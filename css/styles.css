@@ -21,7 +21,7 @@ body {
 }
 
 .body {
-    background: linear-gradient(180deg,var(--main-background-color),var(--main-background-color2));
+    background: linear-gradient(180deg, var(--main-background-color), var(--main-background-color2));
     background-size: cover;
     border-radius: 10px;
     overflow: hidden;
@@ -29,16 +29,18 @@ body {
     justify-content: center;
 }
 
-h2, p {
+h2,
+p {
     color: var(--primary-text-color);
     text-align: center;
 }
 
-h3,.info h3{
+h3,
+.info h3 {
     border-radius: 5px;
     overflow: hidden;
     color: var(--primary-text-color);
-    background: linear-gradient(135deg, var(--h3-background-color2),var(--h3-background-color));
+    background: linear-gradient(135deg, var(--h3-background-color2), var(--h3-background-color));
     backdrop-filter: blur(10px);
     border-radius: 5px;
     margin-left: auto;
@@ -49,7 +51,7 @@ h3,.info h3{
 
 .info h3 {
     font-size: 1.1em;
-    
+
 }
 
 .info h4 {
@@ -75,8 +77,8 @@ h3,.info h3{
     padding: 20px;
     background: linear-gradient(0deg, var(--title-gradient-start), var(--title-gradient-end));
     border-radius: 10px;
-    box-shadow: 0px 4px 6px var(--box-shadow-color), 
-                0px 5px 30px rgba(216, 99, 99, 0.349); 
+    box-shadow: 0px 4px 6px var(--box-shadow-color),
+        0px 5px 30px rgba(216, 99, 99, 0.349);
     margin-bottom: 30px;
     backdrop-filter: blur(10px);
 }
@@ -118,7 +120,7 @@ h3,.info h3{
     align-items: center;
     gap: 20px;
     height: auto;
-    background: linear-gradient(180deg,var(--link-gradient-start),var(--link-gradient-end)); 
+    background: linear-gradient(180deg, var(--link-gradient-start), var(--link-gradient-end));
     backdrop-filter: blur(10px);
     width: 100%;
     max-width: 800px;
@@ -144,6 +146,17 @@ h3,.info h3{
     color: var(--link-color);
 }
 
+.langs .numlist {
+    text-align: left; 
+    column-count: 4; 
+    column-gap: 3vw;
+    list-style-position: inside;
+}
+
+.langs .numlist li {
+    margin-bottom: 1vw; 
+    break-inside: avoid-column; 
+}
 .links img {
     width: clamp(5px, 20px, 40px);
     height: auto;
@@ -166,22 +179,23 @@ h3,.info h3{
     flex-direction: row;
 }
 
-.contest a, .contest h4 {
+.contest a,
+.contest h4 {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1px;
     width: clamp(200px, 100%, 900px);
     text-decoration: none;
-    color:var(--primary-text-color);
+    color: var(--primary-text-color);
     box-sizing: border-box;
     position: relative;
 }
 
 .contest_info {
     flex: 2 1 0;
-    min-width: 45%; 
-    width:100%;
+    min-width: 45%;
+    width: 100%;
     padding-right: 1vw;
     text-align: left;
 }
@@ -190,13 +204,14 @@ h3,.info h3{
     color: var(--highlight-color);
 }
 
-.rank, .rating {
-    line-height: normal; 
-    align-self: center; 
-    height: auto; 
-    display: flex; 
-    align-items: center; 
-    padding-right: vw; 
+.rank,
+.rating {
+    line-height: normal;
+    align-self: center;
+    height: auto;
+    display: flex;
+    align-items: center;
+    padding-right: vw;
 }
 
 .rank {
@@ -205,9 +220,11 @@ h3,.info h3{
     flex: 1;
     color: var(--primary-text-color);
 }
-.rank b ,.rating b{
-    margin-left: 5px; 
-    margin-right: 5px; 
+
+.rank b,
+.rating b {
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 .rating {
@@ -218,13 +235,14 @@ h3,.info h3{
     width: fit-content;
 }
 
-.rating b,.rank b {
-    font-weight: 800; 
-    color: var(--highlight-color2); 
+.rating b,
+.rank b {
+    font-weight: 800;
+    color: var(--highlight-color2);
 }
 
-.section1{
-    background: linear-gradient(135deg, var(--section1-color1),var(--section1-color2));
+.section1 {
+    background: linear-gradient(135deg, var(--section1-color1), var(--section1-color2));
     backdrop-filter: blur(10px);
     border-radius: 5px;
     box-shadow: 0px 4px 6px var(--box-shadow-color);
@@ -242,7 +260,9 @@ h3,.info h3{
     text-decoration: underline;
 }
 
-.projects h4,.assignments h4,.contests h4{
+.projects h4,
+.assignments h4,
+.contests h4 {
     margin: 1vw;
     margin-top: 0vw;
     margin-bottom: 1vw;
@@ -255,7 +275,7 @@ h3,.info h3{
     text-decoration: none;
 }
 
-.projects h4{
+.projects h4 {
     width: 100%;
 }
 
@@ -268,13 +288,15 @@ h3,.info h3{
     color: var(--highlight-color);
 }
 
-.numlist,.bulletlist{
-    font-size:large;
+.numlist,
+.bulletlist {
+    font-size: large;
     font-weight: bold;
-    padding-top:0;
+    padding-top: 0;
 }
 
-ol,ul{
+ol,
+ul {
     margin-block-start: 0;
 }
 
@@ -294,12 +316,12 @@ ol,ul{
     color: var(--primary-text-color);
 }
 
-.assignments a{
+.assignments a {
     color: var(--primary-text-color);
     text-decoration: none;
 }
 
-.assignments a:hover{
+.assignments a:hover {
     text-decoration: underline;
     text-decoration-color: var(--highlight-color);
 }
@@ -343,30 +365,30 @@ ol {
 }
 
 @media (max-width: 700px) {
-   
-    .contest_info{
-            min-width: 50%;
+
+    .contest_info {
+        min-width: 50%;
 
     }
-    
-    .contest .project_info{
+
+    .contest .project_info {
         text-decoration: underline;
         text-decoration-color: var(--mobile-underline-color);
     }
 
-    .rank{
+    .rank {
         margin-left: 10px;
         min-width: 40%;
         display: flex;
         flex-wrap: wrap;
     }
 
-    .highlight{
+    .highlight {
         text-decoration: underline;
         text-decoration-color: var(--mobile-underline-color);
     }
 
-    .titles{
+    .titles {
         font-size: .8em;
     }
 
@@ -391,8 +413,10 @@ ol {
         width: auto;
         overflow-wrap: break-word;
     }
-    
-    .projects h4,.assignments h4,.contests h4{
+
+    .projects h4,
+    .assignments h4,
+    .contests h4 {
         margin: 1.5vw;
         margin-top: 0vw;
         margin-bottom: 1.5vw;
@@ -401,21 +425,24 @@ ol {
 
 @media (min-width: 768px) {
     body {
-        margin: 0 2vw; 
+        margin: 0 2vw;
     }
 }
 
 @media (min-width: 1024px) {
     body {
-        margin: 0 10vw; 
+        margin: 0 10vw;
     }
-    .rank{
+
+    .rank {
         min-width: 35%;
     }
-    .contest_info{
+
+    .contest_info {
         min-width: 55%;
     }
-    .links{
+
+    .links {
         flex-wrap: wrap;
         justify-content: center;
     }
@@ -423,13 +450,15 @@ ol {
 
 @media (min-width: 1440px) {
     body {
-        margin: 0 30vw; 
+        margin: 0 30vw;
     }
-    .rank{
+
+    .rank {
         min-width: 35%;
     }
-    .contest_info{
+
+    .contest_info {
         min-width: 55%;
-    }  
-    
+    }
+
 }
