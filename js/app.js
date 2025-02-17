@@ -4,10 +4,10 @@ const button = document.getElementById('theButton');
 button.addEventListener("click", function() {
     count += 1; 
     if(count == 1){
-        alert(`You have pressed the button 1 time.`);
+        alert(`You have pressed the button 1 time. Thanks for visiting!`);
     }
     else if (count > 9){
-        alert(`You have pressed the button ${count} times. Are you ok?`);
+        alert(`You have pressed the button ${count} times. That is too many.`);
     }
     else{
         alert(`You have pressed the button ${count} times.`);
