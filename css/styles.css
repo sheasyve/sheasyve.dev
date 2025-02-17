@@ -410,13 +410,35 @@ ol {
         width: auto;
         overflow-wrap: break-word;
     }
+    .langs .numlist {
+        text-align: left; 
+        column-count: 2; 
+        column-gap: 5vw;
 
+    }
+    
+    .langs .numlist li {
+        margin-left: 0px;
+        padding: 0px;
+        font-size: .9em;
+    }
     .projects h4,
     .assignments h4,
     .contests h4 {
         margin: 1.5vw;
         margin-top: 0vw;
-        margin-bottom: 1.5vw;
+        font-size: .85em;
+        
+    }
+    .Projects ,
+    .assignments ,
+    .contests  {
+        margin-bottom: 10px;
+        padding-bottom: .1vw;
+        
+    }
+    .section1 .numlist, .bulletlist{
+        font-size: .9em;
     }
 }
 
