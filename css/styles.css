@@ -150,11 +150,11 @@ h3,
     text-align: left; 
     column-count: 4; 
     column-gap: 3vw;
-    list-style-position: inside;
 }
 
 .langs .numlist li {
     margin-bottom: 1vw; 
+    margin-left: .5vw;
     break-inside: avoid-column; 
 }
 .links img {
@@ -184,7 +184,7 @@ h3,
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1px;
+
     width: clamp(200px, 100%, 900px);
     text-decoration: none;
     color: var(--primary-text-color);
@@ -251,7 +251,6 @@ h3,
 
 .projects,
 .contests {
-    padding-left: 10px;
     color: var(--primary-text-color);
     text-decoration: none;
 }
@@ -263,20 +262,17 @@ h3,
 .projects h4,
 .assignments h4,
 .contests h4 {
-    margin: 1vw;
     margin-top: 0vw;
     margin-bottom: 1vw;
-    max-width: 95%;
+    padding-left: 15px;
+    margin-left: .85vw;
 }
 
 .projects h4,
 .contests h4 {
     color: var(--primary-text-color);
     text-decoration: none;
-}
-
-.projects h4 {
-    width: 100%;
+    
 }
 
 /* Lists and Highlighting */
@@ -300,10 +296,7 @@ ul {
     margin-block-start: 0;
 }
 
-.langs {
-    margin: 0;
-    padding: 0;
-}
+
 
 .list li {
     margin: 5px 0;
@@ -311,7 +304,7 @@ ul {
 }
 
 .assignments {
-    padding-left: 10px;
+
     text-decoration: none;
     color: var(--primary-text-color);
 }
@@ -356,6 +349,10 @@ ul {
 
 ol {
     color: var(--highlight-color);
+}
+
+.info li{
+    margin-left: .5vw;
 }
 
 .info ol li,
