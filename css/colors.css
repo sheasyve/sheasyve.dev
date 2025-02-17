@@ -5,6 +5,8 @@
     /* Slightly transparent dark overlay background */
     --main-background-color: rgba(11, 45, 58, 0.973);
     --main-background-color2: rgba(212, 132, 132, 0.267);
+    --main-background-color3: rgba(0, 21, 44, 0.568);
+    --main-background-color4: rgba(221, 221, 221, 0.1);
     --overlay-background-color: rgba(30, 30, 30, 0.63);
     --overlay-background-color2: rgba(92, 72, 72, 0.247);
     
@@ -12,7 +14,7 @@
     --primary-text-color: #e0e0e0;
     /* Medium gray for secondary text */
     --secondary-text-color: #b3b3b3;
-    
+    --tertiary-text-color: #ffbebe;
     /* Crimson for highlights */
     --highlight-color: #cc444b;
     /* Alternate crimson for highlights */

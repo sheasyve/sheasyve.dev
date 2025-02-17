@@ -198,13 +198,19 @@ h3,.info h3 {
 
 }
 .section1 h1{
-    color: var(--primary-text-color);
-    text-decoration: none;
+    color: var(--tertiary-text-color);
+    text-decoration: underline;
+    text-decoration-color: rgba(180, 180, 180, 0.616);
     
     margin: 0px;
-    background: linear-gradient(135deg, var(--main-background-color2), var(--main-background-color2));
+    background: linear-gradient(-10deg, var(--main-background-color4), var(--main-background-color3));
 }
-
+.section1 h1 img {
+    padding-left: 10px;
+    opacity: 0.3;
+    width: clamp(25px, 25px, 25px);
+    height: auto;
+}
 .numlist li::marker {
     color: var(--highlight-color);
 }
