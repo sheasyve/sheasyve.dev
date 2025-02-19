@@ -10,43 +10,29 @@ html {
 }
 
 /* Global Styles */
-body {
-    background-color: var(--background-color);
-    background-image: url('../media/bg2.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    justify-content: center;
 
-}
-
-.body {
-    background: linear-gradient(180deg,var(--main-background-color),var(--main-background-color2));
-    background-size: cover;
-    border-radius: 10px;
-    overflow: hidden;
-    padding: 10px;
-    justify-content: center;
-}
-
-h2, p {
+h2,
+p {
     color: var(--primary-text-color);
     text-align: center;
 }
 
-.section1 h1, .section1 a{
+.section1 h1,
+.section1 a {
     color: var(--primary-text-color);
     text-decoration: none;
-    
+
 }
-.section1 h1:hover, .section1 a:hover{
+
+.section1 h1:hover,
+.section1 a:hover {
     text-decoration: underline;
     color: var(--link-hover-color);
     text-decoration-color: var(--mobile-underline-color);
 }
 
-.info{
-    background: linear-gradient(135deg, rgba(167, 61, 61, .2),rgba(65, 20, 20, 0));
+.info {
+    background: linear-gradient(135deg, rgba(167, 61, 61, .2), rgba(65, 20, 20, 0));
     backdrop-filter: blur(10px);
     border-radius: 5px;
     margin-left: auto;
@@ -54,18 +40,18 @@ h2, p {
     padding: 5px;
 }
 
-.info a{
+.info a {
     color: rgb(255, 255, 255);
 }
 
-.info a:hover{
+.info a:hover {
     color: var(--link-hover-color);
     text-decoration: underline;
 }
 
-.info h1{
+.info h1 {
 
-    background: linear-gradient(135deg, rgb(167, 61, 61),rgba(65, 20, 20, 0));
+    background: linear-gradient(135deg, rgb(167, 61, 61), rgba(65, 20, 20, 0));
     padding: 5px;
     margin-left: auto;
     margin-right: auto;
@@ -73,17 +59,18 @@ h2, p {
 
 }
 
-h3,.info h3 {
+h3,
+.info h3 {
     overflow: hidden;
     color: var(--primary-text-color);
-    
+
     text-decoration: none;
-    
+
 }
 
 .info h3 {
     font-size: 1.1em;
-    
+
 }
 
 .info h4 {
@@ -107,110 +94,35 @@ h3,.info h3 {
     width: 100%;
     height: auto;
     object-fit: cover;
-  }  
-
-/* Headings and Titles */
-.titles {
-    text-align: center;
-    padding: 20px;
-    background: linear-gradient(0deg, var(--title-gradient-start), var(--title-gradient-end));
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px var(--box-shadow-color), 
-                0px 5px 30px rgba(216, 99, 99, 0.349); 
-    margin-bottom: 30px;
-    backdrop-filter: blur(10px);
 }
 
-.titles h1 {
-    font-size: 2.5em;
-    color: var(--primary-text-color);
-    margin: 0;
-    letter-spacing: 1px;
-    font-family: Raleway;
-    font-weight: bold;
-}
+/*  Menus */
 
-.titles h2 {
-    font-size: 1.5em;
-    color: var(--primary-text-color);
-    margin-top: 10px;
-    font-weight: 300;
-}
-
-.titles a {
-    color: var(--primary-text-color);
-    text-decoration: none;
-
-}
-
-.titles a:hover {
-    color: var(--link-hover-color);
-    border-bottom-color: var(--link-hover-color);
-}
-
-/* Links and Menus */
-.links {
-    border-radius: 5px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    height: auto;
-    background: linear-gradient(180deg,var(--link-gradient-start),var(--link-gradient-end)); 
-    backdrop-filter: blur(10px);
-    width: 100%;
-    max-width: 800px;
-    padding: 10px;
-    box-sizing: border-box;
-    margin: 0 auto;
-    box-shadow: 0px 4px 6px var(--box-shadow-color);
-}
-
-.links a {
-    color: var(--link-color);
-    text-decoration: none;
-}
-
-.links a:hover {
-    color: var(--link-hover-color);
-}
-
-.links h2 {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    color: var(--link-color);
-}
-
-.links img {
-    width: clamp(5px, 20px, 40px);
-    height: auto;
-}
-
-.section1{
-    background: linear-gradient(135deg, var(--section1-color1),var(--section1-color));
+.section1 {
+    background: linear-gradient(135deg, var(--section1-color1), var(--section1-color));
     backdrop-filter: blur(10px);
     border-radius: 5px;
     margin-top: 15px;
     box-shadow: 0px 4px 6px var(--box-shadow-color);
 
 }
-.section1 h1{
+
+.section1 h1 {
     color: var(--tertiary-text-color);
     text-decoration: underline;
     text-decoration-color: rgba(180, 180, 180, 0.616);
-    
+
     margin: 0px;
     background: linear-gradient(-10deg, var(--main-background-color4), var(--main-background-color3));
 }
+
 .section1 h1 img {
     padding-left: 10px;
     opacity: 0.3;
     width: clamp(25px, 25px, 25px);
     height: auto;
 }
+
 .numlist li::marker {
     color: var(--highlight-color);
 }
@@ -219,21 +131,23 @@ h3,.info h3 {
     color: var(--highlight-color);
 }
 
-.list{
-    background: linear-gradient(135deg, var(--h3-background-color6),var(--h3-background-color5));
+.list {
+    background: linear-gradient(135deg, var(--h3-background-color6), var(--h3-background-color5));
     backdrop-filter: blur(10px);
     border-radius: 5px;
-    box-shadow: 0px 4px 6px var(--box-shadow-color);  
+    box-shadow: 0px 4px 6px var(--box-shadow-color);
 }
 
-.numlist,.bulletlist{
+.numlist,
+.bulletlist {
     padding-bottom: .5vw;
-    font-size:large;
+    font-size: large;
     font-weight: bold;
-    padding-top:0;
+    padding-top: 0;
 }
 
-ol,ul{
+ol,
+ul {
     margin-block-start: 0;
 }
 
@@ -246,6 +160,7 @@ ol,ul{
     margin: 5px 0;
     color: var(--primary-text-color);
 }
+
 .titles a:hover {
     text-decoration: underline;
 }
@@ -266,73 +181,21 @@ ol {
 }
 
 @media (max-width: 700px) {
-    .section1 a:hover{
+    .section1 a:hover {
         text-decoration: underline;
         text-decoration-color: var(--mobile-underline-color);
     }
 
-    .highlight{
+    .highlight {
         text-decoration: underline;
         text-decoration-color: var(--mobile-underline-color);
-    }
-
-    .titles{
-        font-size: .8em;
-    }
-
-    .links {
-        text-decoration: underline;
-        text-decoration-color: var(--mobile-underline-color);
-        font-size: .8em;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .links img {
-        width: 20px;
-        height: auto;
-        margin-right: 10px;
-    }
-
-    .titles h1 {
-        font-size: 2.3em
-    }
-    
-    .titles h2 {
-        font-size: 1.6em;
-    }
-    .links h2{
-        font-size: 1.3em;
     }
 
 }
 
 @media (min-width: 768px) {
-    body {
-        margin: 0 2vw; 
-    }
-    .section1 a:hover{
+    .section1 a:hover {
         text-decoration: underline;
         text-decoration-color: var(--mobile-underline-color);
     }
-}
-
-@media (min-width: 1024px) {
-    body {
-        margin: 0 10vw; 
-    }
-
-
-    .links{
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-}
-
-@media (min-width: 1440px) {
-    body {
-        margin: 0 30vw; 
-    }
-
 }

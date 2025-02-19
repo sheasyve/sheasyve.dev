@@ -5,29 +5,7 @@
 
 @import url('colors.css');
 
-html {
-    font-family: 'Roboto', sans-serif;
-}
-
 /* Global Styles */
-body {
-    background-color: var(--background-color);
-    background-image: url('../media/bg2.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    justify-content: center;
-
-}
-
-.body {
-    background: linear-gradient(180deg, var(--main-background-color), var(--main-background-color2));
-    background-size: cover;
-    border-radius: 10px;
-    overflow: hidden;
-    padding: 10px;
-    justify-content: center;
-}
 
 h2,
 p {
@@ -71,95 +49,16 @@ h3,
     color: var(--highlight-color);
 }
 
-/* Headings and Titles */
-.titles {
-    text-align: center;
-    padding: 20px;
-    background: linear-gradient(0deg, var(--title-gradient-start), var(--title-gradient-end));
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px var(--box-shadow-color),
-        0px 5px 30px rgba(216, 99, 99, 0.349);
-    margin-bottom: 30px;
-    backdrop-filter: blur(10px);
-}
-
-.titles h1 {
-    font-size: 2.5em;
-    color: var(--primary-text-color);
-    margin: 0;
-    letter-spacing: 1px;
-    font-family: Raleway;
-    font-weight: bold;
-}
-
-.titles h2 {
-    font-size: 1.5em;
-    color: var(--primary-text-color);
-    margin-top: 10px;
-    font-weight: 300;
-}
-
-.titles a {
-    color: var(--primary-text-color);
-    text-decoration: none;
-
-}
-
-.titles a:hover {
-    color: var(--link-hover-color);
-    border-bottom-color: var(--link-hover-color);
-}
-
-/* Links and Menus */
-.links {
-    border-radius: 5px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    height: auto;
-    background: linear-gradient(180deg, var(--link-gradient-start), var(--link-gradient-end));
-    backdrop-filter: blur(10px);
-    width: 100%;
-    max-width: 800px;
-    padding: 10px;
-    box-sizing: border-box;
-    margin: 0 auto;
-    box-shadow: 0px 4px 6px var(--box-shadow-color);
-}
-
-.links a {
-    color: var(--link-color);
-    text-decoration: none;
-}
-
-.links a:hover {
-    color: var(--link-hover-color);
-}
-
-.links h2 {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    color: var(--link-color);
-}
-
 .langs .numlist {
-    text-align: left; 
-    column-count: 4; 
+    text-align: left;
+    column-count: 4;
     column-gap: 3vw;
 }
 
 .langs .numlist li {
-    margin-bottom: 1vw; 
+    margin-bottom: 1vw;
     margin-left: .5vw;
-    break-inside: avoid-column; 
-}
-.links img {
-    width: clamp(5px, 20px, 40px);
-    height: auto;
+    break-inside: avoid-column;
 }
 
 /* Contests and Projects */
@@ -272,7 +171,7 @@ h3,
 .contests h4 {
     color: var(--primary-text-color);
     text-decoration: none;
-    
+
 }
 
 /* Lists and Highlighting */
@@ -296,8 +195,6 @@ ul {
     margin-block-start: 0;
 }
 
-
-
 .list li {
     margin: 5px 0;
     color: var(--primary-text-color);
@@ -317,10 +214,6 @@ ul {
 .assignments a:hover {
     text-decoration: underline;
     text-decoration-color: var(--highlight-color);
-}
-
-.links a:hover {
-    text-decoration: underline;
 }
 
 .project-link {
@@ -351,7 +244,7 @@ ol {
     color: var(--highlight-color);
 }
 
-.info li{
+.info li {
     margin-left: .5vw;
 }
 
@@ -385,43 +278,26 @@ ol {
         text-decoration-color: var(--mobile-underline-color);
     }
 
-    .titles {
-        font-size: .8em;
-    }
-
-    .links {
-        text-decoration: underline;
-        text-decoration-color: var(--mobile-underline-color);
-        font-size: .8em;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .links img {
-        width: 20px;
-        height: auto;
-        margin-right: 10px;
-    }
-
     .rank {
         text-align: left;
         flex: 1;
         width: auto;
         overflow-wrap: break-word;
     }
+
     .langs .numlist {
-        text-align: left; 
-        column-count: 2; 
+        text-align: left;
+        column-count: 2;
         column-gap: 5vw;
 
     }
-    
+
     .langs .numlist li {
         margin-left: 1vw;
         padding: 0px;
         font-size: .9em;
     }
+
     .projects h4,
     .assignments h4,
     .contests h4 {
@@ -429,68 +305,32 @@ ol {
         margin-top: 0vw;
         margin-left: 2vw;
         font-size: .9em;
-        
+
     }
+
     .projects h4,
-    .assignments ,
-    .contests  {
+    .assignments,
+    .contests {
         margin-bottom: 10px;
         padding-bottom: .1vw;
-        
+
     }
-    .section1 .numlist{
+
+    .section1 .numlist {
         font-size: .97em;
         margin-left: 0px;
         padding-left: 9vw;
     }
-    .section1 .bulletlist{
+
+    .section1 .bulletlist {
         font-size: .9em;
         margin-left: 0px;
         padding-left: 9vw;
     }
-    .titles h1 {
-        font-size: 2.3em
-    }
-    
-    .titles h2 {
-        font-size: 1.6em;
-    }
-    .links h2{
-        font-size: 1.3em;
-    }
-}
 
-@media (min-width: 768px) {
-    body {
-        margin: 0 2vw;
-    }
-    
-}
-
-@media (min-width: 1024px) {
-    body {
-        margin: 0 10vw;
-    }
-
-    .rank {
-        min-width: 35%;
-    }
-
-    .contest_info {
-        min-width: 55%;
-    }
-
-    .links {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    
 }
 
 @media (min-width: 1440px) {
-    body {
-        margin: 0 30vw;
-    }
 
     .rank {
         min-width: 35%;
