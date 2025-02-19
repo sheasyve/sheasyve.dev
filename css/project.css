@@ -17,15 +17,15 @@ p {
     text-align: center;
 }
 
-.section1 h1,
-.section1 a {
+.section h1,
+.section a {
     color: var(--primary-text-color);
     text-decoration: none;
 
 }
 
-.section1 h1:hover,
-.section1 a:hover {
+.section h1:hover,
+.section a:hover {
     text-decoration: underline;
     color: var(--link-hover-color);
     text-decoration-color: var(--mobile-underline-color);
@@ -98,8 +98,8 @@ h3,
 
 /*  Menus */
 
-.section1 {
-    background: linear-gradient(135deg, var(--section1-color1), var(--section1-color));
+.section {
+    background: linear-gradient(135deg, var(--section-color1), var(--section-color));
     backdrop-filter: blur(10px);
     border-radius: 5px;
     margin-top: 15px;
@@ -107,7 +107,7 @@ h3,
 
 }
 
-.section1 h1 {
+.section h1 {
     color: var(--tertiary-text-color);
     text-decoration: underline;
     text-decoration-color: rgba(180, 180, 180, 0.616);
@@ -116,7 +116,7 @@ h3,
     background: linear-gradient(-10deg, var(--main-background-color4), var(--main-background-color3));
 }
 
-.section1 h1 img {
+.section h1 img {
     padding-left: 10px;
     opacity: 0.3;
     width: clamp(25px, 25px, 25px);
@@ -181,7 +181,7 @@ ol {
 }
 
 @media (max-width: 700px) {
-    .section1 a:hover {
+    .section a:hover {
         text-decoration: underline;
         text-decoration-color: var(--mobile-underline-color);
     }
@@ -194,7 +194,7 @@ ol {
 }
 
 @media (min-width: 768px) {
-    .section1 a:hover {
+    .section a:hover {
         text-decoration: underline;
         text-decoration-color: var(--mobile-underline-color);
     }

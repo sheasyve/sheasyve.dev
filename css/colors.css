@@ -47,8 +47,8 @@
     --h3-background-color4: rgba(15, 8, 8, 0.63);
     
     /* Transparent sections with dark red tones */
-    --section1-color1: #270e0ec9;
-    --section1-color2: #61343452;
+    --section-color1: #270e0ec9;
+    --section-color2: #61343452;
     
     /* Crimson for ranks or badges */
     --rank-color: #cc444b;
