@@ -3,55 +3,20 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shea Syverson Dev Site</title>
     <link href="css/header.css" rel="stylesheet" />
+    <script src="js/common_head.js"></script>
+    <title>Shea Syverson Developer Website</title>
     <link href="css/styles.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/devicon@2.14.0/devicon.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
 <body>
     <div class="body">
-        <div class="menu">
-            <div class="titles">
-                <h1><a href="https://sheasyve.dev">
-                        <b>Shea Syverson</a> | <a href="https://github.com/sheasyve/sheasyve.dev"> Developer
-                        Portfolio</b></a></h1>
-                <h2>Bachelor of Computer Science - <a href="https://www.uvic.ca/" target="_blank">University of
-                        Victoria</a></h2>
-            </div>
-            <div class="links">
-                <a href="https://github.com/sheasyve" target="_blank">
-                    <h2> <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
-                            alt="GitHub Logo"> GitHub</h2>
-                </a>
-                <a href="https://www.linkedin.com/in/sheasyve/" target="_blank">
-                    <h2> <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
-                            alt="Linkedin Profile"> Linkedin</h2>
-                </a>
-                <a href="https://leetcode.com/u/sheasyve" target="_blank">
-                    <h2> <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png"
-                            alt="LeetCode Profile"> LeetCode</h2>
-                </a>
-                <a href="https://www.codingame.com/profile/bcb5a473e16c66721d9a257097face784882305" target="_blank">
-                    <h2>
-                        <img src="media/cg_logo.png" alt="CodinGame Profile"> CodinGame
-                    </h2>
-                </a>
-                <a href="https://www.hackerrank.com/profile/syversonshea" target="_blank">
-                    <h2> <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/HackerRank_Icon-1000px.png"
-                            alt="HackerRank Profile"> HackerRank</h2>
-                </a>
-            </div>
-        </div>
+        <script src="js/header.js"></script>
         <div class="section1">
             <div class="Projects">
                 <h3>Projects</h3>
                 <div class="projects">
-                    <a href="https://sheasyve.dev/birdflow" target="h4" class="project-link">
+                    <a href="projects/birdflow.html" target="h4" class="project-link">
                         <h4>
                             <span class="assign_links">BirdFlow - Wind Simulator Extension for Blender</span>
                             <span class="highlight">– (Cython, Python)</span>
@@ -132,18 +97,15 @@
                         <ol class="numlist">
                             <li><i class="devicon-python-plain"></i> Python</li>
                             <li><i class="devicon-cplusplus-plain"></i> C++</li>
-                            <li><img src="media/cuda.svg" alt="CUDA" style="width: 15px;"> CUDA
-                            </li>
+                            <li><img src="media/cuda.svg" alt="CUDA" style="width: 15px;"> CUDA</li>
                             <li><i class="devicon-javascript-plain"></i> JavaScript</li>
                             <li><i class="devicon-postgresql-plain"></i> SQL</li>
                             <li><i class="devicon-java-plain"></i> Java</li>
                             <li><i class="devicon-html5-plain"></i> HTML</li>
                             <li><i class="devicon-css3-plain"></i> CSS</li>
-                            <li><img src="media/lisp.png" alt="" style="width: 13px;"> Racket
-                            </li>
+                            <li><img src="media/lisp.png" alt="" style="width: 13px;"> Racket</li>
                             <li><i class="devicon-r-plain"></i> R</li>
                         </ol>
-
                     </div>
                 </div>
             </div>
@@ -209,7 +171,7 @@
                 <div class="assignments">
                     <div class="assignment">
                         <h4>
-                            <span class="assign_links">Apriori Algorithm Implementation for Predicting Item Purchase
+                            <span class="assign_links">Apriori Algorithm for Predicting Purchase
                                 Likelihood</span>
                             <span class="highlight">– CSC 330 UVic – (SML)</span>
                         </h4>
@@ -245,7 +207,7 @@
     <div class="button">
         <button id="theButton"><span class="italic">Thanks.</span></button>
     </div>
-    <script src="js/app.js"></script>
+    <script src="js/button.js"></script>
 </body>
 
 </html>

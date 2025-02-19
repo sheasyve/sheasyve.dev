@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!--Shea Syverson-->
+<html lang="en">
+
+<head>
+    <link href="../css/header.css" rel="stylesheet" />
+    <script src="../js/common_head.js"></script>
+    <link href="../css/project.css" rel="stylesheet" /></head>
+
+<body>
+    <div class="body">
+        <script src="../js/header.js"></script>
+        <div class="section1">
+            <div class="info">
+                <a href="https://github.com/sheasyve/BirdFlow">
+                    <h1><b>BirdFlow - Wind Simulator Extension for Blender</b><img
+                            src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+                            alt="GitHub Logo">
+                    </h1>
+                </a>
+                <h3>
+                    Birdflow is a tool for generating wind simulations in Blender, built with Python and Cython. The
+                    extension
+                    can
+                    be used to
+                    generate realistic looking particle based visualizations of air on an object.
+
+                </h3>
+                <video autoplay loop muted>
+                    <source src="../media/projects/birdflow/Front car.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <h3>
+                    The engine uses a Eulerian
+                    grid
+                    with a Conjugate
+                    Gradient solver to simulate incompressible flow by solving the Navier-Stokes equations. Visuals are
+                    rendered
+                    using particles, for
+                    a simple way to display the behavior of the airflow. This involved using Lagrangian methods for
+                    particle
+                    collisions and movement, making the simulation a hybrid approach having both Eulerian and Lagrangian
+                    aspects.
+                </h3>
+                <h2>Current Version </h2>
+                <h4>Car From Side Angle - Shows Simulation Space</h4>
+                <video autoplay loop muted>
+                    <source src="../media/projects/birdflow/Side Car.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <h3> Results were overall satisfying,
+                    although not everything I initially planned was implemented. Realistic air movement beyond naive
+                    collision
+                    can
+                    be observed,
+                    as particles avoid high pressure areas and gravitate towards low pressure areas. Collisions are
+                    convincing
+                    with
+                    dynamic velocity damping and redirection, with tangential friction being applied. </h3>
+                <h4> Tilted Block<h4>
+                        <video autoplay loop muted>
+                            <source src="../media/projects/birdflow/block.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+
+                        <h4>Sphere</h4>
+                        <video autoplay loop muted>
+                            <source src="../media/projects/birdflow/Sphere.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <h4>Car - Rear View</h4>
+                        <video autoplay loop muted>
+                            <source src="../media/projects/birdflow/Back car.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+
+                        <h3>Although the overall goal
+                            of a
+                            Eulerian fluid simulation
+                            was achieved, there are various shortcomings with the program discussed in the paper, which
+                            can lead
+                            to
+                            inconsistent results.
+                            Program execution is not conventionally fast, although given the problem space it is
+                            acceptable.
+                            With large
+                            grid
+                            settings and
+                            thousands of particles, the simulation can take upwards of 5 minutes. However, simpler
+                            settings can
+                            lead to
+                            run-times under 30
+                            seconds.</h3>
+
+                        <h2>Failed Attempts Along the Way</h2>
+                        <h4>Initial Attempt with Lagrangian Physics - No Pressure Calculations</h4>
+                        <video autoplay loop muted>
+                            <source src="../media/projects/birdflow/Initial.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <h4>Initial Eulerian Attempt - Advected the Grid Itself Opposed to Grid Velocities</h4>
+                        <video autoplay loop muted>
+                            <source src="../media/projects/birdflow/Moving grid.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+            </div>
+        </div>
+</body>
+</html>
