@@ -428,7 +428,7 @@ ol {
         margin: 1.5vw;
         margin-top: 0vw;
         margin-left: 2vw;
-        font-size: .85em;
+        font-size: .9em;
         
     }
     .projects h4,
@@ -438,22 +438,22 @@ ol {
         padding-bottom: .1vw;
         
     }
-    .section1 .numlist, .section1 .bulletlist{
-        font-size: .95em;
+    .section1 .numlist{
+        font-size: .97em;
         margin-left: 0px;
         padding-left: 9vw;
     }
     .section1 .bulletlist{
-        font-size: .95em;
+        font-size: .9em;
         margin-left: 0px;
         padding-left: 9vw;
     }
     .titles h1 {
-        font-size: 2.0em
+        font-size: 2.3em
     }
     
     .titles h2 {
-        font-size: 1.5em;
+        font-size: 1.6em;
     }
     .links h2{
         font-size: 1.3em;
