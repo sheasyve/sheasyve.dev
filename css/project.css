@@ -149,11 +149,6 @@ ul {
     margin-block-start: 0;
 }
 
-.langs {
-    margin: 0;
-    padding: 0;
-}
-
 .list li {
     margin: 5px 0;
     color: var(--primary-text-color);
