@@ -166,7 +166,8 @@ h3,
 .projects h4,
 .assignments h4,
 .contests h4 {
-    margin: 1vw;
+    margin-bottom: 1vw;
+    margin-left: 1vw;
     margin-top: 0vw;
     font-size: 1em;
 }
@@ -310,7 +311,6 @@ ol {
     }
 
     .languages .numlist li {
-        margin-left: 1vw;
         padding: 0px;
         font-size: .9em;
     }
@@ -319,9 +319,9 @@ ol {
     .assignments h4,
     .contests h4 {
         margin-top: 0vw;
-        margin-left: 2vw;
         font-size: .9em;
-
+        margin-left: 3vw;
+        max-width: 90%;
     }
 
     .section .numlist {
