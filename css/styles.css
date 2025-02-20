@@ -247,6 +247,7 @@ ol {
     font-size: .9em;
     color: var(--primary-text-color);
     margin-bottom: .5vw;
+    margin-left: 0;
 }
 
 .section h3,
@@ -317,7 +318,6 @@ ol {
     .projects h4,
     .assignments h4,
     .contests h4 {
-
         margin-top: 0vw;
         margin-left: 2vw;
         font-size: .9em;
@@ -327,17 +327,20 @@ ol {
     .section .numlist {
         font-size: .97em;
         margin-left: 0px;
-        padding-left: 9vw;
+
     }
 
     .section .bulletlist {
         font-size: .97em;
         margin-left: 0px;
-        padding-left: 9vw;
     }
 
     .section {
         padding-bottom: 1vw;
+    }
+    .section h3,
+    .info h3 {
+        margin-bottom: 2vw;
     }
 
 }

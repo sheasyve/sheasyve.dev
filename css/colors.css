@@ -1,62 +1,57 @@
 /* Root variables for colors and styles */
 :root {
-    /* Dark gray (almost black) background */
-    --background-color: #1a1a1a;
-    /* Slightly transparent dark overlay background */
-    --main-background-color: rgba(11, 45, 58, 0.973);
-    --main-background-color2: rgba(212, 132, 132, 0.267);
-    --main-background-color3: rgba(0, 21, 44, 0.568);
-    --main-background-color4: rgba(221, 221, 221, 0.1);
-    --overlay-background-color: rgba(30, 30, 30, 0.63);
-    --overlay-background-color2: rgba(92, 72, 72, 0.247);
+    /* Background colors */
+    --background-color: #1a1a1a; /* Dark gray (almost black) background */
+    --main-background-color: rgba(11, 45, 58, 0.973); /* Slightly transparent dark blue overlay */
+    --main-background-color2: rgba(212, 132, 132, 0.267); /* Light red transparent overlay */
+    --main-background-color3: rgba(0, 21, 44, 0.568); /* Dark blue transparent overlay */
+    --main-background-color4: rgba(221, 221, 221, 0.1); /* Light gray transparent overlay */
+    --overlay-background-color: rgba(30, 30, 30, 0.63); /* Dark gray transparent overlay */
+    --overlay-background-color2: rgba(92, 72, 72, 0.247); /* Muted red transparent overlay */
 
-    /* Light gray text for primary content */
-    --primary-text-color: #e0e0e0;
-    /* Medium gray for secondary text */
-    --secondary-text-color: #b3b3b3;
-    --tertiary-text-color: #ffbebe;
-    /* Crimson for highlights */
-    --highlight-color: #cc444b;
-    /* Alternate crimson for highlights */
-    --highlight-color2: #cc444b;
-    /* Crimson for button hover state */
-    --button-hover-color: #a63234;
+    /* Text colors */
+    --primary-text-color: #e0e0e0; /* Light gray for primary text */
+    --secondary-text-color: #b3b3b3; /* Medium gray for secondary text */
+    --tertiary-text-color: #ffbebe; /* Light pink for tertiary text */
 
-    /* White for link text */
-    --link-color: #ffffff;
-    /* Light gray for link hover state */
-    --link-hover-color: #dddddd;
+    /* Highlight colors */
+    --highlight-color: #cc444b; /* Crimson for highlights */
+    --highlight-color2: #cc444b; /* Alternate crimson for highlights */
+    --button-hover-color: #a63234; /* Darker crimson for button hover state */
 
-    /* Semi-transparent black for shadows */
-    --box-shadow-color: rgba(0, 0, 0, 0.5);
+    /* Link colors */
+    --link-color: #ffffff; /* White for link text */
+    --link-hover-color: #dddddd; /* Light gray for link hover state */
 
-    /* Gradient for title with dark red tones */
-    --title-gradient-start: rgba(0, 24, 34, 0.973);
-    --title-gradient-end: #a73434;
-    --title-gradient-start2: rgba(10, 7, 7, 0.63);
-    --title-gradient-end2: #501e1ea8;
+    /* Shadow colors */
+    --box-shadow-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black for shadows */
 
-    /* Muted link gradient with crimson tones */
-    --link-gradient-start: #703b3b;
-    --link-gradient-end: rgba(0, 22, 31, 0.548);
+    /* Gradient colors for titles */
+    --title-gradient-start: rgba(0, 24, 34, 0.973); /* Dark blue gradient start */
+    --title-gradient-end: #a73434; /* Crimson gradient end */
+    --title-gradient-start2: rgba(10, 7, 7, 0.63); /* Dark gray gradient start */
+    --title-gradient-end2: #501e1ea8; /* Muted crimson gradient end */
 
-    /* Transparent dark crimson background for headers */
-    --h3-background-color: rgba(12, 2, 2, 0.63);
-    --h3-background-color2: #802f2f;
-    --h3-background-color3: rgba(30, 30, 30, 0.63);
-    --h3-background-color4: rgba(15, 8, 8, 0.63);
+    /* Gradient colors for links */
+    --link-gradient-start: #703b3b; /* Muted crimson gradient start */
+    --link-gradient-end: rgba(0, 22, 31, 0.548); /* Dark blue gradient end */
 
-    /* Transparent sections with dark red tones */
-    --section-color1: #270e0ec9;
-    --section-color2: #61343452;
+    /* Header background colors */
+    --h3-background-color: rgba(12, 2, 2, 0.63); /* Transparent dark crimson */
+    --h3-background-color2: #802f2f; /* Solid muted crimson */
+    --h3-background-color3: rgba(30, 30, 30, 0.63); /* Transparent dark gray */
+    --h3-background-color4: rgba(15, 8, 8, 0.63); /* Transparent dark red */
 
-    /* Crimson for ranks or badges */
-    --rank-color: #cc444b;
-    /* Light gray for ratings or scores */
-    --rating-color: #e0e0e0;
+    /* Section background colors */
+    --section-color1: #270e0ec9; /* Transparent dark red */
+    --section-color2: #61343452; /* Transparent muted red */
 
-    /* Light red for underline on mobile */
-    --mobile-underline-color: rgba(221, 148, 148, 0.6);
-    --mobile-underline-color2: rgba(221, 148, 148, 0.13);
-    --mobile-underline-color3: rgba(221, 148, 148, 0.06);
+    /* Rank and rating colors */
+    --rank-color: #cc444b; /* Crimson for ranks or badges */
+    --rating-color: #e0e0e0; /* Light gray for ratings or scores */
+
+    /* Mobile underline colors */
+    --mobile-underline-color: rgba(221, 148, 148, 0.6); /* Light red underline */
+    --mobile-underline-color2: rgba(221, 148, 148, 0.13); /* Lighter red underline */
+    --mobile-underline-color3: rgba(221, 148, 148, 0.04); /* Very light red underline */
 }
