@@ -1,5 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
-    fetch("common_head.html")
+    const currentPath = window.location.pathname;
+    const commonHeadPath = currentPath.includes("/projects/") ? "../common_head.html" : "common_head.html";
+
+    fetch(commonHeadPath)
         .then(response => response.text())
         .then(data => {
             document.head.insertAdjacentHTML("beforeend", data);
