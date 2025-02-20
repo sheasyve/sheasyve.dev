@@ -250,7 +250,7 @@ ol {
 .info ul li {
     font-size: .9em;
     color: var(--primary-text-color);
-    margin-bottom: .2vw;
+    margin-bottom: .5vw;
 }
 
 .section h3, .info h3{
