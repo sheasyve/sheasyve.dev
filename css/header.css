@@ -66,6 +66,7 @@ body {
 .titles a:hover {
     color: var(--link-hover-color);
     border-bottom-color: var(--link-hover-color);
+    opacity: 0.6;
 }
 
 /* Links and Menus */
@@ -95,6 +96,7 @@ body {
 
 .links a:hover {
     color: var(--link-hover-color);
+    opacity: 0.6;
 }
 
 .links h2 {
@@ -116,6 +118,22 @@ body {
 @media (max-width: 700px) {
     .titles {
         font-size: .8em;
+    }
+
+    .titles a {
+        text-decoration: double underline;
+        text-decoration-color: var(--mobile-underline-color2);
+    }
+
+    .homepage a {
+        text-decoration: none;
+
+    }
+
+    .repo a {
+        text-decoration: underline;
+        text-decoration-color: var(--mobile-underline-color3);
+
     }
 
     .links {
@@ -165,7 +183,33 @@ body {
 
 @media (min-width: 1440px) {
     body {
-        margin: 0 30vw;
+        margin: 0 15vw;
     }
 
+    .links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 2000px) {
+    body {
+        margin: 0 18vw;
+    }
+
+    .links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 2250px) {
+    body {
+        margin: 0 25vw;
+    }
+
+    .links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
