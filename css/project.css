@@ -21,6 +21,8 @@ p {
 .section a {
     color: var(--primary-text-color);
     text-decoration: none;
+    font-size: 1.3em;
+
 
 }
 
@@ -69,7 +71,7 @@ h3,
 }
 
 .info h3 {
-    font-size: 1.1em;
+    font-size: .8em;
 
 }
 
