@@ -24,12 +24,10 @@ h3,
     margin-left: auto;
     margin-right: auto;
     padding: 5px;
-
 }
 
 .info h3 {
     font-size: 1.1em;
-
 }
 
 .info h4 {
@@ -62,6 +60,7 @@ h3,
 }
 
 /* Contests and Projects */
+
 .projects {
     width: clamp(200px, 100%, 800px);
 }
@@ -83,7 +82,6 @@ h3,
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     width: clamp(200px, 100%, 900px);
     text-decoration: none;
     color: var(--primary-text-color);
@@ -95,7 +93,7 @@ h3,
     flex: 2 1 0;
     min-width: 45%;
     width: 100%;
-    padding-right: 1vw;
+    padding-right: 3vw;
     text-align: left;
 }
 
@@ -165,13 +163,13 @@ h3,
     margin-bottom: 1vw;
     padding-left: 15px;
     margin-left: .85vw;
+    max-width: 90%;
 }
 
 .projects h4,
 .contests h4 {
     color: var(--primary-text-color);
     text-decoration: none;
-
 }
 
 /* Lists and Highlighting */
@@ -188,6 +186,7 @@ h3,
     font-size: large;
     font-weight: bold;
     padding-top: 0;
+    max-width: 83%;
 }
 
 ol,
@@ -201,7 +200,6 @@ ul {
 }
 
 .assignments {
-
     text-decoration: none;
     color: var(--primary-text-color);
 }
@@ -211,22 +209,14 @@ ul {
     text-decoration: none;
 }
 
-.assignments a:hover {
-    text-decoration: underline;
-    text-decoration-color: var(--highlight-color);
-}
-
 .project-link {
     text-decoration: none;
     color: inherit;
 }
 
-.project-link:hover {
+.assignments a:hover, .project-link:hover, .titles a:hover {
     text-decoration: underline;
-}
-
-.titles a:hover {
-    text-decoration: underline;
+    text-decoration-color: var(--highlight-color);
 }
 
 .highlight {
