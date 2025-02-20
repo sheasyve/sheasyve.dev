@@ -60,10 +60,14 @@ h3,
     break-inside: avoid-column;
 }
 
+.languages .numlist li:last-child {
+    margin-bottom: 0;
+}
+
 /* Contests and Projects */
 
 .projects {
-    width: clamp(200px, 100%, 800px);
+    width: clamp(200px, 95%, 800px);
 }
 
 .contests {
@@ -71,12 +75,7 @@ h3,
     flex-direction: column;
 }
 
-.contest {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-}
+
 
 .contest a,
 .contest h4 {
@@ -92,8 +91,8 @@ h3,
 
 .contest_info {
     flex: 2 1 0;
-    min-width: 45%;
-    width: 100%;
+    min-width: 55%;
+    max-width: 95%;
     padding-right: 3vw;
     text-align: left;
 }
@@ -161,12 +160,19 @@ h3,
 .assignments h4,
 .contests h4 {
     margin-top: 0vw;
-    margin-bottom: 1vw;
     padding-left: 15px;
     margin-left: .85vw;
     max-width: 95%;
 
 }
+
+.projects h4, .assignments h4, .contests h4 {
+    margin: 1.5vw;
+    margin-top: 0vw;
+    margin-left: 2vw;
+    font-size: 1em;
+}
+
 
 .projects h4,
 .contests h4 {
@@ -247,6 +253,10 @@ ol {
     margin-bottom: .2vw;
 }
 
+.section h3, .info h3{
+    margin-bottom: 1.5vw;
+}
+
 @media (min-width: 1440px) {
 
     .rank {
@@ -259,7 +269,9 @@ ol {
 }
 
 @media (max-width: 700px) {
-
+    .section h3, .info h3{
+        margin-bottom: 3vw;
+    }
     .contest_info {
         min-width: 50%;
 
@@ -304,7 +316,7 @@ ol {
     .projects h4,
     .assignments h4,
     .contests h4 {
-        margin: 1.5vw;
+
         margin-top: 0vw;
         margin-left: 2vw;
         font-size: .9em;
@@ -321,6 +333,9 @@ ol {
         font-size: .97em;
         margin-left: 0px;
         padding-left: 9vw;
+    }
+    .section{
+        padding-bottom: 1vw;
     }
 
 }
