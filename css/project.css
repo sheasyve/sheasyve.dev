@@ -183,6 +183,10 @@ ol {
         text-decoration: underline;
         text-decoration-color: var(--mobile-underline-color);
     }
+    .homepage a {
+        text-decoration: underline;
+        text-decoration-color: var(--mobile-underline-color);
+    }
 
 }
 
