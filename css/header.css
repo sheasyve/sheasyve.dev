@@ -58,7 +58,7 @@ body {
 }
 
 .titles a {
-    color: var(--primary-text-color);
+    color: var(--title-color);
     text-decoration: none;
 
 }
