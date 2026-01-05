@@ -25,7 +25,7 @@
     --link-hover-color: #666666;           /* Gray hover state */
 
     /* Shadow colors - Softer for white backgrounds */
-    --box-shadow-color: rgba(0, 0, 0, 0.08); /* Much lighter shadow for depth */
+    --box-shadow-color: rgba(0, 0, 0, 0.281); /* Much lighter shadow for depth */
 
     /* Gradient colors for titles - Subtle Grays */
     --title-gradient-start: #ffffff;     /* Black */
@@ -34,13 +34,13 @@
     --title-gradient-end2: #666666;        
 
     /* Gradient colors for links */
-    --link-gradient-start:#f3f3f3;
-    --link-gradient-end: #f7f7f7; 
+    --link-gradient-start:#ffffff;
+    --link-gradient-end: #cecdcdcc; 
 
 
     /* Header background colors */
     --h3-background-color: #f4f4f4;        /* Light gray bar */
-    --h3-background-color2: #ebebeb;       /* Solid light gray */
+    --h3-background-color2: #e0e0e0;       /* Solid light gray */
     --h3-background-color3: #ffffff;       /* Pure white */
     --h3-background-color4: #f9f9f9;       /* Off-white */
 
@@ -53,7 +53,7 @@
     --rating-color: #333333;               /* Dark gray ratings */
 
     /* Mobile underline colors - Minimalist */
-    --mobile-underline-color: rgba(0, 0, 0, 0.1); 
+    --mobile-underline-color: rgba(0, 0, 0, 0.267); 
     --mobile-underline-color2: rgba(0, 0, 0, 0.05);
     --mobile-underline-color3: rgba(0, 0, 0, 0.02);
 }
