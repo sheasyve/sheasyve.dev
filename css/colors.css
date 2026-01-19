@@ -2,7 +2,7 @@
 :root {
     /* Background colors - Mostly White/Light */
     --background-color: #ffffff;           /* Pure white background */
-    --main-background-color: #f8f9fa;      /* Very light gray for structure */
+    --main-background-color: #f8f9faf6;      /* Very light gray for structure */
     --main-background-color2: #f0f0f0;     /* Soft gray for subtle blocks */
     --main-background-color3: #ffffff;     /* Keeping it clean */
     --main-background-color4: rgba(0, 0, 0, 0.03); /* Extremely faint overlay */
