@@ -168,6 +168,10 @@ body {
     body {
         margin: 0 2vw;
     }
+
+    .rating {
+        visibility: hidden;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -178,6 +182,13 @@ body {
     .links {
         flex-wrap: wrap;
         justify-content: center;
+    }
+
+}
+
+@media (min-width: 1600px) {
+    .rating {
+        visibility: visible;
     }
 }
 

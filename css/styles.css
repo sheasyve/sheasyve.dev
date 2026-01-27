@@ -113,8 +113,9 @@ h3,
     text-align: left;
     min-width: 65%;
     flex: 1;
-    color: var(--primary-text-color);
+    color: var(--highlight-color2);
 }
+
 
 .rank b,
 .rating b {
@@ -123,17 +124,17 @@ h3,
 }
 
 .rating {
-    text-align: center;
     flex: 1;
-    min-width: 15%;
-    color: var(--primary-text-color);
+    min-width: 20%;
+    color: var(--highlight-color2);
     width: fit-content;
+    padding-left: 2vw;
 }
 
 .rating b,
 .rank b {
     font-weight: 800;
-    color: var(--highlight-color2);
+    color: var(--primary-text-color);
 }
 
 .section {
