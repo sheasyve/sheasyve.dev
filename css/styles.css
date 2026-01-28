@@ -116,7 +116,6 @@ h3,
     color: var(--highlight-color2);
 }
 
-
 .rank b,
 .rating b {
     margin-left: 5px;
@@ -126,11 +125,17 @@ h3,
 .rating {
     flex: 1;
     min-width: 20%;
-    color: var(--highlight-color2);
+    color: var(--highlight-color3);
     width: fit-content;
     padding-left: 2vw;
+    text-decoration-style: dashed;
+    font-size: 10px;
 }
-
+.problems{
+    color: var(--highlight-color3);
+    font-size: 13px;
+    padding-left: 1vw;
+}
 .rating b,
 .rank b {
     font-weight: 800;

@@ -18,6 +18,7 @@
     /* Highlight colors - Black & White Style */
     --highlight-color: rgb(121, 121, 121);            /* Sharp black for accents */
     --highlight-color2: rgb(122, 116, 116);            /* Dark gray accent */
+    --highlight-color3: rgba(0, 0, 0, 0.712);    
     --button-hover-color: #444444;         /* Softening the black on hover */
 
     /* Link colors */
