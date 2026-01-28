@@ -134,7 +134,7 @@ h3,
 .problems{
     color: var(--highlight-color3);
     font-size: 13px;
-    padding-left: 1vw;
+    padding-left: .25vw;
 }
 .rating b,
 .rank b {
