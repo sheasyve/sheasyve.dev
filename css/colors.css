@@ -47,7 +47,7 @@
 
     /* Section background colors */
     --section-color1: #ffffff;             /* Keep sections clean and white */
-    --section-color2: #fafafa;             /* Very slight variance */
+    --section-color2: #fcfcfcb6;             /* Very slight variance */
 
     /* Rank and rating colors */
     --rank-color: #000000;                 /* Black badges */

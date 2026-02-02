@@ -21,7 +21,7 @@ h3,
     background: linear-gradient(135deg, var(--h3-background-color2), var(--h3-background-color));
     backdrop-filter: blur(10px);
     border-radius: 5px;
-    margin-left: auto;
+    margin-left: .5vw;
     margin-right: auto;
     padding: 5px;
 }
