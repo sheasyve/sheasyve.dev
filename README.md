@@ -1,34 +1,27 @@
-# <a href="https://sheasyve.dev">Shea Syverson Developer Website </a>
-This is my developer portfolio website which showcases my accomplishments, projects, skills and interests.
-It contains links to all of my online presence as well as detailed project writeups and demonstrations.
+# [Shea Syverson's Developer Portfolio](https://sheasyve.dev)
 
-## Technical Breakdown  
+Welcome to my developer portfolio! This site showcases my projects, skills, and journey as a developer. Recently rebuilt from the ground up using **React**, it features detailed project write-ups, interactive demonstrations, and links to my professional online presence.
 
-I created the website using raw HTML, CSS, and JavaScript. The design is fully custom, with no external resources used for layout or styling.  
+## Technical Breakdown
 
-- CSS styling is applied in a modular manner to create consistency across webpages.  
-- The design is adjusted for both mobile and desktop environments.  
-- Modern CSS techniques such as shadows, opacity gradients, and bezels are used to create a visually enticing look.  
-- JavaScript is currently used for:  
-  - Dynamic content loading.  
-  - A playful button interaction.  
-  - Future plans for more dynamic content.  
-- The project is organized into multiple files and folders to:  
-  - Separate sections on the homepage.  
-  - Structure project content for maintainability and usability.  
+This project was completely engineered using **React**, transitioning from a vanilla web setup to a modern, component-driven architecture. The design is 100% custom, built without the use of external UI component libraries or templates.
 
-## Experience Gained  
+* **Core Framework:** React (using functional components and hooks) for a responsive, snappy user experience.
+* **Custom Styling:** Modular CSS tailored for a seamless responsive design across mobile and desktop environments. I utilized modern CSS techniques—such as custom shadows, opacity gradients, and bezels—to create a visually enticing and polished UI.
+* **Component Architecture:** The project is organized into logical, reusable components (separating out homepage sections, project cards, etc.), making the codebase scalable and highly maintainable.
+* **Interactivity & State:** Leveraged React's state management to handle dynamic content loading and playful user interactions seamlessly.
 
-Building this website deepened my understanding of front-end development, including structuring maintainable HTML, writing modular CSS, and managing JavaScript for dynamic content.  
+## Experience Gained
 
-- Improved skills in responsive design to ensure the site functions well on different devices.  
-- Gained experience in organizing a project for long-term maintainability by:  
-  - Structuring files and folders logically.  
-  - Making future updates easier and allowing for scalability.  
-- Learned how to deploy a static website using GitHub Pages, including:  
-  - Version control management.  
-  - Efficient asset handling for faster loading times.  
-- Plans for future improvements include:  
-  - Expanding JavaScript-based interactivity.  
-  - Enhancing accessibility.  
-  - Potentially incorporating backend features for additional functionality.  
+Rebuilding this portfolio in React significantly deepened my understanding of modern front-end development, specifically in shifting to a component-based mindset.
+
+* **React Fundamentals:** Solidified my practical knowledge of JSX, state management, props, and component lifecycles.
+* **Scalable Code Structuring:** Gained experience in organizing a modern web app for long-term maintainability by abstracting UI elements into reusable pieces and keeping a clean file directory.
+* **Advanced Styling:** Improved my ability to modularize CSS within a JavaScript framework, ensuring consistent design without style leakage.
+* **Build & Deployment:** Handled the build process and deployed the optimized, static React application via GitHub Pages, including managing version control and efficient asset bundling.
+
+## Future Roadmap
+
+* Expanding JavaScript/React-based interactivity and smooth animations.
+* Auditing and enhancing site-wide accessibility (a11y) standards.
+* Potentially incorporating backend features or a headless CMS for streamlined content updates.
