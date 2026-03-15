@@ -1,20 +1,19 @@
 <!DOCTYPE html>
-<!--Shea Syverson-->
 <html lang="en">
 
 <head>
     <link href="css/header.css" rel="stylesheet" />
-    <script src="js/common_head.js"></script>
+    <script src="js/common.js"></script>
     <title>Shea Syverson Developer Website</title>
     <link href="css/styles.css" rel="stylesheet" />
 </head>
 
 <body>
     <div class="body">
-        <script src="js/header.js"></script>
-        <script src="js/load_sections.js" defer></script>
+        <div id="header"></div>
+        
         <div class="section">
-            <div id="projects"></div>
+            <div id="projects"></div> 
         </div>
         <div class="section">
             <div id="contests"></div>
@@ -27,21 +26,33 @@
             </div>
             <div class="section">
                 <div class="list">
-                    <div id="tools"> </div>
+                    <div id="tools"></div>
                 </div>
             </div>
             <div class="section">
-                <div id="software"> </div>
+                <div id="software"></div>
             </div>
             <div class="section">
-                <div id="interests"> </div>
+                <div id="interests"></div>
             </div>
         </div>
     </div>
+    
     <div class="button">
-        <button id="theButton"><span class="italic">Thanks.</span></button>
+        <div id="button-root"></div>
     </div>
-    <script src="js/button.js"> defer</script>
-</body>
 
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel" src="js/header.js"></script>
+    <script type="text/babel" src="js/home_page/contests.js"></script>
+    <script type="text/babel" src="js/home_page/interests.js"></script>
+    <script type="text/babel" src="js/home_page/languages.js"></script>
+    <script type="text/babel" src="js/home_page/projects.js"></script>
+    <script type="text/babel" src="js/home_page/software.js"></script>
+    <script type="text/babel" src="js/home_page/tools.js"></script>
+    <script type="text/babel" src="js/components/button.js"></script>
+</body>
 </html>

@@ -12,6 +12,7 @@
     /* Text colors - High Contrast */
     --primary-text-color: #363636;         
     --title-color:  #333333;      /* Near black for readability */
+    --title-color3:  #ffffff;  
     --secondary-text-color: #666666;       /* Medium gray for meta-data */
     --tertiary-text-color: #2c2c2c;         /* Light gray for disabled/minor text */
 
@@ -40,7 +41,7 @@
 
 
     /* Header background colors */
-    --h3-background-color: #c9c8c8;        /* Light gray bar */
+    --h3-background-color: #4d4d4da4;        /* Light gray bar */
     --h3-background-color2: #ffffff;       /* Solid light gray */
     --h3-background-color3: #ffffff;       /* Pure white */
     --h3-background-color4: #f9f9f9;       /* Off-white */

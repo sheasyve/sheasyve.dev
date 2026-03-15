@@ -17,17 +17,18 @@ h3,
 .info h3 {
     border-radius: 5px;
     overflow: hidden;
-    color: var(--title-color);
-    background: linear-gradient(135deg, var(--h3-background-color2), var(--h3-background-color));
+    color: var(--title-color3);
+    background: linear-gradient(135deg, var(--h3-background-color), var(--h3-background-color2));
     backdrop-filter: blur(10px);
     border-radius: 5px;
-    margin-left: .5vw;
     margin-right: auto;
     padding: 5px;
+    padding-left: .5vw;
 }
 
 .info h3 {
     font-size: 1.1em;
+
 }
 
 .info h4 {
