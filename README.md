@@ -15,7 +15,7 @@ This project was completely engineered using **React**, transitioning from a van
 
 Rebuilding this portfolio in React significantly deepened my understanding of modern front-end development, specifically in shifting to a component-based mindset.
 
-* **React Fundamentals:** Solidified my practical knowledge of JSX, state management, props, and component lifecycles.
+* **React Fundamentals:** Solidified my practical knowledge of JSX.
 * **Scalable Code Structuring:** Gained experience in organizing a modern web app for long-term maintainability by abstracting UI elements into reusable pieces and keeping a clean file directory.
 * **Advanced Styling:** Improved my ability to modularize CSS within a JavaScript framework, ensuring consistent design without style leakage.
 * **Build & Deployment:** Handled the build process and deployed the optimized, static React application via GitHub Pages, including managing version control and efficient asset bundling.
