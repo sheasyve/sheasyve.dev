@@ -5,6 +5,7 @@ function LanguagesSection() {
         { icon: <i className="devicon-cplusplus-plain"></i>, name: " C++" },
         { icon: <img src="media/cuda.png" alt="CUDA" style={{ width: "15px" }} />, name: " CUDA" },
         { icon: <i className="devicon-javascript-plain"></i>, name: " JavaScript" },
+        { icon: <i className="devicon-react-plain"></i>, name: " React" },
         { icon: <i className="devicon-postgresql-plain"></i>, name: " SQL" },
         { icon: <i className="devicon-java-plain"></i>, name: " Java" },
         { icon: <i className="devicon-html5-plain"></i>, name: " HTML" },
