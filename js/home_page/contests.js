@@ -71,8 +71,3 @@ function ContestsSection() {
         </>
     );
 }
-const contestsDiv = document.getElementById('contests');
-if (contestsDiv) {
-    const contestsRoot = ReactDOM.createRoot(contestsDiv);
-    contestsRoot.render(<ContestsSection />);
-}

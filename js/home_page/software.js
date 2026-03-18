@@ -24,9 +24,3 @@ function SoftwareSection() {
         </div>
     );
 }
-
-const softwareDiv = document.getElementById('software');
-if (softwareDiv) {
-    const softwareRoot = ReactDOM.createRoot(softwareDiv);
-    softwareRoot.render(<SoftwareSection />);
-}

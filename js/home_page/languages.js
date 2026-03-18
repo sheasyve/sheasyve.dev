@@ -27,9 +27,3 @@ function LanguagesSection() {
         </div>
     );
 }
-
-const languagesDiv = document.getElementById('languages');
-if (languagesDiv) {
-    const languagesRoot = ReactDOM.createRoot(languagesDiv);
-    languagesRoot.render(<LanguagesSection />);
-}

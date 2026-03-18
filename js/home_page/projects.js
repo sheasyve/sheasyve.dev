@@ -23,9 +23,3 @@ function ProjectsSection() {
         </>
     );
 }
-
-const projectsDiv = document.getElementById('projects');
-if (projectsDiv) {
-    const projectsRoot = ReactDOM.createRoot(projectsDiv);
-    projectsRoot.render(<ProjectsSection />);
-}

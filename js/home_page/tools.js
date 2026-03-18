@@ -26,9 +26,3 @@ function ToolsSection() {
         </div>
     );
 }
-
-const toolsDiv = document.getElementById('tools');
-if (toolsDiv) {
-    const toolsRoot = ReactDOM.createRoot(toolsDiv);
-    toolsRoot.render(<ToolsSection />);
-}
