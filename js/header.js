@@ -50,8 +50,18 @@ function Header() {
     );
 }
 
-const headerDiv = document.getElementById('header');
-if (headerDiv) {
-    const headerRoot = ReactDOM.createRoot(headerDiv);
-    headerRoot.render(<Header />);
+const renderHeader = () => {
+    const headerDiv = document.getElementById('header');
+    if (headerDiv) {
+        const headerRoot = ReactDOM.createRoot(headerDiv);
+        headerRoot.render(<Header />);
+    } else {
+        console.warn("Header div not found, retrying...");
+    }
+};
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', renderHeader);
+} else {
+    renderHeader();
 }

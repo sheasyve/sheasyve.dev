@@ -23,9 +23,3 @@ function InterestsSection() {
         </div>
     );
 }
-
-const interestsDiv = document.getElementById('interests');
-if (interestsDiv) {
-    const interestsRoot = ReactDOM.createRoot(interestsDiv);
-    interestsRoot.render(<InterestsSection />);
-}
