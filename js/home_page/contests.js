@@ -30,7 +30,6 @@ function ContestsSection() {
         }
     ];
 
-    // 2. Return the JSX
     return (
         <>
             <h3>Contests</h3>
