@@ -1,0 +1,61 @@
+/* Root variables for a Clean Monochrome Modern Style */
+:root {
+    /* Background colors - Mostly White/Light */
+    --background-color: #ffffff;           /* Pure white background */
+    --main-background-color: #c5c5c5f6;      /* Very light gray for structure */
+    --main-background-color2: #f0f0f0;     /* Soft gray for subtle blocks */
+    --main-background-color3: #ffffff;     /* Keeping it clean */
+    --main-background-color4: rgba(0, 0, 0, 0.03); /* Extremely faint overlay */
+    --overlay-background-color: rgba(255, 255, 255, 0.8); /* Frosted glass effect */
+    --overlay-background-color2: rgba(0, 0, 0, 0.05);    /* Subtle dark tint */
+    --main-text-color: color: rgb(66, 66, 66);
+    /* Text colors - High Contrast */
+    --primary-text-color: #363636;         
+    --title-color:  #333333;      /* Near black for readability */
+    --title-color3:  #ffffff;  
+    --secondary-text-color: #666666;       /* Medium gray for meta-data */
+    --tertiary-text-color: #2c2c2c;         /* Light gray for disabled/minor text */
+
+    /* Highlight colors - Black & White Style */
+    --highlight-color: rgb(121, 121, 121);            /* Sharp black for accents */
+    --highlight-color2: rgb(122, 116, 116);            /* Dark gray accent */
+    --highlight-color3: rgba(0, 0, 0, 0.712);    
+    --button-hover-color: #444444;         /* Softening the black on hover */
+
+    /* Link colors */
+    --link-color: #3a3a3a;                 /* Bold black links */
+    --link-hover-color: #666666;           /* Gray hover state */
+
+    /* Shadow colors - Softer for white backgrounds */
+    --box-shadow-color: rgba(0, 0, 0, 0.281); /* Much lighter shadow for depth */
+
+    /* Gradient colors for titles - Subtle Grays */
+    --title-gradient-start: #ffffff;     /* Black */
+    --title-gradient-end:   #ffffff;    /* Dark gray */
+    --title-gradient-start2: #333333;      
+    --title-gradient-end2: #666666;        
+
+    /* Gradient colors for links */
+    --link-gradient-start:#ffffff;
+    --link-gradient-end: #cecdcdcc; 
+
+
+    /* Header background colors */
+    --h3-background-color: #4d4d4da4;
+    --h3-background-color2: #d3d3d3;
+    --h3-background-color3: #ffffff;
+    --h3-background-color4: #f9f9f9;      /* Off-white */
+
+    /* Section background colors */
+    --section-color1: #ffffff;             /* Keep sections clean and white */
+    --section-color2: #fcfcfcb6;             /* Very slight variance */
+
+    /* Rank and rating colors */
+    --rank-color: #000000;                 /* Black badges */
+    --rating-color: #333333;               /* Dark gray ratings */
+
+    /* Mobile underline colors - Minimalist */
+    --mobile-underline-color: rgba(0, 0, 0, 0.267); 
+    --mobile-underline-color2: rgba(0, 0, 0, 0.05);
+    --mobile-underline-color3: rgba(0, 0, 0, 0.02);
+}
