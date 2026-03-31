@@ -8,7 +8,7 @@
     --main-background-color4: rgba(0, 0, 0, 0.03); /* Extremely faint overlay */
     --overlay-background-color: rgba(255, 255, 255, 0.8); /* Frosted glass effect */
     --overlay-background-color2: rgba(0, 0, 0, 0.05);    /* Subtle dark tint */
-
+    --main-text-color: color: rgb(66, 66, 66);
     /* Text colors - High Contrast */
     --primary-text-color: #363636;         
     --title-color:  #333333;      /* Near black for readability */
@@ -41,10 +41,10 @@
 
 
     /* Header background colors */
-    --h3-background-color: #4d4d4da4;        /* Light gray bar */
-    --h3-background-color2: #ffffff;       /* Solid light gray */
-    --h3-background-color3: #ffffff;       /* Pure white */
-    --h3-background-color4: #f9f9f9;       /* Off-white */
+    --h3-background-color: #4d4d4da4;
+    --h3-background-color2: #d3d3d3;
+    --h3-background-color3: #ffffff;
+    --h3-background-color4: #f9f9f9;      /* Off-white */
 
     /* Section background colors */
     --section-color1: #ffffff;             /* Keep sections clean and white */

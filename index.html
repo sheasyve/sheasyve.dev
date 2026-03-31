@@ -1,64 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <link href="css/header.css" rel="stylesheet" />
-    <script src="js/common.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/devicon@2.14.0/devicon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/colors.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/project.css">
     <title>Shea Syverson Developer Website</title>
-    <link href="css/styles.css" rel="stylesheet" />
 </head>
-
 <body>
-    <div class="body">
-        <div id="header"></div>
-        <div class="section">
-            <div id="projects"></div> 
-        </div>
-        <div class="section">
-            <div id="contests"></div>
-        </div>
-        <div class="info">
-            <div class="section">
-                <div class="list">
-                    <div id="languages"></div>
-                </div>
-            </div>
-            <div class="section">
-                <div class="list">
-                    <div id="tools"></div>
-                </div>
-            </div>
-            <div class="section">
-                <div class="list">
-                <div id="software"></div>
-                </div>
-            </div>
-            <div class="section">
-                <div class="list">
-                <div id="interests"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div class="button">
-        <div id="button-root"></div>
-    </div>
-
-    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-
-    <script type="text/babel" src="js/header.js"></script>
-    <script type="text/babel" src="js/home_page/projects.js"></script>
-    <script type="text/babel" src="js/home_page/contests.js"></script>
-    <script type="text/babel" src="js/home_page/interests.js"></script>
-    <script type="text/babel" src="js/home_page/languages.js"></script>
-    <script type="text/babel" src="js/home_page/software.js"></script>
-    <script type="text/babel" src="js/home_page/tools.js"></script>
-    <script type="text/babel" src="js/components/button.js"></script>
-
-    <script type="text/babel" src="js/mount.js"></script>
-
+    <div id="root"></div>
+    <script src="./dist/bundle.js"></script>
 </body>
 </html>

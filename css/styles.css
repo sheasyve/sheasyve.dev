@@ -1,63 +1,200 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
-
+/* =========================================
+   Imports
+   ========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@400;700&family=Poppins:wght@400;700&family=Raleway:wght@400;700&display=swap');
 @import url('colors.css');
 
-/* Global Styles */
-
-h2,
-p {
+/* =========================================
+   Global Styles & Typography
+   ========================================= */
+h2, p {
     color: var(--primary-text-color);
     text-align: center;
-}
-
-h3,
-.info h3 {
-    border-radius: 5px;
-    overflow: hidden;
-    color: var(--title-color3);
-    background: linear-gradient(135deg, var(--h3-background-color), var(--h3-background-color2));
-    backdrop-filter: blur(10px);
-    border-radius: 5px;
-    margin-right: auto;
-    padding: 5px;
-    padding-left: .5vw;
-}
-
-.info h3 {
-    font-size: 1.1em;
-
-}
-
-.info h4 {
-    color: var(--primary-text-color);
-    backdrop-filter: blur(10px);
-    margin-left: 1vw;
-    margin-right: auto;
-    padding: 5px;
 }
 
 .italic {
     font-style: italic;
 }
 
+.highlight {
+    color: var(--highlight-color);
+    font-weight: bold;
+}
+
 .softwareattributes {
     font-style: italic;
+    color: rgb(160, 160, 160);
+}
+
+.proficiency {
+    font-weight: bold;
+    font-size: 0.9em;
     color: var(--highlight-color);
 }
 
+/* =========================================
+   Headings
+   ========================================= */
+h3, .info h3 {
+    border-radius: 5px;
+    overflow: hidden;
+    color: var(--primary-text-color);
+    background: linear-gradient(135deg, var(--h3-background-color), var(--h3-background-color2));
+    backdrop-filter: blur(10px);
+    margin-right: auto;
+    margin-bottom: 1.0vw;
+    padding: 5px 5px 5px 0.5vw;
+    text-decoration: none;
+}
+
+.info h3 {
+    font-size: 1.1em;
+}
+
+.info h4 {
+    color: var(--main-text-color);
+    backdrop-filter: blur(10px);
+    margin-left: 1vw;
+    margin-right: auto;
+    padding: 5px;
+}
+
+.section h1, .section a {
+    color: var(--primary-text-color);
+    text-decoration: none;
+}
+
+.section h1 {
+    color: var(--tertiary-text-color);
+    font-size: 1.3em;
+    text-decoration: underline;
+    text-decoration-color: rgba(180, 180, 180, 0.616);
+    margin: 0px;
+    background: linear-gradient(-10deg, var(--main-background-color4), var(--main-background-color3));
+}
+
+.section h1 img {
+    padding-left: 10px;
+    opacity: 0.3;
+    width: clamp(25px, 25px, 25px);
+    height: auto;
+}
+
+/* =========================================
+   Containers & Layout
+   ========================================= */
+.section {
+    background: linear-gradient(135deg, var(--section-color1), var(--section-color2));
+    backdrop-filter: blur(10px);
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px var(--box-shadow-color);
+    padding-bottom: 0.2vw;
+    margin-top: 15px;
+}
+
+.info {
+    background: linear-gradient(135deg, rgba(167, 61, 61, 0.2), rgba(65, 20, 20, 0));
+    backdrop-filter: blur(10px);
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+}
+
+.info h1 {
+    background: linear-gradient(135deg, rgb(167, 61, 61), rgba(65, 20, 20, 0));
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+}
+
+.info a {
+    color: rgb(255, 255, 255);
+}
+
+.info video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.list {
+    background: linear-gradient(135deg, var(--section-color1), var(--section-color2));
+    backdrop-filter: blur(10px);
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px var(--box-shadow-color);
+}
+
+/* =========================================
+   Lists
+   ========================================= */
+ol, ul {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+h1 img{
+    width: clamp(20px, 25px, 30px);
+    height: auto;
+    opacity: 0.3;
+}
+
+ol {
+    color: var(--highlight-color);
+}
+
+button{
+    margin-top: 1vw;
+}
+
+.numlist, .bulletlist {
+    padding-top: 0;
+padding-bottom: .5vw;   
+    max-width: 83%;
+}
+.numlist li::marker, .bulletlist li::marker {
+    color: var(--highlight-color);
+}
+
+.list li, .numlist li {
+    margin: 5px 0;
+    color: var(--primary-text-color);
+}
+
+.info ol li, .info ul li {
+    font-size: 0.9em;
+    color: var(--primary-text-color);
+    margin-bottom: 0.5vw;
+    margin-left: 0;
+}
+
 .languages .numlist {
-    text-align: left;
-    column-count: 4;
-    column-gap: ex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Creates exactly 4 equal columns */
+    gap: 1ex; /* This replaces column-gap */
+    margin-left: 0;
+
+    list-style-position: inside;
     max-width: 90%;
+}
+
+/* You can also simplify your mobile media query now! */
+@media (max-width: 700px) {
+    .languages .numlist {
+        grid-template-columns: repeat(3, 1fr); /* Changes to 3 columns on tablet */
+    }
+}
+
+@media (max-width: 500px) {
+    .languages .numlist {
+        grid-template-columns: repeat(2, 1fr); /* Changes to 2 columns on phone */
+    }
 }
 
 .languages .numlist li {
     margin-bottom: 1vw;
-    margin-left: .5vw;
+    margin-left: 0.5vw;
     break-inside: avoid-column;
 }
 
@@ -65,8 +202,9 @@ h3,
     margin-bottom: 0;
 }
 
-/* Contests and Projects */
-
+/* =========================================
+   Projects & Contests
+   ========================================= */
 .projects {
     width: clamp(200px, 95%, 800px);
 }
@@ -76,14 +214,28 @@ h3,
     flex-direction: column;
 }
 
-.contest a,
-.contest h4 {
+.projects, .contests, .assignments {
+    color: var(--main-text-color);
+    text-decoration: none;
+}
+
+.projects h4, .assignments h4, .contests h4 {
+    margin-top: 0vw;
+    margin-bottom: 1vw;
+    margin-left: 1vw;
+    padding-left: 15px;
+    max-width: 95%;
+    font-size: 1em;
+    color: var(--main-text-color);
+    text-decoration: none;
+}
+
+.contest a, .contest h4 {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: clamp(200px, 100%, 900px);
     text-decoration: none;
-    color: var(--primary-text-color);
     box-sizing: border-box;
     position: relative;
 }
@@ -94,20 +246,20 @@ h3,
     max-width: 95%;
     padding-right: 3vw;
     text-align: left;
+
 }
 
 .project_info {
     color: var(--highlight-color);
 }
 
-.rank,
-.rating {
+.rank, .rating {
     line-height: normal;
     align-self: center;
     height: auto;
     display: flex;
     align-items: center;
-    padding-right: vw;
+    padding-right: 1vw;
 }
 
 .rank {
@@ -115,12 +267,6 @@ h3,
     min-width: 65%;
     flex: 1;
     color: var(--highlight-color2);
-}
-
-.rank b,
-.rating b {
-    margin-left: 5px;
-    margin-right: 5px;
 }
 
 .rating {
@@ -132,230 +278,98 @@ h3,
     text-decoration-style: dashed;
     font-size: 10px;
 }
-.problems{
-    color: var(--highlight-color3);
-    font-size: 13px;
-    padding-left: .25vw;
-}
-.rating b,
-.rank b {
+
+.rank b, .rating b {
+    margin-left: 5px;
+    margin-right: 5px;
     font-weight: 800;
     color: var(--primary-text-color);
 }
 
-.section {
-    background: linear-gradient(135deg, var(--section-color1), var(--section-color2));
-    backdrop-filter: blur(10px);
-    border-radius: 5px;
-    box-shadow: 0px 4px 6px var(--box-shadow-color);
-    padding-bottom: .2vw;
+.problems {
+    color: var(--highlight-color3);
+    font-size: 13px;
+    padding-left: 0.25vw;
 }
 
-.projects,
-.contests {
-    color: var(--primary-text-color);
-    text-decoration: none;
-}
-
-.contest:hover {
-    text-decoration: underline;
-}
-
-.projects h4,
-.assignments h4,
-.contests h4 {
-    margin-top: 0vw;
-    padding-left: 15px;
-    max-width: 95%;
-
-}
-
-.projects h4,
-.assignments h4,
-.contests h4 {
-    margin-bottom: 1vw;
-    margin-left: 1vw;
-    margin-top: 0vw;
-    font-size: 1em;
-}
-
-
-.projects h4,
-.contests h4 {
-    color: var(--primary-text-color);
-    text-decoration: none;
-}
-
-/* Lists and Highlighting */
-.numlist li::marker {
-    color: var(--highlight-color);
-}
-
-.bulletlist li::marker {
-    color: var(--highlight-color);
-}
-
-.numlist,
-.bulletlist {
-    font-size: large;
-    font-weight: bold;
-    padding-top: 0;
-    max-width: 83%;
-}
-
-ol,
-ul {
-    margin-block-start: 0;
-    margin-block-end: 1vw;
-}
-
-.list li {
-    color: var(--primary-text-color);
-}
-
-.assignments {
-    text-decoration: none;
-    color: var(--primary-text-color);
-}
-
-.assignments a {
-    color: var(--primary-text-color);
-    text-decoration: none;
-}
-
-.project-link {
+/* Hover States & Links */
+.assignments a, .project-link {
     text-decoration: none;
     color: inherit;
 }
 
-.assignments a:hover,
-.project-link:hover,
-.titles a:hover {
+.contest:hover, .assignments a:hover, .project-link:hover, .titles a:hover, .info a:hover {
     text-decoration: underline;
     text-decoration-color: var(--highlight-color);
 }
 
-.highlight {
-    color: var(--highlight-color);
-    font-weight: bold;
+.section h1:hover, .section a:hover {
+    text-decoration: underline;
+    color: var(--link-hover-color);
+    text-decoration-color: var(--mobile-underline-color);
 }
 
-.proficiency {
-    font-weight: bold;
-    font-size: 0.9em;
-    color: var(--highlight-color);
-}
+/* =========================================
+   Media Queries
+   ========================================= */
 
-ol {
-    color: var(--highlight-color);
-}
-
-.info ol li,
-.info ul li {
-    font-size: .9em;
-    color: var(--primary-text-color);
-    margin-bottom: .5vw;
-    margin-left: 0;
-}
-
-.section h3,
-.info h3 {
-    margin-bottom: 1.0vw;
-}
-
+/* Desktop Extra Large */
 @media (min-width: 1440px) {
-
-    .rank {
-        min-width: 35%;
-    }
-
-    .contest_info {
-        min-width: 55%;
-    }
-
+    .rank { min-width: 35%; }
+    .contest_info { min-width: 55%; }
 }
 
-@media (max-width: 700px) {
-
-    .section h3,
-    .info h3 {
-        margin-bottom: 3vw;
-    }
-
-    .contest_info {
-        min-width: 50%;
-
-    }
-
-    .contest .project_info {
+/* Tablet / Desktop Overrides */
+@media (min-width: 768px) {
+    .section a:hover {
         text-decoration: underline;
         text-decoration-color: var(--mobile-underline-color);
     }
+}
 
+/* Mobile Devices */
+@media (max-width: 700px) {
+    .section { padding-bottom: 1vw; }
+    
+    .section h3, .info h3 { 
+        margin-bottom: 2vw; 
+    }
+    
+    .contest_info { min-width: 50%; }
+    
+    .contest .project_info, .highlight, .section a:hover, .homepage a {
+        text-decoration: underline;
+        text-decoration-color: var(--mobile-underline-color);
+    }
+    
     .rank {
         margin-left: 10px;
         min-width: 40%;
         display: flex;
         flex-wrap: wrap;
-    }
-
-    .highlight {
-        text-decoration: underline;
-        text-decoration-color: var(--mobile-underline-color);
-    }
-
-    .rank {
         text-align: left;
         flex: 1;
         width: auto;
         overflow-wrap: break-word;
     }
-
-    .languages .numlist {
-        column-count: 3;
-        column-gap: 1vw;
-
-    }
-
-    .languages .numlist li {
-        padding: 0px;
-        font-size: .9em;
-    }
-
-    .projects h4,
-    .assignments h4,
-    .contests h4 {
+    
+    .projects h4, .assignments h4, .contests h4 {
         margin-top: 0vw;
-        font-size: .9em;
+        font-size: 0.9em;
         margin-left: 3vw;
         max-width: 90%;
     }
-
-    .section .numlist {
-        font-size: .97em;
-        margin-left: 0px;
-
-    }
-
-    .section .bulletlist {
-        font-size: .97em;
+    
+    .section .numlist, .section .bulletlist {
+        font-size: 0.97em;
         margin-left: 0px;
     }
-
-    .section {
-        padding-bottom: 1vw;
-    }
-    .section h3,
-    .info h3 {
-        margin-bottom: 2vw;
-    }
-
 }
 
+/* Small Mobile Devices */
 @media (max-width: 500px) {
     .languages .numlist {
         column-count: 2;
-        column-gap: ex;
-
+        column-gap: 1ex;
     }
 }
