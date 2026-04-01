@@ -1,7 +1,6 @@
 import React from 'react';
 
 function InterestsSection() {
-    // 1. A simple array of strings
     const myInterests = [
         "Data Structures & Algorithms",
         "Computer Graphics",

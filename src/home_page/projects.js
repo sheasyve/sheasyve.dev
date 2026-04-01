@@ -1,6 +1,6 @@
 // src/home_page/projects.js
 import React from 'react';
-import { Link } from 'react-router-dom'; // 1. Import Link
+import { Link } from 'react-router-dom';
 
 function ProjectsSection() {
     const myProjects = [
@@ -13,9 +13,8 @@ function ProjectsSection() {
     return (
         <>
             <h3>Projects</h3>
-            {myProjects.map((project, index) => (
-                <div className="projects" key={index}>
-                    {/* 3. Change <a> to <Link> and href to to */}
+            {myProjects.map((project, i) => (
+                <div className="projects" key={i}>
                     <Link to={project.url} className="project-link">
                         <h4>
                             <span className="assign_links">{project.name}</span>

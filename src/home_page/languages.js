@@ -18,8 +18,8 @@ function LanguagesSection() {
         <div className="languages">
             <h3>Programming Languages</h3>
             <ol className="numlist">
-                {languages.map((lang, index) => (
-                    <li key={index}>
+                {languages.map((lang, i) => (
+                    <li key={i}>
                         {lang.icon}
                         {lang.name}
                     </li>

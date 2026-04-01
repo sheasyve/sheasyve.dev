@@ -83,6 +83,7 @@ h3, .info h3 {
 /* =========================================
    Containers & Layout
    ========================================= */
+
 .section {
     background: linear-gradient(135deg, var(--section-color1), var(--section-color2));
     backdrop-filter: blur(10px);
@@ -93,7 +94,8 @@ h3, .info h3 {
 }
 
 .info {
-    background: linear-gradient(135deg, rgba(167, 61, 61, 0.2), rgba(65, 20, 20, 0));
+    margin-top: 1vw;
+    background: linear-gradient(135deg, rgba(146, 146, 146, 0.2), rgba(63, 63, 63, 0));
     backdrop-filter: blur(10px);
     border-radius: 5px;
     margin-left: auto;
@@ -102,8 +104,9 @@ h3, .info h3 {
 }
 
 .info h1 {
-    background: linear-gradient(135deg, rgb(167, 61, 61), rgba(65, 20, 20, 0));
+    background: rgba(68, 68, 68, 0.349);
     padding: 5px;
+    text-align: center;
     margin-left: auto;
     margin-right: auto;
     border-radius: 5px;
@@ -118,7 +121,10 @@ h3, .info h3 {
     height: auto;
     object-fit: cover;
 }
-
+.info h3{
+    color: rgb(29, 29, 29);
+    background: linear-gradient(135deg, var(--h3-background-color3),rgb(207, 207, 207));
+}
 .list {
     background: linear-gradient(135deg, var(--section-color1), var(--section-color2));
     backdrop-filter: blur(10px);
@@ -129,6 +135,7 @@ h3, .info h3 {
 /* =========================================
    Lists
    ========================================= */
+
 ol, ul {
     margin-block-start: 0;
     margin-block-end: 0;
@@ -171,24 +178,23 @@ padding-bottom: .5vw;
 
 .languages .numlist {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Creates exactly 4 equal columns */
-    gap: 1ex; /* This replaces column-gap */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 1ex; 
     margin-left: 0;
 
     list-style-position: inside;
     max-width: 90%;
 }
 
-/* You can also simplify your mobile media query now! */
 @media (max-width: 700px) {
     .languages .numlist {
-        grid-template-columns: repeat(3, 1fr); /* Changes to 3 columns on tablet */
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
 @media (max-width: 500px) {
     .languages .numlist {
-        grid-template-columns: repeat(2, 1fr); /* Changes to 2 columns on phone */
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -205,6 +211,7 @@ padding-bottom: .5vw;
 /* =========================================
    Projects & Contests
    ========================================= */
+
 .projects {
     width: clamp(200px, 95%, 800px);
 }
@@ -226,6 +233,7 @@ padding-bottom: .5vw;
     padding-left: 15px;
     max-width: 95%;
     font-size: 1em;
+    font-weight: 400;
     color: var(--main-text-color);
     text-decoration: none;
 }
@@ -293,6 +301,7 @@ padding-bottom: .5vw;
 }
 
 /* Hover States & Links */
+
 .assignments a, .project-link {
     text-decoration: none;
     color: inherit;

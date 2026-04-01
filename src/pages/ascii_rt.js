@@ -69,8 +69,6 @@ function AsciiRTProject() {
                 </ul>
             </div>
 
-            <div className="Previous Attempts">
-            </div>
         </div>
     );
 }

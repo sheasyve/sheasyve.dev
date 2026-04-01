@@ -14,7 +14,6 @@ function App() {
         <Router>
             <div className="body">
                 <Header /> 
-                
                 <Routes>
                     <Route path="/" element={<HomePage />} />
                     <Route path="/index.html" element={<HomePage />} />

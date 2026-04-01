@@ -37,19 +37,14 @@ function ContestsSection() {
         <>
             <h3>Contests</h3>
             <div className="contests">
-                {myContests.map((contest, index) => {
-                    
+                {myContests.map((contest, i) => {
                     const linkElement = (
                         <a href={contest.url} target="_blank" className="contest">
                             <h4>
                                 <span className="contest_info">
                                     {contest.name}
                                     <span className="project_info">{contest.lang}</span>
-                                    
-                                  
-                                    {contest.extraInfo && (
-                                        <span className="problems"> {contest.extraInfo}</span>
-                                    )}
+                                    {contest.extraInfo && (<span className="problems"> {contest.extraInfo}</span>)}
                                 </span>
                                 <span className="rank">Highest Rank: <b>{contest.rankBold}</b> / {contest.rankTotal}</span>
                                 <span className="rating"></span>
@@ -58,7 +53,7 @@ function ContestsSection() {
                     );
 
                     return (
-                        <div className="contest" key={index}>
+                        <div className="contest" key={i}>
                             {contest.hasC3Wrapper ? (
                                 <div className="c3">
                                     {linkElement}
