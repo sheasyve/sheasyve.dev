@@ -1,6 +1,6 @@
 # [Shea Syverson's Developer Portfolio](https://sheasyve.dev)
 
-Welcome to my developer portfolio! This site showcases my projects, skills, and journey as a developer. Recently rebuilt from the ground up using **React**, it features detailed project write-ups, interactive demonstrations, and links to my professional online presence.
+Welcome to my developer portfolio! This site showcases my projects, skills, and journey as a developer. Recently rebuilt from the ground up using **React**.
 
 ## Technical Breakdown
 
