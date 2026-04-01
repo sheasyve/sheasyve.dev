@@ -1,6 +1,6 @@
 // src/app.js
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Header from './header.js';
 import HomePage from './home_page.js';
@@ -21,14 +21,10 @@ function App() {
                     <Route path="/birdflow" element={<BirdFlowProject />} />
                     <Route path="/super-ai-bros" element={<SuperAIBrosProject />} />
                     <Route path="/teeny-timer" element={<TeenyTimerProject />} />
-
                     <Route path="*" element={
                         <div className="section" style={{ textAlign: 'center', padding: '50px' }}>
                             <h1>404 - Page Not Found</h1>
-                            <p>Looks like you took a wrong turn.</p>
-                            <a href="/" style={{ color: 'var(--highlight-color)', textDecoration: 'underline' }}>
-                                Return to Home
-                            </a>
+                            <a href="/" style={{ color: 'var(--highlight-color)', textDecoration: 'underline' }}>Return to Home</a>
                         </div>
                     } />
                 </Routes>
