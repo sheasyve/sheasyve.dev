@@ -4,21 +4,21 @@ function ContestsSection() {
 
     const myContests = [
         {
-            url: "https://www.codingame.com/multiplayer/clashofcode/leaderboard",
-            name: "Clash of Code - Short Programming Contests",
-            lang: " (Python)",
-            extraInfo: null, 
-            rankBold: "384",
-            rankTotal: "719,426",
-            hasC3Wrapper: false
-        },
-        {
             url: "https://leetcode.com/u/sheasyve",
             name: "Leetcode Weekly Contests",
             lang: " (Python)",
             extraInfo: "500+ Problems Solved", 
             rankBold: "286,674",
             rankTotal: "702,163",
+            hasC3Wrapper: false
+        },
+        {
+            url: "https://www.codingame.com/multiplayer/clashofcode/leaderboard",
+            name: "Clash of Code - Short Programming Contests",
+            lang: " (Python)",
+            extraInfo: null, 
+            rankBold: "384",
+            rankTotal: "719,426",
             hasC3Wrapper: false
         },
         {
