@@ -11,6 +11,7 @@ export default {
     filename: 'bundle.js',
   },
   mode: 'production', 
+  devtool: 'source-map',
   module: {
     rules: [
       {
@@ -18,11 +19,21 @@ export default {
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
+          options: {
+            sourceMaps: true,
+            inputSourceMap: true,
+          }
         },
       },
       {
         test: /\.css$/i,
-        use: ['style-loader', 'css-loader'],
+        use: [
+          'style-loader', 
+          {
+            loader: 'css-loader',
+            options: { sourceMap: true } 
+          }
+        ],
       },
     ],
   },
@@ -34,6 +45,7 @@ export default {
     minimizer: [
       new TerserPlugin({
         terserOptions: {
+          sourceMap: true, 
           format: {
             comments: false, 
           },
