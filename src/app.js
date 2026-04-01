@@ -13,7 +13,7 @@ function App() {
     return (
         <Router>
             <div className="body">
-                <Header /> 
+                <Header />
                 <Routes>
                     <Route path="/" element={<HomePage />} />
                     <Route path="/index.html" element={<HomePage />} />
@@ -21,9 +21,20 @@ function App() {
                     <Route path="/birdflow" element={<BirdFlowProject />} />
                     <Route path="/super-ai-bros" element={<SuperAIBrosProject />} />
                     <Route path="/teeny-timer" element={<TeenyTimerProject />} />
+
+                    <Route path="*" element={
+                        <div className="section" style={{ textAlign: 'center', padding: '50px' }}>
+                            <h1>404 - Page Not Found</h1>
+                            <p>Looks like you took a wrong turn.</p>
+                            <a href="/" style={{ color: 'var(--highlight-color)', textDecoration: 'underline' }}>
+                                Return to Home
+                            </a>
+                        </div>
+                    } />
                 </Routes>
             </div>
         </Router>
+
     );
 }
 
