@@ -7,7 +7,8 @@
 /* =========================================
    Global Styles & Typography
    ========================================= */
-h2, p {
+h2,
+p {
     color: var(--primary-text-color);
     text-align: center;
 }
@@ -35,7 +36,8 @@ h2, p {
 /* =========================================
    Headings
    ========================================= */
-h3, .info h3 {
+h3,
+.info h3 {
     border-radius: 5px 5px 0 0;
     overflow: hidden;
     color: var(--primary-text-color);
@@ -58,7 +60,8 @@ h3, .info h3 {
     padding: 5px;
 }
 
-.section h1, .section a {
+.section h1,
+.section a {
     color: var(--primary-text-color);
     text-decoration: none;
 }
@@ -75,7 +78,7 @@ h3, .info h3 {
 .section h1 img {
     padding-left: 10px;
     opacity: 0.3;
-    width: clamp(25px, 25px, 25px);
+    width: 25px;
     height: auto;
 }
 
@@ -121,12 +124,12 @@ h3, .info h3 {
     object-fit: cover;
 }
 
-.info h3{
+.info h3 {
     color: rgb(29, 29, 29);
-    background: linear-gradient(135deg, var(--h3-background-color3),rgb(207, 207, 207));
+    background: linear-gradient(135deg, var(--h3-background-color3), rgb(207, 207, 207));
 }
 
-.info img{
+.info img {
     margin-left: 1vw;
 }
 
@@ -141,12 +144,13 @@ h3, .info h3 {
    Lists
    ========================================= */
 
-ol, ul {
+ol,
+ul {
     margin-block-start: 0;
     margin-block-end: 0;
 }
 
-h1 img{
+h1 img {
     width: clamp(20px, 25px, 30px);
     height: auto;
     opacity: 0.3;
@@ -156,25 +160,30 @@ ol {
     color: var(--highlight-color);
 }
 
-button{
+button {
     margin-top: 1vw;
 }
 
-.numlist, .bulletlist {
+.numlist,
+.bulletlist {
     padding-top: 0;
-padding-bottom: .5vw;   
+    padding-bottom: .5vw;
     max-width: 83%;
 }
-.numlist li::marker, .bulletlist li::marker {
+
+.numlist li::marker,
+.bulletlist li::marker {
     color: var(--highlight-color);
 }
 
-.list li, .numlist li {
+.list li,
+.numlist li {
     margin: 5px 0;
     color: var(--primary-text-color);
 }
 
-.info ol li, .info ul li {
+.info ol li,
+.info ul li {
     font-size: 0.9em;
     color: var(--primary-text-color);
     margin-bottom: 0.5vw;
@@ -183,8 +192,8 @@ padding-bottom: .5vw;
 
 .languages .numlist {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); 
-    gap: 1ex; 
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1ex;
     margin-left: 0;
 
     list-style-position: inside;
@@ -206,7 +215,7 @@ padding-bottom: .5vw;
 .languages .numlist li {
     margin-bottom: 1vw;
     margin-left: 0.5vw;
-    break-inside: avoid-column;
+    break-inside: avoid;
 }
 
 .languages .numlist li:last-child {
@@ -226,12 +235,16 @@ padding-bottom: .5vw;
     flex-direction: column;
 }
 
-.projects, .contests, .assignments {
+.projects,
+.contests,
+.assignments {
     color: var(--main-text-color);
     text-decoration: none;
 }
 
-.projects h4, .assignments h4, .contests h4 {
+.projects h4,
+.assignments h4,
+.contests h4 {
     margin-top: 0vw;
     margin-bottom: 1vw;
     margin-left: 1vw;
@@ -241,10 +254,11 @@ padding-bottom: .5vw;
     font-weight: 500;
     color: var(--main-text-color);
     text-decoration: none;
-    
+
 }
 
-.contest a, .contest h4 {
+.contest a,
+.contest h4 {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -267,7 +281,8 @@ padding-bottom: .5vw;
     color: var(--highlight-color);
 }
 
-.rank, .rating {
+.rank,
+.rating {
     line-height: normal;
     align-self: center;
     height: auto;
@@ -293,7 +308,8 @@ padding-bottom: .5vw;
     font-size: 10px;
 }
 
-.rank b, .rating b {
+.rank b,
+.rating b {
     margin-left: 5px;
     margin-right: 5px;
     font-weight: 800;
@@ -308,17 +324,23 @@ padding-bottom: .5vw;
 
 /* Hover States & Links */
 
-.assignments a, .project-link {
+.assignments a,
+.project-link {
     text-decoration: none;
     color: inherit;
 }
 
-.contest:hover, .assignments a:hover, .project-link:hover, .titles a:hover, .info a:hover {
+.contest:hover,
+.assignments a:hover,
+.project-link:hover,
+.titles a:hover,
+.info a:hover {
     text-decoration: underline;
     text-decoration-color: var(--highlight-color);
 }
 
-.section h1:hover, .section a:hover {
+.section h1:hover,
+.section a:hover {
     text-decoration: underline;
     color: var(--link-hover-color);
     text-decoration-color: var(--mobile-underline-color);
@@ -330,8 +352,13 @@ padding-bottom: .5vw;
 
 /* Desktop Extra Large */
 @media (min-width: 1440px) {
-    .rank { min-width: 35%; }
-    .contest_info { min-width: 55%; }
+    .rank {
+        min-width: 35%;
+    }
+
+    .contest_info {
+        min-width: 55%;
+    }
 }
 
 /* Tablet / Desktop Overrides */
@@ -344,20 +371,27 @@ padding-bottom: .5vw;
 
 /* Mobile Devices */
 @media (max-width: 700px) {
-    .section { padding-bottom: 1vw; }
-    
+    .section {
+        padding-bottom: 1vw;
+    }
+
     h3 {
         margin-bottom: 2vw;
         padding-left: 3vw;
     }
-    
-    .contest_info { min-width: 50%; }
-    
-    .contest .project_info, .highlight, .section a:hover, .homepage a {
+
+    .contest_info {
+        min-width: 50%;
+    }
+
+    .contest .project_info,
+    .highlight,
+    .section a:hover,
+    .homepage a {
         text-decoration: underline;
         text-decoration-color: var(--mobile-underline-color);
     }
-    
+
     .rank {
         margin-left: 10px;
         min-width: 40%;
@@ -368,15 +402,18 @@ padding-bottom: .5vw;
         width: auto;
         overflow-wrap: break-word;
     }
-    
-    .projects h4, .assignments h4, .contests h4 {
+
+    .projects h4,
+    .assignments h4,
+    .contests h4 {
         margin-top: 0vw;
         font-size: 0.9em;
         margin-left: 3vw;
         max-width: 90%;
     }
-    
-    .section .numlist, .section .bulletlist {
+
+    .section .numlist,
+    .section .bulletlist {
         font-size: 0.97em;
         margin-left: 0px;
     }

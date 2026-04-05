@@ -1,4 +1,3 @@
-/* Root variables for a Clean Monochrome Modern Style */
 :root {
     /* Background colors - Mostly White/Light */
     --background-color: #ffffff;           /* Pure white background */
@@ -38,7 +37,6 @@
     /* Gradient colors for links */
     --link-gradient-start:#ffffff;
     --link-gradient-end: #cecdcdcc; 
-
 
     /* Header background colors */
     --h3-background-color: #4d4d4da4;

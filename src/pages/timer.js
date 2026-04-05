@@ -1,5 +1,9 @@
 import React from 'react';
 
+import t1Img from '../media/projects/timer/t1.png';
+import t2Img from '../media/projects/timer/t2.png';
+import t3Img from '../media/projects/timer/t3.png';
+
 function TeenyTimerProject() {
     return (
         <div className="info">
@@ -22,9 +26,10 @@ function TeenyTimerProject() {
                     without requiring a Python environment. For Linux users, an installation script and desktop entry 
                     are included for seamless integration.
                 </h3>
-                <img src="media/projects/timer/t1.png" alt="Timer Picture 1" />
-                <img src="media/projects/timer/t2.png" alt="Timer Picture 2" />
-                <img src="media/projects/timer/t3.png" alt="Timer Picture 3" />
+                
+                <img src={t1Img} alt="Timer Picture 1" />
+                <img src={t2Img} alt="Timer Picture 2" />
+                <img src={t3Img} alt="Timer Picture 3" />
             </div>
             
             <div className="Technical Breakdown">

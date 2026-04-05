@@ -1,10 +1,11 @@
 import React from 'react';
+import cpng from '../media/cuda.png';
 
 function LanguagesSection() {
     const languages = [
         { icon: <i className="devicon-python-plain"></i>, name: " Python" },
         { icon: <i className="devicon-cplusplus-plain"></i>, name: " C++" },
-        { icon: <img src="media/cuda.png" alt="CUDA" style={{ width: "15px" }} />, name: " CUDA" },
+        { icon: <img src={cpng} alt="CUDA" style={{ width: "15px" }} />, name: " CUDA" },
         { icon: <i className="devicon-javascript-plain"></i>, name: " JavaScript" },
         { icon: <i className="devicon-react-plain"></i>, name: " React" },
         { icon: <i className="devicon-postgresql-plain"></i>, name: " SQL" },
