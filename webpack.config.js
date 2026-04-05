@@ -17,7 +17,7 @@ export default (env, argv) => {
       path: path.resolve(__dirname, 'dist'),
       filename: isProduction ? '[name].[contenthash].js' : '[name].bundle.js',
       clean: true,
-      publicPath: 'auto',
+      publicPath: isProduction ? '/sheasyve.dev/' : '/',
     },
     mode: isProduction ? 'production' : 'development',
     devtool: isProduction ? 'source-map' : 'eval-source-map',
