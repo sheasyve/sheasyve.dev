@@ -1,4 +1,7 @@
 import React from 'react';
+import carAndTeapotVid from '../media/projects/ascii_rt/car_and_teapot.webm';
+import sixtyFpsCarVid from '../media/projects/ascii_rt/60fps_car.mp4';
+import carAnimationVid from '../media/projects/ascii_rt/car_animation.webm';
 
 function AsciiRTProject() {
     return (
@@ -18,7 +21,7 @@ function AsciiRTProject() {
                     Extensive optimizations resulted in a 900x speedup over the initial multi-core version, enabling real-time 60 FPS animations.
                 </h3>
                 <video autoPlay loop muted>
-                    <source src="media/projects/ascii_rt/car_and_teapot.webm" type="video/webm" />
+                    <source src={carAndTeapotVid} type="video/webm" />
                     Your browser does not support the video tag.
                 </video>
                 <h3>
@@ -26,7 +29,7 @@ function AsciiRTProject() {
                     The model consists of 18.3 thousand triangles and 11.2 thousand vertices.
                 </h3>
                 <video autoPlay loop muted>
-                    <source src="media/projects/ascii_rt/60fps Car.webm" type="video/webm" />
+                    <source src={sixtyFpsCarVid} type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
                 <h3>
@@ -43,7 +46,7 @@ function AsciiRTProject() {
                     The engine simulates realistic lighting using reflections, shadows, and perspective projection, with four light sources.
                 </h3>
                 <video autoPlay loop muted>
-                    <source src="media/projects/ascii_rt/car_animation.webm" type="video/webm" />
+                    <source src={carAnimationVid} type="video/webm" />
                     Your browser does not support the video tag.
                 </video>
                 <h3>

@@ -1,5 +1,13 @@
 import React from 'react';
 
+import frontCarVid from '../media/projects/birdflow/Front car.mp4';
+import sideCarVid from '../media/projects/birdflow/Side Car.mp4';
+import backCarVid from '../media/projects/birdflow/Back car.mp4';
+import sphereVid from '../media/projects/birdflow/Sphere.mp4';
+import blockVid from '../media/projects/birdflow/block.mp4';
+import initialVid from '../media/projects/birdflow/Initial.mp4';
+import movingGridVid from '../media/projects/birdflow/Moving grid.mp4';
+
 function BirdFlowProject() {
     return (
         <div className="info">
@@ -18,12 +26,12 @@ function BirdFlowProject() {
                     The extension can be used to generate realistic looking particle based visualizations of air on an object.
                 </h3>
                 <video autoPlay loop muted>
-                    <source src="media/projects/birdflow/Front car.mp4" type="video/mp4" />
+                    <source src={frontCarVid} type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
                 <h4>Car From Side Angle - Shows Simulation Space</h4>
                 <video autoPlay loop muted>
-                    <source src="media/projects/birdflow/Side Car.mp4" type="video/mp4" />
+                    <source src={sideCarVid} type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
                 <h3>
@@ -33,7 +41,7 @@ function BirdFlowProject() {
                 </h3>
                 <h4>Car - Rear View</h4>
                 <video autoPlay loop muted>
-                    <source src="media/projects/birdflow/Back car.mp4" type="video/mp4" />
+                    <source src={backCarVid} type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
             </div>
@@ -53,7 +61,7 @@ function BirdFlowProject() {
                 </h3>
                 <h4>Sphere</h4>
                 <video autoPlay loop muted>
-                    <source src="media/projects/birdflow/Sphere.mp4" type="video/mp4" />
+                    <source src={sphereVid} type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
                 <h3>
@@ -64,7 +72,7 @@ function BirdFlowProject() {
                 </h3>
                 <h4>Tilted Block</h4>
                 <video autoPlay loop muted>
-                    <source src="media/projects/birdflow/block.mp4" type="video/mp4" />
+                    <source src={blockVid} type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
             </div> 
@@ -85,12 +93,12 @@ function BirdFlowProject() {
                 <h2>Failed Attempts Along the Way</h2>
                 <h4>Initial Attempt with Lagrangian Physics - No Pressure Calculations</h4>
                 <video autoPlay loop muted>
-                    <source src="media/projects/birdflow/Initial.mp4" type="video/mp4" />
+                    <source src={initialVid} type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
                 <h4>Initial Eulerian Attempt - Advected the Grid Itself Opposed to Grid Velocities</h4>
                 <video autoPlay loop muted>
-                    <source src="media/projects/birdflow/Moving grid.mp4" type="video/mp4" />
+                    <source src={movingGridVid} type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
             </div>
