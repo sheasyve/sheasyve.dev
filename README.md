@@ -1,6 +1,6 @@
 # Shea Syverson's Developer Portfolio
 
-# [sheasyve.dev](https://sheasyve.dev)
+## [sheasyve.dev](https://sheasyve.dev)
 Welcome to my developer portfolio. This site showcases my projects, technical experiments, and my journey through software development. Originally a static HTML/CSS site, I recently rebuilt the entire architecture from the ground up using React and a modern Webpack pipeline.
 
 ### Tech Stack
