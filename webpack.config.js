@@ -17,7 +17,7 @@ export default (env, argv) => {
       path: path.resolve(__dirname, 'dist'),
       filename: isProduction ? '[name].[contenthash].js' : '[name].bundle.js',
       clean: true,
-      publicPath: isProduction ? '/sheasyve.dev/' : '/',
+      publicPath: '/', 
     },
     mode: isProduction ? 'production' : 'development',
     devtool: isProduction ? 'source-map' : 'eval-source-map',
@@ -95,8 +95,13 @@ export default (env, argv) => {
       new HtmlWebpackPlugin({
         template: './index.html',
       }),
-      ...(isProduction
+      ...(isProduction 
         ? [
+            new HtmlWebpackPlugin({
+              filename: 'CNAME',
+              templateContent: 'sheasyve.dev',
+              inject: false,
+            }),
             new MiniCssExtractPlugin({
               filename: '[name].[contenthash].css',
             })
