@@ -10,7 +10,7 @@ import movingGridVid from '../media/projects/birdflow/Moving grid.mp4';
 
 function BirdFlowProject() {
     return (
-        <div className="info">
+        <div className="project-page">
             <div className="Overview">
                 <a href="https://github.com/sheasyve/BirdFlow">
                     <h1>

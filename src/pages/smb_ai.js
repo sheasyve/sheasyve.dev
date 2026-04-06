@@ -3,7 +3,7 @@ import marioDemoVid from '../media/projects/amb_ai/mario_demo.webm';
 
 function SuperAIBrosProject() {
     return (
-        <div className="info">
+        <div className="project-page">
             <div className="Overview">
                 <a href="https://github.com/sheasyve/super-mario-rl">
                     <h1>

@@ -6,7 +6,7 @@ import t3Img from '../media/projects/timer/t3.png';
 
 function TeenyTimerProject() {
     return (
-        <div className="info">
+        <div className="project-page">
             <div className="Overview">
                 <a href="https://github.com/sheasyve/TeenyTimer">
                     <h1>

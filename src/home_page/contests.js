@@ -32,11 +32,10 @@ function ContestsSection() {
         }
     ];
 
-
     return (
         <>
             <h3>Programming Contests</h3>
-            <div className="contests-list">
+            <div className="contest-list">
                 {myContests.map((contest, i) => {
                     const linkElement = (
                         <a href={contest.url} target="_blank" className="contest">

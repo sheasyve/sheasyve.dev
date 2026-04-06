@@ -5,7 +5,7 @@ import cgLogo from '../src/media/cg_logo.png';
 function Header() {
     return (
         <div className="menu">
-            <div className="titles">
+            <div className="header-titles">
                 <h1>
                     <div className="homepage">
                         <a href="https://sheasyve.dev"><b>Shea Syverson</b></a> | 
@@ -16,7 +16,7 @@ function Header() {
                     <h2>Bachelor of Computer Science - <a href="https://www.uvic.ca/" target="_blank" rel="noreferrer">University of Victoria</a></h2>
                 </div>
             </div>
-            <div className="links">
+            <div className="header-links">
                 <a href="https://github.com/sheasyve" target="_blank" rel="noreferrer">
                     <h2>
                         <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo" />

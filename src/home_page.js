@@ -12,9 +12,9 @@ import ButtonComponent from './components/button.js';
 function HomePage() {
     return (
         <div className="home-page">
-            <div className="section"><ProjectsSection /></div>
-            <div className="section"><ContestsSection /></div>
-            <div className="section"><LanguagesSection /></div>
+            <div className="home-section"><ProjectsSection /></div>
+            <div className="home-section"><ContestsSection /></div>
+            <div className="home-section"><LanguagesSection /></div>
             <div className="list"><ToolsSection /></div>
             <div className="list"><SoftwareSection /></div>
             <div className="list"><InterestsSection /></div>

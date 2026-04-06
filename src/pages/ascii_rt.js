@@ -5,7 +5,7 @@ import carAnimationVid from '../media/projects/ascii_rt/car_animation.webm';
 
 function AsciiRTProject() {
     return (
-        <div className="info">
+        <div className="project-page">
             <div className="Overview">
                 <a href="https://github.com/sheasyve/asciiRT">
                     <h1>
