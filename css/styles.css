@@ -171,7 +171,7 @@ button {
     margin-left: 0;
 }
 
-.languages .numlist {
+.languages-list .numlist {
     display: grid;
     gap: 1ex;
     grid-template-columns: repeat(4, 1fr);
@@ -180,35 +180,35 @@ button {
     max-width: 90%;
 }
 
-.languages .numlist li {
+.languages-list .numlist li {
     break-inside: avoid;
     margin-bottom: 1vw;
     margin-left: 0.5vw;
 }
 
-.languages .numlist li:last-child {
+.languages-list .numlist li:last-child {
     margin-bottom: 0;
 }
 
-.projects {
+.projects-list {
     width: clamp(200px, 95%, 800px);
 }
 
-.contests {
+.contests-list {
     display: flex;
     flex-direction: column;
 }
 
 .assignments,
-.contests,
-.projects {
+.contests-list,
+.projects-list {
     color: var(--h4-text-color);
     text-decoration: none;
 }
 
 .assignments h4,
-.contests h4,
-.projects h4 {
+.contests-list h4,
+.projects-list h4 {
     color: var(--h4-text-color);
     font-size: 1em;
     font-weight: 500;
@@ -333,13 +333,13 @@ button {
         min-width: 50%;
     }
 
-    .languages .numlist {
+    .languages-list .numlist {
         grid-template-columns: repeat(3, 1fr);
     }
 
     .assignments h4,
-    .contests h4,
-    .projects h4 {
+    .contests-list h4,
+    .projects-list h4 {
         font-size: 0.9em;
         margin-left: 3vw;
         margin-top: 0;
@@ -369,7 +369,7 @@ button {
 }
 
 @media (max-width: 500px) {
-    .languages .numlist {
+    .languages-list .numlist {
         column-count: 2;
         column-gap: 1ex;
         grid-template-columns: repeat(2, 1fr);

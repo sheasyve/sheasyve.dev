@@ -14,7 +14,7 @@ function ProjectsSection() {
         <>
             <h3>Projects</h3>
             {myProjects.map((project, i) => (
-                <div className="projects" key={i}>
+                <div className="projects-list" key={i}>
                     <Link to={project.url} className="project-link">
                         <h4>
                             <span className="assign_links">{project.name}</span>

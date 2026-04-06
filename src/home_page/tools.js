@@ -15,7 +15,7 @@ function ToolsSection() {
     ];
 
     return (
-        <div className="tools">
+        <div className="tools-list">
             <h3>Development Tools</h3>
             <ol className="numlist">
                 {toolsList.map((tool, index) => (
