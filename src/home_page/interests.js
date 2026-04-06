@@ -7,7 +7,6 @@ function InterestsSection() {
         "Computer Simulations",
         "Frontend Development",
         "Machine Learning",
-        "Competitive Programming",
         "Database Structures",
     ];
 
