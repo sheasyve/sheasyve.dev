@@ -36,7 +36,6 @@ function Header() {
                     </h2>
                 </a>
                 
-                {/* 2. Swap out the hardcoded sheasyve.dev URL for your local imported variable */}
                 <a href="https://www.codingame.com/profile/bcb5a473e16c66721d9a257097face784882305" target="_blank" rel="noreferrer">
                     <h2>
                         <img src={cgLogo} alt="CodinGame Profile" /> 

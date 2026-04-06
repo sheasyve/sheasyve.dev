@@ -17,8 +17,7 @@ function HomePage() {
             <div className="list"><ToolsSection /></div>
             <div className="list"><SoftwareSection /></div>
             <div className="list"><InterestsSection /></div>
-            {/* <div className="list"><HobbiesSection /></div> */}
-
+            <div className="list"><HobbiesSection /></div> 
             <div className="button">
                 <ButtonComponent />
             </div>
