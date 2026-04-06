@@ -35,7 +35,7 @@ function ContestsSection() {
 
     return (
         <>
-            <h3>Contests</h3>
+            <h3>Programming Contests</h3>
             <div className="contests">
                 {myContests.map((contest, i) => {
                     const linkElement = (
