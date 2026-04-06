@@ -22,7 +22,7 @@ p {
     font-weight: bold;
 }
 
-.softwareattributes {
+.softwareattributes, .hobbyattributes {
     font-style: italic;
     color: rgb(160, 160, 160);
 }

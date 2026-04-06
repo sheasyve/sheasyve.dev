@@ -6,9 +6,7 @@ function SoftwareSection() {
         { name: "Microsoft Office Suite ", attrs: "(Word, Excel, PowerPoint)" },
         { name: "Shopify ", attrs: "(Ecommerce, Web Development)" },
         { name: "PBS Systems ", attrs: "(Automotive Industry Software)" },
-        { name: "Blender ", attrs: "(3D Modeling, Animation, Rendering)" },
         { name: "Adobe Photoshop ", attrs: "(Image Editing, Graphic Design)" },
-        { name: "Ableton Live ", attrs: "(Audio Editing, Music Production)" }
     ];
 
     return (

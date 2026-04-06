@@ -5,6 +5,7 @@ import InterestsSection from './home_page/interests.js';
 import LanguagesSection from './home_page/languages.js';
 import SoftwareSection from './home_page/software.js';
 import ToolsSection from './home_page/tools.js';
+import HobbiesSection from './home_page/hobbies.js';
 import ButtonComponent from './components/button.js';
 
 function HomePage() {
@@ -16,6 +17,7 @@ function HomePage() {
             <div className="list"><ToolsSection /></div>
             <div className="list"><SoftwareSection /></div>
             <div className="list"><InterestsSection /></div>
+            {/* <div className="list"><HobbiesSection /></div> */}
 
             <div className="button">
                 <ButtonComponent />
