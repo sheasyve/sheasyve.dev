@@ -16,7 +16,6 @@ function Header() {
                 </div>
             </div>
             <div className="links">
-                {/* External links stay exactly as they are! */}
                 <a href="https://github.com/sheasyve" target="_blank" rel="noreferrer">
                     <h2>
                         <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo" />
