@@ -1,3 +1,4 @@
+// src/home_page.js
 import React from 'react';
 import ProjectsSection from './home_page/projects.js';
 import ContestsSection from './home_page/contests.js';

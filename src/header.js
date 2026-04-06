@@ -1,3 +1,4 @@
+// src/header.js
 import React from 'react';
 import cgLogo from '../src/media/cg_logo.png';
 

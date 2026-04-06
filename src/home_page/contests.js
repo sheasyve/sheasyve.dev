@@ -7,7 +7,7 @@ function ContestsSection() {
             url: "https://leetcode.com/u/sheasyve",
             name: "Leetcode Weekly Contests",
             lang: " (Python)",
-            extraInfo: "500+ Problems Solved", 
+            extraInfo: "550+ Problems Solved", 
             rankBold: "286,674",
             rankTotal: "702,163",
             hasC3Wrapper: false

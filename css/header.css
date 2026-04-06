@@ -10,7 +10,7 @@ html {
 }
 
 body {
-    background-color: var(--background-color);
+    background-color: var(--background-color1);
     background-image: url('../src/media/bg2.png');
     background-size: cover;
     background-position: center;
@@ -20,7 +20,7 @@ body {
 }
 
 .body {
-    background: linear-gradient(180deg, var(--main-background-color), var(--main-background-color2));
+    background: linear-gradient(180deg, var(--background-color1), var(--background-color2));
     background-size: cover;
     border-radius: 10px;
     overflow: hidden;
@@ -70,6 +70,7 @@ body {
 }
 
 /* Links and Menus */
+
 .links {
     border-radius: 5px;
     overflow: hidden;
