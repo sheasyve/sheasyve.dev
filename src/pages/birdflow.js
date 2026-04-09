@@ -77,7 +77,7 @@ function BirdFlowProject() {
                 </video>
             </div> 
 
-            <div className="Experience Gained">
+            <div className="experience">
                 <h2>Experience Gained</h2>
                 <ul className="bulletlist">
                     <li>Optimizing Python using Cython for improved performance in computationally heavy tasks.</li>

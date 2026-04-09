@@ -49,19 +49,39 @@ h3 {
     border-radius: 5px 5px 0 0;
 }
 
+.project-page h2 {
+    background: rgba(255, 255, 255, 0.753);
+    border-radius: 5px;
+    color: var(--project-h2h4-text);
+    padding: 5px;
+    background: var(--project-h2h4-background);
+}
+
 .project-page h3 {
-    background: var(--info-h3-background);
+    background: var(--project-h3-background);
     border-radius: 5px;
     color: rgb(29, 29, 29);
     font-size: 1.1em;
+    padding-left: 1vw;
+    line-height: 1.5;
 }
 
 .project-page h4 {
     backdrop-filter: blur(10px);
-    color: var(--h4-text-color);
-    margin-left: 1vw;
-    margin-right: auto;
+    border-radius: 5px;
+    text-align: center;
+    color: var(--project-h2h4-text);
     padding: 5px;
+    background: var(--project-h2h4-background);
+}
+
+.experience {
+    background: var(--h3-background-color3);
+    border-radius: 0px 0px 5px 5px;
+}
+
+.experience h2 {
+    border-radius: 5px 5px 0px 0px;
 }
 
 .list,
@@ -109,7 +129,8 @@ h3 {
 }
 
 .project-page h1 {
-    background: rgba(68, 68, 68, 0.479);
+    margin-top: 0px;
+    background: rgba(41, 41, 41, 0.753);
     border-radius: 5px;
     margin-left: auto;
     margin-right: auto;
@@ -165,10 +186,10 @@ button {
 
 .project-page ol li,
 .project-page ul li {
-    color: var(--primary-text-color);
+    color: var(--rank-color);
     font-size: 0.9em;
     margin-bottom: 0.5vw;
-    margin-left: 0;
+    margin-left: 1vw;
 }
 
 .languages-list .numlist {
