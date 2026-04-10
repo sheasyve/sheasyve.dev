@@ -10,7 +10,7 @@ import movingGridVid from '../media/projects/birdflow/Moving grid.mp4';
 
 function BirdFlowProject() {
     return (
-        <div className="info">
+        <div className="project-page">
             <div className="Overview">
                 <a href="https://github.com/sheasyve/BirdFlow">
                     <h1>
@@ -77,7 +77,7 @@ function BirdFlowProject() {
                 </video>
             </div> 
 
-            <div className="Experience Gained">
+            <div className="experience">
                 <h2>Experience Gained</h2>
                 <ul className="bulletlist">
                     <li>Optimizing Python using Cython for improved performance in computationally heavy tasks.</li>

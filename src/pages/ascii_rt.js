@@ -5,7 +5,7 @@ import carAnimationVid from '../media/projects/ascii_rt/car_animation.webm';
 
 function AsciiRTProject() {
     return (
-        <div className="info">
+        <div className="project-page">
             <div className="Overview">
                 <a href="https://github.com/sheasyve/asciiRT">
                     <h1>
@@ -52,8 +52,7 @@ function AsciiRTProject() {
                 <h3>
                     The ray-tracing engine casts a ray for every pixel from the camera's point of view each frame.
                     When a ray collides with an object, lighting calculations determine pixel brightness, which is then mapped to ASCII characters.
-                </h3>
-                <h3>
+                    <br></br>               
                     A Bounding Volume Hierarchy (BVH) accelerates ray-object intersection tests, minimizing computational overhead.
                     The GPU assigns each ray to a separate thread, maximizing parallel execution for real-time performance.
                 </h3>

@@ -22,7 +22,7 @@ function App() {
                     <Route path="/super-ai-bros" element={<SuperAIBrosProject />} />
                     <Route path="/teeny-timer" element={<TeenyTimerProject />} />
                     <Route path="*" element={
-                        <div className="section" style={{ textAlign: 'center', padding: '50px' }}>
+                        <div className="home-section" style={{ textAlign: 'center', padding: '50px' }}>
                             <h1>404 - Page Not Found</h1>
                             <a href="/" style={{ color: 'var(--highlight-color)', textDecoration: 'underline' }}>Return to Home</a>
                         </div>
@@ -30,7 +30,6 @@ function App() {
                 </Routes>
             </div>
         </Router>
-
     );
 }
 

@@ -1,59 +1,40 @@
 :root {
-    /* Background colors - Mostly White/Light */
-    --background-color: #ffffff;           /* Pure white background */
-    --main-background-color: #c5c5c5f6;      /* Very light gray for structure */
-    --main-background-color2: #f0f0f0;     /* Soft gray for subtle blocks */
-    --main-background-color3: #ffffff;     /* Keeping it clean */
-    --main-background-color4: rgba(0, 0, 0, 0.03); /* Extremely faint overlay */
-    --overlay-background-color: rgba(255, 255, 255, 0.8); /* Frosted glass effect */
-    --overlay-background-color2: rgba(0, 0, 0, 0.05);    /* Subtle dark tint */
-    --main-text-color: color: rgb(66, 66, 66);
-    /* Text colors - High Contrast */
-    --primary-text-color: #363636;         
-    --title-color:  #333333;      /* Near black for readability */
-    --title-color3:  #ffffff;  
-    --secondary-text-color: #666666;       /* Medium gray for meta-data */
-    --tertiary-text-color: #2c2c2c;         /* Light gray for disabled/minor text */
 
-    /* Highlight colors - Black & White Style */
-    --highlight-color: rgb(121, 121, 121);            /* Sharp black for accents */
-    --highlight-color2: rgb(122, 116, 116);            /* Dark gray accent */
-    --highlight-color3: rgba(0, 0, 0, 0.712);    
-    --button-hover-color: #444444;         /* Softening the black on hover */
+    /* Background colors */
+    --background-color1:    rgba(0, 0, 0, 0.03);        
+    --background-color2:    rgba(255, 255, 255, 1);     
+    --h3-background-color1:       rgba(77, 77, 77, 0.643);   
+    --h3-background-color2:      rgba(249, 249, 249, 1);    
+    --h3-background-color3:      rgba(255, 255, 255, 1);
+    --section-background1:            rgba(255, 255, 255, 1);     
+    --section-background2:            rgba(252, 252, 252, 0.714); 
+    --project-h3-background:            rgba(255, 255, 255, 0.767);
+    --project-h2h4-background:          rgba(0, 0, 0, 0.651);   
+   
+    /* Text colors */
+    --primary-text-color:        rgba(54, 54, 54, 1);      
+    --secondary-text-color:      rgba(102, 102, 102, 1);   
+    --h4-text-color:           rgba(66, 66, 66, 1);    
+    --title-color:               rgba(51, 51, 51, 1);      
+    --tertiary-text-color:       rgba(44, 44, 44, 1);       
+    --rank-color:                rgba(0, 0, 0, 1);          
+    --rating-color:              rgba(51, 51, 51, 1);       
+    --highlight-color:           rgba(121, 121, 121, 1);   
+    --highlight-color2:          rgba(122, 116, 116, 1);    
+    --highlight-color3:          rgba(0, 0, 0, 0.712);    
+    --project-h2h4-text:   rgba(249, 249, 249, 1);   
 
     /* Link colors */
-    --link-color: #3a3a3a;                 /* Bold black links */
-    --link-hover-color: #666666;           /* Gray hover state */
+    --link-color:                rgba(58, 58, 58, 1);       
+    --link-hover-color:          rgba(102, 102, 102, 1);    
+    --link-gradient-start:       rgba(255, 255, 255, 1);
+    --link-gradient-end:         rgba(206, 205, 205, 0.8);  
+    --title-gradient-start:      rgb(255, 255, 255);     
+    --title-gradient-end:        rgba(255, 255, 255, 0.8);    
 
-    /* Shadow colors - Softer for white backgrounds */
-    --box-shadow-color: rgba(0, 0, 0, 0.281); /* Much lighter shadow for depth */
-
-    /* Gradient colors for titles - Subtle Grays */
-    --title-gradient-start: #ffffff;     /* Black */
-    --title-gradient-end:   #ffffff;    /* Dark gray */
-    --title-gradient-start2: #333333;      
-    --title-gradient-end2: #666666;        
-
-    /* Gradient colors for links */
-    --link-gradient-start:#ffffff;
-    --link-gradient-end: #cecdcdcc; 
-
-    /* Header background colors */
-    --h3-background-color: #4d4d4da4;
-    --h3-background-color2: #d3d3d3;
-    --h3-background-color3: #ffffff;
-    --h3-background-color4: #f9f9f9;      /* Off-white */
-
-    /* Section background colors */
-    --section-color1: #ffffff;             /* Keep sections clean and white */
-    --section-color2: #fcfcfcb6;             /* Very slight variance */
-
-    /* Rank and rating colors */
-    --rank-color: #000000;                 /* Black badges */
-    --rating-color: #333333;               /* Dark gray ratings */
-
-    /* Mobile underline colors - Minimalist */
-    --mobile-underline-color: rgba(0, 0, 0, 0.267); 
-    --mobile-underline-color2: rgba(0, 0, 0, 0.05);
-    --mobile-underline-color3: rgba(0, 0, 0, 0.02);
+    /* Accessories */
+    --box-shadow-color:          rgba(0, 0, 0, 0.281);     
+    --mobile-underline-color:    rgba(0, 0, 0, 0.267); 
+    --mobile-underline-color2:   rgba(0, 0, 0, 0.05);
+    
 }

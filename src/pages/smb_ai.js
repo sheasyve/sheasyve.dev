@@ -1,15 +1,13 @@
 import React from 'react';
-// 1. Import the video file
 import marioDemoVid from '../media/projects/amb_ai/mario_demo.webm';
 
 function SuperAIBrosProject() {
     return (
-        <div className="info">
+        <div className="project-page">
             <div className="Overview">
                 <a href="https://github.com/sheasyve/super-mario-rl">
                     <h1>
                         <b>Super AI Bros - Reinforcement Learning AI for Super Mario Bros</b>
-                        {/* External image stays hardcoded */}
                         <img 
                             src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
                             alt="GitHub Logo"

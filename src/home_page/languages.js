@@ -16,7 +16,7 @@ function LanguagesSection() {
     ];
 
     return (
-        <div className="languages">
+        <div className="languages-list">
             <h3>Programming Languages</h3>
             <ol className="numlist">
                 {languages.map((lang, i) => (

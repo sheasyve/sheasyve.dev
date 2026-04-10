@@ -10,7 +10,7 @@ html {
 }
 
 body {
-    background-color: var(--background-color);
+    background-color: var(--background-color1);
     background-image: url('../src/media/bg2.png');
     background-size: cover;
     background-position: center;
@@ -20,7 +20,7 @@ body {
 }
 
 .body {
-    background: linear-gradient(180deg, var(--main-background-color), var(--main-background-color2));
+    background: linear-gradient(180deg, var(--background-color1), var(--background-color2));
     background-size: cover;
     border-radius: 10px;
     overflow: hidden;
@@ -29,7 +29,7 @@ body {
 }
 
 /* Headings and Titles */
-.titles {
+.header-titles {
     text-align: center;
     padding: 20px;
     background: linear-gradient(0deg, var(--title-gradient-start), var(--title-gradient-end));
@@ -40,7 +40,7 @@ body {
     backdrop-filter: blur(10px);
 }
 
-.titles h1 {
+.header-titles h1 {
     font-size: 2.5em;
     color: var(--primary-text-color);
     margin: 0;
@@ -49,7 +49,7 @@ body {
     font-weight: bold;
 }
 
-.titles h2 {
+.header-titles h2 {
     font-size: 1.5em;
     color: var(--primary-text-color);
     margin-top: 10px;
@@ -57,20 +57,21 @@ body {
     font-weight: 300;
 }
 
-.titles a {
+.header-titles a {
     color: var(--title-color);
     text-decoration: none;
 
 }
 
-.titles a:hover {
+.header-titles a:hover {
     color: var(--link-hover-color);
     border-bottom-color: var(--link-hover-color);
     opacity: 0.6;
 }
 
 /* Links and Menus */
-.links {
+
+.header-links {
     border-radius: 5px;
     overflow: hidden;
     display: flex;
@@ -89,38 +90,38 @@ body {
     box-shadow: 0px 4px 6px var(--box-shadow-color);
 }
 
-.links a {
+.header-links a {
     color: var(--link-color);
     text-decoration: none;
 }
 
-.links a:hover {
+.header-links a:hover {
     color: var(--link-hover-color);
     opacity: 0.6;
 }
 
-.links h2 {
+.header-links h2 {
     margin: 0;
     padding: 0;
     text-align: center;
     color: var(--link-color);
 }
 
-.links img {
+.header-links img {
     width: clamp(5px, 20px, 40px);
     height: auto;
 }
 
-.links a:hover {
+.header-links a:hover {
     text-decoration: underline;
 }
 
 @media (max-width: 700px) {
-    .titles {
+    .header-titles {
         font-size: .8em;
     }
 
-    .titles a {
+    .header-titles a {
         text-decoration: underline;
         text-decoration-color: var(--mobile-underline-color);
     }
@@ -136,7 +137,7 @@ body {
 
     }
 
-    .links {
+    .header-links {
         text-decoration: underline;
         text-decoration-color: var(--mobile-underline-color);
         font-size: .8em;
@@ -145,21 +146,21 @@ body {
         justify-content: center;
     }
 
-    .links img {
+    .header-links img {
         width: 20px;
         height: auto;
         margin-right: 10px;
     }
 
-    .titles h1 {
+    .header-titles h1 {
         font-size: 2.3em
     }
 
-    .titles h2 {
+    .header-titles h2 {
         font-size: 1.6em;
     }
 
-    .links h2 {
+    .header-links h2 {
         font-size: 1.3em;
     }
 }
@@ -179,7 +180,7 @@ body {
         margin: 0 10vw;
     }
 
-    .links {
+    .header-links {
         flex-wrap: wrap;
         justify-content: center;
     }
@@ -197,7 +198,7 @@ body {
         margin: 0 15vw;
     }
 
-    .links {
+    .header-links {
         flex-wrap: wrap;
         justify-content: center;
     }
@@ -208,7 +209,7 @@ body {
         margin: 0 18vw;
     }
 
-    .links {
+    .header-links {
         flex-wrap: wrap;
         justify-content: center;
     }
@@ -219,7 +220,7 @@ body {
         margin: 0 25vw;
     }
 
-    .links {
+    .header-links {
         flex-wrap: wrap;
         justify-content: center;
     }

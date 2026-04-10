@@ -1,12 +1,6 @@
-/* =========================================
-   Imports
-   ========================================= */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@400;700&family=Poppins:wght@400;700&family=Raleway:wght@400;700&display=swap');
 @import url('colors.css');
 
-/* =========================================
-   Global Styles & Typography
-   ========================================= */
 h2,
 p {
     color: var(--primary-text-color);
@@ -22,138 +16,146 @@ p {
     font-weight: bold;
 }
 
+.hobbyattributes,
 .softwareattributes {
-    font-style: italic;
     color: rgb(160, 160, 160);
+    font-style: italic;
 }
 
 .proficiency {
-    font-weight: bold;
-    font-size: 0.9em;
     color: var(--highlight-color);
+    font-size: 0.9em;
+    font-weight: bold;
 }
 
-/* =========================================
-   Headings
-   ========================================= */
+h1 img {
+    height: auto;
+    opacity: 0.3;
+    width: clamp(20px, 25px, 30px);
+}
+
 h3,
-.info h3 {
-    border-radius: 5px 5px 0 0;
-    overflow: hidden;
-    color: var(--primary-text-color);
-    background: linear-gradient(135deg, var(--h3-background-color), var(--h3-background-color4));
+.project-page h3 {
+    margin-bottom: 1vw;
     margin-right: auto;
-    margin-bottom: 1.0vw;
+    overflow: hidden;
     padding: 5px 5px 5px 0.5vw;
     text-decoration: none;
 }
 
-.info h3 {
-    font-size: 1.1em;
+h3 {
+    background: linear-gradient(135deg, var(--h3-background-color1), var(--h3-background-color2));
+    color: var(--primary-text-color);
+    border-radius: 5px 5px 0 0;
 }
 
-.info h4 {
-    color: var(--main-text-color);
-    backdrop-filter: blur(10px);
-    margin-left: 1vw;
-    margin-right: auto;
+.project-page h2 {
+    background: rgba(255, 255, 255, 0.753);
+    border-radius: 5px;
+    color: var(--project-h2h4-text);
     padding: 5px;
+    background: var(--project-h2h4-background);
 }
 
-.section h1,
-.section a {
+.project-page h3 {
+    background: var(--project-h3-background);
+    border-radius: 5px;
+    color: rgb(29, 29, 29);
+    font-size: 1.1em;
+    padding-left: 1vw;
+    line-height: 1.5;
+}
+
+.project-page h4 {
+    backdrop-filter: blur(10px);
+    border-radius: 5px;
+    text-align: center;
+    color: var(--project-h2h4-text);
+    padding: 5px;
+    background: var(--project-h2h4-background);
+}
+
+.experience {
+    background: var(--h3-background-color3);
+    border-radius: 0px 0px 5px 5px;
+}
+
+.experience h2 {
+    border-radius: 5px 5px 0px 0px;
+}
+
+.list,
+.home-section {
+    backdrop-filter: blur(10px);
+    background: linear-gradient(135deg, var(--section-background1), var(--section-background2));
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px var(--box-shadow-color);
+}
+
+.home-section {
+    margin-top: 15px;
+    padding-bottom: 0.2vw;
+}
+
+.home-section a {
     color: var(--primary-text-color);
     text-decoration: none;
 }
 
-.section h1 {
+.home-section h1 {
+    background: linear-gradient(-10deg, var(--background-color1), var(--background-color2));
     color: var(--tertiary-text-color);
     font-size: 1.3em;
+    margin: 0;
     text-decoration: underline;
     text-decoration-color: rgba(180, 180, 180, 0.616);
-    margin: 0px;
-    background: linear-gradient(-10deg, var(--main-background-color4), var(--main-background-color3));
 }
 
-.section h1 img {
-    padding-left: 10px;
-    opacity: 0.3;
-    width: 25px;
+.home-section h1 img {
     height: auto;
+    opacity: 0.3;
+    padding-left: 10px;
+    width: 25px;
 }
 
-/* =========================================
-   Containers & Layout
-   ========================================= */
-
-.section {
-    background: linear-gradient(135deg, var(--section-color1), var(--section-color2));
+.project-page {
     backdrop-filter: blur(10px);
-    border-radius: 5px;
-    box-shadow: 0px 4px 6px var(--box-shadow-color);
-    padding-bottom: 0.2vw;
-    margin-top: 15px;
-}
-
-.info {
-    margin-top: 1vw;
-    background: linear-gradient(135deg, rgba(146, 146, 146, 0.2), rgba(63, 63, 63, 0));
-    backdrop-filter: blur(10px);
+    background: linear-gradient(135deg, rgba(146, 146, 146, 0.2), rgba(255, 255, 255, 0.192));
     border-radius: 5px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 1vw;
     padding: 5px;
 }
 
-.info h1 {
-    background: rgba(68, 68, 68, 0.479);
+.project-page h1 {
+    margin-top: 0px;
+    background: rgba(41, 41, 41, 0.753);
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 5px;
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 5px;
 }
 
-.info a {
+.project-page a {
     color: rgb(255, 255, 255);
 }
 
-.info video {
-    width: 100%;
+.project-page video {
     height: auto;
     object-fit: cover;
+    width: 100%;
 }
 
-.info h3 {
-    color: rgb(29, 29, 29);
-    background: linear-gradient(135deg, var(--h3-background-color3), rgb(207, 207, 207));
-}
-
-.info img {
+.project-page img {
     margin-left: 1vw;
 }
 
-.list {
-    background: linear-gradient(135deg, var(--section-color1), var(--section-color2));
-    backdrop-filter: blur(10px);
-    border-radius: 5px;
-    box-shadow: 0px 4px 6px var(--box-shadow-color);
-}
-
-/* =========================================
-   Lists
-   ========================================= */
-
 ol,
 ul {
-    margin-block-start: 0;
     margin-block-end: 0;
-}
-
-h1 img {
-    width: clamp(20px, 25px, 30px);
-    height: auto;
-    opacity: 0.3;
+    margin-block-start: 0;
 }
 
 ol {
@@ -164,117 +166,98 @@ button {
     margin-top: 1vw;
 }
 
-.numlist,
-.bulletlist {
-    padding-top: 0;
-    padding-bottom: .5vw;
+.bulletlist,
+.numlist {
     max-width: 83%;
+    padding-bottom: 0.5vw;
+    padding-top: 0;
 }
 
-.numlist li::marker,
-.bulletlist li::marker {
+.bulletlist li::marker,
+.numlist li::marker {
     color: var(--highlight-color);
 }
 
 .list li,
 .numlist li {
+    color: var(--primary-text-color);
     margin: 5px 0;
-    color: var(--primary-text-color);
 }
 
-.info ol li,
-.info ul li {
+.project-page ol li,
+.project-page ul li {
+    color: var(--rank-color);
     font-size: 0.9em;
-    color: var(--primary-text-color);
     margin-bottom: 0.5vw;
-    margin-left: 0;
+    margin-left: 1vw;
 }
 
-.languages .numlist {
+.languages-list .numlist {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
     gap: 1ex;
-    margin-left: 0;
-
+    grid-template-columns: repeat(4, 1fr);
     list-style-position: inside;
+    margin-left: 0;
     max-width: 90%;
 }
 
-@media (max-width: 700px) {
-    .languages .numlist {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (max-width: 500px) {
-    .languages .numlist {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-.languages .numlist li {
+.languages-list .numlist li {
+    break-inside: avoid;
     margin-bottom: 1vw;
     margin-left: 0.5vw;
-    break-inside: avoid;
 }
 
-.languages .numlist li:last-child {
+.languages-list .numlist li:last-child {
     margin-bottom: 0;
 }
 
-/* =========================================
-   Projects & Contests
-   ========================================= */
-
-.projects {
+.projects-list {
     width: clamp(200px, 95%, 800px);
 }
 
-.contests {
+.contest-list {
     display: flex;
     flex-direction: column;
 }
 
-.projects,
-.contests,
-.assignments {
-    color: var(--main-text-color);
+.assignments,
+.contest-list,
+.projects-list {
+    color: var(--h4-text-color);
     text-decoration: none;
 }
 
-.projects h4,
 .assignments h4,
-.contests h4 {
-    margin-top: 0vw;
-    margin-bottom: 1vw;
-    margin-left: 1vw;
-    padding-left: 15px;
-    max-width: 95%;
+.contest-list h4,
+.projects-list h4 {
+    color: var(--h4-text-color);
     font-size: 1em;
     font-weight: 500;
-    color: var(--main-text-color);
+    margin-bottom: 1vw;
+    margin-left: 1vw;
+    margin-top: 0;
+    max-width: 95%;
+    padding-left: 15px;
     text-decoration: none;
-
 }
 
 .contest a,
 .contest h4 {
+    align-items: center;
+    box-sizing: border-box;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    width: clamp(200px, 100%, 900px);
-    text-decoration: none;
-    box-sizing: border-box;
     position: relative;
+    text-decoration: none;
+    width: clamp(200px, 100%, 900px);
 }
 
 .contest_info {
     flex: 2 1 0;
-    min-width: 55%;
     max-width: 95%;
+    min-width: 55%;
     padding-right: 3vw;
     text-align: left;
-
 }
 
 .project_info {
@@ -283,37 +266,37 @@ button {
 
 .rank,
 .rating {
-    line-height: normal;
-    align-self: center;
-    height: auto;
-    display: flex;
     align-items: center;
+    align-self: center;
+    display: flex;
+    height: auto;
+    line-height: normal;
     padding-right: 1vw;
 }
 
 .rank {
-    text-align: left;
-    min-width: 65%;
-    flex: 1;
     color: var(--highlight-color2);
+    flex: 1;
+    min-width: 65%;
+    text-align: left;
 }
 
 .rating {
-    flex: 1;
-    min-width: 20%;
     color: var(--highlight-color3);
-    width: fit-content;
+    flex: 1;
+    font-size: 10px;
+    min-width: 20%;
     padding-left: 2vw;
     text-decoration-style: dashed;
-    font-size: 10px;
+    width: fit-content;
 }
 
 .rank b,
 .rating b {
+    color: var(--primary-text-color);
+    font-weight: 800;
     margin-left: 5px;
     margin-right: 5px;
-    font-weight: 800;
-    color: var(--primary-text-color);
 }
 
 .problems {
@@ -322,107 +305,94 @@ button {
     padding-left: 0.25vw;
 }
 
-/* Hover States & Links */
-
 .assignments a,
 .project-link {
-    text-decoration: none;
     color: inherit;
+    text-decoration: none;
 }
 
-.contest:hover,
 .assignments a:hover,
+.contest:hover,
+.project-page a:hover,
 .project-link:hover,
-.titles a:hover,
-.info a:hover {
+.titles a:hover {
     text-decoration: underline;
     text-decoration-color: var(--highlight-color);
 }
 
-.section h1:hover,
-.section a:hover {
-    text-decoration: underline;
+.home-section a:hover,
+.home-section h1:hover {
     color: var(--link-hover-color);
+    text-decoration: underline;
     text-decoration-color: var(--mobile-underline-color);
 }
 
-/* =========================================
-   Media Queries
-   ========================================= */
-
-/* Desktop Extra Large */
 @media (min-width: 1440px) {
-    .rank {
-        min-width: 35%;
-    }
-
     .contest_info {
         min-width: 55%;
     }
-}
 
-/* Tablet / Desktop Overrides */
-@media (min-width: 768px) {
-    .section a:hover {
-        text-decoration: underline;
-        text-decoration-color: var(--mobile-underline-color);
+    .rank {
+        min-width: 35%;
     }
 }
 
-/* Mobile Devices */
 @media (max-width: 700px) {
-    .section {
-        padding-bottom: 1vw;
-    }
-
     h3 {
         margin-bottom: 2vw;
         padding-left: 3vw;
+    }
+
+    .contest .project_info,
+    .highlight,
+    .homepage a {
+        text-decoration: underline;
+        text-decoration-color: var(--mobile-underline-color);
     }
 
     .contest_info {
         min-width: 50%;
     }
 
-    .contest .project_info,
-    .highlight,
-    .section a:hover,
-    .homepage a {
-        text-decoration: underline;
-        text-decoration-color: var(--mobile-underline-color);
+    .languages-list .numlist {
+        grid-template-columns: repeat(3, 1fr);
     }
 
-    .rank {
-        margin-left: 10px;
-        min-width: 40%;
-        display: flex;
-        flex-wrap: wrap;
-        text-align: left;
-        flex: 1;
-        width: auto;
-        overflow-wrap: break-word;
-    }
-
-    .projects h4,
     .assignments h4,
-    .contests h4 {
-        margin-top: 0vw;
+    .contest-list h4,
+    .projects-list h4 {
         font-size: 0.9em;
         margin-left: 3vw;
+        margin-top: 0;
         max-width: 90%;
     }
 
-    .section .numlist,
-    .section .bulletlist {
+    .rank {
+        display: flex;
+        flex: 1;
+        flex-wrap: wrap;
+        margin-left: 10px;
+        min-width: 40%;
+        overflow-wrap: break-word;
+        text-align: left;
+        width: auto;
+    }
+
+    .home-section {
+        padding-bottom: 1vw;
+    }
+
+    .home-section .bulletlist,
+    .home-section .numlist {
         font-size: 0.97em;
-        margin-left: 0px;
+        margin-left: 0;
     }
 }
 
-/* Small Mobile Devices */
 @media (max-width: 500px) {
-    .languages .numlist {
+    .languages-list .numlist {
         column-count: 2;
         column-gap: 1ex;
+        grid-template-columns: repeat(2, 1fr);
     }
 }

@@ -7,7 +7,7 @@ function ContestsSection() {
             url: "https://leetcode.com/u/sheasyve",
             name: "Leetcode Weekly Contests",
             lang: " (Python)",
-            extraInfo: "500+ Problems Solved", 
+            extraInfo: "550+ Problems Solved", 
             rankBold: "286,674",
             rankTotal: "702,163",
             hasC3Wrapper: false
@@ -32,11 +32,10 @@ function ContestsSection() {
         }
     ];
 
-
     return (
         <>
-            <h3>Contests</h3>
-            <div className="contests">
+            <h3>Programming Contests</h3>
+            <div className="contest-list">
                 {myContests.map((contest, i) => {
                     const linkElement = (
                         <a href={contest.url} target="_blank" className="contest">
