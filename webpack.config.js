@@ -6,30 +6,35 @@ import CssMinimizerPlugin from 'css-minimizer-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 
+// Polyfill for __dirname in ES Modules
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default (env, argv) => {
+  // Check if running a production build
   const isProduction = argv.mode === 'production';
 
   return {
+    // 1. ENTRY & OUTPUT
     entry: './src/index.js',
     output: {
       path: path.resolve(__dirname, 'dist'),
       filename: isProduction ? '[name].[contenthash].js' : '[name].bundle.js',
-      clean: true,
+      clean: true, // Cleans the 'dist' folder before each build
       publicPath: '/', 
     },
+    
     mode: isProduction ? 'production' : 'development',
     devtool: isProduction ? 'source-map' : 'eval-source-map',
 
+    // 2. DEVELOPMENT SERVER
     devServer: {
       static: {
         directory: path.join(__dirname, 'dist'),
       },
       port: 3000,
-      hot: true,
+      hot: true, // Hot Module Replacement (HMR)
       open: true,
-      historyApiFallback: true,
+      historyApiFallback: true, // Fixes routing in Single Page Applications (SPA)
     },
 
     performance: {
@@ -38,9 +43,11 @@ export default (env, argv) => {
       maxEntrypointSize: 6000000,
     },
 
+    // 3. LOADERS
     module: {
       rules: [
         {
+          // JS/JSX: Transpile via Babel and enable React Fast Refresh in dev
           test: /\.(js|jsx)$/,
           exclude: /node_modules/,
           use: {
@@ -55,6 +62,7 @@ export default (env, argv) => {
           },
         },
         {
+          // CSS: Extract to files in prod, inject to DOM in dev
           test: /\.css$/i,
           use: [
             isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
@@ -73,6 +81,7 @@ export default (env, argv) => {
           ],
         },
         {
+          // Images & Video: Output to 'media' folder
           test: /\.(png|svg|jpg|jpeg|gif|mp4|webm|ogg)$/i,
           type: 'asset/resource',
           generator: {
@@ -80,6 +89,7 @@ export default (env, argv) => {
           }
         },
         {
+          // Fonts: Output to 'fonts' folder
           test: /\.(woff|woff2|eot|ttf|otf)$/i,
           type: 'asset/resource',
           generator: {
@@ -89,14 +99,17 @@ export default (env, argv) => {
       ],
     },
     resolve: {
-      extensions: ['.js', '.jsx'],
+      extensions: ['.js', '.jsx'], // Allows importing without writing extensions
     },
+    
+    // 4. PLUGINS
     plugins: [
       new HtmlWebpackPlugin({
         template: './index.html',
       }),
       ...(isProduction 
         ? [
+            // Production-only plugins
             new HtmlWebpackPlugin({
               filename: 'CNAME',
               templateContent: 'sheasyve.dev',
@@ -107,13 +120,17 @@ export default (env, argv) => {
             })
           ]
         : [
+            // Development-only plugins
             new ReactRefreshWebpackPlugin()
           ]
       ),
     ],
+
+    // 5. OPTIMIZATION & CODE SPLITTING
     optimization: {
       minimize: isProduction,
       minimizer: [
+        // Minify JS
         new TerserPlugin({
           terserOptions: {
             sourceMap: true,
@@ -123,11 +140,13 @@ export default (env, argv) => {
           },
           extractComments: false,
         }),
+        // Minify CSS
         new CssMinimizerPlugin(),
       ],
       splitChunks: {
         chunks: 'all',
         cacheGroups: {
+          // Extract third-party libraries into a separate vendors chunk
           vendor: {
             test: /[\\/]node_modules[\\/]/,
             name: 'vendors',

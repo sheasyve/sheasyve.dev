@@ -52,13 +52,13 @@ function AsciiRTProject() {
                 <h3>
                     The ray-tracing engine casts a ray for every pixel from the camera's point of view each frame.
                     When a ray collides with an object, lighting calculations determine pixel brightness, which is then mapped to ASCII characters.
-                    <br></br>               
+                    <br></br>   <br></br>             
                     A Bounding Volume Hierarchy (BVH) accelerates ray-object intersection tests, minimizing computational overhead.
                     The GPU assigns each ray to a separate thread, maximizing parallel execution for real-time performance.
                 </h3>
             </div>
 
-            <div className="Experience Gained">
+            <div className="experience">
                 <h2>Experience Gained</h2>
                 <ul className="bulletlist">
                     <li>Developing a real-time ray tracer from scratch, optimizing for both performance and accuracy.</li>
