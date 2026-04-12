@@ -52,7 +52,7 @@ function SuperAIBrosProject() {
                 </h3>
             </div>
             
-            <div className="Experience Gained">
+            <div className="experience">
                 <h2>Experience Gained</h2>
                 <ul className="bulletlist">
                     <li>Reinforcement Learning can successfully train agents in classic platformer games, but convergence 

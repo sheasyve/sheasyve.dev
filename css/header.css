@@ -116,6 +116,7 @@ body {
     text-decoration: underline;
 }
 
+
 @media (max-width: 700px) {
     .header-titles {
         font-size: .8em;
@@ -144,6 +145,7 @@ body {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        margin-bottom: 4vw;
     }
 
     .header-links img {
