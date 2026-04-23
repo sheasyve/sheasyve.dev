@@ -17,8 +17,6 @@ p {
     overflow: hidden;    
 }
 
-
-
 .highlight {
     color: var(--highlight-color);
     font-weight: bold;
@@ -196,7 +194,7 @@ button {
 .project-page ol li,
 .project-page ul li {
     color: var(--rank-color);
-    font-size: 0.9em;
+    font-size: 1em;
     margin-bottom: 0.5vw;
     margin-left: 1vw;
 }

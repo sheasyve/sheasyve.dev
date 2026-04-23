@@ -10,10 +10,8 @@ function AsciiRTProject() {
                 <a href="https://github.com/sheasyve/asciiRT">
                     <h1>
                         <b>AsciiRT - Real-time ray-traced animations in the terminal.</b>
-                        <img
-                            src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
-                            alt="GitHub Logo"
-                        />
+                        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+                            alt="GitHub Logo"/>
                     </h1>
                 </a>
                 <h3>

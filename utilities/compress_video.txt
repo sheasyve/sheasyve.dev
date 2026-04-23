@@ -1,0 +1,18 @@
+& {
+    $files = Get-ChildItem -Recurse -Filter *.mp4 | Where-Object { $_.Name -notlike "*_compressed.mp4" }
+    foreach ($file in $files) {
+        $tempFile = Join-Path $file.DirectoryName "temp_$($file.Name)"
+        Write-Host "Compressing: $($file.FullName)" -ForegroundColor Cyan
+        
+        ffmpeg -y -i $file.FullName -vcodec libx265 -crf 28 -c:a aac -b:a 128k -hide_banner -loglevel error $tempFile
+        
+        if ($LASTEXITCODE -eq 0) {
+            Write-Host "Success! Replacing original..." -ForegroundColor Green
+            Remove-Item $file.FullName
+            Rename-Item $tempFile $file.Name
+        } else {
+            Write-Host "Error occurred, keeping original." -ForegroundColor Red
+            if (Test-Path $tempFile) { Remove-Item $tempFile }
+        }
+    }
+}

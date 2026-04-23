@@ -15,10 +15,8 @@ function BirdFlowProject() {
                 <a href="https://github.com/sheasyve/BirdFlow">
                     <h1>
                         <b>BirdFlow - Wind Simulator Extension for Blender</b>
-                        <img
-                            src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
-                            alt="GitHub Logo"
-                        />
+                        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+                            alt="GitHub Logo" />
                     </h1>
                 </a>
                 <h3>
@@ -99,7 +97,7 @@ function BirdFlowProject() {
                     Your browser does not support the video tag.
                 </video>
                 <h4>Initial Eulerian Attempt - Advected the Grid Itself Opposed to Grid Velocities</h4>
-                <div className="square-video" style = {{aspectRatio: "16/12"}}><video autoPlay loop muted style = {{objectPosition: "50% 40%"}}>
+                <div className="square-video" style={{ aspectRatio: "16/12" }}><video autoPlay loop muted style={{ objectPosition: "50% 40%" }}>
                     <source src={movingGridVid} type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
