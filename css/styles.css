@@ -11,6 +11,14 @@ p {
     font-style: italic;
 }
 
+.square-video {
+    width: 100%;
+    aspect-ratio: 16 / 9; 
+    overflow: hidden;    
+}
+
+
+
 .highlight {
     color: var(--highlight-color);
     font-weight: bold;
@@ -326,6 +334,12 @@ button {
     color: var(--link-hover-color);
     text-decoration: underline;
     text-decoration-color: var(--mobile-underline-color);
+}
+
+.square-video video {
+    height: 100%;
+    object-position: 50% 85%;
+    display: block;      
 }
 
 @media (min-width: 1440px) {

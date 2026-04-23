@@ -5,13 +5,13 @@ function ToolsSection() {
         { name: "GitHub / Git ", attrs: "(Version Control & Collaboration)" },
         { name: "Docker ", attrs: "(Containerization & Deployment)" },
         { name: "Cython ", attrs: "(Python Extension & Performance Optimization)" },
-        { name: "scikit-learn ", attrs: "(Machine Learning & Data Mining)" },
         { name: "NumPy ", attrs: "(Numerical Computing & Array Manipulation)" },
         { name: "Pandas ", attrs: "(Data Manipulation & Analysis)" },
-        { name: "Matplotlib ", attrs: "(Data Visualization)" },
         { name: "OpenGL ", attrs: "(3D Graphics & Rendering)" },
-        { name: "OpenAI Gym ", attrs: "(Reinforcement Learning Environments)" },
-        { name: "NeonDB ", attrs: "(Relational Databases)" }
+        { name: "NeonDB ", attrs: "(Relational Databases)" },
+        { name: "Webpack ", attrs: "(Module Bundler for JavaScript)" },
+        { name: "CMake ", attrs: "(Cross-platform Build System)" },
+        { name: "scikit-learn ", attrs: "(Machine Learning & Data Mining)" }
     ];
 
     return (

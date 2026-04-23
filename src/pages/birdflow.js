@@ -22,7 +22,7 @@ function BirdFlowProject() {
                     </h1>
                 </a>
                 <h3>
-                    Birdflow is a tool for generating wind simulations in Blender, built with Python and Cython. 
+                    Birdflow is a tool for generating wind simulations in Blender, built with Python and Cython.
                     The extension can be used to generate realistic looking particle based visualizations of air on an object.
                 </h3>
                 <video autoPlay loop muted>
@@ -30,13 +30,15 @@ function BirdFlowProject() {
                     Your browser does not support the video tag.
                 </video>
                 <h4>Car From Side Angle - Shows Simulation Space</h4>
-                <video autoPlay loop muted>
-                    <source src={sideCarVid} type="video/mp4" />
-                    Your browser does not support the video tag.
-                </video>
+                <div className="square-video">
+                    <video autoPlay loop muted>
+                        <source src={sideCarVid} type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
                 <h3>
-                    Realistic air movement beyond naive collision can be observed, as particles avoid high pressure areas 
-                    and gravitate towards low pressure areas. Collisions are convincing with dynamic velocity damping 
+                    Realistic air movement beyond naive collision can be observed, as particles avoid high pressure areas
+                    and gravitate towards low pressure areas. Collisions are convincing with dynamic velocity damping
                     and redirection, with tangential friction being applied.
                 </h3>
                 <h4>Car - Rear View</h4>
@@ -49,14 +51,14 @@ function BirdFlowProject() {
             <div className="Technical Breakdown">
                 <h2>Technical Breakdown</h2>
                 <h3>
-                    The engine uses a Eulerian grid with a Conjugate Gradient solver to simulate incompressible flow 
-                    by solving the Navier-Stokes equations. Visuals are rendered using particles, for a simple way to 
-                    display the behavior of the airflow. This involved using Lagrangian methods for particle collisions 
-                    and movement, making the simulation a hybrid approach having both Eulerian and Lagrangian aspects. 
+                    The engine uses a Eulerian grid with a Conjugate Gradient solver to simulate incompressible flow
+                    by solving the Navier-Stokes equations. Visuals are rendered using particles, for a simple way to
+                    display the behavior of the airflow. This involved using Lagrangian methods for particle collisions
+                    and movement, making the simulation a hybrid approach having both Eulerian and Lagrangian aspects.
                 </h3>
                 <h3>
-                    The particles are first advected with a Runge-Kutta 3rd order method, and then pressure in the 
-                    simulation is calculated using the conjugate gradient solver from SciPy. Pressure changes are 
+                    The particles are first advected with a Runge-Kutta 3rd order method, and then pressure in the
+                    simulation is calculated using the conjugate gradient solver from SciPy. Pressure changes are
                     distributed through the grid, and particle velocities are updated accordingly after checking for collisions.
                 </h3>
                 <h4>Sphere</h4>
@@ -65,9 +67,9 @@ function BirdFlowProject() {
                     Your browser does not support the video tag.
                 </video>
                 <h3>
-                    The pressure from the grid does help particles avoid collisions naturally to some extent, as particles 
+                    The pressure from the grid does help particles avoid collisions naturally to some extent, as particles
                     don’t want to be in high pressure areas. However, particles can still collide with the object, which is why
-                    lagrangian collision handling was implemented. This means that when a collision is detected, 
+                    lagrangian collision handling was implemented. This means that when a collision is detected,
                     the particle is redirected along the tangent of the object, and slowed down with collision and friction force.
                 </h3>
                 <h4>Tilted Block</h4>
@@ -75,7 +77,7 @@ function BirdFlowProject() {
                     <source src={blockVid} type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
-            </div> 
+            </div>
 
             <div className="experience">
                 <h2>Experience Gained</h2>
@@ -97,10 +99,11 @@ function BirdFlowProject() {
                     Your browser does not support the video tag.
                 </video>
                 <h4>Initial Eulerian Attempt - Advected the Grid Itself Opposed to Grid Velocities</h4>
-                <video autoPlay loop muted>
+                <div className="square-video" style = {{aspectRatio: "16/12"}}><video autoPlay loop muted style = {{objectPosition: "50% 40%"}}>
                     <source src={movingGridVid} type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
+                </div>
             </div>
         </div>
     );
