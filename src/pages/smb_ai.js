@@ -1,5 +1,6 @@
 import React from 'react';
 import marioDemoVid from '../media/projects/amb_ai/mario_demo.webm';
+import LoadVideo from '../components/load-video.js';
 
 function SuperAIBrosProject() {
     return (
@@ -18,10 +19,7 @@ function SuperAIBrosProject() {
                     Super Mario Bros. This project was undertaken by a group of undergraduate students at the
                     University of Victoria, exploring RL techniques for solving complex, interactive environments.
                 </h3>
-                <video autoPlay loop muted>
-                    <source src={marioDemoVid} type="video/webm" />
-                    Your browser does not support the video tag.
-                </video>
+                <LoadVideo src={marioDemoVid} autoPlay loop muted />
             </div>
 
             <div className="Technical Breakdown">

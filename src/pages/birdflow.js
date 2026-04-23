@@ -7,6 +7,7 @@ import sphereVid from '../media/projects/birdflow/Sphere.mp4';
 import blockVid from '../media/projects/birdflow/block.mp4';
 import initialVid from '../media/projects/birdflow/Initial.mp4';
 import movingGridVid from '../media/projects/birdflow/Moving grid.mp4';
+import LoadVideo from '../components/load-video.js';
 
 function BirdFlowProject() {
     return (
@@ -23,16 +24,10 @@ function BirdFlowProject() {
                     Birdflow is a tool for generating wind simulations in Blender, built with Python and Cython.
                     The extension can be used to generate realistic looking particle based visualizations of air on an object.
                 </h3>
-                <video autoPlay loop muted>
-                    <source src={frontCarVid} type="video/mp4" />
-                    Your browser does not support the video tag.
-                </video>
+                <LoadVideo src={frontCarVid} autoPlay loop muted />
                 <h4>Car From Side Angle - Shows Simulation Space</h4>
                 <div className="square-video">
-                    <video autoPlay loop muted>
-                        <source src={sideCarVid} type="video/mp4" />
-                        Your browser does not support the video tag.
-                    </video>
+                    <LoadVideo src={sideCarVid} autoPlay loop muted />
                 </div>
                 <h3>
                     Realistic air movement beyond naive collision can be observed, as particles avoid high pressure areas
@@ -40,10 +35,7 @@ function BirdFlowProject() {
                     and redirection, with tangential friction being applied.
                 </h3>
                 <h4>Car - Rear View</h4>
-                <video autoPlay loop muted>
-                    <source src={backCarVid} type="video/mp4" />
-                    Your browser does not support the video tag.
-                </video>
+                <LoadVideo src={backCarVid} autoPlay loop muted />
             </div>
 
             <div className="Technical Breakdown">
@@ -60,10 +52,7 @@ function BirdFlowProject() {
                     distributed through the grid, and particle velocities are updated accordingly after checking for collisions.
                 </h3>
                 <h4>Sphere</h4>
-                <video autoPlay loop muted>
-                    <source src={sphereVid} type="video/mp4" />
-                    Your browser does not support the video tag.
-                </video>
+                <LoadVideo src={sphereVid} autoPlay loop muted />
                 <h3>
                     The pressure from the grid does help particles avoid collisions naturally to some extent, as particles
                     don’t want to be in high pressure areas. However, particles can still collide with the object, which is why
@@ -71,10 +60,7 @@ function BirdFlowProject() {
                     the particle is redirected along the tangent of the object, and slowed down with collision and friction force.
                 </h3>
                 <h4>Tilted Block</h4>
-                <video autoPlay loop muted>
-                    <source src={blockVid} type="video/mp4" />
-                    Your browser does not support the video tag.
-                </video>
+                <LoadVideo src={blockVid} autoPlay loop muted />
             </div>
 
             <div className="experience">
@@ -92,15 +78,9 @@ function BirdFlowProject() {
             <div className="Previous Attempts">
                 <h2>Failed Attempts Along the Way</h2>
                 <h4>Initial Attempt with Lagrangian Physics - No Pressure Calculations</h4>
-                <video autoPlay loop muted>
-                    <source src={initialVid} type="video/mp4" />
-                    Your browser does not support the video tag.
-                </video>
+                <LoadVideo src={initialVid} autoPlay loop muted />
                 <h4>Initial Eulerian Attempt - Advected the Grid Itself Opposed to Grid Velocities</h4>
-                <div className="square-video" style={{ aspectRatio: "16/12" }}><video autoPlay loop muted style={{ objectPosition: "50% 40%" }}>
-                    <source src={movingGridVid} type="video/mp4" />
-                    Your browser does not support the video tag.
-                </video>
+                <div className="square-video" style={{ aspectRatio: "16/12" }}><LoadVideo src={movingGridVid} autoPlay loop muted />
                 </div>
             </div>
         </div>
