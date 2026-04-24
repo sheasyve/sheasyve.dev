@@ -2,6 +2,7 @@ import React from 'react';
 import carAndTeapotVid from '../media/projects/ascii_rt/car_and_teapot.webm';
 import sixtyFpsCarVid from '../media/projects/ascii_rt/60fps_car.mp4';
 import carAnimationVid from '../media/projects/ascii_rt/car_animation.webm';
+import LoadVideo from '../components/load-video.js';
 
 function AsciiRTProject() {
     return (
@@ -10,28 +11,20 @@ function AsciiRTProject() {
                 <a href="https://github.com/sheasyve/asciiRT">
                     <h1>
                         <b>AsciiRT - Real-time ray-traced animations in the terminal.</b>
-                        <img
-                            src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
-                            alt="GitHub Logo"
-                        />
+                        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+                            alt="GitHub Logo"/>
                     </h1>
                 </a>
                 <h3>
                     AsciiRT is a highly optimized GPU ray-tracing engine leveraging CUDA to render object models in ASCII characters.
                     Extensive optimizations resulted in a 900x speedup over the initial multi-core version, enabling real-time 60 FPS animations.
                 </h3>
-                <video autoPlay loop muted>
-                    <source src={carAndTeapotVid} type="video/webm" />
-                    Your browser does not support the video tag.
-                </video>
+                <LoadVideo src={carAndTeapotVid} autoPlay loop muted />
                 <h3>
                     The demo below showcases a Toyota Mark II rendered in ASCII at 60 FPS, achieving a frame time of 0.01665 seconds.
                     The model consists of 18.3 thousand triangles and 11.2 thousand vertices.
                 </h3>
-                <video autoPlay loop muted>
-                    <source src={sixtyFpsCarVid} type="video/mp4" />
-                    Your browser does not support the video tag.
-                </video>
+                <LoadVideo src={sixtyFpsCarVid} autoPlay loop muted />
                 <h3>
                     Users can load multiple object files (.obj), render still images or animations, and apply transformations
                     such as translation and rotation. The ray-tracing kernel processes the scene, mapping brightness values to ASCII
@@ -45,10 +38,7 @@ function AsciiRTProject() {
                     Each object model, a collection of connected points in space, is transformed, ray-traced, and converted to ASCII in real-time.
                     The engine simulates realistic lighting using reflections, shadows, and perspective projection, with four light sources.
                 </h3>
-                <video autoPlay loop muted>
-                    <source src={carAnimationVid} type="video/webm" />
-                    Your browser does not support the video tag.
-                </video>
+                <LoadVideo src={carAnimationVid} autoPlay loop muted />
                 <h3>
                     The ray-tracing engine casts a ray for every pixel from the camera's point of view each frame.
                     When a ray collides with an object, lighting calculations determine pixel brightness, which is then mapped to ASCII characters.
