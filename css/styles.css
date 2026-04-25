@@ -167,6 +167,7 @@ h3 {
     background-repeat: no-repeat;
     background-position: bottom center;
     background-size: 100% 0.08vw;
+    padding-left: 0;
 }
 
 .tech-item {
