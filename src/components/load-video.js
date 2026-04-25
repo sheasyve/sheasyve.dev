@@ -5,7 +5,6 @@ const LoadVideo = ({ src, className, style, ...props }) => {
 
   return (
     <div className={`video-wrapper ${className || ''}`} style={{ position: 'relative', ...style }}>
-      {/* Spinner Overlay */}
       {isLoading && (
         <div className="spinner-overlay" style={{
           position: 'absolute', inset: 0, display: 'flex', 
