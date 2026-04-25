@@ -4,7 +4,7 @@
 
 Welcome to the source code for my developer portfolio, [sheasyve.dev](https://sheasyve.dev). 
 
-Originally built as a static HTML/CSS site, I recently architected and migrated this project to a modern React stack.
+Originally built as a static HTML/CSS site, I recently migrated this project to a modern React stack.
 
 ## 🏗️ Architecture & Infrastructure
 
