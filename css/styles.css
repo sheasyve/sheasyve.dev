@@ -404,9 +404,10 @@ button {
 }
 
 .square-video video {
-    height: 100%;
-    object-position: 50% 85%;
-    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+
 }
 
 .loader {

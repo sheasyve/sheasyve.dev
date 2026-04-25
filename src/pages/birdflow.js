@@ -51,20 +51,17 @@ function BirdFlowProject() {
                 <h3>
                     Birdflow is a tool for generating wind simulations in Blender, built with Python and Cython.
                     The extension can be used to generate realistic looking particle based visualizations of air on an object.
-                </h3>
-            </div>
-
-            <div className="showcase">
-                <LoadVideo src={frontCarVid} autoPlay loop muted />
-                <h4>Car From Side Angle - Shows Simulation Space</h4>
-                <div className="square-video">
-                    <LoadVideo src={sideCarVid} autoPlay loop muted />
-                </div>
-                <h3>
+                    <br></br><br></br>
                     Realistic air movement beyond naive collision can be observed, as particles avoid high pressure areas
                     and gravitate towards low pressure areas. Collisions are convincing with dynamic velocity damping
                     and redirection, with tangential friction being applied.
                 </h3>
+            </div>
+
+            <div className="showcase">
+                <h4 style={{ marginTop: 0 }}>Car - Front View</h4>
+                <LoadVideo src={frontCarVid} autoPlay loop muted />
+
                 <h4>Car - Rear View</h4>
                 <LoadVideo src={backCarVid} autoPlay loop muted />
             </div>
@@ -85,18 +82,18 @@ function BirdFlowProject() {
 
             </div>
 
-           
-                <h4>Sphere</h4>
-                <LoadVideo src={sphereVid} autoPlay loop muted />
-                <h3 style={{ background: "var(--showcase-background-color)"}}>
-                    The pressure from the grid does help particles avoid collisions naturally to some extent, as particles
-                    don’t want to be in high pressure areas. However, particles can still collide with the object, which is why
-                    lagrangian collision handling was implemented. This means that when a collision is detected,
-                    the particle is redirected along the tangent of the object, and slowed down with collision and friction force.
-                </h3>
-                <h4>Tilted Block</h4>
-                <LoadVideo src={blockVid} autoPlay loop muted />
-           
+
+            <h4>Sphere</h4>
+            <LoadVideo src={sphereVid} autoPlay loop muted />
+            <h3 style={{ background: "var(--showcase-background-color2)" }}>
+                The pressure from the grid does help particles avoid collisions naturally to some extent, as particles
+                don’t want to be in high pressure areas. However, particles can still collide with the object, which is why
+                lagrangian collision handling was implemented. This means that when a collision is detected,
+                the particle is redirected along the tangent of the object, and slowed down with collision and friction force.
+            </h3>
+            <h4>Tilted Block</h4>
+            <LoadVideo src={blockVid} autoPlay loop muted />
+
 
             <div className="project-list">
                 <h2>Experience Gained</h2>
@@ -112,7 +109,8 @@ function BirdFlowProject() {
                 <h4>Initial Attempt with Lagrangian Physics - No Pressure Calculations</h4>
                 <LoadVideo src={initialVid} autoPlay loop muted />
                 <h4>Initial Eulerian Attempt - Advected the Grid Itself Opposed to Grid Velocities</h4>
-                <div className="square-video" style={{ aspectRatio: "16/12" }}><LoadVideo src={movingGridVid} autoPlay loop muted />
+                <div className="square-video" >
+                    <LoadVideo src={movingGridVid} autoPlay loop muted />
                 </div>
             </div>
         </div>
