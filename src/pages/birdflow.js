@@ -14,8 +14,7 @@ function BirdFlowProject() {
     const techstack = [
         { icon: <i className="devicon-python-plain"></i>, name: " Python" },
         { icon: <i className="devicon-cython-plain"></i>, name: " Cython" },
-        { icon: <i className="devicon-cplusplus-plain"></i>, name: " C++" },
-        { icon: <i className="devicon-blender-plain"></i>, name: " Blender API" }
+        { icon: <i className="devicon-cplusplus-plain"></i>, name: " C++" }
     ];
 
     const experience = ["Optimizing Python using Cython for improved performance in computationally heavy tasks.",
