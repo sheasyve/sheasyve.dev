@@ -5,8 +5,8 @@ import LoadVideo from '../components/load-video.js';
 function SuperAIBrosProject() {
     const techstack = [
         { icon: <i className="devicon-python-plain"></i>, name: " Python" },
-        { icon: <i className="devicon-openai-plain"></i>, name: " OpenAI Gym" },
-        { icon: <i className="devicon-docker-plain"></i>, name: " Docker" }
+        { icon: <i className="devicon-docker-plain"></i>, name: " Docker" },
+        { icon: <i className="devicon-openai-plain"></i>, name: " OpenAI Gym" }
     ];
 
     const experience = ["Reinforcement Learning can successfully train agents in classic platformer games, but convergence requires extensive training.",
