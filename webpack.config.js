@@ -99,7 +99,7 @@ export default (env, argv) => {
       ],
     },
     resolve: {
-      extensions: ['.js', '.jsx'], // Allows importing without writing extensions
+      extensions: ['.js', '.jsx'], 
     },
     
     // 4. PLUGINS

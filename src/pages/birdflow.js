@@ -10,9 +10,27 @@ import movingGridVid from '../media/projects/birdflow/Moving grid.mp4';
 import LoadVideo from '../components/load-video.js';
 
 function BirdFlowProject() {
+
+    const techstack = [
+        { icon: <i className="devicon-python-plain"></i>, name: " Python" },
+        { icon: <i className="devicon-cython-plain"></i>, name: " Cython" },
+        { icon: <i className="devicon-cplusplus-plain"></i>, name: " C++" },
+        { icon: <i className="devicon-blender-plain"></i>, name: " Blender API" }
+    ];
+
+    const experience = ["Optimizing Python using Cython for improved performance in computationally heavy tasks.",
+        "Integrating external APIs efficiently to extend Blender's functionality.",
+        "Gaining a deeper understanding of fluid dynamics and numerical methods, particularly the Navier-Stokes equations.",
+        "Developing a hybrid Eulerian-Lagrangian simulation approach for more realistic airflow visualization.",
+        "Fine-tuning particle behavior through velocity damping, friction forces, and pressure-based redirection.",
+        "Iterating through multiple failed attempts, learning from each to refine simulation accuracy and stability."
+    ];
+
     return (
         <div className="project-page">
-            <div className="Overview">
+
+
+            <div className="project-header">
                 <a href="https://github.com/sheasyve/BirdFlow">
                     <h1>
                         <b>BirdFlow - Wind Simulator Extension for Blender</b>
@@ -20,10 +38,23 @@ function BirdFlowProject() {
                             alt="GitHub Logo" />
                     </h1>
                 </a>
+
+                <ul className="techstack">
+                    {techstack.map((tech, index) => (
+                        <li key={index} className="tech-item">
+                            <h4>{tech.name}</h4>
+                            {tech.icon}
+                        </li>
+                    ))}
+                </ul>
+
                 <h3>
                     Birdflow is a tool for generating wind simulations in Blender, built with Python and Cython.
                     The extension can be used to generate realistic looking particle based visualizations of air on an object.
                 </h3>
+            </div>
+
+            <div className="showcase">
                 <LoadVideo src={frontCarVid} autoPlay loop muted />
                 <h4>Car From Side Angle - Shows Simulation Space</h4>
                 <div className="square-video">
@@ -38,7 +69,7 @@ function BirdFlowProject() {
                 <LoadVideo src={backCarVid} autoPlay loop muted />
             </div>
 
-            <div className="Technical Breakdown">
+            <div className="technical-breakdown">
                 <h2>Technical Breakdown</h2>
                 <h3>
                     The engine uses a Eulerian grid with a Conjugate Gradient solver to simulate incompressible flow
@@ -51,9 +82,13 @@ function BirdFlowProject() {
                     simulation is calculated using the conjugate gradient solver from SciPy. Pressure changes are
                     distributed through the grid, and particle velocities are updated accordingly after checking for collisions.
                 </h3>
+
+            </div>
+
+           
                 <h4>Sphere</h4>
                 <LoadVideo src={sphereVid} autoPlay loop muted />
-                <h3>
+                <h3 style={{ background: "var(--showcase-background-color)"}}>
                     The pressure from the grid does help particles avoid collisions naturally to some extent, as particles
                     don’t want to be in high pressure areas. However, particles can still collide with the object, which is why
                     lagrangian collision handling was implemented. This means that when a collision is detected,
@@ -61,17 +96,14 @@ function BirdFlowProject() {
                 </h3>
                 <h4>Tilted Block</h4>
                 <LoadVideo src={blockVid} autoPlay loop muted />
-            </div>
+           
 
-            <div className="experience">
+            <div className="project-list">
                 <h2>Experience Gained</h2>
-                <ul className="bulletlist">
-                    <li>Optimizing Python using Cython for improved performance in computationally heavy tasks.</li>
-                    <li>Integrating external APIs efficiently to extend Blender's functionality.</li>
-                    <li>Gaining a deeper understanding of fluid dynamics and numerical methods, particularly the Navier-Stokes equations.</li>
-                    <li>Developing a hybrid Eulerian-Lagrangian simulation approach for more realistic airflow visualization.</li>
-                    <li>Fine-tuning particle behavior through velocity damping, friction forces, and pressure-based redirection.</li>
-                    <li>Iterating through multiple failed attempts, learning from each to refine simulation accuracy and stability.</li>
+                <ul className="experience">
+                    {experience.map((exp, index) => (
+                        <li key={index}>{exp}</li>
+                    ))}
                 </ul>
             </div>
 

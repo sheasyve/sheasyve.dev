@@ -11,10 +11,15 @@ p {
     font-style: italic;
 }
 
+.technical-breakdown{
+    background: var(--project-h3-background);
+    border-radius: 5px;
+}
+
 .square-video {
     width: 100%;
-    aspect-ratio: 16 / 9; 
-    overflow: hidden;    
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
 }
 
 .highlight {
@@ -45,13 +50,16 @@ h3 {
     overflow: hidden;
     padding: 5px 5px 5px .75vw;
     text-decoration: none;
-}
-
-h3 {
     background: linear-gradient(135deg, var(--h3-background-color1), var(--h3-background-color2));
     color: var(--project-h2h4-text);
     border-radius: 5px 5px 0 0;
     text-shadow: 0.05vw 0.05vw 0 #000000;
+}
+
+.showcase {
+    background: linear-gradient(135deg, var(--showcase-background-color), var(--showcase-background-color2));
+    border-radius: 5px 5px 5px 5px;
+    padding: 1vw;
 }
 
 .project-page h2 {
@@ -63,14 +71,14 @@ h3 {
 }
 
 .project-page h3 {
-    background: var(--project-h3-background);
     border-radius: 5px;
     font-size: 1.1em;
-    padding-left: 1vw;
+    padding-left: 2vw;
     padding-right: 1vw;
     line-height: 1.5;
     color: var(--primary-text-color);
     text-shadow: none;
+    background:none;
 }
 
 .project-page h4 {
@@ -80,15 +88,6 @@ h3 {
     color: var(--project-h2h4-text);
     padding: 5px;
     background: var(--project-h2h4-background);
-}
-
-.experience {
-    background: var(--h3-background-color3);
-    border-radius: 0px 0px 5px 5px;
-}
-
-.experience h2 {
-    border-radius: 5px 5px 0px 0px;
 }
 
 .list,
@@ -135,13 +134,63 @@ h3 {
     padding: 5px;
 }
 
-.project-page h1 {
-    margin-top: 0px;
+.project-header{
     background: rgba(41, 41, 41, 0.753);
-    border-radius: 5px;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.project-header h3{
+    margin-top: 0;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    background-color: rgba(255, 255, 255, 0.932);
+    border-radius: 0px 0px 5px 5px;
+}
+
+.techstack {
+    padding-top: 1vw;
+    padding-bottom:0.5vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12vw;
+    list-style: none;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.932);
+    background-image: linear-gradient(
+        to right, 
+        transparent, 
+        #818181, 
+        #7a7878, 
+        transparent
+    );
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: 100% 0.08vw;
+}
+
+.tech-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+.tech-item h4{
+    font-size: 1em;
+    padding: 0;
+    margin: 0;
+    background:none;
+    color: var(--primary-text-color);
+}
+
+.project-page h1 {
+    padding: 5px;
+    padding-bottom: 1vw;
+    padding-top: .8vw;
+    margin: 0;
     margin-left: auto;
     margin-right: auto;
-    padding: 5px;
     text-align: center;
 }
 
@@ -186,9 +235,29 @@ button {
 }
 
 .list li,
-.numlist li {
+.numlist li,
+.project-list li {
     color: var(--primary-text-color);
     margin: 5px 0;
+}
+
+.project-list li {
+    padding-left: 1vw;
+}
+
+
+.project-list {
+    background: var(--h3-background-color3);
+    border-radius: 0px 0px 5px 5px;
+}
+
+.project-list h2 {
+    border-radius: 5px 5px 0px 0px;
+}
+
+.experience {
+    padding-left: 3vw;
+    padding-bottom: 1vw;
 }
 
 .project-page ol li,
@@ -337,21 +406,29 @@ button {
 .square-video video {
     height: 100%;
     object-position: 50% 85%;
-    display: block;      
+    display: block;
 }
 
 .loader {
-  border: 4px solid #f3f3f3;
-  border-top: 4px solid #3498db;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  animation: spin 1s linear infinite;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+}
+.technical-breakdown h2{
+    border-radius: 5px 5px 0 0;
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 @media (min-width: 1440px) {
