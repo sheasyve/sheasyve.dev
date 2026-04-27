@@ -1,0 +1,40 @@
+:root {
+
+    /* Background colors */
+    --background-color1:    rgba(0, 0, 0, 0.03);        
+    --background-color2:    rgba(255, 255, 255, 1);     
+    --h3-background-color1:       rgba(77, 77, 77, 0.643);   
+    --h3-background-color2:      rgba(249, 249, 249, 1);    
+    --h3-background-color3:      rgba(255, 255, 255, 1);
+    --section-background1:            rgba(255, 255, 255, 1);     
+    --section-background2:            rgba(252, 252, 252, 0.714); 
+    --project-h3-background:            rgba(255, 255, 255, 0.767);
+    --project-h2h4-background:          rgba(0, 0, 0, 0.651);   
+   
+    /* Text colors */
+    --primary-text-color:        rgba(54, 54, 54, 1);      
+    --secondary-text-color:      rgba(102, 102, 102, 1);   
+    --h4-text-color:           rgba(66, 66, 66, 1);    
+    --title-color:               rgba(51, 51, 51, 1);      
+    --tertiary-text-color:       rgba(44, 44, 44, 1);       
+    --rank-color:                rgba(0, 0, 0, 1);          
+    --rating-color:              rgba(51, 51, 51, 1);       
+    --highlight-color:           rgba(121, 121, 121, 1);   
+    --highlight-color2:          rgba(122, 116, 116, 1);    
+    --highlight-color3:          rgba(0, 0, 0, 0.712);    
+    --project-h2h4-text:   rgba(249, 249, 249, 1);   
+
+    /* Link colors */
+    --link-color:                rgba(58, 58, 58, 1);       
+    --link-hover-color:          rgba(102, 102, 102, 1);    
+    --link-gradient-start:       rgba(255, 255, 255, 1);
+    --link-gradient-end:         rgba(206, 205, 205, 0.8);  
+    --title-gradient-start:      rgb(255, 255, 255);     
+    --title-gradient-end:        rgba(255, 255, 255, 0.8);    
+
+    /* Accessories */
+    --box-shadow-color:          rgba(0, 0, 0, 0.281);     
+    --mobile-underline-color:    rgba(0, 0, 0, 0.267); 
+    --mobile-underline-color2:   rgba(0, 0, 0, 0.05);
+    
+}

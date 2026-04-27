@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@400;700&family=Poppins:wght@400;700&family=Raleway:wght@400;700&display=swap');
+@import url('colors.css');
+
+h2,
+p {
+    color: var(--primary-text-color);
+    text-align: center;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.highlight {
+    color: var(--highlight-color);
+    font-weight: bold;
+}
+
+.hobbyattributes,
+.softwareattributes {
+    color: rgb(160, 160, 160);
+    font-style: italic;
+}
+
+.proficiency {
+    color: var(--highlight-color);
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+h1 img {
+    height: auto;
+    opacity: 0.3;
+    width: clamp(20px, 25px, 30px);
+}
+
+h3,
+.project-page h3 {
+    margin-bottom: 1vw;
+    margin-right: auto;
+    overflow: hidden;
+    padding: 5px 5px 5px 0.5vw;
+    text-decoration: none;
+}
+
+h3 {
+    background: linear-gradient(135deg, var(--h3-background-color1), var(--h3-background-color2));
+    color: var(--primary-text-color);
+    border-radius: 5px 5px 0 0;
+}
+
+.project-page h2 {
+    background: rgba(255, 255, 255, 0.753);
+    border-radius: 5px;
+    color: var(--project-h2h4-text);
+    padding: 5px;
+    background: var(--project-h2h4-background);
+}
+
+.project-page h3 {
+    background: var(--project-h3-background);
+    border-radius: 5px;
+    color: rgb(29, 29, 29);
+    font-size: 1.1em;
+    padding-left: 1vw;
+    line-height: 1.5;
+}
+
+.project-page h4 {
+    backdrop-filter: blur(10px);
+    border-radius: 5px;
+    text-align: center;
+    color: var(--project-h2h4-text);
+    padding: 5px;
+    background: var(--project-h2h4-background);
+}
+
+.experience {
+    background: var(--h3-background-color3);
+    border-radius: 0px 0px 5px 5px;
+}
+
+.experience h2 {
+    border-radius: 5px 5px 0px 0px;
+}
+
+.list,
+.home-section {
+    backdrop-filter: blur(10px);
+    background: linear-gradient(135deg, var(--section-background1), var(--section-background2));
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px var(--box-shadow-color);
+}
+
+.home-section {
+    margin-top: 15px;
+    padding-bottom: 0.2vw;
+}
+
+.home-section a {
+    color: var(--primary-text-color);
+    text-decoration: none;
+}
+
+.home-section h1 {
+    background: linear-gradient(-10deg, var(--background-color1), var(--background-color2));
+    color: var(--tertiary-text-color);
+    font-size: 1.3em;
+    margin: 0;
+    text-decoration: underline;
+    text-decoration-color: rgba(180, 180, 180, 0.616);
+}
+
+.home-section h1 img {
+    height: auto;
+    opacity: 0.3;
+    padding-left: 10px;
+    width: 25px;
+}
+
+.project-page {
+    backdrop-filter: blur(10px);
+    background: linear-gradient(135deg, rgba(146, 146, 146, 0.2), rgba(255, 255, 255, 0.192));
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1vw;
+    padding: 5px;
+}
+
+.project-page h1 {
+    margin-top: 0px;
+    background: rgba(41, 41, 41, 0.753);
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    text-align: center;
+}
+
+.project-page a {
+    color: rgb(255, 255, 255);
+}
+
+.project-page video {
+    height: auto;
+    object-fit: cover;
+    width: 100%;
+}
+
+.project-page img {
+    margin-left: 1vw;
+}
+
+ol,
+ul {
+    margin-block-end: 0;
+    margin-block-start: 0;
+}
+
+ol {
+    color: var(--highlight-color);
+}
+
+button {
+    margin-top: 1vw;
+}
+
+.bulletlist,
+.numlist {
+    max-width: 83%;
+    padding-bottom: 0.5vw;
+    padding-top: 0;
+}
+
+.bulletlist li::marker,
+.numlist li::marker {
+    color: var(--highlight-color);
+}
+
+.list li,
+.numlist li {
+    color: var(--primary-text-color);
+    margin: 5px 0;
+}
+
+.project-page ol li,
+.project-page ul li {
+    color: var(--rank-color);
+    font-size: 0.9em;
+    margin-bottom: 0.5vw;
+    margin-left: 1vw;
+}
+
+.languages-list .numlist {
+    display: grid;
+    gap: 1ex;
+    grid-template-columns: repeat(4, 1fr);
+    list-style-position: inside;
+    margin-left: 0;
+    max-width: 90%;
+}
+
+.languages-list .numlist li {
+    break-inside: avoid;
+    margin-bottom: 1vw;
+    margin-left: 0.5vw;
+}
+
+.languages-list .numlist li:last-child {
+    margin-bottom: 0;
+}
+
+.projects-list {
+    width: clamp(200px, 95%, 800px);
+}
+
+.contest-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.assignments,
+.contest-list,
+.projects-list {
+    color: var(--h4-text-color);
+    text-decoration: none;
+}
+
+.assignments h4,
+.contest-list h4,
+.projects-list h4 {
+    color: var(--h4-text-color);
+    font-size: 1em;
+    font-weight: 500;
+    margin-bottom: 1vw;
+    margin-left: 1vw;
+    margin-top: 0;
+    max-width: 95%;
+    padding-left: 15px;
+    text-decoration: none;
+}
+
+.contest a,
+.contest h4 {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    text-decoration: none;
+    width: clamp(200px, 100%, 900px);
+}
+
+.contest_info {
+    flex: 2 1 0;
+    max-width: 95%;
+    min-width: 55%;
+    padding-right: 3vw;
+    text-align: left;
+}
+
+.project_info {
+    color: var(--highlight-color);
+}
+
+.rank,
+.rating {
+    align-items: center;
+    align-self: center;
+    display: flex;
+    height: auto;
+    line-height: normal;
+    padding-right: 1vw;
+}
+
+.rank {
+    color: var(--highlight-color2);
+    flex: 1;
+    min-width: 65%;
+    text-align: left;
+}
+
+.rating {
+    color: var(--highlight-color3);
+    flex: 1;
+    font-size: 10px;
+    min-width: 20%;
+    padding-left: 2vw;
+    text-decoration-style: dashed;
+    width: fit-content;
+}
+
+.rank b,
+.rating b {
+    color: var(--primary-text-color);
+    font-weight: 800;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.problems {
+    color: var(--highlight-color3);
+    font-size: 13px;
+    padding-left: 0.25vw;
+}
+
+.assignments a,
+.project-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.assignments a:hover,
+.contest:hover,
+.project-page a:hover,
+.project-link:hover,
+.titles a:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--highlight-color);
+}
+
+.home-section a:hover,
+.home-section h1:hover {
+    color: var(--link-hover-color);
+    text-decoration: underline;
+    text-decoration-color: var(--mobile-underline-color);
+}
+
+@media (min-width: 1440px) {
+    .contest_info {
+        min-width: 55%;
+    }
+
+    .rank {
+        min-width: 35%;
+    }
+}
+
+@media (max-width: 700px) {
+    h3 {
+        margin-bottom: 2vw;
+        padding-left: 3vw;
+    }
+
+    .contest .project_info,
+    .highlight,
+    .homepage a {
+        text-decoration: underline;
+        text-decoration-color: var(--mobile-underline-color);
+    }
+
+    .contest_info {
+        min-width: 50%;
+    }
+
+    .languages-list .numlist {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .assignments h4,
+    .contest-list h4,
+    .projects-list h4 {
+        font-size: 0.9em;
+        margin-left: 3vw;
+        margin-top: 0;
+        max-width: 90%;
+    }
+
+    .rank {
+        display: flex;
+        flex: 1;
+        flex-wrap: wrap;
+        margin-left: 10px;
+        min-width: 40%;
+        overflow-wrap: break-word;
+        text-align: left;
+        width: auto;
+    }
+
+    .home-section {
+        padding-bottom: 1vw;
+    }
+
+    .home-section .bulletlist,
+    .home-section .numlist {
+        font-size: 0.97em;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 500px) {
+    .languages-list .numlist {
+        column-count: 2;
+        column-gap: 1ex;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

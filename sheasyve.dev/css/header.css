@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+@import url('colors.css');
+
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: var(--background-color1);
+    background-image: url('../src/media/bg2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    justify-content: center;
+
+}
+
+.body {
+    background: linear-gradient(180deg, var(--background-color1), var(--background-color2));
+    background-size: cover;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 10px;
+    justify-content: center;
+}
+
+/* Headings and Titles */
+.header-titles {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(0deg, var(--title-gradient-start), var(--title-gradient-end));
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px var(--box-shadow-color),
+        0px 5px 30px rgba(216, 99, 99, 0.349);
+    margin-bottom: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.header-titles h1 {
+    font-size: 2.5em;
+    color: var(--primary-text-color);
+    margin: 0;
+    letter-spacing: 1px;
+    font-family: Raleway;
+    font-weight: bold;
+}
+
+.header-titles h2 {
+    font-size: 1.5em;
+    color: var(--primary-text-color);
+    margin-top: 10px;
+    margin-bottom: 1vw;
+    font-weight: 300;
+}
+
+.header-titles a {
+    color: var(--title-color);
+    text-decoration: none;
+
+}
+
+.header-titles a:hover {
+    color: var(--link-hover-color);
+    border-bottom-color: var(--link-hover-color);
+    opacity: 0.6;
+}
+
+/* Links and Menus */
+
+.header-links {
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: auto;
+    background: linear-gradient(180deg, var(--link-gradient-start), var(--link-gradient-end));
+    backdrop-filter: blur(10px);
+    width: 100%;
+    max-width: 800px;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    box-shadow: 0px 4px 6px var(--box-shadow-color);
+}
+
+.header-links a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+.header-links a:hover {
+    color: var(--link-hover-color);
+    opacity: 0.6;
+}
+
+.header-links h2 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: var(--link-color);
+}
+
+.header-links img {
+    width: clamp(5px, 20px, 40px);
+    height: auto;
+}
+
+.header-links a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+    .header-titles {
+        font-size: .8em;
+    }
+
+    .header-titles a {
+        text-decoration: underline;
+        text-decoration-color: var(--mobile-underline-color);
+    }
+
+    .homepage a {
+        text-decoration: none;
+
+    }
+
+    .repo a {
+        text-decoration: underline;
+        text-decoration-color: var(--mobile-underline-color2);
+
+    }
+
+    .header-links {
+        text-decoration: underline;
+        text-decoration-color: var(--mobile-underline-color);
+        font-size: .8em;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .header-links img {
+        width: 20px;
+        height: auto;
+        margin-right: 10px;
+    }
+
+    .header-titles h1 {
+        font-size: 2.3em
+    }
+
+    .header-titles h2 {
+        font-size: 1.6em;
+    }
+
+    .header-links h2 {
+        font-size: 1.3em;
+    }
+}
+
+@media (min-width: 768px) {
+    body {
+        margin: 0 2vw;
+    }
+
+    .rating {
+        visibility: hidden;
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+        margin: 0 10vw;
+    }
+
+    .header-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+}
+
+@media (min-width: 1600px) {
+    .rating {
+        visibility: visible;
+    }
+}
+
+@media (min-width: 1440px) {
+    body {
+        margin: 0 15vw;
+    }
+
+    .header-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 2000px) {
+    body {
+        margin: 0 18vw;
+    }
+
+    .header-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 2250px) {
+    body {
+        margin: 0 25vw;
+    }
+
+    .header-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
