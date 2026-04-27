@@ -20,9 +20,9 @@ export default (env, argv) => {
       path: path.resolve(__dirname, 'dist'),
       filename: isProduction ? '[name].[contenthash].js' : '[name].bundle.js',
       clean: true, // Cleans the 'dist' folder before each build
-      publicPath: '/', 
+      publicPath: '/',
     },
-    
+
     mode: isProduction ? 'production' : 'development',
     devtool: isProduction ? 'source-map' : 'eval-source-map',
 
@@ -34,7 +34,13 @@ export default (env, argv) => {
       port: 3000,
       hot: true, // Hot Module Replacement (HMR)
       open: true,
-      historyApiFallback: true, // Fixes routing in Single Page Applications (SPA)
+      historyApiFallback: true, 
+      proxy: [
+        {
+          context: ['/api'],
+          target: 'http://localhost:3001', 
+        },
+      ],
     },
 
     performance: {
@@ -99,30 +105,30 @@ export default (env, argv) => {
       ],
     },
     resolve: {
-      extensions: ['.js', '.jsx'], 
+      extensions: ['.js', '.jsx'],
     },
-    
+
     // 4. PLUGINS
     plugins: [
       new HtmlWebpackPlugin({
         template: './index.html',
       }),
-      ...(isProduction 
+      ...(isProduction
         ? [
-            // Production-only plugins
-            new HtmlWebpackPlugin({
-              filename: 'CNAME',
-              templateContent: 'sheasyve.dev',
-              inject: false,
-            }),
-            new MiniCssExtractPlugin({
-              filename: '[name].[contenthash].css',
-            })
-          ]
+          // Production-only plugins
+          new HtmlWebpackPlugin({
+            filename: 'CNAME',
+            templateContent: 'sheasyve.dev',
+            inject: false,
+          }),
+          new MiniCssExtractPlugin({
+            filename: '[name].[contenthash].css',
+          })
+        ]
         : [
-            // Development-only plugins
-            new ReactRefreshWebpackPlugin()
-          ]
+          // Development-only plugins
+          new ReactRefreshWebpackPlugin()
+        ]
       ),
     ],
 
