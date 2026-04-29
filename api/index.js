@@ -49,8 +49,8 @@ app.post('/api/increment', async (req, res) => {
         
         const countMatch = check.match(/(\d+)/);
         if (countMatch && parseInt(countMatch[0], 0) === 0) {
-            await runSql(`INSERT INTO UNIQUE_VISITORS (IP_ADDRESS) VALUES ('${sanitizedIp}');`);
-            await runSql(`UPDATE COUNTERS SET VISIT_COUNT = VISIT_COUNT + 1 WHERE ID = 1;`);
+            await runSql(`INSERT INTO UNIQUE_VISITORS (IP_ADDRESS) VALUES ('${sanitizedIp}');COMMIT;`);
+            await runSql(`UPDATE COUNTERS SET VISIT_COUNT = VISIT_COUNT + 1 WHERE ID = 1;COMMIT;`);
             res.json({ success: true, newVisitor: true });
         } else {
             res.json({ success: true, newVisitor: false });
