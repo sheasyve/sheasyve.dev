@@ -3,7 +3,7 @@ echo "Pulling latest code..."
 git pull origin main
 
 echo "Rebuilding React..."
-npm run build # (Assuming your React app needs building)
+npm run build 
 
 echo "Restarting API..."
 pm2 restart visitor-api
