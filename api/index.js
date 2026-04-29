@@ -4,12 +4,21 @@ require('dotenv').config();
 const cors = require('cors'); // Add this
 const app = express();
 
-
 // Check if we are running on Windows
 const isWindows = process.platform === 'win32';
 
 const dbPath = "/var/lib/firebird/data/visitor_counter.fdb";
 const auth = `-user sysdba -password '${process.env.DB_PASSWORD}'`;
+
+const runSql = (query) => {
+    return new Promise((resolve, reject) => {
+        const cmd = `echo "${query}" | isql-fb ${dbPath} ${auth}`;
+        exec(cmd, (error, stdout, stderr) => {
+            if (error) reject(stderr);
+            else resolve(stdout);
+        });
+    });
+};
 
 app.use(cors());
 
@@ -30,8 +39,6 @@ app.get('/api/count', (req, res) => {
 app.post('/api/increment', async (req, res) => {
 
     app.set('trust proxy', true);
-
-
     const ip = req.headers['cf-connecting-ip'] || req.headers['x-forwarded-for'] || req.socket.remoteAddress;
 
     // Basic sanitization: Ensure it's a valid IPv4/IPv6 string
