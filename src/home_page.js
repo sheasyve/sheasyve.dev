@@ -8,6 +8,7 @@ import SoftwareSection from './home_page/software.js';
 import ToolsSection from './home_page/tools.js';
 import HobbiesSection from './home_page/hobbies.js';
 import ButtonComponent from './components/button.js';
+import VisitorComponent from './components/visitor.js';
 
 function HomePage() {
     return (
@@ -19,9 +20,8 @@ function HomePage() {
             <div className="list"><SoftwareSection /></div>
             <div className="list"><InterestsSection /></div>
             <div className="list"><HobbiesSection /></div> 
-            <div className="button">
-                <ButtonComponent />
-            </div>
+            <div className="button"><ButtonComponent /></div>
+            <div className="visitor-count"><VisitorComponent /></div>
         </div>
     );
 }

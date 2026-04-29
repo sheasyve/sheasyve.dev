@@ -24,17 +24,30 @@ app.get('/api/count', (req, res) => {
     });
 });
 
-app.post('/api/increment', (req, res) => {
-    // If on Windows, just pretend it worked
-    if (isWindows) return res.json({ success: true, mocked: true });
+app.post('/api/increment', async (req, res) => {
 
-    const query = "UPDATE COUNTERS SET VISIT_COUNT = VISIT_COUNT + 1 WHERE ID = 1;";
-    const cmd = `echo "${query}" | isql-fb ${dbPath} ${auth}`;
+    app.set('trust proxy', true);
 
-    exec(cmd, (error, stdout, stderr) => {
-        if (error) return res.status(500).json({ error: stderr });
-        res.json({ success: true });
-    });
+
+    const ip = req.headers['cf-connecting-ip'] || req.headers['x-forwarded-for'] || req.socket.remoteAddress;
+
+    // Basic sanitization: Ensure it's a valid IPv4/IPv6 string
+    const sanitizedIp = ip.replace(/[^a-zA-Z0-9.:]/g, '');
+
+    try {
+        const check = await runSql(`SELECT COUNT(*) FROM UNIQUE_VISITORS WHERE IP_ADDRESS = '${sanitizedIp}';`);
+        
+        const countMatch = check.match(/(\d+)/);
+        if (countMatch && parseInt(countMatch[0], 0) === 0) {
+            await runSql(`INSERT INTO UNIQUE_VISITORS (IP_ADDRESS) VALUES ('${sanitizedIp}');`);
+            await runSql(`UPDATE COUNTERS SET VISIT_COUNT = VISIT_COUNT + 1 WHERE ID = 1;`);
+            res.json({ success: true, newVisitor: true });
+        } else {
+            res.json({ success: true, newVisitor: false });
+        }
+    } catch (err) {
+        res.status(500).json({ error: "Database error" });
+    }
 });
 
 app.listen(3001, () => console.log('API server running on port 3001'));
