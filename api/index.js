@@ -1,14 +1,17 @@
 const express = require('express');
 const { exec } = require('child_process');
 require('dotenv').config();
-
+const cors = require('cors'); // Add this
 const app = express();
+
 
 // Check if we are running on Windows
 const isWindows = process.platform === 'win32';
 
 const dbPath = "/var/lib/firebird/data/visitor_counter.fdb";
 const auth = `-user sysdba -password '${process.env.DB_PASSWORD}'`;
+
+app.use(cors());
 
 app.get('/api/count', (req, res) => {
     // If on Windows, just return a fake number so React doesn't break
