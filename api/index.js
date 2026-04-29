@@ -1,10 +1,10 @@
 const express = require('express');
 const { exec } = require('child_process');
 require('dotenv').config();
-const cors = require('cors'); // Add this
+const cors = require('cors'); 
 const app = express();
 
-// Check if we are running on Windows
+// Check if running on Windows
 const isWindows = process.platform === 'win32';
 
 const dbPath = "/var/lib/firebird/data/visitor_counter.fdb";
@@ -56,6 +56,7 @@ app.post('/api/increment', async (req, res) => {
             res.json({ success: true, newVisitor: false });
         }
     } catch (err) {
+        console.error("INCREMENT ERROR DETAILS:", err);
         res.status(500).json({ error: "Database error" });
     }
 });
