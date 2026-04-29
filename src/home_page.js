@@ -19,9 +19,11 @@ function HomePage() {
             <div className="list"><ToolsSection /></div>
             <div className="list"><SoftwareSection /></div>
             <div className="list"><InterestsSection /></div>
-            <div className="list"><HobbiesSection /></div> 
-            <div className="button"><ButtonComponent /></div>
-            <div className="visitor-count"><VisitorComponent /></div>
+            <div className="list"><HobbiesSection /></div>
+            <div className="footer">
+                <VisitorComponent />
+                <ButtonComponent />
+            </div>
         </div>
     );
 }
