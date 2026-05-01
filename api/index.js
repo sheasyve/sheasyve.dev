@@ -7,7 +7,7 @@ const app = express();
 // Check if running on Window
 const isWindows = process.platform === 'win32';
 
-const dbPath = "127.0.0.1:/var/lib/firebird/data/visitor_counter.fdb";
+const dbPath = "localhost:/var/lib/firebird/data/visitor_counter.fdb";
 const auth = `-user sysdba -password '${process.env.DB_PASSWORD}'`;
 
 const runSql = (query) => {
