@@ -65,25 +65,32 @@ app.post('/api/increment', async (req, res) => {
     if (isWindows) return res.json({ success: true, newVisitor: true });
 
     const sanitizedIp = getSanitizedIp(req);
+    console.log(`\n--- NEW INCREMENT REQUEST FROM: ${sanitizedIp} ---`);
 
     try {
-        // 1. Ensure the counter record exists before trying to update it
-        const counterCheck = await runSql("SELECT VISIT_COUNT FROM COUNTERS WHERE ID = 1;");
-        if (!counterCheck.match(/={3,}\s+(\d+)/)) {
-            await runSql("INSERT INTO COUNTERS (ID, VISIT_COUNT) VALUES (1, 0); COMMIT;");
-        }
+        // 1. Raw Counter Check
+        const rawCounter = await runSql("SELECT VISIT_COUNT FROM COUNTERS WHERE ID = 1;");
+        console.log("[DEBUG] Raw Counter Output:\n", rawCounter);
 
-        // 2. Check the unique visitor
-        const check = await runSql(`SELECT COUNT(*) FROM UNIQUE_VISITORS WHERE IP_ADDRESS = '${sanitizedIp}';`);
-        
-        // Correctly parse the SQL table output, skipping the echoed IP address digits
-        const countMatch = check.match(/={3,}\s+(\d+)/);
+        // 2. Raw IP Check
+        const rawIpCheck = await runSql(`SELECT COUNT(*) FROM UNIQUE_VISITORS WHERE IP_ADDRESS = '${sanitizedIp}';`);
+        console.log("[DEBUG] Raw IP Check Output:\n", rawIpCheck);
 
-        if (countMatch && parseInt(countMatch[1], 10) === 0) {
+        // Parse attempts
+        const countMatch = rawIpCheck.match(/\d+/g); 
+        console.log("[DEBUG] All numbers found in IP check:", countMatch);
+
+        // For safety, let's just grab the last number found in the output string
+        const finalNumberFound = countMatch ? parseInt(countMatch[countMatch.length - 1], 10) : null;
+        console.log(`[DEBUG] Number we are using for the IP check: ${finalNumberFound}`);
+
+        if (finalNumberFound === 0) {
+            console.log("[DEBUG] DECISION: It is a 0! Inserting new IP and incrementing.");
             await runSql(`INSERT INTO UNIQUE_VISITORS (IP_ADDRESS) VALUES ('${sanitizedIp}'); COMMIT;`);
             await runSql(`UPDATE COUNTERS SET VISIT_COUNT = VISIT_COUNT + 1 WHERE ID = 1; COMMIT;`);
             res.json({ success: true, newVisitor: true });
         } else {
+            console.log("[DEBUG] DECISION: Not 0. Skipping increment.");
             res.json({ success: true, newVisitor: false });
         }
     } catch (err) {
