@@ -470,6 +470,8 @@ ol {
 
     .footer {
         margin-top: 3vw;
+        margin: 3vw 2vw 0;
+        width:96%;
     }
 
     .contest .project_info,

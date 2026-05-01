@@ -11,7 +11,6 @@ const auth = `-user sysdba -password '${process.env.DB_PASSWORD}'`;
 
 const runSql = (query) => {
     return new Promise((resolve, reject) => {
-        // Appending QUIT; forces the shell to close, preventing zombie locks
         const cmd = `echo "${query} QUIT;" | isql-fb ${dbPath} ${auth}`;
         exec(cmd, (error, stdout, stderr) => {
             if (error) reject(stderr);
