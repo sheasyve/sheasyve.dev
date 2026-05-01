@@ -11,7 +11,7 @@ const auth = `-user sysdba -password '${process.env.DB_PASSWORD}'`;
 
 const runSql = (query) => {
     return new Promise((resolve, reject) => {
-        const cmd = `echo "${query} QUIT;" | isql-fb ${dbPath} ${auth}`;
+        const cmd = `echo "${query} COMMIT; QUIT;" | isql-fb ${dbPath} ${auth}`;
         exec(cmd, (error, stdout, stderr) => {
             if (error) reject(stderr);
             else resolve(stdout);
