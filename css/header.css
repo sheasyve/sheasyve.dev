@@ -25,6 +25,7 @@ body {
     border-radius: 10px;
     overflow: hidden;
     padding: 10px;
+    margin-bottom: 0.5vw;
     justify-content: center;
 }
 

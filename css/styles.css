@@ -11,24 +11,25 @@ p {
     font-style: italic;
 }
 
-.technical-breakdown{
+.technical-breakdown {
     background: var(--project-h3-background);
     border-radius: 5px;
 }
 
 .footer {
-  display: flex;           
-  flex-direction: row;     
-  align-items: center;       
-  justify-content: center;   
-  gap: 20px;               
-  flex-wrap: wrap;     
-  margin-top: 1vw;      
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 0.5vw 0.5vw 0vw 0.5vw;
+    width: 98%;
 }
 
 .footer p {
-  margin: 0;
-  line-height: normal;       
+    margin: 0;
+    line-height: normal;
 }
 
 .square-video {
@@ -93,7 +94,7 @@ h3 {
     line-height: 1.5;
     color: var(--primary-text-color);
     text-shadow: none;
-    background:none;
+    background: none;
 }
 
 .project-page h4 {
@@ -149,12 +150,12 @@ h3 {
     padding: 5px;
 }
 
-.project-header{
+.project-header {
     background: rgba(41, 41, 41, 0.753);
     border-radius: 5px 5px 5px 5px;
 }
 
-.project-header h3{
+.project-header h3 {
     margin-top: 0;
     padding-top: 1vw;
     padding-bottom: 1vw;
@@ -164,7 +165,7 @@ h3 {
 
 .techstack {
     padding-top: 1vw;
-    padding-bottom:0.5vw;
+    padding-bottom: 0.5vw;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -172,13 +173,11 @@ h3 {
     list-style: none;
     justify-content: center;
     background-color: rgba(255, 255, 255, 0.932);
-    background-image: linear-gradient(
-        to right, 
-        transparent, 
-        #818181, 
-        #7a7878, 
-        transparent
-    );
+    background-image: linear-gradient(to right,
+            transparent,
+            #818181,
+            #7a7878,
+            transparent);
     background-repeat: no-repeat;
     background-position: bottom center;
     background-size: 100% 0.08vw;
@@ -192,11 +191,11 @@ h3 {
     white-space: nowrap;
 }
 
-.tech-item h4{
+.tech-item h4 {
     font-size: 1em;
     padding: 0;
     margin: 0;
-    background:none;
+    background: none;
     color: var(--primary-text-color);
 }
 
@@ -235,11 +234,11 @@ ol {
 }
 
 .button {
-  height: fit-content;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
+    height: fit-content;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
 }
 
 .bulletlist,
@@ -438,7 +437,8 @@ ol {
     height: 30px;
     animation: spin 1s linear infinite;
 }
-.technical-breakdown h2{
+
+.technical-breakdown h2 {
     border-radius: 5px 5px 0 0;
 }
 
@@ -467,7 +467,8 @@ ol {
         margin-bottom: 2vw;
         padding-left: 3vw;
     }
-    .footer{
+
+    .footer {
         margin-top: 3vw;
     }
 
