@@ -12,12 +12,15 @@ const auth = `-user sysdba -password '${process.env.DB_PASSWORD}'`;
 
 const runSql = (query) => {
     return new Promise((resolve, reject) => {
-        // Use a Bash Heredoc (<<EOF) to forcefully feed the query, and -q to hide welcome messages
-        const cmd = `isql-fb "${dbPath}" -user sysdba -password '${process.env.DB_PASSWORD}' -q <<EOF
-${query}
-QUIT;
-EOF`;
-        exec(cmd, (error, stdout, stderr) => {
+        const cmd = `isql-fb "${dbPath}" -q <<EOF\n${query}\nQUIT;\nEOF`;
+        
+        exec(cmd, {
+            env: {
+                ...process.env,
+                ISC_USER: 'sysdba',
+                ISC_PASSWORD: process.env.DB_PASSWORD 
+            }
+        }, (error, stdout, stderr) => {
             if (stderr && stderr.trim().length > 0) {
                 console.error(`\n[DB ERROR/WARN]:\n${stderr}`);
             }
@@ -26,6 +29,7 @@ EOF`;
         });
     });
 };
+
 app.use(cors());
 app.use(express.json());
 
