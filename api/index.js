@@ -12,15 +12,10 @@ const auth = `-user sysdba -password '${process.env.DB_PASSWORD}'`;
 
 const runSql = (query) => {
     return new Promise((resolve, reject) => {
-        const cmd = `isql-fb "${dbPath}" -q <<EOF\n${query}\nQUIT;\nEOF`;
+        // Putting the auth flags back forces TCP network mode, avoiding the file lock
+        const cmd = `isql-fb "${dbPath}" -user sysdba -password '${process.env.DB_PASSWORD}' -q <<EOF\n${query}\nQUIT;\nEOF`;
         
-        exec(cmd, {
-            env: {
-                ...process.env,
-                ISC_USER: 'sysdba',
-                ISC_PASSWORD: process.env.DB_PASSWORD 
-            }
-        }, (error, stdout, stderr) => {
+        exec(cmd, (error, stdout, stderr) => {
             if (stderr && stderr.trim().length > 0) {
                 console.error(`\n[DB ERROR/WARN]:\n${stderr}`);
             }
