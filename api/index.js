@@ -1,6 +1,9 @@
 const express = require('express');
 const { exec } = require('child_process');
-require('dotenv').config();
+
+// The one fix we MUST keep so PM2 finds your password
+require('dotenv').config({ path: __dirname + '/.env' });
+
 const cors = require('cors'); 
 const app = express();
 
