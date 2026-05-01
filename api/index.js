@@ -14,7 +14,11 @@ const runSql = (query) => {
     return new Promise((resolve, reject) => {
         const cmd = `echo "${query}" | isql-fb ${dbPath} ${auth}`;
         exec(cmd, (error, stdout, stderr) => {
-            if (error) reject(stderr);
+            // Force hidden Firebird errors to print in the PM2 logs
+            if (stderr && stderr.trim().length > 0) {
+                console.error(`\n[HIDDEN DB ERROR]:\n${stderr}`);
+            }
+            if (error) reject(stderr || error.message);
             else resolve(stdout);
         });
     });
