@@ -12,18 +12,20 @@ const auth = `-user sysdba -password '${process.env.DB_PASSWORD}'`;
 
 const runSql = (query) => {
     return new Promise((resolve, reject) => {
-        const cmd = `echo "${query}" | isql-fb ${dbPath} ${auth}`;
+        // Use a Bash Heredoc (<<EOF) to forcefully feed the query, and -q to hide welcome messages
+        const cmd = `isql-fb "${dbPath}" -user sysdba -password '${process.env.DB_PASSWORD}' -q <<EOF
+${query}
+QUIT;
+EOF`;
         exec(cmd, (error, stdout, stderr) => {
-            // Force hidden Firebird errors to print in the PM2 logs
             if (stderr && stderr.trim().length > 0) {
-                console.error(`\n[HIDDEN DB ERROR]:\n${stderr}`);
+                console.error(`\n[DB ERROR/WARN]:\n${stderr}`);
             }
             if (error) reject(stderr || error.message);
             else resolve(stdout);
         });
     });
 };
-
 app.use(cors());
 app.use(express.json());
 
@@ -72,29 +74,31 @@ app.post('/api/increment', async (req, res) => {
     console.log(`\n--- NEW INCREMENT REQUEST FROM: ${sanitizedIp} ---`);
 
     try {
-        // 1. Raw Counter Check
+        // 1. Ensure the counter record exists
         const rawCounter = await runSql("SELECT VISIT_COUNT FROM COUNTERS WHERE ID = 1;");
-        console.log("[DEBUG] Raw Counter Output:\n", rawCounter);
+        if (!rawCounter.match(/\d+/)) {
+            await runSql("INSERT INTO COUNTERS (ID, VISIT_COUNT) VALUES (1, 0); COMMIT;");
+        }
 
-        // 2. Raw IP Check
+        // 2. Check if the IP exists
         const rawIpCheck = await runSql(`SELECT COUNT(*) FROM UNIQUE_VISITORS WHERE IP_ADDRESS = '${sanitizedIp}';`);
-        console.log("[DEBUG] Raw IP Check Output:\n", rawIpCheck);
+        console.log("[DEBUG] Raw DB Output:\n", rawIpCheck);
 
-        // Parse attempts
+        // Grab the numbers from the output
         const countMatch = rawIpCheck.match(/\d+/g); 
-        console.log("[DEBUG] All numbers found in IP check:", countMatch);
-
-        // For safety, let's just grab the last number found in the output string
+        
+        // Since -q is on, the last number printed will be the actual COUNT(*) result
         const finalNumberFound = countMatch ? parseInt(countMatch[countMatch.length - 1], 10) : null;
-        console.log(`[DEBUG] Number we are using for the IP check: ${finalNumberFound}`);
+        console.log(`[DEBUG] Final parsed count: ${finalNumberFound}`);
 
+        // If the count is 0, they are a new visitor!
         if (finalNumberFound === 0) {
-            console.log("[DEBUG] DECISION: It is a 0! Inserting new IP and incrementing.");
             await runSql(`INSERT INTO UNIQUE_VISITORS (IP_ADDRESS) VALUES ('${sanitizedIp}'); COMMIT;`);
             await runSql(`UPDATE COUNTERS SET VISIT_COUNT = VISIT_COUNT + 1 WHERE ID = 1; COMMIT;`);
+            console.log("[SUCCESS] Inserted new IP and incremented counter.");
             res.json({ success: true, newVisitor: true });
         } else {
-            console.log("[DEBUG] DECISION: Not 0. Skipping increment.");
+            console.log("[SKIPPED] IP already exists.");
             res.json({ success: true, newVisitor: false });
         }
     } catch (err) {
