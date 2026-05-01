@@ -1,26 +1,30 @@
 const express = require('express');
-const { exec } = require('child_process');
+const Firebird = require('node-firebird');
 require('dotenv').config({ path: __dirname + '/.env' });
 const cors = require('cors'); 
 const app = express();
 
-// Check if running on Window
 const isWindows = process.platform === 'win32';
 
-const dbPath = "localhost:/var/lib/firebird/data/visitor_counter.fdb";
-const auth = `-user sysdba -password '${process.env.DB_PASSWORD}'`;
+// Native driver options - strictly uses TCP port 3050, completely bypassing file locks
+const dbOptions = {
+    host: '127.0.0.1',
+    port: 3050,
+    database: '/var/lib/firebird/data/visitor_counter.fdb',
+    user: 'sysdba',
+    password: process.env.DB_PASSWORD
+};
 
-const runSql = (query) => {
+// Clean Promise wrapper for the native driver
+const runSql = (query, params = []) => {
     return new Promise((resolve, reject) => {
-        // Putting the auth flags back forces TCP network mode, avoiding the file lock
-        const cmd = `isql-fb "${dbPath}" -user sysdba -password '${process.env.DB_PASSWORD}' -q <<EOF\n${query}\nQUIT;\nEOF`;
-        
-        exec(cmd, (error, stdout, stderr) => {
-            if (stderr && stderr.trim().length > 0) {
-                console.error(`\n[DB ERROR/WARN]:\n${stderr}`);
-            }
-            if (error) reject(stderr || error.message);
-            else resolve(stdout);
+        Firebird.attach(dbOptions, (err, db) => {
+            if (err) return reject(err);
+            db.query(query, params, (err, result) => {
+                db.detach(); // Always release connection
+                if (err) reject(err);
+                else resolve(result);
+            });
         });
     });
 };
@@ -49,22 +53,19 @@ app.get('/api/count', async (req, res) => {
     if (isWindows) return res.json({ count: 42 });
 
     try {
-        const rawCounter = await runSql("SELECT VISIT_COUNT FROM COUNTERS WHERE ID = 1;");
+        let result = await runSql("SELECT VISIT_COUNT FROM COUNTERS WHERE ID = 1");
         
-        // Since -q is active, just find all numbers and grab the last one
-        const match = rawCounter.match(/\d+/g);
-        
-        // If no numbers came back at all, the table is actually empty
-        if (!match) {
-            await runSql("INSERT INTO COUNTERS (ID, VISIT_COUNT) VALUES (1, 0); COMMIT;");
+        // If table is empty
+        if (!result || result.length === 0) {
+            await runSql("INSERT INTO COUNTERS (ID, VISIT_COUNT) VALUES (1, 0)");
             return res.json({ count: 0 });
         }
 
-        const currentCount = parseInt(match[match.length - 1], 10);
-        res.json({ count: currentCount });
+        // Return the exact integer directly from the DB object
+        res.json({ count: parseInt(result[0].VISIT_COUNT, 10) });
     } catch (err) {
-        console.error("GET COUNT ERROR DETAILS:", err);
-        res.status(500).json({ error: "Database not initialized" });
+        console.error("\n[GET COUNT ERROR]:", err.message || err);
+        res.status(500).json({ error: "Database error" });
     }
 });
 
@@ -75,27 +76,22 @@ app.post('/api/increment', async (req, res) => {
     console.log(`\n--- NEW INCREMENT REQUEST FROM: ${sanitizedIp} ---`);
 
     try {
-        // 1. Ensure the counter record exists
-        const rawCounter = await runSql("SELECT VISIT_COUNT FROM COUNTERS WHERE ID = 1;");
-        if (!rawCounter.match(/\d+/)) {
-            await runSql("INSERT INTO COUNTERS (ID, VISIT_COUNT) VALUES (1, 0); COMMIT;");
+        // 1. Ensure counter row exists
+        let counterCheck = await runSql("SELECT VISIT_COUNT FROM COUNTERS WHERE ID = 1");
+        if (!counterCheck || counterCheck.length === 0) {
+            await runSql("INSERT INTO COUNTERS (ID, VISIT_COUNT) VALUES (1, 0)");
         }
 
-        // 2. Check if the IP exists
-        const rawIpCheck = await runSql(`SELECT COUNT(*) FROM UNIQUE_VISITORS WHERE IP_ADDRESS = '${sanitizedIp}';`);
-        console.log("[DEBUG] Raw DB Output:\n", rawIpCheck);
-
-        // Grab the numbers from the output
-        const countMatch = rawIpCheck.match(/\d+/g); 
+        // 2. Check if IP exists using safe parameterized queries
+        let ipCheck = await runSql("SELECT COUNT(*) FROM UNIQUE_VISITORS WHERE IP_ADDRESS = ?", [sanitizedIp]);
         
-        // Since -q is on, the last number printed will be the actual COUNT(*) result
-        const finalNumberFound = countMatch ? parseInt(countMatch[countMatch.length - 1], 10) : null;
-        console.log(`[DEBUG] Final parsed count: ${finalNumberFound}`);
+        // Extract the count integer safely regardless of what the DB aliases the column as
+        let countValue = parseInt(Object.values(ipCheck[0])[0], 10);
+        console.log(`[DEBUG] Final parsed count: ${countValue}`);
 
-        // If the count is 0, they are a new visitor!
-        if (finalNumberFound === 0) {
-            await runSql(`INSERT INTO UNIQUE_VISITORS (IP_ADDRESS) VALUES ('${sanitizedIp}'); COMMIT;`);
-            await runSql(`UPDATE COUNTERS SET VISIT_COUNT = VISIT_COUNT + 1 WHERE ID = 1; COMMIT;`);
+        if (countValue === 0) {
+            await runSql("INSERT INTO UNIQUE_VISITORS (IP_ADDRESS) VALUES (?)", [sanitizedIp]);
+            await runSql("UPDATE COUNTERS SET VISIT_COUNT = VISIT_COUNT + 1 WHERE ID = 1");
             console.log("[SUCCESS] Inserted new IP and incremented counter.");
             res.json({ success: true, newVisitor: true });
         } else {
@@ -103,7 +99,7 @@ app.post('/api/increment', async (req, res) => {
             res.json({ success: true, newVisitor: false });
         }
     } catch (err) {
-        console.error("INCREMENT ERROR DETAILS:", err);
+        console.error("\n[INCREMENT ERROR]:", err.message || err);
         res.status(500).json({ error: "Database error" });
     }
 });
@@ -112,11 +108,11 @@ app.post('/api/clear-visitors', async (req, res) => {
     if (isWindows) return res.json({ success: true, cleared: true });
 
     try {
-        await runSql("DELETE FROM UNIQUE_VISITORS; COMMIT;");
-        await runSql("UPDATE COUNTERS SET VISIT_COUNT = 0 WHERE ID = 1; COMMIT;");
+        await runSql("DELETE FROM UNIQUE_VISITORS");
+        await runSql("UPDATE COUNTERS SET VISIT_COUNT = 0 WHERE ID = 1");
         res.json({ success: true, cleared: true });
     } catch (err) {
-        console.error("CLEAR ERROR DETAILS:", err);
+        console.error("\n[CLEAR ERROR]:", err.message || err);
         res.status(500).json({ error: "Database error" });
     }
 });
