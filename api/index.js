@@ -50,19 +50,21 @@ app.get('/api/count', async (req, res) => {
     if (isWindows) return res.json({ count: 42 });
 
     try {
-        let result = await runSql("SELECT VISIT_COUNT FROM COUNTERS WHERE ID = 1;");
+        const rawCounter = await runSql("SELECT VISIT_COUNT FROM COUNTERS WHERE ID = 1;");
         
-        // Grab the digits immediately following the '====' table underline
-        let match = result.match(/={3,}\s+(\d+)/);
+        // Since -q is active, just find all numbers and grab the last one
+        const match = rawCounter.match(/\d+/g);
         
-        // If no record exists, create the default counter row
+        // If no numbers came back at all, the table is actually empty
         if (!match) {
             await runSql("INSERT INTO COUNTERS (ID, VISIT_COUNT) VALUES (1, 0); COMMIT;");
             return res.json({ count: 0 });
         }
 
-        res.json({ count: parseInt(match[1], 10) });
+        const currentCount = parseInt(match[match.length - 1], 10);
+        res.json({ count: currentCount });
     } catch (err) {
+        console.error("GET COUNT ERROR DETAILS:", err);
         res.status(500).json({ error: "Database not initialized" });
     }
 });
