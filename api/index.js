@@ -1,7 +1,7 @@
 const express = require('express');
 const { exec } = require('child_process');
 require('dotenv').config({ path: __dirname + '/.env' });
-const cors = require('cors'); 
+const cors = require('cors');
 const app = express();
 
 const isWindows = process.platform === 'win32';
@@ -43,9 +43,14 @@ app.post('/api/increment', async (req, res) => {
 
     // IP Obfuscation
     if (sanitizedIp.includes('.')) {
+        // IPv4: keep first 3 octets
         sanitizedIp = sanitizedIp.substring(0, sanitizedIp.lastIndexOf('.')) + '.0';
     } else if (sanitizedIp.includes(':')) {
-        sanitizedIp = sanitizedIp.substring(0, sanitizedIp.lastIndexOf(':')) + '::';
+        // IPv6: keep the first 4 parts of the address
+        const parts = sanitizedIp.split(':');
+        if (parts.length > 4) {
+            sanitizedIp = parts.slice(0, 4).join(':') + '::';
+        }
     }
 
     try {
