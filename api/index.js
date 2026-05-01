@@ -1,13 +1,9 @@
 const express = require('express');
 const { exec } = require('child_process');
-
-// The one fix we MUST keep so PM2 finds your password
 require('dotenv').config({ path: __dirname + '/.env' });
-
 const cors = require('cors'); 
 const app = express();
 
-// Check if running on Windows
 const isWindows = process.platform === 'win32';
 
 const dbPath = "/var/lib/firebird/data/visitor_counter.fdb";
@@ -15,7 +11,8 @@ const auth = `-user sysdba -password '${process.env.DB_PASSWORD}'`;
 
 const runSql = (query) => {
     return new Promise((resolve, reject) => {
-        const cmd = `echo "${query}" | isql-fb ${dbPath} ${auth}`;
+        // Appending QUIT; forces the shell to close, preventing zombie locks
+        const cmd = `echo "${query} QUIT;" | isql-fb ${dbPath} ${auth}`;
         exec(cmd, (error, stdout, stderr) => {
             if (error) reject(stderr);
             else resolve(stdout);
@@ -26,16 +23,13 @@ const runSql = (query) => {
 app.use(cors());
 
 app.get('/api/count', (req, res) => {
-    // If on Windows, just return a fake number so React doesn't break
     if (isWindows) return res.json({ count: 42 });
 
     const query = "SELECT VISIT_COUNT FROM COUNTERS WHERE ID = 1;";
-    const cmd = `echo "${query}" | isql-fb ${dbPath} ${auth}`;
+    const cmd = `echo "${query} QUIT;" | isql-fb ${dbPath} ${auth}`;
 
     exec(cmd, (error, stdout, stderr) => {
         if (error) return res.status(500).json({ error: stderr });
-        
-        // Grab the last number printed to avoid echoing issues
         const matches = stdout.match(/\d+/g);
         res.json({ count: matches ? parseInt(matches[matches.length - 1], 10) : 0 });
     });
@@ -45,10 +39,10 @@ app.post('/api/increment', async (req, res) => {
     app.set('trust proxy', true);
     const ip = req.headers['cf-connecting-ip'] || req.headers['x-forwarded-for'] || req.socket.remoteAddress;
 
-    // 1. Basic sanitization
     let sanitizedIp = ip ? ip.replace(/[^a-zA-Z0-9.:]/g, '') : '127.0.0.1';
+    console.log(`\n--- VISITOR HIT FROM: ${sanitizedIp} ---`);
 
-    // 2. IP Obfuscation (Masking the last block)
+    // IP Obfuscation
     if (sanitizedIp.includes('.')) {
         sanitizedIp = sanitizedIp.substring(0, sanitizedIp.lastIndexOf('.')) + '.0';
     } else if (sanitizedIp.includes(':')) {
@@ -57,16 +51,16 @@ app.post('/api/increment', async (req, res) => {
 
     try {
         const check = await runSql(`SELECT COUNT(*) FROM UNIQUE_VISITORS WHERE IP_ADDRESS = '${sanitizedIp}';`);
-        
-        // Grab the last number printed by Firebird
         const matches = check.match(/\d+/g);
         const countValue = matches ? parseInt(matches[matches.length - 1], 10) : null;
 
         if (countValue === 0) {
             await runSql(`INSERT INTO UNIQUE_VISITORS (IP_ADDRESS) VALUES ('${sanitizedIp}');`);
             await runSql(`UPDATE COUNTERS SET VISIT_COUNT = VISIT_COUNT + 1 WHERE ID = 1;`);
+            console.log("[SUCCESS] Incremented Counter!");
             res.json({ success: true, newVisitor: true });
         } else {
+            console.log("[SKIPPED] Existing Visitor.");
             res.json({ success: true, newVisitor: false });
         }
     } catch (err) {
