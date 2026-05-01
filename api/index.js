@@ -4,7 +4,7 @@ require('dotenv').config();
 const cors = require('cors'); 
 const app = express();
 
-// Check if running on Windows
+// Check if running on Window
 const isWindows = process.platform === 'win32';
 
 const dbPath = "localhost:/var/lib/firebird/data/visitor_counter.fdb";
