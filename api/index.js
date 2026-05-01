@@ -45,7 +45,9 @@ app.get('/api/count', async (req, res) => {
 
     try {
         let result = await runSql("SELECT VISIT_COUNT FROM COUNTERS WHERE ID = 1;");
-        let match = result.match(/\d+/);
+        
+        // Grab the digits immediately following the '====' table underline
+        let match = result.match(/={3,}\s+(\d+)/);
         
         // If no record exists, create the default counter row
         if (!match) {
@@ -53,7 +55,7 @@ app.get('/api/count', async (req, res) => {
             return res.json({ count: 0 });
         }
 
-        res.json({ count: parseInt(match[0], 10) });
+        res.json({ count: parseInt(match[1], 10) });
     } catch (err) {
         res.status(500).json({ error: "Database not initialized" });
     }
@@ -67,15 +69,17 @@ app.post('/api/increment', async (req, res) => {
     try {
         // 1. Ensure the counter record exists before trying to update it
         const counterCheck = await runSql("SELECT VISIT_COUNT FROM COUNTERS WHERE ID = 1;");
-        if (!counterCheck.match(/\d+/)) {
+        if (!counterCheck.match(/={3,}\s+(\d+)/)) {
             await runSql("INSERT INTO COUNTERS (ID, VISIT_COUNT) VALUES (1, 0); COMMIT;");
         }
 
         // 2. Check the unique visitor
         const check = await runSql(`SELECT COUNT(*) FROM UNIQUE_VISITORS WHERE IP_ADDRESS = '${sanitizedIp}';`);
-        const countMatch = check.match(/(\d+)/);
+        
+        // Correctly parse the SQL table output, skipping the echoed IP address digits
+        const countMatch = check.match(/={3,}\s+(\d+)/);
 
-        if (countMatch && parseInt(countMatch[0], 10) === 0) {
+        if (countMatch && parseInt(countMatch[1], 10) === 0) {
             await runSql(`INSERT INTO UNIQUE_VISITORS (IP_ADDRESS) VALUES ('${sanitizedIp}'); COMMIT;`);
             await runSql(`UPDATE COUNTERS SET VISIT_COUNT = VISIT_COUNT + 1 WHERE ID = 1; COMMIT;`);
             res.json({ success: true, newVisitor: true });
