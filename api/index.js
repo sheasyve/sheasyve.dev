@@ -23,40 +23,40 @@ const runSql = (query) => {
 app.use(cors());
 app.use(express.json());
 
-// Helper function to hash or mask an IP address
 const getSanitizedIp = (req) => {
     app.set('trust proxy', true);
     let ip = req.headers['cf-connecting-ip'] || req.headers['x-forwarded-for'] || req.socket.remoteAddress;
-    
-    // Basic sanitization: Ensure it's a valid IPv4/IPv6 string
     let sanitizedIp = ip ? ip.replace(/[^a-zA-Z0-9.:]/g, '') : '127.0.0.1';
 
-    // Mask the IP to anonymize the identifier
     if (sanitizedIp.includes('.')) {
-        // IPv4 masking
         return sanitizedIp.substring(0, sanitizedIp.lastIndexOf('.')) + '.0';
     } else if (sanitizedIp.includes(':')) {
-        // IPv6 masking
         return sanitizedIp.substring(0, sanitizedIp.lastIndexOf(':')) + '::';
     }
     return sanitizedIp;
 };
 
 // ==========================================
-// Visitor Tracking & Counting Endpoints
+// Main Endpoints
 // ==========================================
 
-app.get('/api/count', (req, res) => {
+app.get('/api/count', async (req, res) => {
     if (isWindows) return res.json({ count: 42 });
 
-    const query = "SELECT VISIT_COUNT FROM COUNTERS WHERE ID = 1;";
-    const cmd = `echo "${query}" | isql-fb ${dbPath} ${auth}`;
+    try {
+        let result = await runSql("SELECT VISIT_COUNT FROM COUNTERS WHERE ID = 1;");
+        let match = result.match(/\d+/);
+        
+        // If no record exists, create the default counter row
+        if (!match) {
+            await runSql("INSERT INTO COUNTERS (ID, VISIT_COUNT) VALUES (1, 0); COMMIT;");
+            return res.json({ count: 0 });
+        }
 
-    exec(cmd, (error, stdout, stderr) => {
-        if (error) return res.status(500).json({ error: stderr });
-        const match = stdout.match(/\d+/);
-        res.json({ count: match ? parseInt(match[0], 10) : 0 });
-    });
+        res.json({ count: parseInt(match[0], 10) });
+    } catch (err) {
+        res.status(500).json({ error: "Database not initialized" });
+    }
 });
 
 app.post('/api/increment', async (req, res) => {
@@ -65,12 +65,19 @@ app.post('/api/increment', async (req, res) => {
     const sanitizedIp = getSanitizedIp(req);
 
     try {
+        // 1. Ensure the counter record exists before trying to update it
+        const counterCheck = await runSql("SELECT VISIT_COUNT FROM COUNTERS WHERE ID = 1;");
+        if (!counterCheck.match(/\d+/)) {
+            await runSql("INSERT INTO COUNTERS (ID, VISIT_COUNT) VALUES (1, 0); COMMIT;");
+        }
+
+        // 2. Check the unique visitor
         const check = await runSql(`SELECT COUNT(*) FROM UNIQUE_VISITORS WHERE IP_ADDRESS = '${sanitizedIp}';`);
-        
         const countMatch = check.match(/(\d+)/);
-        if (countMatch && parseInt(countMatch[0], 0) === 0) {
-            await runSql(`INSERT INTO UNIQUE_VISITORS (IP_ADDRESS) VALUES ('${sanitizedIp}');COMMIT;`);
-            await runSql(`UPDATE COUNTERS SET VISIT_COUNT = VISIT_COUNT + 1 WHERE ID = 1;COMMIT;`);
+
+        if (countMatch && parseInt(countMatch[0], 10) === 0) {
+            await runSql(`INSERT INTO UNIQUE_VISITORS (IP_ADDRESS) VALUES ('${sanitizedIp}'); COMMIT;`);
+            await runSql(`UPDATE COUNTERS SET VISIT_COUNT = VISIT_COUNT + 1 WHERE ID = 1; COMMIT;`);
             res.json({ success: true, newVisitor: true });
         } else {
             res.json({ success: true, newVisitor: false });
@@ -81,14 +88,12 @@ app.post('/api/increment', async (req, res) => {
     }
 });
 
-// Endpoint to clear all unique visitors
 app.post('/api/clear-visitors', async (req, res) => {
     if (isWindows) return res.json({ success: true, cleared: true });
 
     try {
-        await runSql(`DELETE FROM UNIQUE_VISITORS;COMMIT;`);
-        await runSql(`UPDATE COUNTERS SET VISIT_COUNT = 0 WHERE ID = 1;COMMIT;`);
-        
+        await runSql("DELETE FROM UNIQUE_VISITORS; COMMIT;");
+        await runSql("UPDATE COUNTERS SET VISIT_COUNT = 0 WHERE ID = 1; COMMIT;");
         res.json({ success: true, cleared: true });
     } catch (err) {
         console.error("CLEAR ERROR DETAILS:", err);
@@ -96,5 +101,4 @@ app.post('/api/clear-visitors', async (req, res) => {
     }
 });
 
-// Start Server
 app.listen(3001, () => console.log('API server running on port 3001'));
