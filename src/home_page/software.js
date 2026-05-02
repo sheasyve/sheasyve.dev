@@ -10,7 +10,7 @@ function SoftwareSection() {
     ];
 
     return (
-        <div className="list">
+        <>
             <h3>Software Proficiency</h3>
             <ul className="bulletlist">
                 {softwareList.map((software, index) => (
@@ -20,7 +20,7 @@ function SoftwareSection() {
                     </li>
                 ))}
             </ul>
-        </div>
+        </>
     );
 }
 
