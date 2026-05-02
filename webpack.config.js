@@ -19,7 +19,7 @@ export default (env, argv) => {
     output: {
       path: path.resolve(__dirname, 'dist'),
       filename: isProduction ? '[name].[contenthash].js' : '[name].bundle.js',
-      clean: true, // Cleans the 'dist' folder before each build
+      clean: true, 
       publicPath: '/',
     },
 

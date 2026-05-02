@@ -58,7 +58,7 @@ function TeenyTimerProject() {
             <div className="technical-breakdown">
                 <h2>Technical Breakdown</h2>
 
-                <h3>
+                <p>
                     The user interface was built with <code>Tkinter</code>, Python’s built-in GUI toolkit, allowing for
                     a simple and responsive design. The core functionality involves a countdown mechanism that updates
                     dynamically, ensuring smooth real-time feedback.
@@ -66,7 +66,7 @@ function TeenyTimerProject() {
                     The application is packaged using <code>pyinstaller</code> to create standalone executables for Windows
                     and Linux. A shell script automates installation for Linux users, adding a desktop entry for convenient
                     access from the system menu.
-                </h3>
+                </p>
 
             </div>
 
