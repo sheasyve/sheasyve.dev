@@ -74,7 +74,7 @@ function BirdFlowProject() {
                     display the behavior of the airflow. This involved using Lagrangian methods for particle collisions
                     and movement, making the simulation a hybrid approach having both Eulerian and Lagrangian aspects.
                 </h3>
-                <h3 style={{ padding: "1vw 1vw 0vw 2vw" }}>
+                <h3 style={{ padding: "1vw 1vw 1vw 2vw" }}>
                     The particles are first advected with a Runge-Kutta 3rd order method, and then pressure in the
                     simulation is calculated using the conjugate gradient solver from SciPy. Pressure changes are
                     distributed through the grid, and particle velocities are updated accordingly after checking for collisions.

@@ -14,7 +14,6 @@ p {
 .technical-breakdown {
     background: var(--project-h3-background);
     border-radius: 5px;
-    padding-bottom: 1vw;
 }
 
 .footer {
@@ -116,7 +115,6 @@ h3 {
 
 .home-section {
     margin-top: 15px;
-    padding-bottom: 0.2vw;
 }
 
 .home-section a {
@@ -260,7 +258,6 @@ ol {
 .bulletlist,
 .numlist {
     max-width: 83%;
-    padding-bottom: 0.5vw;
     padding-top: 0;
     padding-left: calc(2vw + 17px);
 }
@@ -275,6 +272,7 @@ ol {
 .project-list li {
     color: var(--primary-text-color);
     margin: 5px 0;
+    margin-bottom: 0;
 }
 
 .project-list li {
@@ -307,9 +305,10 @@ ol {
 .languages-list .numlist {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    gap: 2vw 1vw;
     padding-bottom: 0;
-    /* max-width: 800px; */
-    /* margin: 0 auto; */
+    max-width: 800px; 
+    margin: 0 auto; 
 }
 
 .languages-list.numlist li {
@@ -320,7 +319,6 @@ ol {
 
 .languages-list .numlist li {
     break-inside: avoid;
-    margin-bottom: 1vw;
 }
 
 .languages-list .numlist li:last-child {
@@ -349,7 +347,6 @@ ol {
     color: var(--h4-text-color);
     font-size: 1em;
     font-weight: 500;
-    margin-bottom: 1vw;
     margin-top: 0;
     max-width: 95%;
     padding-left: 2vw;
@@ -357,6 +354,9 @@ ol {
 }
 
 
+.contest-list > .contest:last-child h4, .projects-list:last-child h4 {
+    margin-bottom: 0;
+}
 
 .contest a,
 .contest h4 {
@@ -464,7 +464,9 @@ ol {
     border-radius: 5px 5px 0 0;
 }
 
-
+.home-section{
+    padding-bottom: 1vw;
+}
 
 @keyframes spin {
     0% {
@@ -492,7 +494,9 @@ ol {
         padding-left: 3vw;
 
     }
-
+.home-section{
+    padding-bottom: 2vw;
+}
     .technical-breakdown h2 {
         margin-bottom: 3vw;
     }
@@ -540,7 +544,7 @@ ol {
 
     .footer {
         margin-top: 3vw;
-        margin: 3vw 2.5vw 0;
+        margin: 1vw 2.5vw 0;
         width: 95%;
     }
 
@@ -561,7 +565,9 @@ ol {
     }
 
     .languages-list .numlist {
-        grid-template-columns: repeat(3, 1fr);
+        gap: 1vw 0vw;
+        grid-template-columns: repeat(2, 1fr);
+        margin-left: 9vw;
     }
 
     .assignments h4,
@@ -570,6 +576,7 @@ ol {
         font-size: 0.9em;
         margin-left: 3vw;
         margin-top: 0;
+        margin-bottom: 0vw;
         max-width: 90%;
     }
 
@@ -593,20 +600,5 @@ ol {
         width: auto;
     }
 
-    .home-section {
-        padding-bottom: 1vw;
-    }
-
-    .home-section .bulletlist,
-    .home-section .numlist {
-        font-size: 0.97em;
-        margin-left: 0;
-    }
 }
 
-@media (max-width: 500px) {
-    .languages-list .numlist {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1vw 0vw;
-    }
-}

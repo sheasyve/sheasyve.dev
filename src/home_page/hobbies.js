@@ -10,7 +10,7 @@ function HobbiesSection() {
     ];
 
     return (
-        <div className="list">
+        <>
             <h3>Hobbies</h3>
             <ul className="bulletlist">
                 {myHobbies.map((hobby, index) => (
@@ -20,7 +20,7 @@ function HobbiesSection() {
                     </li>
                 ))}
             </ul>
-        </div>
+        </>
     );
 }
 
