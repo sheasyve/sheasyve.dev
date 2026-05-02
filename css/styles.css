@@ -14,6 +14,7 @@ p {
 .technical-breakdown {
     background: var(--project-h3-background);
     border-radius: 5px;
+    padding-bottom: 1vw;
 }
 
 .footer {
@@ -170,7 +171,6 @@ h3 {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    /* Keeps wrapping active */
     gap: 1vw 4vw;
     list-style: none;
     justify-content: center;
@@ -179,8 +179,6 @@ h3 {
     background-repeat: no-repeat;
     background-position: bottom center;
     background-size: 100% 0.08vw;
-
-    /* ADD THESE OVERRIDES TO FIX THE ISSUE */
     padding-left: 0 !important;
     padding-inline-start: 0 !important;
     margin-left: 0 !important;
@@ -192,10 +190,8 @@ h3 {
     display: flex;
     align-items: center;
     margin-left: 0 !important;
-    /* Removes the browser-default or inherited margin */
     padding-right: 1vw;
     white-space: normal;
-    /* Allows the items to wrap properly */
 }
 
 
@@ -280,9 +276,16 @@ ol {
 }
 
 
-.project-list {
+.project-list,
+.journey {
     background: var(--h3-background-color3);
     border-radius: 5px 0px 5px 5px;
+}
+
+.technical-breakdown h3 {
+    text-shadow: 0.05vw 0.05vw 0 #b8b8b869;
+    text-decoration: underline;
+    text-decoration-color: var(--highlight-color);
 }
 
 .project-list h2 {
@@ -290,8 +293,21 @@ ol {
 }
 
 .experience,
-.breakdown-inner {
+.breakdown-inner,
+.journey {
     padding-bottom: 1vw;
+}
+
+.project-page p {
+    color: var(--primary-text-color);
+    text-align: left;
+    padding-left: 2vw;
+    font-weight: 500;
+    margin-bottom: 0vw;
+}
+
+.technical-breakdown p {
+    font-size: 1.2em;
 }
 
 .project-page ol li,
@@ -307,8 +323,8 @@ ol {
     grid-template-columns: repeat(4, 1fr);
     gap: 2vw 1vw;
     padding-bottom: 0;
-    max-width: 800px; 
-    margin: 0 auto; 
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .languages-list.numlist li {
@@ -354,7 +370,8 @@ ol {
 }
 
 
-.contest-list > .contest:last-child h4, .projects-list:last-child h4 {
+.contest-list>.contest:last-child h4,
+.projects-list:last-child h4 {
     margin-bottom: 0;
 }
 
@@ -464,8 +481,23 @@ ol {
     border-radius: 5px 5px 0 0;
 }
 
-.home-section{
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+.home-section {
+
     padding-bottom: 1vw;
+}
+
+.home-section,
+.bulletlist {
+    font-weight: 400;
+    color: var(--h4-text-color);
+}
+
+.project-page ul li:last-child h4 {
+    margin-bottom: 0;
 }
 
 @keyframes spin {
@@ -494,9 +526,15 @@ ol {
         padding-left: 3vw;
 
     }
-.home-section{
-    padding-bottom: 2vw;
-}
+
+    .technical-breakdown h3 {
+        text-align: center;
+    }
+
+    .home-section {
+        padding-bottom: 2vw;
+    }
+
     .technical-breakdown h2 {
         margin-bottom: 3vw;
     }
@@ -536,6 +574,8 @@ ol {
         margin-left: 9vw;
         width: 90%;
     }
+
+
 
     .project-header ol li,
     .project-header ul li {
@@ -601,4 +641,3 @@ ol {
     }
 
 }
-
