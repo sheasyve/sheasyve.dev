@@ -90,7 +90,7 @@ h3 {
 .project-page h3 {
     border-radius: 5px;
     font-size: 1.1em;
-    padding: 1vw 1vw 1vw 2vw;
+    padding: 0vw 1vw 0% 2vw;
     line-height: 1.5;
     color: var(--h4-text-color);
     text-shadow: none;
@@ -272,11 +272,6 @@ ol {
     margin: 5px 0;
     margin-bottom: 0;
 }
-
-.project-list .experience{
-    padding-left: 3vw;
-}
-
 
 .project-list,
 .journey {

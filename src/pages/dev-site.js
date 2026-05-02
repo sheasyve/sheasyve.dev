@@ -41,10 +41,10 @@ function DevSiteProject() {
                         </li>
                     ))}
                 </ul>
-                <h3>
-                    Welcome to my developer portfolio, <strong>sheasyve.dev</strong>.
+                <h3 style = {{"text-align": "center", lineHeight: "1.8"}}>
                     This project has been my personal playground for experimenting with modern web development technologies and deployment strategies.
-                    Originally built as a static HTML/CSS site on GitHub Pages, I recently migrated this project to a modern full-stack React application with a firebird database on my own droplet server.
+                    <br></br>
+                    Originally built as a static HTML/CSS site on GitHub Pages, I recently migrated this project to a modern full-stack React application.
                 </h3>
             </div>
 
