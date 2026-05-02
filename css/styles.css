@@ -313,9 +313,9 @@ ol {
 }
 
 .languages-list.numlist li {
-  display: flex;
-  align-items: center;
-  justify-content: center; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .languages-list .numlist li {
@@ -492,9 +492,11 @@ ol {
         padding-left: 3vw;
 
     }
+
     .technical-breakdown h2 {
-    margin-bottom: 3vw;
+        margin-bottom: 3vw;
     }
+
     .techstack {
         gap: 1vw;
         flex-wrap: nowrap;
@@ -604,8 +606,7 @@ ol {
 
 @media (max-width: 500px) {
     .languages-list .numlist {
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 1rem 1rem;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1vw 0vw;
     }
 }
