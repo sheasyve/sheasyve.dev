@@ -55,7 +55,7 @@ function AsciiRTProject() {
                     The model consists of 18.3 thousand triangles and 11.2 thousand vertices.
                 </h3>
                 <LoadVideo src={sixtyFpsCarVid} autoPlay loop muted />
-                <h3>
+                <h3 style = {{marginBottom: "0"}}>
                     Users can load multiple object files (.obj), render still images or animations, and apply transformations
                     such as translation and rotation. The ray-tracing kernel processes the scene, mapping brightness values to ASCII
                     characters for terminal-based rendering. With optimized parallelism, animations maintain smooth 60 FPS output.
@@ -64,6 +64,7 @@ function AsciiRTProject() {
 
             <div className="technical-breakdown">
                 <h2>Technical Breakdown</h2>
+
                 <h3>
                     Each object model, a collection of connected points in space, is transformed, ray-traced, and converted to ASCII in real-time.
                     The engine simulates realistic lighting using reflections, shadows, and perspective projection, with four light sources.
@@ -74,6 +75,7 @@ function AsciiRTProject() {
                     A Bounding Volume Hierarchy (BVH) accelerates ray-object intersection tests, minimizing computational overhead.
                     The GPU assigns each ray to a separate thread, maximizing parallel execution for real-time performance.
                 </h3>
+
                 <LoadVideo src={carAnimationVid} autoPlay loop muted />
             </div>
 

@@ -23,7 +23,6 @@ function TeenyTimerProject() {
     return (
         <div className="project-page">
 
-
             <div className="project-header">
                 <a href="https://github.com/sheasyve/TeenyTimer">
                     <h1>
@@ -52,13 +51,13 @@ function TeenyTimerProject() {
                 </h3>
             </div>
 
-
             <img src={t1Img} alt="Timer Picture 1" />
             <img src={t2Img} alt="Timer Picture 2" />
             <img src={t3Img} alt="Timer Picture 3" />
 
             <div className="technical-breakdown">
                 <h2>Technical Breakdown</h2>
+
                 <h3>
                     The user interface was built with <code>Tkinter</code>, Python’s built-in GUI toolkit, allowing for
                     a simple and responsive design. The core functionality involves a countdown mechanism that updates
@@ -68,6 +67,7 @@ function TeenyTimerProject() {
                     and Linux. A shell script automates installation for Linux users, adding a desktop entry for convenient
                     access from the system menu.
                 </h3>
+
             </div>
 
             <div className="project-list">

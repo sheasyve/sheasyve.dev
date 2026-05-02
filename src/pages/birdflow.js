@@ -14,7 +14,7 @@ function BirdFlowProject() {
     const techstack = [
         { icon: <i className="devicon-python-plain"></i>, name: " Python" },
         { icon: <i className="devicon-cython-plain"></i>, name: " Cython" },
-        { icon: <i className="devicon-cplusplus-plain"></i>, name: " C++" }
+        { icon: <i className="devicon-blender-plain"></i>, name: " Blender API" }
     ];
 
     const experience = ["Optimizing Python using Cython for improved performance in computationally heavy tasks.",
@@ -67,13 +67,14 @@ function BirdFlowProject() {
 
             <div className="technical-breakdown">
                 <h2>Technical Breakdown</h2>
-                <h3>
+
+                <h3 style={{ padding: "1vw 1vw 0vw 2vw" }}>
                     The engine uses a Eulerian grid with a Conjugate Gradient solver to simulate incompressible flow
                     by solving the Navier-Stokes equations. Visuals are rendered using particles, for a simple way to
                     display the behavior of the airflow. This involved using Lagrangian methods for particle collisions
                     and movement, making the simulation a hybrid approach having both Eulerian and Lagrangian aspects.
                 </h3>
-                <h3>
+                <h3 style={{ padding: "1vw 1vw 0vw 2vw" }}>
                     The particles are first advected with a Runge-Kutta 3rd order method, and then pressure in the
                     simulation is calculated using the conjugate gradient solver from SciPy. Pressure changes are
                     distributed through the grid, and particle velocities are updated accordingly after checking for collisions.

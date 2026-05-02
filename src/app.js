@@ -8,6 +8,7 @@ import AsciiRTProject from './pages/ascii_rt.js';
 import BirdFlowProject from './pages/birdflow.js';
 import SuperAIBrosProject from './pages/smb_ai.js';
 import TeenyTimerProject from './pages/timer.js';
+import DevSiteProject from './pages/dev-site.js';
 
 function App() {
     return (
@@ -17,6 +18,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<HomePage />} />
                     <Route path="/index.html" element={<HomePage />} />
+                    <Route path="/devsite" element={<DevSiteProject />} />
                     <Route path="/ascii-rt" element={<AsciiRTProject />} />
                     <Route path="/birdflow" element={<BirdFlowProject />} />
                     <Route path="/super-ai-bros" element={<SuperAIBrosProject />} />
