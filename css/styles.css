@@ -262,7 +262,7 @@ ol {
     max-width: 83%;
     padding-bottom: 0.5vw;
     padding-top: 0;
-    padding-left: 3vw;
+    padding-left: calc(2vw + 17px);
 }
 
 .bulletlist li::marker,
