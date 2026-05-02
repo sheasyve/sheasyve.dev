@@ -513,7 +513,7 @@ ol {
     .bulletlist,
     .numlist {
         max-width: 83%;
-        padding-left: 10vw;
+        padding-left: 9vw;
     }
 
     .project-page ol li,
