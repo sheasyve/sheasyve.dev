@@ -262,7 +262,7 @@ ol {
     max-width: 83%;
     padding-bottom: 0.5vw;
     padding-top: 0;
-    padding-left: 2.5vw;
+    padding-left: 3vw;
 }
 
 .bulletlist li::marker,
@@ -344,10 +344,9 @@ ol {
     font-size: 1em;
     font-weight: 500;
     margin-bottom: 1vw;
-    margin-left: 1vw;
     margin-top: 0;
     max-width: 95%;
-    padding-left: 15px;
+    padding-left: 2vw;
     text-decoration: none;
 }
 
