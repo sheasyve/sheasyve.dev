@@ -307,7 +307,7 @@ ol {
 .languages-list .numlist {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-
+    padding-bottom: 0;
     /* max-width: 800px; */
     /* margin: 0 auto; */
 }
