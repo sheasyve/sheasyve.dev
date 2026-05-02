@@ -65,7 +65,7 @@ function AsciiRTProject() {
             <div className="technical-breakdown">
                 <h2>Technical Breakdown</h2>
 
-                <h3>
+                <p>
                     Each object model, a collection of connected points in space, is transformed, ray-traced, and converted to ASCII in real-time.
                     The engine simulates realistic lighting using reflections, shadows, and perspective projection, with four light sources.
                     <br></br> <br></br>
@@ -74,7 +74,7 @@ function AsciiRTProject() {
                     <br></br> <br></br>
                     A Bounding Volume Hierarchy (BVH) accelerates ray-object intersection tests, minimizing computational overhead.
                     The GPU assigns each ray to a separate thread, maximizing parallel execution for real-time performance.
-                </h3>
+                </p>
 
                 <LoadVideo src={carAnimationVid} autoPlay loop muted />
             </div>
