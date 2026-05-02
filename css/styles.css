@@ -306,10 +306,16 @@ ol {
 
 .languages-list .numlist {
     display: grid;
-    gap: 1ex;
     grid-template-columns: repeat(4, 1fr);
-    margin-left: 0;
-    max-width: 99%;
+
+    /* max-width: 800px; */
+    /* margin: 0 auto; */
+}
+
+.languages-list.numlist li {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
 }
 
 .languages-list .numlist li {
@@ -458,6 +464,8 @@ ol {
     border-radius: 5px 5px 0 0;
 }
 
+
+
 @keyframes spin {
     0% {
         transform: rotate(0deg);
@@ -478,7 +486,7 @@ ol {
     }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
     h3 {
         margin-bottom: 2vw;
         padding-left: 3vw;
@@ -596,8 +604,8 @@ ol {
 
 @media (max-width: 500px) {
     .languages-list .numlist {
-        column-count: 2;
-        column-gap: 1ex;
-        grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 1rem 1rem;
     }
 }
