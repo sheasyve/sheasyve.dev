@@ -50,7 +50,7 @@ function SuperAIBrosProject() {
             <div className="technical-breakdown">
                 <h2>Technical Breakdown</h2>
                 <div className="breakdown-inner">
-                    <h3>
+                    <p>
                         The project used the <code>gym-super-mario-bros</code> 7.4.0 Python package to simulate the game environment.
                         The RL agent was trained using deep Q-learning (DQN), a model-free algorithm that optimizes actions based on
                         past rewards.
@@ -66,7 +66,7 @@ function SuperAIBrosProject() {
                         The model's performance was evaluated using reward tracking and visualization tools to analyze
                         action efficiency over time. Future improvements could include using more advanced RL techniques
                         like Proximal Policy Optimization (PPO) or distributed training to accelerate learning.
-                    </h3>
+                    </p>
                 </div>
             </div>
 

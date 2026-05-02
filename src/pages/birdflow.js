@@ -68,13 +68,13 @@ function BirdFlowProject() {
             <div className="technical-breakdown">
                 <h2>Technical Breakdown</h2>
 
-                <p style={{ padding: "1vw 1vw 0vw 2vw" }}>
+                <p style={{ padding: "0vw 1vw 0vw 3vw" }}>
                     The engine uses a Eulerian grid with a Conjugate Gradient solver to simulate incompressible flow
                     by solving the Navier-Stokes equations. Visuals are rendered using particles, for a simple way to
                     display the behavior of the airflow. This involved using Lagrangian methods for particle collisions
                     and movement, making the simulation a hybrid approach having both Eulerian and Lagrangian aspects.
                 </p>
-                <p style={{ padding: "1vw 1vw 0vw 2vw" }}>
+                <p style={{ padding: "1vw 1vw 0vw 3vw" }}>
                     The particles are first advected with a Runge-Kutta 3rd order method, and then pressure in the
                     simulation is calculated using the conjugate gradient solver from SciPy. Pressure changes are
                     distributed through the grid, and particle velocities are updated accordingly after checking for collisions.
