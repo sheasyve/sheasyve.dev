@@ -49,23 +49,25 @@ function SuperAIBrosProject() {
 
             <div className="technical-breakdown">
                 <h2>Technical Breakdown</h2>
-                <h3>
-                    The project used the <code>gym-super-mario-bros</code> 7.4.0 Python package to simulate the game environment.
-                    The RL agent was trained using deep Q-learning (DQN), a model-free algorithm that optimizes actions based on
-                    past rewards.
-                    <br></br>
-                    The agent's state was represented by the game screen's pixel data, processed through a convolutional neural network (CNN)
-                    to extract features. The action space included movements like left, right, jump, and combinations thereof.
-                    <br></br><br></br>
-                    A key challenge was optimizing the agents hyperparameters to balance exploration and exploitation.
-                    Despite adjustments, training was constrained by hardware limitations, significantly reducing the number
-                    of iterations we could run. As a result, while the agent learned to navigate obstacles and progress through
-                    the first level, it did not achieve full completion or high-level gameplay proficiency.
-                    <br></br><br></br>
-                    The model's performance was evaluated using reward tracking and visualization tools to analyze
-                    action efficiency over time. Future improvements could include using more advanced RL techniques
-                    like Proximal Policy Optimization (PPO) or distributed training to accelerate learning.
-                </h3>
+                <div className="breakdown-inner">
+                    <h3>
+                        The project used the <code>gym-super-mario-bros</code> 7.4.0 Python package to simulate the game environment.
+                        The RL agent was trained using deep Q-learning (DQN), a model-free algorithm that optimizes actions based on
+                        past rewards.
+                        <br></br>
+                        The agent's state was represented by the game screen's pixel data, processed through a convolutional neural network (CNN)
+                        to extract features. The action space included movements like left, right, jump, and combinations thereof.
+                        <br></br><br></br>
+                        A key challenge was optimizing the agents hyperparameters to balance exploration and exploitation.
+                        Despite adjustments, training was constrained by hardware limitations, significantly reducing the number
+                        of iterations we could run. As a result, while the agent learned to navigate obstacles and progress through
+                        the first level, it did not achieve full completion or high-level gameplay proficiency.
+                        <br></br><br></br>
+                        The model's performance was evaluated using reward tracking and visualization tools to analyze
+                        action efficiency over time. Future improvements could include using more advanced RL techniques
+                        like Proximal Policy Optimization (PPO) or distributed training to accelerate learning.
+                    </h3>
+                </div>
             </div>
 
             <div className="project-list">
