@@ -85,7 +85,7 @@ function BirdFlowProject() {
 
             <h4>Sphere</h4>
             <LoadVideo src={sphereVid} autoPlay loop muted />
-            <h3 style={{ background: "var(--showcase-background-color2)" }}>
+            <h3 style={{ background: "var(--showcase-background-color2)", padding: "1vw 1vw 1vw 2vw"}}>
                 The pressure from the grid does help particles avoid collisions naturally to some extent, as particles
                 don’t want to be in high pressure areas. However, particles can still collide with the object, which is why
                 lagrangian collision handling was implemented. This means that when a collision is detected,
