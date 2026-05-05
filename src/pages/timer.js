@@ -33,12 +33,13 @@ function TeenyTimerProject() {
                 </a>
 
                 <ul className="techstack">
-                    {techstack.map((tech, index) => (
-                        <li key={index} className="tech-item">
-                            <h4>{tech.name}</h4>
-                            {tech.icon}
-                        </li>
-                    ))}
+                    <div className="tech-items">
+                        {techstack.map((tech, index) => (
+                            <li key={index} className="tech-item">
+                                <h4>{tech.name}</h4>
+                                {tech.icon}
+                            </li>
+                        ))}</div>
                 </ul>
 
                 <h3>

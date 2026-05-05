@@ -9,13 +9,34 @@ function DevSiteProject() {
         { icon: <i className="devicon-react-plain"></i>, name: " React" },
         { icon: <i className="devicon-html5-plain"></i>, name: " HTML" },
         { icon: <i className="devicon-css3-plain"></i>, name: " CSS" },
+        { icon: <i className="devicon-webpack-plain"></i>, name: " Webpack" },
+        { icon: <i className="devicon-sql-plain"></i>, name: " Firebird SQL" },
+        { icon: <i className="devicon-nginx-original"></i>, name: " Nginx" },
+        { icon: <i className="devicon-digitalocean-plain"></i>, name: " DigitalOcean" },
+        { icon: <i className="devicon-cloudflare-plain"></i>, name: " Cloudflare" }
     ];
 
     const experience = [
-        "Learned how to build a modern web application from the ground up with React 18 and a custom backend API.",
-        "Built a custom Webpack 5 pipeline from scratch with HMR, code splitting, and asset minification.",
-        "Engineered infrastructure with Nginx on a DigitalOcean Droplet and secured access via strict UFW/SSH policies.",
-        "Automated deployment workflows, including Cloudflare DNS and domain management directly in the production build."
+        "Architected a modern web application from the ground up using React 18 and a custom backend API.",
+        "Engineered a custom Webpack 5 pipeline from scratch, implementing HMR, code splitting, and asset minification.",
+        "Provisioned and secured infrastructure on a DigitalOcean Droplet using Nginx, enforcing strict UFW firewall rules and SSH key-based authentication.",
+        "Automated deployment workflows, integrating Cloudflare DNS and domain management directly into the production build process."
+    ];
+
+    const architecture = [
+        { label: "Hosting:", text: "Self-hosted on a DigitalOcean Droplet, served via Nginx with application processes managed by PM2." },
+        { label: "Security & DNS:", text: "Proxied through Cloudflare with strict UFW firewall rules and hardened server access (SSH key-based authentication only)." },
+        { label: "Domain Management:", text: "Automated CNAME generation built directly into the production build step for HTTPS verification." }
+    ];
+
+    const coreStack = [
+        { label: "Webpack 5 Deployment:", text: "Features Hot Module Replacement (HMR), lazy loading, and React Fast Refresh for immediate developer feedback." },
+        { label: "Database Integration:", text: "Utilizes a local Firebird database for data persistence, with the backend API managed through PM2 for reliable scaling." },
+        { label: "Optimization:", text: <>Implements <code>TerserPlugin</code> for JavaScript minification and <code>CssMinimizerPlugin</code> for stylesheet optimization.</> },
+        { label: "Asset Management:", text: <>Uses <code>MiniCssExtractPlugin</code> for production CSS extraction, alongside content hashing for aggressive cache busting.</> },
+        { label: "Code Splitting:", text: <>Automatically extracts third-party dependencies from <code>node_modules</code> into a dedicated <code>vendors</code> chunk.</> },
+        { label: "Transpilation:", text: "Utilizes Babel for JavaScript transpilation to ES5, ensuring robust compatibility with older browsers." },
+        { label: "Local Development Server:", text: "Configured with Webpack Dev Server for local development, featuring hot reloading and proxying API requests to the backend." }
     ];
 
     return (
@@ -31,54 +52,43 @@ function DevSiteProject() {
                 </a>
 
                 <ul className="techstack">
-                    {techstack.map((tech, index) => (
-                        <li
-                            key={index}
-                            className={`tech-item ${index === 0 ? 'first-item' : ''}`}
-                        >
-                            <h4>{tech.name}</h4>
-                            {tech.icon}
-                        </li>
-                    ))}
+                    <div className="tech-items">
+                        {techstack.map((tech, index) => (
+                            <li
+                                key={index}
+                                className={`tech-item ${index === 0 ? 'first-item' : ''}`}
+                            >
+                                <h4>{tech.name}</h4>
+                                {tech.icon}
+                            </li>
+                        ))
+                        }
+                    </div>
                 </ul>
-                <h3 style = {{"text-align": "center", lineHeight: "1.8"}}>
-                    This project has been my personal playground for experimenting with modern web development technologies and deployment strategies.
+                <h3 style={{ textAlign: "center", lineHeight: "1.8" }}>
+                    This project served as a comprehensive testing ground for exploring modern web development technologies and deployment strategies.
                     <br></br>
-                    Originally built as a static HTML/CSS site on GitHub Pages, I recently migrated this project to a modern full-stack React application.
+                    Originally built as a static HTML/CSS site on GitHub Pages, I successfully migrated the architecture to a full-stack React application to improve scalability and maintainability.
                 </h3>
             </div>
 
             <div className="technical-breakdown">
-                <h2>Overview & Architecture</h2>
-
-                <ul>
-                    <li><strong>Hosting:</strong> Self-hosted on a DigitalOcean Droplet server, served via Nginx and PM2 for firebird database management.</li>
-                    <li><strong>Security & DNS:</strong> Proxied through Cloudflare with strict UFW firewall rules and hardened server access (SSH key-based authentication only).</li>
-                    <li><strong>Domain Management:</strong> Automated CNAME generation built directly into the production build step for https verification.</li>
-                </ul>
-            </div>
-
-            {/* <div className="showcase">  </div> */}
-
-            <div className="technical-breakdown">
 
                 <h2>Technical Breakdown</h2>
+                <p>Building this application provided hands-on experience integrating JavaScript, React, CSS, and Firebird SQL, ultimately culminating in a fully self-hosted deployment.</p>
+
                 <h3>Architecture Overview</h3>
                 <ul>
-                    <li><strong>Hosting:</strong> Self-hosted on a DigitalOcean Droplet server, served via Nginx and PM2 for firebird database management.</li>
-                    <li><strong>Security & DNS:</strong> Proxied through Cloudflare with strict UFW firewall rules and hardened server access (SSH key-based authentication only).</li>
-                    <li><strong>Domain Management:</strong> Automated CNAME generation built directly into the production build step for https verification.</li>
+                    {architecture.map((item, index) => (
+                        <li key={index}><strong>{item.label}</strong> {item.text}</li>
+                    ))}
                 </ul>
-                
+
                 <h3>Core Application Stack</h3>
                 <ul>
-                    <li><strong>Webpack 5 Deployment:</strong> Features Hot Module Replacement (HMR), lazy loading, and React Fast Refresh for immediate feedback.</li>
-                    <li><strong>Database Integration:</strong> Utilizes a local Firebird database for data persistence, managed through PM2 for reliable deployment and scaling.</li>
-                    <li><strong>Optimization:</strong> Implements <code>TerserPlugin</code> for JavaScript minification and <code>CssMinimizerPlugin</code> for stylesheet optimization.</li>
-                    <li><strong>Asset Management:</strong> Uses <code>MiniCssExtractPlugin</code> for production CSS extraction, alongside content hashing for aggressive cache busting.</li>
-                    <li><strong>Code Splitting:</strong> Automatically extracts third-party dependencies from <code>node_modules</code> into a dedicated <code>vendors</code> chunk.</li>
-                    <li><strong>Transpilation:</strong> Utilizes Babel for JavaScript transpilation to ES5, ensuring compatibility with older browsers.</li>
-                    <li><strong>Local Development Server:</strong> Configured with Webpack Dev Server for local development, featuring hot reloading and proxying API requests to a backend server.</li>
+                    {coreStack.map((item, index) => (
+                        <li key={index}><strong>{item.label}</strong> {item.text}</li>
+                    ))}
                 </ul>
 
             </div>
@@ -95,9 +105,9 @@ function DevSiteProject() {
             <div className="journey">
                 <h2>The Journey & Iterations</h2>
                 <p>
-                    Before migrating to the current architecture, the portfolio was deployed as a simple static HTML and CSS site.
-                    While simpler, it lacked the modularity and developer experience improvements offered by Webpack 5 and the React 18 ecosystem.
-                    This meta-project rewrite documents that architectural shift, containerized, and optimized deployment setup.
+                    Before adopting the current architecture, this portfolio operated as a simple static HTML and CSS site. 
+                    While functional, it lacked the modularity and developer experience provided by Webpack 5 and the React 18 ecosystem. 
+                    This rewrite documents the architectural shift from a basic static site to a highly optimized, self-hosted deployment setup.
                 </p>
             </div>
 

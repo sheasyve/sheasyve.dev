@@ -34,12 +34,13 @@ function AsciiRTProject() {
                 </a>
 
                 <ul className="techstack">
-                    {techstack.map((tech, index) => (
-                        <li key={index} className="tech-item">
-                            <h4>{tech.name}</h4>
-                            {tech.icon}
-                        </li>
-                    ))}
+                    <div className="tech-items">
+                        {techstack.map((tech, index) => (
+                            <li key={index} className="tech-item">
+                                <h4>{tech.name}</h4>
+                                {tech.icon}
+                            </li>
+                        ))}</div>
                 </ul>
                 <h3>
                     AsciiRT is a highly optimized GPU ray-tracing engine leveraging CUDA to render object models in ASCII characters.
@@ -55,7 +56,7 @@ function AsciiRTProject() {
                     The model consists of 18.3 thousand triangles and 11.2 thousand vertices.
                 </h3>
                 <LoadVideo src={sixtyFpsCarVid} autoPlay loop muted />
-                <h3 style = {{marginBottom: "0"}}>
+                <h3 style={{ marginBottom: "0" }}>
                     Users can load multiple object files (.obj), render still images or animations, and apply transformations
                     such as translation and rotation. The ray-tracing kernel processes the scene, mapping brightness values to ASCII
                     characters for terminal-based rendering. With optimized parallelism, animations maintain smooth 60 FPS output.

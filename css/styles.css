@@ -169,23 +169,28 @@ h3 {
 .techstack {
     padding-top: 1vw;
     padding-bottom: 0.5vw;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 1vw 4vw;
-    list-style: none;
-    justify-content: center;
     background-color: rgba(255, 255, 255, 0.932);
     background-image: linear-gradient(to right, transparent, #818181, #7a7878, transparent);
     background-repeat: no-repeat;
     background-position: bottom center;
     background-size: 100% 0.08vw;
-    padding-left: 0 !important;
-    padding-inline-start: 0 !important;
-    margin-left: 0 !important;
     box-sizing: border-box;
     width: 100%;
 }
+
+.tech-items {
+    margin: 0 auto;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 80%;
+    gap: 1vw 4vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
 
 .tech-item {
     display: flex;
@@ -266,7 +271,8 @@ ol {
 
 .list li,
 .numlist li,
-.project-list li ,.bulletlist li {
+.project-list li,
+.bulletlist li {
     color: var(--primary-text-color);
     margin: 5px 0;
     margin-bottom: 0;
