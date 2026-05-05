@@ -531,9 +531,10 @@ html {
         text-align: center;
 
     }
+
     .projects-list {
-    width: clamp(200px, 95%, 1200px);
-}
+        width: clamp(200px, 95%, 1200px);
+    }
 
     .contest a,
     .contest h4 {
@@ -546,12 +547,16 @@ html {
         text-align: left;
         gap: 0vw 1vw;
         margin: 0 auto;
-         
+
+    }
+
+    .project-link h4,
+    .contest-list h4 {
+        font-size: 1.05em !important;
     }
 }
-.project-link h4, .contest-list h4 {
-    font-size: 1.05em !important;
-}
+
+
 
 @media (max-width: 800px) {
     h3 {
