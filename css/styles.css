@@ -162,6 +162,10 @@ h3 {
     border-radius: 0px 0px 5px 5px;
 }
 
+.contest,.project-link {
+    
+}
+
 .project-header b {
     width: 9%;
 }
@@ -362,15 +366,18 @@ ol {
     color: var(--h4-text-color);
     font-size: 1em;
     font-weight: 500;
-    margin-top: 0;
+      margin-top: 0;
+      margin-bottom: 1vw;
     max-width: 95%;
     padding-left: 2vw;
     text-decoration: none;
 }
-
+.project-link h4{
+    margin-bottom: 1vw;
+}
 
 .contest-list>.contest:last-child h4,
-.projects-list:last-child h4 {
+.projects-list>.project-link:last-child h4 {
     margin-bottom: 0;
 }
 

@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 function ProjectsSection() {
-    
+
     const myProjects = [
         { url: "/devsite", name: "Portfolio Website - sheasyve.dev", tech: "– (JavaScript, React, HTML, CSS)" },
         { url: "/birdflow", name: "BirdFlow - Wind Simulator Extension for Blender", tech: "– (Cython, Python)" },
@@ -15,16 +15,16 @@ function ProjectsSection() {
     return (
         <>
             <h3>Projects</h3>
-            {myProjects.map((project, i) => (
-                <div className="projects-list" key={i}>
+            <div className="projects-list">
+                {myProjects.map((project, i) => (
                     <Link to={project.url} className="project-link">
                         <h4>
                             <span className="assign_links">{project.name}</span>
                             <span className="highlight"> {project.tech}</span>
                         </h4>
                     </Link>
-                </div>
-            ))}
+
+                ))}</div>
         </>
     );
 }
