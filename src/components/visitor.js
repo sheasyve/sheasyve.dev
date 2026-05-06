@@ -24,7 +24,7 @@ const VisitorComponent = () => {
   }, []);
 
   return (
-    <div className="visitor-count-container">
+    <div className="visitor-count">
       <p>Unique Visitors: <strong>{count}</strong></p>
     </div>
   );
