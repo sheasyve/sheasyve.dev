@@ -16,7 +16,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     justify-content: center;
-
+    margin: 0;
 }
 
 .body {
@@ -26,6 +26,7 @@ body {
     overflow: hidden;
     padding: 10px;
     margin-bottom: 0.5vw;
+    margin-top: 0.5vw;
     justify-content: center;
 }
 
@@ -169,8 +170,8 @@ body {
 }
 
 @media (min-width: 768px) {
-    body {
-        margin: 0 2vw;
+    .body {
+        margin: 0.5vw 2vw;
     }
 
     .rating {
@@ -179,8 +180,8 @@ body {
 }
 
 @media (min-width: 1024px) {
-    body {
-        margin: 0 10vw;
+    .body {
+        margin: 0.5vw 10vw;
     }
 
     .header-links {
@@ -197,8 +198,8 @@ body {
 }
 
 @media (min-width: 1440px) {
-    body {
-        margin: 0 15vw;
+    .body {
+        margin: 0.5vw 15vw;
     }
 
     .header-links {
@@ -208,8 +209,8 @@ body {
 }
 
 @media (min-width: 2000px) {
-    body {
-        margin: 0 18vw;
+    .body {
+        margin: 0.5vw 18vw;
     }
 
     .header-links {
@@ -219,8 +220,8 @@ body {
 }
 
 @media (min-width: 2250px) {
-    body {
-        margin: 0 25vw;
+    .body {
+        margin: 0.5vw 25vw;
     }
 
     .header-links {

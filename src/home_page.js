@@ -20,10 +20,6 @@ function HomePage() {
             <div className="home-section"><SoftwareSection /></div>
             <div className="home-section"><InterestsSection /></div>
             <div className="home-section"><HobbiesSection /></div>
-            <div className="footer">
-                <VisitorComponent />
-                <ButtonComponent />
-            </div>
         </div>
     );
 }
