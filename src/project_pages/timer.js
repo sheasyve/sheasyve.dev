@@ -1,8 +1,8 @@
 import React from 'react';
 
-import t1Img from '../media/projects/timer/t1.png';
-import t2Img from '../media/projects/timer/t2.png';
-import t3Img from '../media/projects/timer/t3.png';
+import t1Img from '../../media/projects/timer/t1.png';
+import t2Img from '../../media/projects/timer/t2.png';
+import t3Img from '../../media/projects/timer/t3.png';
 
 function TeenyTimerProject() {
     const techstack = [
@@ -18,7 +18,6 @@ function TeenyTimerProject() {
         "Enhanced understanding of event-driven programming and UI responsiveness.",
         "Gained experience in designing user-friendly interfaces for simple utility applications."
     ];
-
 
     return (
         <div className="project-page">

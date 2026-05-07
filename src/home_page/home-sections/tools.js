@@ -21,7 +21,7 @@ function ToolsSection() {
                 {toolsList.map((tool, index) => (
                     <li key={index}>
                         {tool.name}
-                        <span className="softwareattributes">{tool.attrs}</span>
+                        <span className="software-attributes">{tool.attrs}</span>
                     </li>
                 ))}
             </ol>

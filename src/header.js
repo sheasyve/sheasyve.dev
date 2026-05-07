@@ -1,6 +1,6 @@
 // src/header.js
 import React from 'react';
-import cgLogo from '../src/media/cg_logo.png';
+import cgLogo from '../media/cg_logo.png';
 
 function Header() {
     return (
@@ -16,6 +16,7 @@ function Header() {
                     <h2>Bachelor of Computer Science - <a href="https://www.uvic.ca/" target="_blank" rel="noreferrer">University of Victoria</a></h2>
                 </div>
             </div>
+            
             <div className="header-links">
                 <a href="https://github.com/sheasyve" target="_blank" rel="noreferrer">
                     <h2>
@@ -23,12 +24,14 @@ function Header() {
                         GitHub
                     </h2>
                 </a>
+
                 <a href="https://www.linkedin.com/in/sheasyve/" target="_blank" rel="noreferrer">
                     <h2>
                         <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="Linkedin Profile" /> 
                         Linkedin
                     </h2>
                 </a>
+
                 <a href="https://leetcode.com/u/sheasyve" target="_blank" rel="noreferrer">
                     <h2>
                         <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" alt="LeetCode Profile" /> 

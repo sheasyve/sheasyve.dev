@@ -1,12 +1,12 @@
 import React from 'react';
 
-import frontCarVid from '../media/projects/birdflow/Front car.mp4';
-import sideCarVid from '../media/projects/birdflow/Side Car.mp4';
-import backCarVid from '../media/projects/birdflow/Back car.mp4';
-import sphereVid from '../media/projects/birdflow/Sphere.mp4';
-import blockVid from '../media/projects/birdflow/block.mp4';
-import initialVid from '../media/projects/birdflow/Initial.mp4';
-import movingGridVid from '../media/projects/birdflow/Moving grid.mp4';
+import frontCarVid from '../../media/projects/birdflow/Front car.mp4';
+import sideCarVid from '../../media/projects/birdflow/Side Car.mp4';
+import backCarVid from '../../media/projects/birdflow/Back car.mp4';
+import sphereVid from '../../media/projects/birdflow/Sphere.mp4';
+import blockVid from '../../media/projects/birdflow/block.mp4';
+import initialVid from '../../media/projects/birdflow/Initial.mp4';
+import movingGridVid from '../../media/projects/birdflow/Moving grid.mp4';
 import LoadVideo from '../components/load-video.js';
 
 function BirdFlowProject() {
@@ -83,7 +83,6 @@ function BirdFlowProject() {
 
             </div>
 
-
             <h4>Sphere</h4>
             <LoadVideo src={sphereVid} autoPlay loop muted />
             <h3 style={{ background: "var(--showcase-background-color2)", padding: "1vw 1vw 1vw 2vw" }}>
@@ -92,9 +91,9 @@ function BirdFlowProject() {
                 lagrangian collision handling was implemented. This means that when a collision is detected,
                 the particle is redirected along the tangent of the object, and slowed down with collision and friction force.
             </h3>
+
             <h4>Tilted Block</h4>
             <LoadVideo src={blockVid} autoPlay loop muted />
-
 
             <div className="project-list">
                 <h2>Experience Gained</h2>
@@ -105,7 +104,7 @@ function BirdFlowProject() {
                 </ul>
             </div>
 
-            <div className="Previous Attempts">
+            <div className="previous-attempts">
                 <h2>Failed Attempts Along the Way</h2>
                 <h4>Initial Attempt with Lagrangian Physics - No Pressure Calculations</h4>
                 <LoadVideo src={initialVid} autoPlay loop muted />

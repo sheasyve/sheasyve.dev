@@ -1,9 +1,9 @@
 import React from 'react';
-import carAndTeapotVid from '../media/projects/ascii_rt/car_and_teapot.webm';
-import sixtyFpsCarVid from '../media/projects/ascii_rt/60fps_car.mp4';
-import carAnimationVid from '../media/projects/ascii_rt/car_animation.webm';
+import carAndTeapotVid from '../../media/projects/ascii_rt/car_and_teapot.webm';
+import sixtyFpsCarVid from '../../media/projects/ascii_rt/60fps_car.mp4';
+import carAnimationVid from '../../media/projects/ascii_rt/car_animation.webm';
 import LoadVideo from '../components/load-video.js';
-import cpng from '../media/cuda.png';
+import cpng from '../../media/cuda.png';
 
 function AsciiRTProject() {
     const techstack = [
@@ -23,7 +23,6 @@ function AsciiRTProject() {
 
     return (
         <div className="project-page">
-
             <div className="project-header">
                 <a href="https://github.com/sheasyve/asciiRT">
                     <h1>
@@ -32,7 +31,6 @@ function AsciiRTProject() {
                             alt="GitHub Logo" />
                     </h1>
                 </a>
-
                 <ul className="techstack">
                     <div className="tech-items">
                         {techstack.map((tech, index) => (
@@ -42,12 +40,10 @@ function AsciiRTProject() {
                             </li>
                         ))}</div>
                 </ul>
-                <h3>
-                    AsciiRT is a highly optimized GPU ray-tracing engine leveraging CUDA to render object models in ASCII characters.
+                <h3>AsciiRT is a highly optimized GPU ray-tracing engine leveraging CUDA to render object models in ASCII characters.
                     Extensive optimizations resulted in a 900x speedup over the initial multi-core version, enabling real-time 60 FPS animations.
                 </h3>
             </div>
-
 
             <div className="showcase">
                 <LoadVideo src={carAndTeapotVid} autoPlay loop muted />
@@ -65,7 +61,6 @@ function AsciiRTProject() {
 
             <div className="technical-breakdown">
                 <h2>Technical Breakdown</h2>
-
                 <p>
                     Each object model, a collection of connected points in space, is transformed, ray-traced, and converted to ASCII in real-time.
                     The engine simulates realistic lighting using reflections, shadows, and perspective projection, with four light sources.
@@ -76,7 +71,6 @@ function AsciiRTProject() {
                     A Bounding Volume Hierarchy (BVH) accelerates ray-object intersection tests, minimizing computational overhead.
                     The GPU assigns each ray to a separate thread, maximizing parallel execution for real-time performance.
                 </p>
-
                 <LoadVideo src={carAnimationVid} autoPlay loop muted />
             </div>
 

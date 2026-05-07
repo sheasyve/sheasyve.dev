@@ -16,7 +16,7 @@ function SoftwareSection() {
                 {softwareList.map((software, index) => (
                     <li key={index}>
                         {software.name}
-                        <span className="softwareattributes">{software.attrs}</span>
+                        <span className="software-attributes">{software.attrs}</span>
                     </li>
                 ))}
             </ul>

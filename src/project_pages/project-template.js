@@ -47,7 +47,7 @@ function ProjectTemplate() {
                 </ul>
             </div>
 
-            <div className="Previous Attempts">
+            <div className="previous-attempts">
 
             </div>
 

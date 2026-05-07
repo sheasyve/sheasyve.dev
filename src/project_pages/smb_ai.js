@@ -1,5 +1,5 @@
 import React from 'react';
-import marioDemoVid from '../media/projects/amb_ai/mario_demo.webm';
+import marioDemoVid from '../../media/projects/smb_ai/mario_demo.webm';
 import LoadVideo from '../components/load-video.js';
 
 function SuperAIBrosProject() {

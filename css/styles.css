@@ -28,8 +28,8 @@ p {
     font-weight: bold;
 }
 
-.hobbyattributes,
-.softwareattributes {
+.hobby-attributes,
+.software-attributes {
     color: rgb(160, 160, 160);
     font-style: italic;
 }

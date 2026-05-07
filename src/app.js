@@ -3,12 +3,12 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Header from './header.js';
-import HomePage from './home_page.js';
-import AsciiRTProject from './pages/ascii_rt.js';
-import BirdFlowProject from './pages/birdflow.js';
-import SuperAIBrosProject from './pages/smb_ai.js';
-import TeenyTimerProject from './pages/timer.js';
-import DevSiteProject from './pages/dev-site.js';
+import HomePage from './home_page/home_page.js';
+import AsciiRTProject from './project_pages/ascii_rt.js';
+import BirdFlowProject from './project_pages/birdflow.js';
+import SuperAIBrosProject from './project_pages/smb_ai.js';
+import TeenyTimerProject from './project_pages/timer.js';
+import DevSiteProject from './project_pages/devsite/dev-site.js';
 import VisitorComponent from './components/visitor.js';
 import ButtonComponent from './components/button.js';
 

@@ -1,14 +1,14 @@
 // src/home_page.js
 import React from 'react';
-import ProjectsSection from './home_page/projects.js';
-import ContestsSection from './home_page/contests.js';
-import InterestsSection from './home_page/interests.js';
-import LanguagesSection from './home_page/languages.js';
-import SoftwareSection from './home_page/software.js';
-import ToolsSection from './home_page/tools.js';
-import HobbiesSection from './home_page/hobbies.js';
-import ButtonComponent from './components/button.js';
-import VisitorComponent from './components/visitor.js';
+import ProjectsSection from './home-sections/projects.js';
+import ContestsSection from './home-sections/contests.js';
+import InterestsSection from './home-sections/interests.js';
+import LanguagesSection from './home-sections/languages.js';
+import SoftwareSection from './home-sections/software.js';
+import ToolsSection from './home-sections/tools.js';
+import HobbiesSection from './home-sections/hobbies.js';
+import ButtonComponent from '../components/button.js';
+import VisitorComponent from '../components/visitor.js';
 
 function HomePage() {
     return (

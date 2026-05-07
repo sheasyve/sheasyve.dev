@@ -16,7 +16,7 @@ function HobbiesSection() {
                 {myHobbies.map((hobby, index) => (
                     <li key={index}>
                         {hobby.name}
-                        <span className="hobbyattributes"> {hobby.attrs}</span>
+                        <span className="hobby-attributes"> {hobby.attrs}</span>
                     </li>
                 ))}
             </ul>

@@ -1,5 +1,5 @@
 import React from 'react';
-import cpng from '../media/cuda.png';
+import cpng from '../../../media/cuda.png';
 
 function LanguagesSection() {
     const languages = [

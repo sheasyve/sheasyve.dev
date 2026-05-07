@@ -1,5 +1,4 @@
 :root {
-
     /* Background colors */
     --background-color1:    rgba(0, 0, 0, 0.03);        
     --background-color2:    rgba(255, 255, 255, 1);     
@@ -40,5 +39,4 @@
     --box-shadow-color:          rgba(0, 0, 0, 0.281);     
     --mobile-underline-color:    rgba(0, 0, 0, 0.267); 
     --mobile-underline-color2:   rgba(0, 0, 0, 0.05);
-    
 }

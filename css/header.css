@@ -11,7 +11,7 @@ html {
 
 body {
     background-color: var(--background-color1);
-    background-image: url('../src/media/bg2.png');
+    background-image: url('../media/bg2.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
