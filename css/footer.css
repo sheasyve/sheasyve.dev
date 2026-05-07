@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+@import url('colors.css');
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: .3vw;
+    padding-bottom: .3vw;
+    backdrop-filter: blur(10px);
+    background: linear-gradient(0deg, var(--footer-background-color), var(--footer-background-color2));
+}
+
+.visitor-count {
+    font-weight: 500;
+}
+
+.footer p,
+.footer button {
+    margin: 0 .1vw;
+    line-height: normal;
+    font-size: 0.7em;
+}
+
+.footer p {
+    color: var(--project-h2h4-text);
+}
+
+@media (max-width: 800px) {
+.footer{
+    margin-top: 1vw;
+}
+}

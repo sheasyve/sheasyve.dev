@@ -7,7 +7,7 @@ function ContestsSection() {
             url: "https://leetcode.com/u/sheasyve",
             name: "Leetcode Weekly Contests",
             lang: " (Python)",
-            extraInfo: "550+ Problems Solved", 
+            extraInfo: "550+ Problems Solved",
             rankBold: "286,674",
             rankTotal: "702,163",
             hasC3Wrapper: false
@@ -16,7 +16,7 @@ function ContestsSection() {
             url: "https://www.codingame.com/multiplayer/clashofcode/leaderboard",
             name: "Clash of Code - Short Programming Contests",
             lang: " (Python)",
-            extraInfo: null, 
+            extraInfo: null,
             rankBold: "384",
             rankTotal: "719,426",
             hasC3Wrapper: false
@@ -28,7 +28,7 @@ function ContestsSection() {
             extraInfo: null,
             rankBold: "832",
             rankTotal: "3,789",
-            hasC3Wrapper: true 
+            hasC3Wrapper: true
         }
     ];
 
