@@ -3,11 +3,20 @@ const { exec } = require('child_process');
 require('dotenv').config({ path: __dirname + '/.env' });
 const cors = require('cors');
 const app = express();
+const rateLimit = require('express-rate-limit');
 
 const isWindows = process.platform === 'win32';
 
 const dbPath = "/var/lib/firebird/data/visitor_counter.fdb";
 const auth = `-user sysdba -password '${process.env.DB_PASSWORD}'`;
+
+const limiter = rateLimit({
+    windowMs: 1 * 60 * 1000, 
+    max: 10, 
+    message: { error: 'Too many requests, please try again later.' },
+    standardHeaders: true, 
+    legacyHeaders: false, 
+});
 
 const runSql = (query) => {
     return new Promise((resolve, reject) => {
@@ -19,7 +28,19 @@ const runSql = (query) => {
     });
 };
 
-app.use(cors({ origin: 'https://sheasyve.dev' }));
+const allowedOrigins = ['https://sheasyve.dev'];
+app.use(cors({
+    origin: (origin, callback) => {
+        // Allow requests with no origin (like strict mobile browsers) or if in the allowlist
+        if (!origin || allowedOrigins.indexOf(origin) !== -1) {
+            callback(null, true);
+        } else {
+            callback(new Error('Not allowed by CORS'));
+        }
+    }
+}));
+
+app.use(limiter);
 
 app.get('/api/count', (req, res) => {
     if (isWindows) return res.json({ count: 42 });
