@@ -19,7 +19,7 @@ const runSql = (query) => {
     });
 };
 
-app.use(cors());
+app.use(cors({ origin: 'https://sheasyve.dev' }));
 
 app.get('/api/count', (req, res) => {
     if (isWindows) return res.json({ count: 42 });
