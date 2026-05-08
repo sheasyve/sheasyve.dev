@@ -1,0 +1,243 @@
+.home-section {
+    backdrop-filter: blur(10px);
+    background: linear-gradient(135deg, var(--section-background1), var(--section-background2));
+    border-radius: 6px;
+    box-shadow: 0px 4px 6px var(--box-shadow-color);
+    margin-top: 15px;
+    padding-bottom: 1vw;
+}
+
+.home-section a {
+    color: var(--primary-text-color);
+    text-decoration: none;
+}
+
+.home-section h1 {
+    background: linear-gradient(-10deg, var(--background-color1), var(--background-color2));
+    color: var(--tertiary-text-color);
+    font-size: 1.3em;
+    margin: 0;
+    text-decoration: underline;
+    text-decoration-color: rgba(180, 180, 180, 0.616);
+}
+
+.home-section h1 img {
+    height: auto;
+    opacity: 0.3;
+    padding-left: 10px;
+    width: 25px;
+}
+
+.home-section,
+.bulletlist {
+    font-weight: 400;
+    color: var(--h4-text-color);
+
+}
+.project-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.contest-list {
+    display: flex;
+    flex-direction: column;
+    color: var(--h4-text-color);
+    text-decoration: none;
+}
+
+.contest-list h4 {
+    color: var(--h4-text-color);
+    font-size: 1em;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 1vw;
+    max-width: 95%;
+    padding-left: 2vw;
+    text-decoration: none;
+}
+
+.contest-list>.contest:last-child h4 {
+    margin-bottom: 0;
+}
+
+.contest a,
+.contest h4 {
+    margin: 0 auto;
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    text-decoration: none;
+    width: clamp(200px, 100%, 900px);
+}
+
+.contest_info {
+    flex: 2 1 0;
+    max-width: 95%;
+    min-width: 55%;
+    padding-right: 3vw;
+    text-align: left;
+}
+
+.problems {
+    color: var(--highlight-color3);
+    font-size: 13px;
+    padding-left: 0.25vw;
+}
+
+.rank,
+.rating {
+    align-items: center;
+    align-self: center;
+    display: flex;
+    height: auto;
+    line-height: normal;
+    padding-right: 1vw;
+}
+
+.rank {
+    color: var(--highlight-color2);
+    flex: 1;
+    min-width: 65%;
+    text-align: left;
+}
+
+.rating {
+    color: var(--highlight-color3);
+    flex: 1;
+    font-size: 10px;
+    min-width: 20%;
+    padding-left: 2vw;
+    text-decoration-style: dashed;
+    width: fit-content;
+}
+
+.rank b,
+.rating b {
+    color: var(--primary-text-color);
+    font-weight: 800;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.languages-list .numlist {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1vw 1vw;
+    padding-bottom: 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.languages-list.numlist li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.languages-list .numlist li {
+    break-inside: avoid;
+}
+
+.languages-list .numlist li:last-child {
+    margin-bottom: 0;
+}
+
+.hobby-attributes,
+.software-attributes {
+    color: rgb(160, 160, 160);
+    font-style: italic;
+}
+
+.contest:hover,
+.home-section a:hover,
+.home-section h1:hover {
+    color: var(--link-hover-color);
+    text-decoration: underline;
+    text-decoration-color: var(--mobile-underline-color);
+}
+
+@media (min-width: 800px) {
+
+     .contest-list {
+        gap: 1vw;
+        display: flex;
+
+        flex-direction: column;
+        margin: 0 auto;
+        text-align: center;
+
+    }
+
+    .projects-list {
+        width: clamp(200px, 95%, 1200px);
+    }
+
+    .contest a,
+    .contest h4 {
+        width: clamp(200px, 95%, 1200px);
+    }
+
+    .projects-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        text-align: left;
+        gap: 0vw 1vw;
+        margin: 0 auto;
+
+    }
+
+    .project-link h4,
+    .contest-list h4 {
+        font-size: 1.05em !important;
+    }
+}
+
+@media (max-width: 800px) {
+
+    .homepage a {
+        text-decoration: underline;
+        text-decoration-color: var(--mobile-underline-color);
+    }
+ .home-section {
+        padding-bottom: 2vw;
+
+    }
+
+    .contest .project_info {
+        text-decoration: underline;
+        text-decoration-color: var(--mobile-underline-color);
+    }
+    .contest_info {
+        min-width: 50%;
+    }
+
+    .languages-list .numlist {
+        gap: 1vw 0vw;
+        grid-template-columns: repeat(2, 1fr);
+        margin-left: 9vw;
+    }
+
+    .assignments h4,
+    .contest-list h4,
+    .projects-list h4 {
+        font-size: 0.9em;
+        margin-left: 3vw;
+        margin-top: 0;
+        margin-bottom: 2vw;
+        max-width: 90%;
+    }
+
+    .rank {
+        display: flex;
+        flex: 1;
+        flex-wrap: wrap;
+        margin-left: 10px;
+        min-width: 40%;
+        overflow-wrap: break-word;
+        text-align: left;
+        width: auto;
+    }
+}
