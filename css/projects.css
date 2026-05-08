@@ -1,5 +1,4 @@
 .project-page h2 {
-    background: rgba(255, 255, 255, 0.753);
     border-radius: 5px;
     color: var(--project-h2h4-text);
     padding: 5px;
@@ -42,10 +41,6 @@
     padding: 1vw 2vw 1vw 3vw;
     background-color: rgba(255, 255, 255, 0.932);
     border-radius: 0px 0px 5px 5px;
-}
-
-.project-header b {
-    width: 9%;
 }
 
 .project-page h1 {
@@ -261,12 +256,10 @@
     }
 
     .techstack {
-        gap: 1vw;
         flex-wrap: nowrap;
         padding-left: 0;
         display: flex;
         align-items: center;
-        gap: 0.5rem;
         padding-right: 0.5vw;
         box-sizing: border-box;
         gap: 1vw 3vw !important;

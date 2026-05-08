@@ -34,6 +34,7 @@
     color: var(--h4-text-color);
 
 }
+
 .project-link {
     color: inherit;
     text-decoration: none;
@@ -161,7 +162,7 @@
 
 @media (min-width: 800px) {
 
-     .contest-list {
+    .contest-list {
         gap: 1vw;
         display: flex;
 
@@ -201,7 +202,8 @@
         text-decoration: underline;
         text-decoration-color: var(--mobile-underline-color);
     }
- .home-section {
+
+    .home-section {
         padding-bottom: 2vw;
 
     }
@@ -210,6 +212,7 @@
         text-decoration: underline;
         text-decoration-color: var(--mobile-underline-color);
     }
+
     .contest_info {
         min-width: 50%;
     }
