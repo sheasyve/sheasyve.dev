@@ -25,7 +25,7 @@
 .footer button {
     margin: 0 .1vw;
     line-height: normal;
-    font-size: 0.7em;
+    font-size: 0.8rem;
 }
 
 .footer p {
@@ -35,5 +35,6 @@
 @media (max-width: 800px) {
 .footer{
     margin-top: 1vw;
+    font-size: 1.1rem;
 }
 }
