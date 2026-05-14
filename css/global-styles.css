@@ -59,7 +59,7 @@ ol {
 .numlist {
     max-width: 83%;
     padding-top: 0;
-    padding-left: calc(2vw + 17px);
+    padding-left: 3rem;
 }
 
 .bulletlist li::marker,
@@ -135,7 +135,7 @@ ol {
     .bulletlist,
     .numlist {
         max-width: 83%;
-        padding-left: 9vw;
+        padding-left: 2rem;
     }
 
     .highlight {
