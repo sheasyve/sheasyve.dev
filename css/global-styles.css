@@ -135,7 +135,7 @@ ol {
     .bulletlist,
     .numlist {
         max-width: 83%;
-        padding-left: 2rem;
+        padding-left: 3rem;
     }
 
     .highlight {

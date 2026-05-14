@@ -45,7 +45,7 @@
     width: clamp(200px, 100%, 1200px);
     color: var(--h4-text-color);
     text-decoration: none;
-            margin: 0 2rem;
+
 }
 
 .projects-list h4 {
@@ -213,7 +213,12 @@
         font-size: 1.05em !important;
     }
 }
+.assignments h4,
+    .contest-list h4,
+    .projects-list h4 {
+        margin-left: 2rem;
 
+    }
 @media (max-width: 800px) {
 
     .homepage a {
@@ -244,10 +249,9 @@
     .assignments h4,
     .contest-list h4,
     .projects-list h4 {
-        margin-left: 1rem;
         margin-top: 0;
         margin-bottom: 2vw;
-        max-width: 90%;
+        max-width: 85%;
     }
 
     .rank {
