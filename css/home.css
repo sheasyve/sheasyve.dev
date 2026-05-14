@@ -90,9 +90,7 @@
     text-decoration: none;
     width: clamp(200px, 100%, 900px);
 }
-.contest h4 {
-    margin: 0 2rem;
-}
+
 .contest_info {
     flex: 2 1 0;
     max-width: 95%;
