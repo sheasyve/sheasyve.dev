@@ -18,7 +18,7 @@
     font-size: 1.3em;
     margin: 0;
     text-decoration: underline;
-    text-decoration-color: rgba(180, 180, 180, 0.616);
+    text-decoration-color: var(--h1-underline-color);   
 }
 
 .home-section h1 img {
@@ -32,7 +32,12 @@
 .bulletlist {
     font-weight: 500;
     color: var(--h4-text-color);
+}
 
+.assignments h4,
+.contest-list h4,
+.projects-list h4 {
+    margin-left: 2rem;
 }
 
 .project-link {
@@ -40,12 +45,10 @@
     text-decoration: none;
 }
 
-
 .projects-list {
     width: clamp(200px, 100%, 1200px);
     color: var(--h4-text-color);
     text-decoration: none;
-
 }
 
 .projects-list h4 {
@@ -165,7 +168,7 @@
 
 .hobby-attributes,
 .software-attributes {
-    color: rgb(160, 160, 160);
+    color: var(--attribute-text-color);
     font-style: italic;
 }
 
@@ -182,11 +185,9 @@
     .contest-list {
         gap: 1vw;
         display: flex;
-
         flex-direction: column;
         margin: 0 auto;
         text-align: center;
-
     }
 
     .projects-list {
@@ -203,7 +204,6 @@
         grid-template-columns: repeat(2, 1fr);
         text-align: left;
         gap: 0vw 1vw;
-
     }
 
     .project-link h4,
@@ -211,12 +211,7 @@
         font-size: 1.05em !important;
     }
 }
-.assignments h4,
-    .contest-list h4,
-    .projects-list h4 {
-        margin-left: 2rem;
 
-    }
 @media (max-width: 800px) {
 
     .homepage a {
@@ -226,7 +221,6 @@
 
     .home-section {
         padding-bottom: 2vw;
-
     }
 
     .contest .project_info {
@@ -264,7 +258,8 @@
     }
 
     .projects-list {
+        margin: 0;
+    }
+
     
-            margin: 0;
-}
 }

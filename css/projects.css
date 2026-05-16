@@ -1,3 +1,34 @@
+.project-header {
+    background: var(--project-header-background);
+    border-radius: 5px 5px 5px 5px;
+}
+
+.project-header h3 {
+    margin-top: 0;
+    padding: 1vw 2vw 1vw 3vw;
+    background-color: var(--project-header-text);
+    border-radius: 0px 0px 5px 5px;
+}
+
+.project-page {
+    backdrop-filter: blur(10px);
+    background: linear-gradient(135deg, var(--project-page-background1), var(--project-page-background2));
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1vw;
+}
+
+.project-page h1 {
+    padding: 5px;
+    padding-bottom: 1vw;
+    padding-top: .8vw;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
 .project-page h2 {
     border-radius: 5px;
     color: var(--project-h2h4-text);
@@ -20,42 +51,11 @@
     border-radius: 5px;
     text-align: center;
     padding: 5px;
-    background: rgba(255, 255, 255, 0.932);
-}
-
-.project-page {
-    backdrop-filter: blur(10px);
-    background: linear-gradient(135deg, rgba(146, 146, 146, 0.2), rgba(255, 255, 255, 0.192));
-    border-radius: 5px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 1vw;
-}
-
-.project-header {
-    background: rgba(41, 41, 41, 0.753);
-    border-radius: 5px 5px 5px 5px;
-}
-
-.project-header h3 {
-    margin-top: 0;
-    padding: 1vw 2vw 1vw 3vw;
-    background-color: rgba(255, 255, 255, 0.932);
-    border-radius: 0px 0px 5px 5px;
-}
-
-.project-page h1 {
-    padding: 5px;
-    padding-bottom: 1vw;
-    padding-top: .8vw;
-    margin: 0;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+    background: var(--project-h4-text);
 }
 
 .project-page a {
-    color: rgb(255, 255, 255);
+    color: white;
 }
 
 .project-page video {
@@ -70,10 +70,26 @@
 
 .project-page ol,
 .project-page ul {
-
     padding-inline-start: 0px;
 }
 
+.project-page ol li,
+.project-page ul li {
+    color: var(--project-page-list-text);
+    font-size: 1em;
+    margin-bottom: 0.5rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+.project-page p {
+    color: var(--primary-text-color);
+    text-align: left;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-weight: 500;
+    margin-bottom: 0vw;
+}
 
 .project-list li {
     color: var(--primary-text-color);
@@ -91,24 +107,6 @@
     border-radius: 5px 5px 0px 0px;
 }
 
-.project-page p {
-    color: var(--primary-text-color);
-    text-align: left;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    font-weight: 500;
-    margin-bottom: 0vw;
-}
-
-.project-page ol li,
-.project-page ul li {
-    color: var(--rank-color);
-    font-size: 1em;
-    margin-bottom: 0.5rem;
-    margin-left: 3rem;
-    margin-right: 3rem;
-}
-
 .project-link h4 {
     margin-bottom: 1vw;
 }
@@ -123,7 +121,7 @@
 
 .techstack {
     padding-top: .5rem;
-    background-color: rgba(255, 255, 255, 0.932);
+    background-color: var(--tech-stack-background);
     background-image: linear-gradient(to right, transparent, #818181, #7a7878, transparent);
     background-repeat: no-repeat;
     background-position: bottom center;
@@ -159,11 +157,6 @@
     color: var(--primary-text-color);
 }
 
-.technical-breakdown li{
-padding-right: 2rem;
-
-}
-
 .showcase {
     background: linear-gradient(135deg, var(--showcase-background-color), var(--showcase-background-color2));
     border-radius: 5px 5px 5px 5px;
@@ -180,20 +173,23 @@ padding-right: 2rem;
     border-radius: 5px 5px 0 0;
 }
 
+.technical-breakdown h3 {
+    text-shadow: 0.05vw 0.05vw 0 #b8b8b869;
+    text-decoration: underline;
+    text-decoration-color: var(--highlight-color);
+}
+
 .technical-breakdown p {
     padding: 0vw 2rem 1vw 2rem;
     font-size: 1.1em;
 }
 
-.project-header h3{
-    padding: 1rem 2rem 1rem 2rem;
-
+.technical-breakdown li {
+    padding-right: 2rem;
 }
 
-.technical-breakdown h3 {
-    text-shadow: 0.05vw 0.05vw 0 #b8b8b869;
-    text-decoration: underline;
-    text-decoration-color: var(--highlight-color);
+.project-header h3 {
+    padding: 1rem 2rem 1rem 2rem;
 }
 
 .experience,
@@ -209,34 +205,8 @@ padding-right: 2rem;
 }
 
 @media (max-width: 800px) {
-
-.project-page ol li, .project-page ul li {
-    
-    margin-right: 0rem;
-}
-
-
-    .technical-breakdown h3 {
-        text-align: center;
-    }
-
-    .technical-breakdown h2 {
-        margin-bottom: 3vw;
-    }
-
     .project-header h3 {
         text-align: left !important;
-    }
-
-    .technical-breakdown p,
-    .project-page ul {
-
-        font-size: 1em;
-    }
-
-    .project-header ol li,
-    .project-header ul li {
-        margin-left: 5vw;
     }
 
     .project-page h1 {
@@ -245,6 +215,30 @@ padding-right: 2rem;
 
     .project-page h3 {
         font-size: 1em;
+    }
+
+    .project-header ol li,
+    .project-header ul li {
+        margin-left: 5vw;
+    }
+
+    .project-page ol li,
+    .project-page ul li {
+        margin-right: 0rem;
+    }
+
+    .technical-breakdown p,
+    .project-page ul {
+
+        font-size: 1em;
+    }
+
+    .technical-breakdown h2 {
+        margin-bottom: 3vw;
+    }
+
+    .technical-breakdown h3 {
+        text-align: center;
     }
 
     .techstack {
@@ -257,10 +251,6 @@ padding-right: 2rem;
         gap: 1vw 3vw !important;
     }
 
-    .project-list .experience {
-        padding-left: 0vw;
-    }
-
     .tech-item.first-item,
     .techstack .tech-item {
         padding-left: 0 !important;
@@ -270,6 +260,10 @@ padding-right: 2rem;
 
     .tech-item.first-item {
         padding-left: 3vw !important;
+    }
+
+    .project-list .experience {
+        padding-left: 0vw;
     }
 
     .experience {
