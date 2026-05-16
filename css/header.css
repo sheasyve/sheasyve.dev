@@ -3,8 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
 
-@import url('colors.css');
-
 html {
     font-family: 'Roboto', sans-serif;
 }
@@ -31,13 +29,13 @@ body {
 }
 
 /* Headings and Titles */
+
 .header-titles {
     text-align: center;
     padding: 20px;
     background: linear-gradient(0deg, var(--title-gradient-start), var(--title-gradient-end));
     border-radius: 10px;
-    box-shadow: 0px 4px 6px var(--box-shadow-color),
-        0px 5px 30px rgba(216, 99, 99, 0.349);
+    box-shadow: 0px 4px 6px var(--box-shadow-color), 0px 5px 30px var(--box-shadow-color2);
     margin-bottom: 20px;
     backdrop-filter: blur(10px);
 }
@@ -82,14 +80,14 @@ body {
     align-items: center;
     gap: 20px;
     height: auto;
-    background: linear-gradient(180deg, var(--link-gradient-start), var(--link-gradient-end));
-    backdrop-filter: blur(10px);
-    width: 100%;
-    max-width: 800px;
     padding: 10px;
     box-sizing: border-box;
     margin: 0 auto;
+    width: 100%;
+    max-width: 800px;
+    background: linear-gradient(180deg, var(--link-gradient-start), var(--link-gradient-end));
     box-shadow: 0px 4px 6px var(--box-shadow-color);
+    backdrop-filter: blur(10px);
 }
 
 .header-links a {
@@ -120,6 +118,7 @@ body {
 
 
 @media (max-width: 700px) {
+
     .header-titles {
         font-size: .8em;
     }
@@ -169,7 +168,8 @@ body {
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
+
     .body {
         margin: 0.5vw 2vw;
     }
@@ -180,6 +180,7 @@ body {
 }
 
 @media (min-width: 1024px) {
+
     .body {
         margin: 0.5vw 10vw;
     }
@@ -191,41 +192,34 @@ body {
 
 }
 
-@media (min-width: 1600px) {
-    .rating {
-        visibility: visible;
-    }
-}
-
 @media (min-width: 1440px) {
+
     .body {
         margin: 0.5vw 15vw;
     }
 
-    .header-links {
-        flex-wrap: wrap;
-        justify-content: center;
+}
+
+@media (min-width: 1600px) {
+    
+    .rating {
+        visibility: visible;
     }
+
 }
 
 @media (min-width: 2000px) {
+
     .body {
         margin: 0.5vw 18vw;
     }
 
-    .header-links {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
 }
 
 @media (min-width: 2250px) {
+
     .body {
         margin: 0.5vw 25vw;
     }
 
-    .header-links {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
 }

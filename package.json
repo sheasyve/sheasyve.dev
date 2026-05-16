@@ -2,7 +2,7 @@
   "name": "sheasyve.dev",
   "version": "1.0.0",
   "type": "module",
-  "description": "Welcome to my developer portfolio! This site showcases my projects, skills, and journey as a developer. Recently rebuilt from the ground up using **React**, it features detailed project write-ups, interactive demonstrations, and links to my professional online presence.",
+  "description": "This is my developer portfolio. This site showcases my projects, skills, and journey as a developer. Recently rebuilt from the ground up using **React**, it features detailed project write-ups, interactive demonstrations, and links to my professional online presence.",
   "main": "index.js",
   "scripts": {
     "start": "webpack serve --mode development",

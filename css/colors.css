@@ -35,6 +35,7 @@
     --project-h4-text: rgba(255, 255, 255, 0.932);
     --project-header-text: rgba(255, 255, 255, 0.932);
     --project-page-list-text: rgba(0, 0, 0, 1);
+    --text-shadow-color: rgba(160, 160, 160, 1);
 
     /* Link colors */
     --link-color: rgba(58, 58, 58, 1);
@@ -46,6 +47,9 @@
 
     /* Accessories */
     --box-shadow-color: rgba(0, 0, 0, 0.281);
+    --box-shadow-color2: rgba(216, 99, 99, 0.349);
     --mobile-underline-color: rgba(0, 0, 0, 0.267);
     --mobile-underline-color2: rgba(0, 0, 0, 0.05);
+    --loader-color: #3498db;
+    --loader-border-color: rgba(255, 255, 255, 0.932);
 }

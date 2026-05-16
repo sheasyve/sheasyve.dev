@@ -3,13 +3,6 @@
     border-radius: 5px 5px 5px 5px;
 }
 
-.project-header h3 {
-    margin-top: 0;
-    padding: 1vw 2vw 1vw 3vw;
-    background-color: var(--project-header-text);
-    border-radius: 0px 0px 5px 5px;
-}
-
 .project-page {
     backdrop-filter: blur(10px);
     background: linear-gradient(135deg, var(--project-page-background1), var(--project-page-background2));
@@ -44,6 +37,13 @@
     color: var(--h4-text-color);
     text-shadow: none;
     background: none;
+}
+
+.project-header h3 {
+    margin-top: 0;
+    padding: 1vw 2vw 1vw 3vw;
+    background-color: var(--project-header-text);
+    border-radius: 0px 0px 5px 5px;
 }
 
 .project-page h4 {
@@ -174,7 +174,7 @@
 }
 
 .technical-breakdown h3 {
-    text-shadow: 0.05vw 0.05vw 0 #b8b8b869;
+    text-shadow: 0.05vw 0.05vw 0 var(--text-shadow-color);
     text-decoration: underline;
     text-decoration-color: var(--highlight-color);
 }
