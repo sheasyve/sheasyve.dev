@@ -56,8 +56,8 @@ function TeenyTimerProject() {
             <img src={t3Img} alt="Timer Picture 3" />
 
             <div className="technical-breakdown">
-                <h2>Technical Breakdown</h2>
 
+                <h2>Technical Breakdown</h2>
                 <p>
                     The user interface was built with <code>Tkinter</code>, Python’s built-in GUI toolkit, allowing for
                     a simple and responsive design. The core functionality involves a countdown mechanism that updates

@@ -17,24 +17,21 @@
     background: linear-gradient(0deg, var(--footer-background-color), var(--footer-background-color2));
 }
 
-.visitor-count {
-    font-weight: 500;
-}
-
 .footer p,
 .footer button {
     margin: 0 .1vw;
     line-height: normal;
     font-size: 0.8rem;
-}
-
-.footer p {
     color: var(--project-h2h4-text);
 }
 
-@media (max-width: 800px) {
-.footer{
-    margin-top: 1vw;
-    font-size: 1.1rem;
+.visitor-count {
+    font-weight: 500;
 }
+
+@media (max-width: 800px) {
+    .footer {
+        margin-top: 1vw;
+        font-size: 1.1rem;
+    }
 }
