@@ -8,6 +8,7 @@ import '../css/global-styles.css';
 import '../css/footer.css';
 import '../css/projects.css';
 import '../css/home.css';
+import '../css/contact.css';
 
 const container = document.getElementById('root');
 const root = createRoot(container);

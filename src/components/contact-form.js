@@ -46,8 +46,8 @@ function ContactForm() {
 
     return (
         <div>
-            <button onClick={() => setIsOpen(true)}>
-                Shea Syverson
+            <button onClick={() => setIsOpen(!isOpen)}>
+                Contact Me
             </button>
 
             {isOpen && (
@@ -56,7 +56,7 @@ function ContactForm() {
                         <h3>Send a Message</h3>
                         
                         <form onSubmit={handleSubmit}>
-                            <div className="contact-form-group">
+                            <div className="contact-form-item">
                                 <label htmlFor="name">Name:</label>
                                 <input
                                     type="text"
@@ -68,7 +68,7 @@ function ContactForm() {
                                 />
                             </div>
                             
-                            <div className="contact-form-group">
+                            <div className="contact-form-item">
                                 <label htmlFor="email">Email:</label>
                                 <input
                                     type="email"
@@ -80,7 +80,7 @@ function ContactForm() {
                                 />
                             </div>
                             
-                            <div className="contact-form-group">
+                            <div className="contact-form-item">
                                 <label htmlFor="message">Message:</label>
                                 <textarea
                                     id="message"
@@ -92,11 +92,8 @@ function ContactForm() {
                                 />
                             </div>
                             
-                            <div className="contact-button-group">
+                            <div className="contact-button">
                                 <button type="submit">Send</button>
-                                <button type="button" onClick={() => setIsOpen(false)}>
-                                    Cancel
-                                </button>
                             </div>
                         </form>
                     </div>

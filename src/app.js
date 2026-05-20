@@ -9,8 +9,7 @@ import BirdFlowProject from './project_pages/birdflow.js';
 import SuperAIBrosProject from './project_pages/smb_ai.js';
 import TeenyTimerProject from './project_pages/timer.js';
 import DevSiteProject from './project_pages/devsite/dev-site.js';
-import VisitorComponent from './components/visitor.js';
-import ButtonComponent from './components/button.js';
+import Footer from './footer.js';
 
 function App() {
     return (
@@ -33,9 +32,7 @@ function App() {
                     } />
                 </Routes>
             </div>
-            <div className="footer">
-                <VisitorComponent />
-            </div>         
+            <Footer />
         </Router>
     );
 }
