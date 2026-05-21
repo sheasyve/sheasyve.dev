@@ -12,13 +12,13 @@ router.post('/send-email', async (req, res) => {
         port: 465,
         secure: true, 
         auth: {
-            user: process.env.BOT_EMAIL_ADDRESS,  
-            pass: process.env.BOT_EMAIL_PASSWORD  
+            user: process.env.EMAIL_ADDRESS,  
+            pass: process.env.EMAIL_PASSWORD  
         }
     });
 
     const mailOptions = {
-        from: process.env.BOT_EMAIL_ADDRESS, 
+        from: process.env.EMAIL_ADDRESS, 
         replyTo: email,                      
         to: 'syversonshea@gmail.com',    
         subject: `New Contact Form Message from ${name}`,
