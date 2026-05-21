@@ -1,3 +1,4 @@
+@import url('colors.css');
 .home-section {
     backdrop-filter: blur(10px);
     background: linear-gradient(135deg, var(--section-background1), var(--section-background2));

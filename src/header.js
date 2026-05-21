@@ -1,6 +1,7 @@
 // src/header.js
 import React from 'react';
 import cgLogo from '../media/cg_logo.png';
+import ContactForm from './components/contact-form.js';
 
 function Header() {
     return (
@@ -14,6 +15,9 @@ function Header() {
                 </h1>
                 <div className="repo">
                     <h2>Bachelor of Computer Science - <a href="https://www.uvic.ca/" target="_blank" rel="noreferrer">University of Victoria</a></h2>
+                </div>
+                <div className="contact-section">
+                    <ContactForm />
                 </div>
             </div>
             
