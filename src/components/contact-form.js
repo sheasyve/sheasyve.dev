@@ -19,7 +19,7 @@ function ContactForm() {
     const handleSubmit = async (e) => {
         e.preventDefault(); 
         
-        const SERVER_URL = "http://localhost:3001/api/send-email";
+        const SERVER_URL = "https://sheasyve.dev/api/send-email";
 
         try {
             const response = await fetch(SERVER_URL, {
