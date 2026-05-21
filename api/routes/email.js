@@ -1,35 +1,26 @@
 // routes/email.js
 const express = require('express');
-const nodemailer = require('nodemailer');
+const { Resend } = require('resend');
 
 const router = express.Router();
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 router.post('/send-email', async (req, res) => {
     const { name, email, message } = req.body;
 
-    const transporter = nodemailer.createTransport({
-        host: 'smtp.zoho.com',
-        port: 465,
-        secure: true, 
-        auth: {
-            user: process.env.EMAIL_ADDRESS,  
-            pass: process.env.EMAIL_PASSWORD  
-        }
-    });
-
-    const mailOptions = {
-        from: process.env.EMAIL_ADDRESS, 
-        replyTo: email,                      
-        to: 'syversonshea@gmail.com',    
-        subject: `New Contact Form Message from ${name}`,
-        text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
-    };
-
     try {
-        await transporter.sendMail(mailOptions);
+        await resend.emails.send({
+            from: 'Portfolio Contact <onboarding@resend.dev>', 
+            to: 'syversonshea@gmail.com',                
+            reply_to: email,
+            subject: `New Contact Form Message from ${name}`,
+            text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+        });
+
         res.status(200).json({ message: 'Email sent successfully!' });
     } catch (error) {
-        console.error('Error sending email via Zoho:', error);
+
+        console.error('Error sending email via Resend API:', error);
         res.status(500).json({ message: 'Failed to send email.' });
     }
 });
