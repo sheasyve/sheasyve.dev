@@ -19,13 +19,12 @@ function ContactForm() {
     const handleSubmit = async (e) => {
         e.preventDefault(); 
         
-        const FORMSPREE_URL = "https://formspree.io/f/";
+        const SERVER_URL = "http://localhost:3001/api/send-email";
 
         try {
-            const response = await fetch(FORMSPREE_URL, {
+            const response = await fetch(SERVER_URL, {
                 method: 'POST',
                 headers: {
-                    'Accept': 'application/json',
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify(formData) 
@@ -33,14 +32,15 @@ function ContactForm() {
 
             if (response.ok) {
                 alert('Message sent successfully!');
+                
                 setFormData({ name: '', email: '', message: '' });
                 setIsOpen(false);
             } else {
-                alert('Oops! There was a problem delivering your message.');
+                alert('Oops! There was a problem sending the email from the server.');
             }
         } catch (error) {
             console.error('Error:', error);
-            alert('Something went wrong. Please try again later.');
+            alert('Could not connect to the server. Please try again later.');
         }
     };
 
