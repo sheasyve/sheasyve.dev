@@ -1,10 +1,16 @@
 // routes/email.js
 const express = require('express');
-const { Resend } = require('resend');
 const rateLimit = require('express-rate-limit');
 
 const router = express.Router();
-const resend = new Resend(process.env.RESEND_API_KEY);
+
+const isWindows = process.platform === 'win32';
+
+let resend;
+if (!isWindows) {
+    const { Resend } = require('resend');
+    resend = new Resend(process.env.RESEND_API_KEY);
+}
 
 const emailLimiter = rateLimit({
     windowMs: 10 * 60 * 1000, // 10 minutes
@@ -17,6 +23,17 @@ const emailLimiter = rateLimit({
 router.post('/send-email', emailLimiter, async (req, res) => {
     const { name, email, message } = req.body;
 
+    // Windows
+    if (isWindows) {
+        console.log('\n--- MOCK EMAIL INTERCEPTED (WINDOWS DEV) ---');
+        console.log(`From: ${name} <${email}>`);
+        console.log(`Message: ${message}`);
+        console.log('--------------------------------------------\n');
+        
+        return res.status(200).json({ message: 'Test Email sent successfully!' });
+    }
+
+    // Production
     try {
         await resend.emails.send({
             from: 'sheasyve.dev <onboarding@resend.dev>', 

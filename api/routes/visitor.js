@@ -20,7 +20,7 @@ const runSql = (query) => {
 
 // Maps to /api/count
 router.get('/count', (req, res) => {
-    if (isWindows) return res.json({ count: 42 });
+    if (isWindows) return res.json({ count: 5700000 });
 
     const query = "SELECT VISIT_COUNT FROM COUNTERS WHERE ID = 1;";
     const cmd = `echo "${query} QUIT;" | isql-fb ${dbPath} ${auth}`;

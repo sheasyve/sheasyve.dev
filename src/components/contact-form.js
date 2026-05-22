@@ -17,8 +17,8 @@ function ContactForm() {
     };
 
     const handleSubmit = async (e) => {
-        e.preventDefault(); 
-        
+        e.preventDefault();
+
         const SERVER_URL = "https://sheasyve.dev/api/send-email";
 
         try {
@@ -27,16 +27,16 @@ function ContactForm() {
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify(formData) 
+                body: JSON.stringify(formData)
             });
 
             if (response.ok) {
                 alert('Message sent successfully!');
-                
                 setFormData({ name: '', email: '', message: '' });
                 setIsOpen(false);
             } else {
-                alert('Oops! There was a problem sending the email from the server.');
+                const errorData = await response.json();
+                alert(errorData.message || 'There was a problem sending the email from the server.');
             }
         } catch (error) {
             console.error('Error:', error);
@@ -54,7 +54,7 @@ function ContactForm() {
                 <div className="contact-overlay">
                     <div className="contact-modal">
                         <h3>Send a Message</h3>
-                        
+
                         <form onSubmit={handleSubmit}>
                             <div className="contact-form-item">
                                 <label htmlFor="name">Name:</label>
@@ -67,7 +67,7 @@ function ContactForm() {
                                     required
                                 />
                             </div>
-                            
+
                             <div className="contact-form-item">
                                 <label htmlFor="email">Email:</label>
                                 <input
@@ -79,7 +79,7 @@ function ContactForm() {
                                     required
                                 />
                             </div>
-                            
+
                             <div className="contact-form-item">
                                 <label htmlFor="message">Message:</label>
                                 <textarea
@@ -91,7 +91,7 @@ function ContactForm() {
                                     required
                                 />
                             </div>
-                            
+
                             <div className="contact-button">
                                 <button type="submit">Send</button>
                             </div>
