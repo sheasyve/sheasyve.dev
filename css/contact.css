@@ -1,6 +1,6 @@
 @import url('colors.css');
 
-form{
+form {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -14,10 +14,10 @@ form{
 }
 
 .contact-section button {
-    background-color: #fafafa; 
+    background-color: #fafafa;
     color: #333333;
-    border: 1px solid rgba(0, 0, 0, 0.116); 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); 
+    border: 1px solid rgba(0, 0, 0, 0.116);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
     border-radius: 5px;
     padding: 0.6rem 2.2rem;
     font-size: 1rem;
@@ -27,9 +27,9 @@ form{
 }
 
 .contact-section button:hover {
-    transform: translateY(-2px); 
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12); 
-}   
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+}
 
 .contact-section button:active {
     transform: scale(0.97);
@@ -57,7 +57,7 @@ form{
     text-shadow: #e9ecef .3px .3px .5px;
     background: none !important;
     background: #333333 !important;
-    color:white !important;
+    color: white !important;
 }
 
 .contact-form-item {
@@ -83,6 +83,14 @@ form{
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
+.contact-form-item textarea {
+    box-sizing: border-box;
+    width: 100%;
+    resize: vertical;
+    height: 150px;
+    max-height: 300px;
+}
+
 .contact-form-item input:focus,
 .contact-form-item textarea:focus {
     outline: none;
@@ -90,7 +98,7 @@ form{
     box-shadow: 0 0 0 3px rgba(105, 105, 105, 0.603);
 }
 
-.contact-button{
+.contact-button {
     display: flex;
     justify-content: flex-start;
     margin-bottom: .5rem;
