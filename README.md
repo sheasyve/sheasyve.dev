@@ -20,6 +20,7 @@ Rather than relying on managed deployment platforms, I opted to self-host this a
 * **Routing:** React Router (BrowserRouter)
 * **Styling:** CSS with PostCSS (Autoprefixer)
 * **Build System:** Custom Webpack 5 pipeline
+* **Email System** Nodemailer forwarded with Resend
 
 ### Webpack Pipeline Highlights
 I built a custom Webpack configuration from scratch to optimize both the developer experience and production performance:
