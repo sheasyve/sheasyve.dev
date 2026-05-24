@@ -16,10 +16,12 @@ function HomePage() {
             <div className="home-section"><ProjectsSection /></div>
             <div className="home-section"><ContestsSection /></div>
             <div className="home-section"><LanguagesSection /></div>
-            <div className="home-section"><ToolsSection /></div>
-            <div className="home-section"><SoftwareSection /></div>
-            <div className="home-section"><InterestsSection /></div>
-            <div className="home-section"><HobbiesSection /></div>
+            <div className="home-list">
+                <div className="home-section"><ToolsSection /></div>
+                <div className="home-section"><SoftwareSection /></div>
+                <div className="home-section"><InterestsSection /></div>
+                <div className="home-section"><HobbiesSection /></div>
+            </div>
         </div>
     );
 }
