@@ -53,7 +53,7 @@
 }
 
 .projects-list h4 {
-    color: var(--h4-text-color);
+    color: var(--primary-text-color);
     font-size: 1em;
     font-weight: 500;
     margin-top: 0;
@@ -70,7 +70,7 @@
 }
 
 .contest-list h4 {
-    color: var(--h4-text-color);
+    color: var(--primary-text-color);
     font-size: 1em;
     font-weight: 500;
     margin-top: 0;
