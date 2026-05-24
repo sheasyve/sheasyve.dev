@@ -1,4 +1,5 @@
 @import url('colors.css');
+
 .home-section {
     backdrop-filter: blur(10px);
     background: linear-gradient(135deg, var(--section-background1), var(--section-background2));
@@ -19,7 +20,7 @@
     font-size: 1.3em;
     margin: 0;
     text-decoration: underline;
-    text-decoration-color: var(--h1-underline-color);   
+    text-decoration-color: var(--h1-underline-color);
 }
 
 .home-section h1 img {
@@ -180,7 +181,23 @@
     text-decoration-color: var(--mobile-underline-color);
 }
 
-@media (min-width: 800px) {
+.home-list {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.home-list h3 {
+    margin-top: 0;
+}
+
+@media (min-width: 801px) {
+    .home-list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0rem 1rem;
+        /* Adjust spacing between grid items */
+    }
 
     .contest-list {
         gap: 1vw;
@@ -261,5 +278,5 @@
         margin: 0;
     }
 
-    
+
 }
