@@ -15,13 +15,14 @@
     padding-bottom: .3vw;
     backdrop-filter: blur(10px);
     background: linear-gradient(0deg, var(--footer-background-color), var(--footer-background-color2));
+    margin-top: .5vw;
 }
 
 .footer p,
 .footer button {
     margin: 0 .1vw;
     line-height: normal;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     color: var(--project-h2h4-text);
 }
 
@@ -30,8 +31,10 @@
 }
 
 @media (max-width: 800px) {
+
     .footer {
         margin-top: 1vw;
         font-size: 1.1rem;
     }
+
 }

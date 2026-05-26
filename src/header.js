@@ -9,9 +9,8 @@ function Header() {
             <div className="header-titles">
                 <h1>
                     <div className="homepage">
-                        <a href="https://sheasyve.dev"><b>Shea Syverson</b></a> | 
+                        <a href="https://sheasyve.dev"><b>Shea Syverson</b><br></br><b> Developer Portfolio</b></a>
                     </div>
-                    <a href="https://github.com/sheasyve/sheasyve.dev"><b> Developer Portfolio</b></a>
                 </h1>
                 <div className="repo">
                     <h2>Bachelor of Computer Science - <a href="https://www.uvic.ca/" target="_blank" rel="noreferrer">University of Victoria</a></h2>

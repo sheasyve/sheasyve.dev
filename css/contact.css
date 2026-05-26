@@ -15,12 +15,12 @@ form {
 }
 
 .contact-section button {
-    background-color: #fafafa;
-    color: #333333;
+    background-color: var(--contact-button-background);
+    color: var(--contact-button-text);
     border: 1px solid rgba(0, 0, 0, 0.116);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
     border-radius: 5px;
-    padding: 0.6rem 2.2rem;
+    padding: 0.5rem 2.5rem;
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
@@ -58,7 +58,7 @@ form {
     text-align: center;
     text-shadow: #e9ecef .3px .3px .5px;
     background: none !important;
-    background: #333333 !important;
+    background: var(--contact-text-background) !important;
     color: white !important;
 }
 
@@ -115,7 +115,7 @@ form {
 }
 
 .contact-button button[type="submit"] {
-    background-color: #414141;
+    background-color: var(--contact-text-background);
     color: white;
 }
 

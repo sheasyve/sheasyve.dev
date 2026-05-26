@@ -2,9 +2,10 @@
     /* Background colors */
     --background-color1: rgba(0, 0, 0, 0.03);
     --background-color2: rgba(255, 255, 255, 1);
-    --h3-background-color1: rgba(0, 0, 0, 0.719);
+    --h3-background-color1: rgba(0, 0, 0, 0.82);
     --h3-background-color2: rgba(249, 249, 249, 1);
     --h3-background-color3: rgba(255, 255, 255, 1);
+    --h3-background-color4: rgba(0, 0, 0, 0.719);
     --footer-background-color: rgba(0, 0, 0, 0.678);
     --footer-background-color2: rgba(0, 0, 0, 0.678);
     --showcase-background-color: rgba(255, 255, 255, 0.199);
@@ -52,4 +53,7 @@
     --mobile-underline-color2: rgba(0, 0, 0, 0.05);
     --loader-color: #3498db;
     --loader-border-color: rgba(255, 255, 255, 0.932);
+    --contact-button-background: #414141;
+    --contact-button-text:#fafafa;
+    --contact-text-background:#414141;
 }

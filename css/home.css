@@ -192,11 +192,15 @@
 }
 
 @media (min-width: 801px) {
+
     .home-list {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 0rem 1rem;
-        /* Adjust spacing between grid items */
+    }
+
+    .home-list h3 {
+        background: linear-gradient(-10deg, var(--h3-background-color4), var(--h3-background-color4));
     }
 
     .contest-list {

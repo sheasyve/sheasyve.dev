@@ -3,30 +3,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
 @import url('colors.css');
+
 html {
     font-family: 'Roboto', sans-serif;
 }
 
-body {
-    background-color: var(--background-color1);
-    background-image: url('../media/bg2.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    justify-content: center;
-    margin: 0;
-}
-
-.body {
-    background: linear-gradient(180deg, var(--background-color1), var(--background-color2));
-    background-size: cover;
-    border-radius: 10px;
-    overflow: hidden;
-    padding: 10px;
-    margin-bottom: 0.5vw;
-    margin-top: 0.5vw;
-    justify-content: center;
-}
 
 /* Headings and Titles */
 
@@ -169,21 +150,12 @@ body {
 }
 
 @media (min-width: 800px) {
-
-    .body {
-        margin: 0.5vw 2vw;
-    }
-
     .rating {
         visibility: hidden;
     }
 }
 
 @media (min-width: 1024px) {
-
-    .body {
-        margin: 0.5vw 10vw;
-    }
 
     .header-links {
         flex-wrap: wrap;
@@ -192,34 +164,11 @@ body {
 
 }
 
-@media (min-width: 1440px) {
-
-    .body {
-        margin: 0.5vw 15vw;
-    }
-
-}
 
 @media (min-width: 1600px) {
-    
+
     .rating {
         visibility: visible;
-    }
-
-}
-
-@media (min-width: 2000px) {
-
-    .body {
-        margin: 0.5vw 18vw;
-    }
-
-}
-
-@media (min-width: 2250px) {
-
-    .body {
-        margin: 0.5vw 25vw;
     }
 
 }

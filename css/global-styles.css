@@ -5,8 +5,26 @@ html {
     font-family: 'Roboto', sans-serif;
 }
 
-.italic {
-    font-style: italic;
+body {
+    background-color: var(--background-color1);
+    background-image: url('../media/bg2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    justify-content: center;
+    margin: 0;
+}
+
+.body {
+    background: linear-gradient(180deg, var(--background-color1), var(--background-color2));
+    background-size: cover;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 10px;
+    justify-content: center;
+    width: 96%;
+    max-width: 1400px;
+    margin: 0vw auto;
 }
 
 .proficiency {
@@ -123,6 +141,10 @@ ol {
     padding: 0;
     display: flex;
     align-items: center;
+}
+
+.italic {
+    font-style: italic;
 }
 
 @keyframes spin {
