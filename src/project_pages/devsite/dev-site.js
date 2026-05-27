@@ -13,7 +13,6 @@ function DevSiteProject() {
         { icon: <i className="devicon-webpack-plain"></i>, name: " Webpack" },
         { icon: <i className="devicon-sql-plain"></i>, name: " Firebird SQL" },
         { icon: <i className="devicon-nginx-original"></i>, name: " Nginx" },
-        { icon: <i className="devicon-digitalocean-plain"></i>, name: " DigitalOcean" },
         { icon: <i className="devicon-cloudflare-plain"></i>, name: " Cloudflare" }
     ];
 
