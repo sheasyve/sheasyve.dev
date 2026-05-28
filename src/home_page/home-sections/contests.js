@@ -46,7 +46,6 @@ function ContestsSection() {
                                     {contest.extraInfo && (<span className="problems"> {contest.extraInfo}</span>)}
                                 </span>
                                 <span className="rank">Highest Rank: <b>{contest.rankBold}</b> / {contest.rankTotal}</span>
-                                <span className="rating"></span>
                             </h4>
                         </a>
                     );

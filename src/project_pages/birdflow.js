@@ -28,7 +28,6 @@ function BirdFlowProject() {
     return (
         <div className="project-page">
 
-
             <div className="project-header">
                 <a href="https://github.com/sheasyve/BirdFlow">
                     <h1>

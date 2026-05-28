@@ -157,6 +157,12 @@ ol {
     }
 }
 
+@media (min-width: 801px) {
+    h3 {
+        text-align: center;
+    }
+}
+
 @media (max-width: 800px) {
 
     h3 {
