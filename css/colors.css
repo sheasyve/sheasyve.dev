@@ -18,6 +18,8 @@
     --project-page-background2: rgba(255, 255, 255, 0.192);
     --project-header-background: rgba(41, 41, 41, 0.753);
     --tech-stack-background: rgba(255, 255, 255, 0.932);
+    --showcase-h4-background: rgba(0, 0, 0, 0.651);
+    --attempts-h4-background: rgba(255, 255, 255, 0.932);
 
     /* Text colors */
     --primary-text-color: rgba(54, 54, 54, 1);
@@ -37,6 +39,8 @@
     --project-header-text: rgba(255, 255, 255, 0.932);
     --project-page-list-text: rgba(0, 0, 0, 1);
     --text-shadow-color: rgba(160, 160, 160, 1);
+    --showcase-h4-text: rgba(255, 255, 255, 0.932);
+    --attempts-h4-text: rgba(54, 54, 54, 1);
 
     /* Link colors */
     --link-color: rgba(58, 58, 58, 1);

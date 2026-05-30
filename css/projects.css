@@ -53,6 +53,7 @@
     border-radius: 5px;
     text-align: center;
     padding: 5px;
+
     background: var(--project-h4-text);
 }
 
@@ -164,23 +165,34 @@
     background: linear-gradient(135deg, var(--showcase-background-color), var(--showcase-background-color2));
     border-radius: 5px 5px 5px 5px;
     padding: 1vw;
+    margin-top: 1vw;
+}
+
+.showcase h4, .previous-attempts h4 {
+    margin-bottom: 1vw;
+}
+
+.birdflow-showcase h4{
+    background: var(--showcase-h4-background);
+    color: var(--showcase-h4-text);
+}
+
+.previous-attempts h4{
+    background: var(--attempts-h4-background);
+    color: var(--attempts-h4-text);
 }
 
 .technical-breakdown {
     background: var(--project-h3-background);
     border-radius: 5px;
     padding-bottom: 1vw;
+    margin-top: 1vw;
 }
 
 .technical-breakdown h2 {
     border-radius: 5px 5px 0 0;
 }
 
-.technical-breakdown h3 {
-    text-shadow: 0.05vw 0.05vw 0 var(--text-shadow-color);
-    text-decoration: underline;
-    text-decoration-color: var(--highlight-color);
-}
 
 .technical-breakdown p {
     padding: 0vw 2rem 1vw 2rem;
