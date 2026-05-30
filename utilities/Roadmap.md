@@ -1,0 +1,12 @@
+- Add pictures to site journey
+- Put more effort into asciirt breakdown
+- Add some text spacing lines
+- Consider adding more footer info,  like an about tag and even more
+- Review readme
+- Make projects on home page have mini sections with a demo image
+- Page for leetcode journey
+- Add pages for hobbies
+- D3 developer timeline
+- New react plugins
+- Live leetcode and irating rank 
+- Skateboard game?
