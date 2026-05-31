@@ -165,11 +165,12 @@
     background: linear-gradient(135deg, var(--showcase-background-color), var(--showcase-background-color2));
     border-radius: 5px 5px 5px 5px;
     padding: 1vw;
-    margin-top: 1vw;
+
 }
 
 .showcase h4, .previous-attempts h4 {
-    margin-bottom: 1vw;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
 }
 
 .birdflow-showcase h4{
@@ -195,7 +196,7 @@
 
 
 .technical-breakdown p {
-    padding: 0vw 2rem 1vw 2rem;
+    padding: 0vw 2rem 1rem 2rem;
     font-size: 1.1em;
 }
 
