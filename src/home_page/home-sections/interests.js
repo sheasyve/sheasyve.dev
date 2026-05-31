@@ -2,10 +2,9 @@ import React from 'react';
 
 function InterestsSection() {
     const myInterests = [
-        "Backend Development",
+        "Full-Stack Development",
         "Computer Graphics",
         "Computer Simulations",
-        "Frontend Development",
         "Database Structures",
         "Machine Learning"
     ];

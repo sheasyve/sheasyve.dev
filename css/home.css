@@ -93,7 +93,7 @@
     justify-content: flex-start;
     position: relative;
     text-decoration: none;
-    width: 100%; 
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -178,8 +178,9 @@
     text-decoration: underline;
     text-decoration-color: var(--mobile-underline-color);
 }
-.contest_info{
-    flex-basis: 600px; 
+
+.contest_info {
+    flex-basis: 600px;
 
 }
 
@@ -194,13 +195,22 @@
     text-align: left;
 }
 
+.home-list li {
+    padding-left: .5rem;
+}
+
 @media (min-width: 801px) {
 
     .home-list {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 0rem 1rem;
-        
+
+    }
+
+    .home-list ol,
+    .home-list ul {
+        padding-left: 3rem;
     }
 
     .home-list h3 {
@@ -225,10 +235,12 @@
     .contest h4 {
         max-width: 1000px;
     }
-    .contest rank{
+
+    .contest rank {
         text-align: left;
         align-items: left;
     }
+
     .projects-list {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -294,16 +306,16 @@
 
 
 }
+
 /* 1. Force the main parent to take up the full section */
 .contest-list {
     display: flex;
     flex-direction: column;
-    width: 100%; 
+    width: 100%;
 }
 
 /* 2. Target that nameless, invisible wrapper <div> directly! */
-.contest-list > div {
+.contest-list>div {
     width: 100%;
 
 }
-
