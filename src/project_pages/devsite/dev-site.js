@@ -81,7 +81,7 @@ function DevSiteProject() {
 
             <div className="technical-breakdown">
                 <h2>Technical Breakdown</h2>
-                <p>Building this application provided hands-on experience integrating JavaScript, React, CSS, and Firebird SQL, ultimately culminating in a fully self-hosted deployment.</p>
+                <p style = {{paddingBottom: "0"}}>Building this application provided hands-on experience integrating JavaScript, React, CSS, and Firebird SQL, ultimately culminating in a fully self-hosted deployment.</p>
 
                 <h3>Architecture Overview</h3>
                 <ul>
