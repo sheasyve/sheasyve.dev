@@ -5,8 +5,9 @@ function SoftwareSection() {
         { name: "Google Workspace ", attrs: "(Docs, Sheets, Slides, Drive)" },
         { name: "Microsoft Office Suite ", attrs: "(Word, Excel, PowerPoint)" },
         { name: "Shopify ", attrs: "(Ecommerce, Web Development)" },
-        { name: "PBS Systems ", attrs: "(Automotive Industry Software)" },
         { name: "Adobe Photoshop ", attrs: "(Image Editing, Graphic Design)" },
+        { name: "PBS Systems ", attrs: "(Automotive Industry Software)" },
+        { name: "Visual-Eyes ", attrs: "(Optometry Practice Software)" },
     ];
 
     return (

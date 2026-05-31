@@ -11,9 +11,11 @@ function DevSiteProject() {
         { icon: <i className="devicon-html5-plain"></i>, name: " HTML" },
         { icon: <i className="devicon-css3-plain"></i>, name: " CSS" },
         { icon: <i className="devicon-webpack-plain"></i>, name: " Webpack" },
-        { icon: <i className="devicon-sql-plain"></i>, name: " Firebird SQL" },
+        { icon: <i><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" style={{ display: 'inline-block', verticalAlign: 'middle' }}><path d="M12 2s.06 4.7-2.6 7c0 0-1.74-2.81-1.39-5C4.24 7.21 2 11.23 2 14c0 4.88 4.22 8 10 8s10-3.64 10-8.89C22 7.07 14.5 2 12 2zm3.3 14.18c-.84.9-2.31 1.57-3.3 1.57-2.11 0-3.11-1.63-1.62-3.71.16-.22.38-.46.59-.69.57-.65 1.25-1.42 1.37-2.4 1.14 1.17 2.15 3.32 1.96 5.23z"/></svg></i>, name: "Firebird SQL" },
         { icon: <i className="devicon-nginx-original"></i>, name: " Nginx" },
-        { icon: <i className="devicon-cloudflare-plain"></i>, name: " Cloudflare" }
+        { icon: (<i><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" style={{ display: 'inline-block', verticalAlign: 'top' }}>
+                    <path d="M22.03 14.591c-.015-.126-.03-.255-.054-.384a3.633 3.633 0 00-3.321-2.906 5.534 5.534 0 00-5.184-3.834 5.483 5.483 0 00-4.14 1.884 4.106 4.106 0 00-2.946-.226 4.143 4.143 0 00-2.8 3.76c0 .085.006.168.012.252A4.544 4.544 0 001.5 17.524c0 2.471 2.031 4.476 4.537 4.476h13.737c2.334 0 4.226-1.865 4.226-4.162a4.116 4.116 0 00-1.97-3.247z" />
+                </svg></i>), name: "Cloudflare"}
     ];
 
     const experience = [
@@ -80,7 +82,7 @@ function DevSiteProject() {
             <div className="technical-breakdown">
                 <h2>Technical Breakdown</h2>
                 <p>Building this application provided hands-on experience integrating JavaScript, React, CSS, and Firebird SQL, ultimately culminating in a fully self-hosted deployment.</p>
-                
+
                 <h3>Architecture Overview</h3>
                 <ul>
                     {architecture.map((item, index) => (

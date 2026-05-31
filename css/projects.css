@@ -219,6 +219,10 @@
     text-decoration-color: var(--highlight-color);
 }
 
+.tech-item i{
+    padding-left: 0.35rem;
+}
+
 @media (max-width: 800px) {
     .project-header h3 {
         text-align: left !important;
