@@ -9,6 +9,7 @@ import BirdFlowProject from './project_pages/birdflow.js';
 import SuperAIBrosProject from './project_pages/smb_ai.js';
 import TeenyTimerProject from './project_pages/timer.js';
 import DevSiteProject from './project_pages/devsite/dev-site.js';
+import SimpleCrushProject from './project_pages/simplecrush.js';
 import Footer from './footer.js';
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
                     <Route path="/birdflow" element={<BirdFlowProject />} />
                     <Route path="/super-ai-bros" element={<SuperAIBrosProject />} />
                     <Route path="/teeny-timer" element={<TeenyTimerProject />} />
+                    <Route path="/simplecrush" element={<SimpleCrushProject />} />
                     <Route path="*" element={
                         <div className="home-section" style={{ textAlign: 'center', padding: '50px' }}>
                             <h1>404 - Page Not Found</h1>
