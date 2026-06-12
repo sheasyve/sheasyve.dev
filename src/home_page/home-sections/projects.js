@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 function ProjectsSection() {
 
     const myProjects = [
+        { url: "/simplecrush", name: "SimpleCrush - Audio Distortion Plugin", tech: "– (C++, JUCE)" },
         { url: "/devsite", name: "Portfolio Website - sheasyve.dev", tech: "– (JavaScript, React, HTML, CSS)" },
         { url: "/birdflow", name: "BirdFlow - Wind Simulator Extension for Blender", tech: "– (Cython, Python)" },
         { url: "/ascii-rt", name: "AsciiRT - Real-time Ray-traced Animations in the Terminal.", tech: "– (CUDA, C++)" },
