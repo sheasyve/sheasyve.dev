@@ -37,7 +37,7 @@ function SimpleCrushProject() {
                     <br></br>
                     The plugin allows users to reduce the bit depth and sample rate of audio, with built in mix and filter controls.
                     <br></br>
-                    This plugin is in early development, but is fully functional.
+                    This plugin and is in early development, but is fully functional. This writeup is a work in progress and will be updated with more technical details and experience gained as development continues.
                 </h3>
             </div>
 
