@@ -70,7 +70,9 @@
 .project-page img {
     margin-left: 1vw;
 }
-
+.tech-item img {
+    margin-left: .35rem;
+}
 .project-page ol,
 .project-page ul {
     padding-inline-start: 0px;
@@ -183,7 +185,7 @@
     color: var(--attempts-h4-text);
 }
 
-.technical-breakdown {
+.technical-breakdown, .features {
     background: var(--project-h3-background);
     border-radius: 5px;
     padding-bottom: 1vw;
