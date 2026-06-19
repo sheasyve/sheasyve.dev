@@ -15,9 +15,7 @@
 }
 
 .project-page h1 {
-    padding: 5px;
-    padding-bottom: 1vw;
-    padding-top: .8vw;
+    padding: 1rem;
     margin: 0;
     margin-left: auto;
     margin-right: auto;
@@ -27,7 +25,7 @@
 .project-page h2 {
     border-radius: 5px;
     color: var(--project-h2h4-text);
-    padding: 5px;
+    padding: 1rem;
     background: var(--project-h2h4-background);
 }
 
@@ -83,8 +81,6 @@
     color: var(--project-page-list-text);
     font-size: 1em;
     margin-bottom: 0.5rem;
-    margin-left: 3rem;
-    margin-right: 3rem;
 }
 
 .project-page p {
@@ -150,8 +146,8 @@
 .tech-item {
     display: flex;
     align-items: center;
-    margin-left: 0 !important;
-    padding-right: 1vw;
+    padding-right: 1rem;
+    padding-left: 1rem;
     white-space: normal;
 }
 

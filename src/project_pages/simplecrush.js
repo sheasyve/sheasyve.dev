@@ -2,12 +2,12 @@ import React from 'react';
 
 import LoadVideo from '../components/load-video.js';
 import pluginPic from '../../media/projects/simplecrush/plugin.png';
-
+import demo from '../../media/projects/simplecrush/demo.mp4';
 function SimpleCrushProject() {
 
     const techstack = [
         { icon: <i className="devicon-cplusplus-plain"></i>, name: " C++" },
-{ icon: <img src="https://cdn.simpleicons.org/juce" alt="JUCE" style={{ width: '1em', height: '1em', verticalAlign: 'middle' }} />, name: " JUCE" }
+{ icon: <img src="https://cdn.simpleicons.org/juce" alt="JUCE" style={{ width: '1em', height: '1em', verticalAlign: 'middle'}} />, name: " JUCE" }
     ];
 
     const features = [
@@ -34,7 +34,7 @@ function SimpleCrushProject() {
                     </h1>
                 </a>
                 <ul className="techstack">
-                    <div className="tech-items">
+                    <div className="tech-items" style={{"flex-wrap": "nowrap"}}>
                         {techstack.map((tech, index) => (
                             <li key={index} className="tech-item">
                                 <h4>{tech.name}</h4>
@@ -45,22 +45,27 @@ function SimpleCrushProject() {
 
                 <h3 style={{textAlign: 'center'}}>
                     SimpleCrush is a VST3 bitcrusher plugin built with C++ and the JUCE framework.
-                    <br></br>
+                    <img src={pluginPic} alt="SimpleCrush Plugin" className="plugin-pic" style={{margin: '1rem auto', display: 'block'}} />
                     The plugin allows users to reduce the bit depth and sample rate of audio, with built in mix and filter controls.
                     <br></br>
                     This plugin and is in early development, but is fully functional. This writeup is a work in progress and will be updated with more technical details and experience gained as development continues.
+                    
                 </h3>
+                
             </div>
 
             <div className="simplecrush-showcase">
                 <div className="features">
                     <h2>Features</h2>
+                    
+                   
+                    
                     <ul className="feature-list">
                         {features.map((exp, index) => (
                             <li key={index}>{exp}</li>))}
                     </ul>
-                    <img src={pluginPic} alt="SimpleCrush Plugin" className="plugin-pic" style={{margin: '0 auto', display: 'block'}} />
-                </div>
+                    <LoadVideo src={demo} loop controls />
+               </div>
                 <div className="technical-breakdown">
                     <h2>Technical Breakdown</h2>
                     <p>The plugin was built using C++ and the JUCE framework.
