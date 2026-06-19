@@ -57,10 +57,7 @@ function SimpleCrushProject() {
             <div className="simplecrush-showcase">
                 <div className="features">
                     <h2>Features</h2>
-                    
-                   
-                    
-                    <ul className="feature-list">
+                    <ul className="feature-list" style={{ paddingBottom: '1rem' }}>
                         {features.map((exp, index) => (
                             <li key={index}>{exp}</li>))}
                     </ul>

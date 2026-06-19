@@ -23,7 +23,7 @@
 }
 
 .project-page h2 {
-    border-radius: 5px;
+    border-radius: 5px 5px 0px 0px;
     color: var(--project-h2h4-text);
     padding: 1rem;
     background: var(--project-h2h4-background);
@@ -62,7 +62,8 @@
 .project-page video {
     height: auto;
     object-fit: cover;
-    width: 100%;
+    object-position: center;
+    
 }
 
 .project-page img {
@@ -81,6 +82,7 @@
     color: var(--project-page-list-text);
     font-size: 1em;
     margin-bottom: 0.5rem;
+    margin-left: 3rem;
 }
 
 .project-page p {
@@ -162,8 +164,6 @@
 .showcase {
     background: linear-gradient(135deg, var(--showcase-background-color), var(--showcase-background-color2));
     border-radius: 5px 5px 5px 5px;
-    padding: 1vw;
-
 }
 
 .showcase h4, .previous-attempts h4 {
@@ -177,8 +177,8 @@
 }
 
 .previous-attempts h4{
-    background: var(--attempts-h4-background);
-    color: var(--attempts-h4-text);
+    background: var(--showcase-h4-background);
+    color: var(--showcase-h4-text);
 }
 
 .technical-breakdown, .features {
