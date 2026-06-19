@@ -58,7 +58,7 @@ function BirdFlowProject() {
             </div>
 
             <div className="birdflow-showcase">
-                <div className="showcase">
+                <div className="showcase" style={{ padding: "1rem" }}>
                     <h4 style={{ marginTop: 0 }}>Car - Front View</h4>
 
                     <LoadVideo src={frontCarVid} autoPlay loop muted />
@@ -79,7 +79,7 @@ function BirdFlowProject() {
                     </p>
 
 
-                    <div className="showcase" style={{ background: "None" }}>
+                    <div className="showcase" style={{ background: "None", padding: "1rem" }}>
                         <h4>Car - Rear View</h4>
                         <LoadVideo src={backCarVid} autoPlay loop muted />
 
@@ -105,15 +105,16 @@ function BirdFlowProject() {
                     </ul>
                 </div>
             </div>
-            <div className="previous-attempts">
-
-
+            <div className="previous-attempts" >
                 <h2>Failed Attempts Along the Way</h2>
-                <h4 style={{ marginTop: 0 }}>Initial Attempt with Lagrangian Physics - No Pressure Calculations</h4>
-                <LoadVideo src={initialVid} autoPlay loop muted />
-                <h4>Initial Eulerian Attempt - Advected the Grid Itself Opposed to Grid Velocities</h4>
-                <div className="square-video" >
-                    <LoadVideo src={movingGridVid} autoPlay loop muted />
+                <div className="showcase" style={{ background: "None", padding: "1rem" }}>
+
+                    <h4 style={{ marginTop: 0 }}>Initial Attempt with Lagrangian Physics - No Pressure Calculations</h4>
+                    <LoadVideo src={initialVid} autoPlay loop muted />
+                    <h4>Initial Eulerian Attempt - Advected the Grid Itself Opposed to Grid Velocities</h4>
+                    <div className="square-video" >
+                        <LoadVideo src={movingGridVid} autoPlay loop muted />
+                    </div>
                 </div>
 
             </div>

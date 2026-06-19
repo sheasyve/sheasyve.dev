@@ -46,6 +46,7 @@ function AsciiRTProject() {
             </div>
 
             <div className="showcase">
+                <h2 style={{ borderRadius: "5px 5px 0px 0px" }}>Showcase</h2>
                 <LoadVideo src={carAndTeapotVid} autoPlay loop muted />
                 <h3>
                     The demo below showcases a Toyota Mark II rendered in ASCII at 60 FPS, achieving a frame time of 0.01665 seconds.
