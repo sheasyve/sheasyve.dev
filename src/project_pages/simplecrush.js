@@ -14,7 +14,8 @@ function SimpleCrushProject() {
         "Bit Depth Reduction: Users can reduce the bit depth of the audio signal, introducing quantization noise and creating a characteristic lo-fi sound. It also works great on bass and drums.",
         "Sample Rate Reduction: The plugin allows users to lower the sample rate of the audio, resulting in aliasing artifacts that contribute to the bitcrushed effect.",
         "Mix Control: A mix control enables users to blend the processed (bitcrushed) signal with the original dry signal, allowing for subtle or extreme effects.",
-        "Filter Controls: Built-in high-pass and low-pass filters allow users to remove unpleasant high and low frequencies that can arise from bitcrushing, providing more control over the final sound."
+        "Filter Controls: Built-in high-pass and low-pass filters allow users to remove unpleasant high and low frequencies that can arise from bitcrushing, providing more control over the final sound.",
+        "Themes: This is in development with a working demo complete. I need to dial in the UI of the settings menu and the colorschemes. "
     ];
 
     const experience = ["Learned how to create VST3 plugins using C++ and the JUCE framework.",
@@ -49,7 +50,8 @@ function SimpleCrushProject() {
                     The plugin allows users to reduce the bit depth and sample rate of audio, with built in mix and filter controls.
                     <br></br>
                     This plugin and is in early development, but is fully functional. This writeup is a work in progress and will be updated with more technical details and experience gained as development continues.
-                    
+                    Currently I am working on implementing a settings menu with themes and color schemes, as well as refining the user interface for a more polished experience.
+                    After that I will add a few more audio processing features and then work on implementing presets. 
                 </h3>
                 
             </div>
