@@ -2,6 +2,7 @@ import React from 'react';
 
 import LoadVideo from '../components/load-video.js';
 import pluginPic from '../../media/projects/simplecrush/plugin.png';
+import settingsPic from '../../media/projects/simplecrush/settings.png';
 import demo from '../../media/projects/simplecrush/demo.mp4';
 function SimpleCrushProject() {
 
@@ -48,10 +49,10 @@ function SimpleCrushProject() {
                     SimpleCrush is a VST3 bitcrusher plugin built with C++ and the JUCE framework.
                     <img src={pluginPic} alt="SimpleCrush Plugin" className="plugin-pic" style={{margin: '1rem auto', display: 'block'}} />
                     The plugin allows users to reduce the bit depth and sample rate of audio, with built in mix and filter controls.
-                    <br></br>
                     This plugin and is in early development, but is fully functional. This writeup is a work in progress and will be updated with more technical details and experience gained as development continues.
+                    <br></br><br></br>
                     Currently I am working on implementing a settings menu with themes and color schemes, as well as refining the user interface for a more polished experience.
-                    After that I will add a few more audio processing features and then work on implementing presets. 
+                    Next, I will add a few more audio processing features and then work on implementing presets. 
                 </h3>
                 
             </div>
@@ -71,7 +72,7 @@ function SimpleCrushProject() {
                     JUCE provides a powerful and flexible platform for audio plugin development, allowing for efficient handling of audio processing and user interface design. The plugin's core functionality is implemented in C++, leveraging JUCE's audio processing capabilities to manipulate the audio signal in real-time. 
                     <br></br><br></br>
                     The bit depth and sample rate reduction algorithms are designed to introduce the characteristic distortion associated with bitcrushing, while the mix and filter controls allow users to remove unpleasant high and low frequencies. The development process involved iterating on the audio processing algorithms to achieve the desired sound quality and performance, as well as designing an intuitive user interface for seamless interaction with the plugin.</p>
-
+<img src={settingsPic} alt="SimpleCrush Settings" className="plugin-pic" style={{margin: '1rem auto', display: 'block'}} />
                 </div>
 
                 <div className="project-list">
