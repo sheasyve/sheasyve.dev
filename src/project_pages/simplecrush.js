@@ -1,15 +1,13 @@
 import React from 'react';
-
 import LoadVideo from '../components/load-video.js';
 import pluginPic from '../../media/projects/simplecrush/plugin.png';
 import settingsPic from '../../media/projects/simplecrush/settings.png';
 import demo from '../../media/projects/simplecrush/demo.mp4';
+
 function SimpleCrushProject() {
 
-    const techstack = [
-        { icon: <i className="devicon-cplusplus-plain"></i>, name: " C++" },
-{ icon: <img src="https://cdn.simpleicons.org/juce" alt="JUCE" style={{ width: '1em', height: '1em', verticalAlign: 'middle'}} />, name: " JUCE" }
-    ];
+    const techstack = [{ icon: <i className="devicon-cplusplus-plain"></i>, name: " C++" },
+{ icon: <img src="https://cdn.simpleicons.org/juce" alt="JUCE" style={{ width: '1em', height: '1em', verticalAlign: 'middle'}} />, name: " JUCE" }];
 
     const features = [
         "Bit Depth Reduction: Users can reduce the bit depth of the audio signal, introducing quantization noise and creating a characteristic lo-fi sound. It also works great on bass and drums.",
@@ -35,6 +33,7 @@ function SimpleCrushProject() {
                             alt="GitHub Logo" />
                     </h1>
                 </a>
+
                 <ul className="techstack">
                     <div className="tech-items" style={{"flex-wrap": "nowrap"}}>
                         {techstack.map((tech, index) => (
@@ -58,6 +57,7 @@ function SimpleCrushProject() {
             </div>
 
             <div className="simplecrush-showcase">
+
                 <div className="features">
                     <h2>Features</h2>
                     <ul className="feature-list" style={{ paddingBottom: '1rem' }}>
@@ -66,6 +66,7 @@ function SimpleCrushProject() {
                     </ul>
                     <LoadVideo src={demo} loop controls />
                </div>
+
                 <div className="technical-breakdown">
                     <h2>Technical Breakdown</h2>
                     <p>The plugin was built using C++ and the JUCE framework.
