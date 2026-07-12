@@ -14,13 +14,14 @@ function SimpleCrushProject() {
         "Sample Rate Reduction: The plugin allows users to lower the sample rate of the audio, resulting in aliasing artifacts that contribute to the bitcrushed effect.",
         "Mix Control: A mix control enables users to blend the processed (bitcrushed) signal with the original dry signal, allowing for subtle or extreme effects.",
         "Filter Controls: Built-in high-pass and low-pass filters allow users to remove unpleasant high and low frequencies that can arise from bitcrushing, providing more control over the final sound.",
-        "Themes: This is in development with a working demo complete. I need to dial in the UI of the settings menu and the colorschemes. "
+        "Themes: This is in development and nearly finished. I need to dial in colorschemes but they are implemented and save in a file as a persistent setting. "
     ];
 
     const experience = ["Learned how to create VST3 plugins using C++ and the JUCE framework.",
         "Developed a deeper understanding of digital audio processing concepts, including bit depth and sample rate reduction algorithms.",
         "Gained experience in designing and implementing user interfaces for audio plugins, ensuring an intuitive and visually appealing user experience.",
-        "Iterated on audio processing algorithms to achieve the desired sound quality and performance, balancing the trade-offs between audio fidelity and computational efficiency."
+        "Iterated on audio processing algorithms to achieve the desired sound quality and performance, balancing the trade-offs between audio fidelity and computational efficiency.",
+        "Implemented a fully custom plugin development framework which I can reuse to create more plugins with a consistent look and feel, and with a more efficient development process."
     ];
 
     return (
@@ -74,6 +75,7 @@ function SimpleCrushProject() {
                     <br></br><br></br>
                     The bit depth and sample rate reduction algorithms are designed to introduce the characteristic distortion associated with bitcrushing, while the mix and filter controls allow users to remove unpleasant high and low frequencies. The development process involved iterating on the audio processing algorithms to achieve the desired sound quality and performance, as well as designing an intuitive user interface for seamless interaction with the plugin.</p>
 <img src={settingsPic} alt="SimpleCrush Settings" className="plugin-pic" style={{margin: '1rem auto', display: 'block'}} />
+                    I have just finished implementing 8 unique themes, that can be selected in the settings menu. The settings are saved in a file which is loaded on startup so that they are persistent across sessions.
                 </div>
 
                 <div className="project-list">
