@@ -58,5 +58,5 @@ I built a custom Webpack configuration from scratch to optimize both the develop
 
 ### Scripts
 
-* `npm run start`: Spins up the Webpack dev server on `localhost:3000` with HMR and Fast Refresh enabled.
+* `npm run dev`: Spins up the Webpack dev server on `localhost:3000` with HMR and Fast Refresh enabled, and a simulated database.
 * `npm run build`: Compiles the production build into the `dist` folder for deployment on the droplet.
