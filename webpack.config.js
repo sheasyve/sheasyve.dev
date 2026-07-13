@@ -5,7 +5,7 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import CssMinimizerPlugin from 'css-minimizer-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
-
+import CopyPlugin from 'copy-webpack-plugin';
 // Polyfill for __dirname in ES Modules
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -19,7 +19,7 @@ export default (env, argv) => {
     output: {
       path: path.resolve(__dirname, 'dist'),
       filename: isProduction ? '[name].[contenthash].js' : '[name].bundle.js',
-      clean: true, 
+      clean: true,
       publicPath: '/',
     },
 
@@ -34,11 +34,11 @@ export default (env, argv) => {
       port: 3000,
       hot: true, // Hot Module Replacement (HMR)
       open: true,
-      historyApiFallback: true, 
+      historyApiFallback: true,
       proxy: [
         {
           context: ['/api'],
-          target: 'http://localhost:3001', 
+          target: 'http://localhost:3001',
         },
       ],
     },
@@ -110,6 +110,11 @@ export default (env, argv) => {
 
     // 4. PLUGINS
     plugins: [
+      new CopyPlugin({
+        patterns: [
+          { from: 'public', to: '' }, 
+        ],
+      }),
       new HtmlWebpackPlugin({
         template: './index.html',
       }),
