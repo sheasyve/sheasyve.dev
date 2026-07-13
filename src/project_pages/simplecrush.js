@@ -16,7 +16,7 @@ import { FiDownload } from "react-icons/fi";
 const DownloadButton = () => {
   return (
     <a 
-      href="/downloads/SimpleCrush.vst3.zip" 
+      href="downloads/SimpleCrush.vst3.zip" 
       download="SimpleCrush.vst3.zip"
       target="_blank" 
       rel="noopener noreferrer"
