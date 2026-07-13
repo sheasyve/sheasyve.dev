@@ -11,8 +11,7 @@ import LoadVideo from '../components/load-video.js';
 
 function BirdFlowProject() {
 
-    const techstack = [
-        { icon: <i className="devicon-python-plain"></i>, name: " Python" },
+    const techstack = [{ icon: <i className="devicon-python-plain"></i>, name: " Python" },
         { icon: <i className="devicon-cython-plain"></i>, name: " Cython" },
         { icon: <i className="devicon-blender-plain"></i>, name: " Blender API" }
     ];
@@ -55,34 +54,33 @@ function BirdFlowProject() {
                     and gravitate towards low pressure areas. Collisions are convincing with dynamic velocity damping
                     and redirection, with tangential friction being applied.
                 </h3>
+
             </div>
 
             <div className="birdflow-showcase">
                 <div className="showcase" style={{ padding: "1rem" }}>
                     <h4 style={{ marginTop: 0 }}>Car - Front View</h4>
-
                     <LoadVideo src={frontCarVid} autoPlay loop muted />
                 </div>
+
                 <div className="technical-breakdown">
                     <h2>Technical Breakdown</h2>
-
                     <p style={{ padding: ".5rem 0vw 0vw 3vw" }}>
                         The engine uses a Eulerian grid with a Conjugate Gradient solver to simulate incompressible flow
                         by solving the Navier-Stokes equations. Visuals are rendered using particles, for a simple way to
                         display the behavior of the airflow. This involved using Lagrangian methods for particle collisions
                         and movement, making the simulation a hybrid approach having both Eulerian and Lagrangian aspects.
                     </p>
+
                     <p style={{ padding: ".5rem 0vw .5rem 3vw" }}>
                         The particles are first advected with a Runge-Kutta 3rd order method, and then pressure in the
                         simulation is calculated using the conjugate gradient solver from SciPy. Pressure changes are
                         distributed through the grid, and particle velocities are updated accordingly after checking for collisions.
                     </p>
 
-
                     <div className="showcase" style={{ background: "None", padding: "1rem" }}>
                         <h4>Car - Rear View</h4>
                         <LoadVideo src={backCarVid} autoPlay loop muted />
-
                         <h4>Sphere</h4>
                         <LoadVideo src={sphereVid} autoPlay loop muted />
                         <h3 style={{ background: "var(--showcase-background-color2)", padding: "1vw 1vw 1vw 2vw" }}>
@@ -91,11 +89,11 @@ function BirdFlowProject() {
                             lagrangian collision handling was implemented. This means that when a collision is detected,
                             the particle is redirected along the tangent of the object, and slowed down with collision and friction force.
                         </h3>
-
                         <h4>Tilted Block</h4>
                         <LoadVideo src={blockVid} autoPlay loop muted />
                     </div>
                 </div>
+
                 <div className="project-list">
                     <h2>Experience Gained</h2>
                     <ul className="experience">
@@ -105,6 +103,7 @@ function BirdFlowProject() {
                     </ul>
                 </div>
             </div>
+
             <div className="previous-attempts" >
                 <h2>Failed Attempts Along the Way</h2>
                 <div className="showcase" style={{ background: "None", padding: "1rem" }}>
@@ -116,8 +115,8 @@ function BirdFlowProject() {
                         <LoadVideo src={movingGridVid} autoPlay loop muted />
                     </div>
                 </div>
-
             </div>
+
         </div>
     );
 }
