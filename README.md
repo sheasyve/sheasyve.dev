@@ -29,14 +29,17 @@ I built a custom Webpack configuration from scratch to optimize both the develop
 * **Code Splitting:** Automatically extracts third-party dependencies from `node_modules` into a dedicated `vendors` chunk to improve browser caching and load times.
 * **Asset Management:** Uses `MiniCssExtractPlugin` for production CSS extraction, alongside content hashing for aggressive cache busting.
 
-## 🚀 Getting Started
+## Installing From Zip
 
-### Prerequisites
+* Extract the zip folder.
+* Drop the SimpleCrush.vst folder in your DAW's VST folder and re-load your plugins.
+
+## Compillation
+
+#### Prerequisites
 * Node.js (v16 or higher recommended)
 * npm
-
-### Installation
-
+  
 1. Clone the repository:
    ```bash
    git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
