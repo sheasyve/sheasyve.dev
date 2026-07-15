@@ -238,6 +238,12 @@
     align-items: center;
 }
 
+.plugin-vid {
+    max-width: 800px;
+    margin: 0 auto;
+    width: 90%;
+}
+
 .theme-pic {
     width: 100%;
     height: auto;

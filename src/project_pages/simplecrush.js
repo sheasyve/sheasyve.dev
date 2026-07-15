@@ -98,7 +98,9 @@ function SimpleCrushProject() {
                         {features.map((exp, index) => (
                             <li key={index}>{exp}</li>))}
                     </ul>
-                    <LoadVideo src={demo} loop controls />
+                    <div className="plugin-vid">
+                        <LoadVideo src={demo} loop controls />
+                    </div>
                     <div className="settings-themes-showcase">
                         <img src={settingsPic} alt="SimpleCrush Settings" className="setting-pic" />
                         <img src={themePic} alt="SimpleCrush Themes" className="setting-pic" />
