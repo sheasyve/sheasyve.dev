@@ -10,7 +10,6 @@ import CopyPlugin from 'copy-webpack-plugin';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default (env, argv) => {
-  // Check if running a production build
   const isProduction = argv.mode === 'production';
 
   return {
@@ -32,7 +31,7 @@ export default (env, argv) => {
         directory: path.join(__dirname, 'dist'),
       },
       port: 3000,
-      hot: true, // Hot Module Replacement (HMR)
+      hot: true, 
       open: true,
       historyApiFallback: true,
       proxy: [
@@ -87,7 +86,6 @@ export default (env, argv) => {
           ],
         },
         {
-          // Images & Video: Output to 'media' folder
           test: /\.(png|svg|jpg|jpeg|gif|mp4|webm|ogg)$/i,
           type: 'asset/resource',
           generator: {
@@ -95,7 +93,6 @@ export default (env, argv) => {
           }
         },
         {
-          // Fonts: Output to 'fonts' folder
           test: /\.(woff|woff2|eot|ttf|otf)$/i,
           type: 'asset/resource',
           generator: {
@@ -120,7 +117,6 @@ export default (env, argv) => {
       }),
       ...(isProduction
         ? [
-          // Production-only plugins
           new HtmlWebpackPlugin({
             filename: 'CNAME',
             templateContent: 'sheasyve.dev',
@@ -131,7 +127,6 @@ export default (env, argv) => {
           })
         ]
         : [
-          // Development-only plugins
           new ReactRefreshWebpackPlugin()
         ]
       ),
@@ -141,8 +136,7 @@ export default (env, argv) => {
     optimization: {
       minimize: isProduction,
       minimizer: [
-        // Minify JS
-        new TerserPlugin({
+        new TerserPlugin({// Minify JS
           terserOptions: {
             sourceMap: true,
             format: {
@@ -151,14 +145,12 @@ export default (env, argv) => {
           },
           extractComments: false,
         }),
-        // Minify CSS
         new CssMinimizerPlugin(),
       ],
       splitChunks: {
         chunks: 'all',
         cacheGroups: {
-          // Extract third-party libraries into a separate vendors chunk
-          vendor: {
+          vendor: {// Extract third-party libraries into a separate vendors chunk
             test: /[\\/]node_modules[\\/]/,
             name: 'vendors',
             chunks: 'all',
