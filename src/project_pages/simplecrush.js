@@ -12,6 +12,7 @@ import t5 from '../../media/projects/simplecrush/t5.png';
 import t6 from '../../media/projects/simplecrush/t6.png';
 import t7 from '../../media/projects/simplecrush/t7.png';
 import demo from '../../media/projects/simplecrush/demo.mp4';
+import presets from '../../media/projects/simplecrush/presets.mp4';
 import { FiDownload } from "react-icons/fi";
 
 const DownloadButton = () => {
@@ -106,6 +107,7 @@ function SimpleCrushProject() {
                     </ul>
                     <div className="plugin-vid">
                         <LoadVideo src={demo} loop controls />
+                        <LoadVideo src={presets} loop controls />
                     </div>
                     <div className="settings-themes-showcase">
                         <img src={settingsPic} alt="SimpleCrush Settings" className="setting-pic" />
