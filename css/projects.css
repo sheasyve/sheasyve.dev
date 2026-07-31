@@ -1,5 +1,5 @@
-
 @import url('colors.css');
+
 .project-header {
     background: var(--project-header-background);
     border-radius: 5px 5px 5px 5px;
@@ -63,12 +63,13 @@
     height: auto;
     object-fit: cover;
     object-position: center;
-    
+
 }
 
 .tech-item img {
     margin-left: .35rem;
 }
+
 .project-page ol,
 .project-page ul {
     padding-inline-start: 0px;
@@ -163,22 +164,24 @@
     border-radius: 5px 5px 5px 5px;
 }
 
-.showcase h4, .previous-attempts h4 {
+.showcase h4,
+.previous-attempts h4 {
     margin-bottom: 1rem;
     margin-top: 1rem;
 }
 
-.birdflow-showcase h4{
+.birdflow-showcase h4 {
     background: var(--showcase-h4-background);
     color: var(--showcase-h4-text);
 }
 
-.previous-attempts h4{
+.previous-attempts h4 {
     background: var(--showcase-h4-background);
     color: var(--showcase-h4-text);
 }
 
-.technical-breakdown, .features {
+.technical-breakdown,
+.features {
     background: var(--project-h3-background);
     border-radius: 5px;
     padding-bottom: 1vw;
@@ -204,30 +207,31 @@
 }
 
 .plugin-vid {
-  display: flex;
-  flex-direction: column; 
-  gap: 16px;
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto; 
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 @media (min-width: 640px) {
-  .plugin-vid {
-    flex-direction: row;
-  }
+    .plugin-vid {
+        flex-direction: row;
+    }
 }
-.plugin-vid > * {
-  flex: 1;
-  width: 100%;
+
+.plugin-vid>* {
+    flex: 1;
+    width: 100%;
 }
 
 .plugin-vid video {
-  width: 100%;
-  aspect-ratio: 1 / 1;     
-  object-fit: cover;       
-  object-position: bottom; 
-  display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: bottom;
+    display: block;
 }
 
 .experience,
@@ -242,7 +246,7 @@
     text-decoration-color: var(--highlight-color);
 }
 
-.tech-item i{
+.tech-item i {
     padding-left: 0.35rem;
 }
 
@@ -256,12 +260,11 @@
 
 .theme-grid {
     display: grid;
-    /* Use max-content instead of 1fr */
     grid-template-columns: repeat(auto-fit, minmax(150px, max-content));
     gap: 10px;
-    margin: 1rem auto; 
+    margin: 1rem auto;
     width: 95%;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
 }
 
@@ -276,6 +279,7 @@
     height: auto;
     border-radius: 8px;
 }
+
 .settings-pic {
     width: 100%;
     height: auto;
@@ -283,15 +287,62 @@
     align-items: center;
 }
 
+.desktop-split {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    
+    padding: 1rem;
+}
+
+.button-wrapper {
+    margin: 2rem;
+}
+
+.plugin-pic {
+    max-width: 100%;
+    height: auto;
+}
+
+.headerbg {
+    background-color: var(--tech-stack-background);
+    border-radius: 0px 0px 5px 5px;
+}
+
+/* Desktop layout */
+@media (min-width: 768px) {
+    .desktop-split {
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: left;
+        margin: 0 auto;
+        max-width: 1000px;
+        gap: 2rem;
+    }
+
+    .left-content {
+        flex: 1;
+    }
+
+    .right-content {
+        flex: 1;
+        display: flex;
+        justify-content: flex-start;
+    }
+}
+
 @media (min-width: 801px) {
     .settings-themes-showcase {
         flex-direction: row;
     }
-    
+
     .settings-themes-showcase .plugin-pic {
-        flex: 1; 
+        flex: 1;
     }
 }
+
 @media (max-width: 800px) {
     .project-header h3 {
         text-align: left !important;
@@ -331,7 +382,6 @@
 
     .techstack {
         flex-wrap: nowrap;
-        padding-left: 0;
         display: flex;
         align-items: center;
         padding-right: 0.5vw;
