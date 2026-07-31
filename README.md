@@ -6,7 +6,7 @@ Welcome to the source code for my developer portfolio, [sheasyve.dev](https://sh
 
 Originally built as a static HTML/CSS site, I recently migrated this project to a modern React stack.
 
-## 🏗️ Architecture & Infrastructure
+## Architecture & Infrastructure
 
 Rather than relying on managed deployment platforms, I opted to self-host this application to maintain full control over the deployment environment and security.
 
@@ -14,7 +14,7 @@ Rather than relying on managed deployment platforms, I opted to self-host this a
 * **Security & DNS:** Proxied through Cloudflare with strict UFW firewall rules and hardened server access (SSH key-based authentication only).
 * **Domain Management:** Automated CNAME generation built directly into the production build step.
 
-## 💻 Tech Stack
+## Tech Stack
 
 * **Core:** React 18
 * **Routing:** React Router (BrowserRouter)
