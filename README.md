@@ -1,8 +1,8 @@
 # Shea Syverson | Developer Portfolio
 
-[![Website Status](https://img.shields.io/website?url=https%3A%2F%2Fsheasyve.dev&style=flat-square)](https://sheasyve.dev)
+Welcome to the source code for my developer portfolio, [sheasyve.dev](https://sheasyve.dev).
 
-Welcome to the source code for my developer portfolio, [sheasyve.dev](https://sheasyve.dev). 
+[![Website Status](https://img.shields.io/website?url=https%3A%2F%2Fsheasyve.dev&style=flat-square)](https://sheasyve.dev)
 
 Originally built as a static HTML/CSS site, I recently migrated this project to a modern React stack.
 
