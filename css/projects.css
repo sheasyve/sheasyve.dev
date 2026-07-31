@@ -293,7 +293,6 @@
     align-items: center;
     text-align: center;
     gap: 1rem;
-    
     padding: 1rem;
 }
 
@@ -311,11 +310,11 @@
     border-radius: 0px 0px 5px 5px;
 }
 
-/* Desktop layout */
 @media (min-width: 768px) {
     .desktop-split {
-        flex-direction: row;
-        align-items: flex-start;
+        display: flex;
+        /* Ensure this is set so flex-direction works */
+        flex-direction: row-reverse;
         text-align: left;
         margin: 0 auto;
         max-width: 1000px;
@@ -329,10 +328,18 @@
     .right-content {
         flex: 1;
         display: flex;
-        justify-content: flex-start;
+        justify-content: center;
+        align-items: center;
     }
+
+
 }
 
+    .project-page ul {
+        padding-right: 1rem;
+        padding-left: 1rem;
+        font-size: 1em;
+    }
 @media (min-width: 801px) {
     .settings-themes-showcase {
         flex-direction: row;
@@ -368,7 +375,8 @@
 
     .technical-breakdown p,
     .project-page ul {
-
+        padding-right: 1rem;
+        padding-left: 1rem;
         font-size: 1em;
     }
 
@@ -397,10 +405,6 @@
 
     .tech-item.first-item {
         padding-left: 3vw !important;
-    }
-
-    .project-list .experience {
-        padding-left: 0vw;
     }
 
     .experience {

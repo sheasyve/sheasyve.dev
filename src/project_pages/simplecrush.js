@@ -88,27 +88,24 @@ function SimpleCrushProject() {
                 </div>
                 <div className="headerbg">
                     <div className="desktop-split">
-                        <div className="left-content">
-                            <div className="description">
-                                <p>SimpleCrush is a VST3 bitcrusher plugin built with C++ and the JUCE framework.</p>
-                                <div className="button-wrapper"><DownloadButton /></div>
-                                <p>The plugin allows users to reduce the bit depth and sample rate of audio, with built in mix and filter controls.
-                                    There is also a settings menu with 7 unique color themes, a resizing tool, and a preset system with a randomizer.
-                                    <br></br><br></br>
-                                    This writeup is a work in progress and will be updated with more technical details and experience gained as development continues.
-                                </p>
-                                <p>Currently I am working on bundling it with an installer, cleaning up the code base, and adding hover hints to the knobs and buttons. The hover hints can be toggled in the settings menu.
-                                    After that, I will be working on tuning the audio engine and knob behavior, and then completing a visual overhaul.
-                                </p>
-                            </div>
-                        </div>
-
                         <div className="right-content">
                             <img
                                 src={pluginPic}
                                 alt="SimpleCrush Plugin"
                                 className="plugin-pic"
                             />
+                        </div>
+                        <div className="left-content">
+                            <div className="description">
+                                <p>SimpleCrush is a VST3 bitcrusher plugin built with C++ and the JUCE framework.</p>
+                                <div className="button-wrapper"><DownloadButton /></div>
+                                <p>The plugin allows users to reduce the bit depth and sample rate of audio, with built in mix and filter controls.
+                                    There is also a settings menu with 7 unique color themes, a resizing tool, and a preset system with a randomizer.   
+                                </p>
+                                <p>Currently I am working on bundling it with an installer, cleaning up the code base, and adding hover hints to the knobs and buttons. The hover hints can be toggled in the settings menu.
+                                    After that, I will be working on tuning the audio engine and knob behavior, and then completing a visual overhaul.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
