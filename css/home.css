@@ -307,14 +307,12 @@
 
 }
 
-/* 1. Force the main parent to take up the full section */
 .contest-list {
     display: flex;
     flex-direction: column;
     width: 100%;
 }
 
-/* 2. Target that nameless, invisible wrapper <div> directly! */
 .contest-list>div {
     width: 100%;
 
