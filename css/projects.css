@@ -310,6 +310,13 @@
     border-radius: 0px 0px 5px 5px;
 }
 
+.button-wrapper a {
+    color: var(--primary-text-color);
+    text-decoration: none;
+}
+
+
+
 @media (min-width: 768px) {
     .desktop-split {
         display: flex;

@@ -15,28 +15,6 @@ import demo from '../../media/projects/simplecrush/demo.mp4';
 import presets from '../../media/projects/simplecrush/presets.mp4';
 import { FiDownload } from "react-icons/fi";
 
-const DownloadButton = () => {
-    return (
-        <a
-            href="downloads/SimpleCrush_v1.3.0_Windows.exe"
-            download="SimpleCrush_v1.3.0_Windows.exe"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "8px",
-                textDecoration: "none",
-                color: "#007bff",
-                fontWeight: "bold"
-            }}
-        >
-            <FiDownload />
-            Download SimpleCrush v1.3.0
-        </a>
-    );
-};
-
 function SimpleCrushProject() {
 
     const techstack = [{ icon: <i className="devicon-cplusplus-plain"></i>, name: " C++" },
@@ -98,9 +76,30 @@ function SimpleCrushProject() {
                         <div className="left-content">
                             <div className="description">
                                 <p>SimpleCrush is a VST3 bitcrusher plugin built with C++ and the JUCE framework.</p>
-                                <div className="button-wrapper"><DownloadButton /></div>
+                                <div className="button-wrapper">
+                                    <a
+                                        href="downloads/SimpleCrush_v1.3.0_Windows.exe"
+                                        download="SimpleCrush_v1.3.0.exe"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <FiDownload style={{ paddingRight: '1rem' }} /> 
+                                        Download SimpleCrush v1.3.0 Installer
+                                    </a>
+                                </div>
+                                <div className="button-wrapper">
+                                    <a
+                                        href="downloads/SimpleCrush.vst3.zip"
+                                        download="SimpleCrush_v1.3.0.vst3.zip"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <FiDownload style={{ paddingRight: '1rem' }} /> 
+                                        Download SimpleCrush v1.3.0 zip
+                                    </a>
+                                </div>
                                 <p>The plugin allows users to reduce the bit depth and sample rate of audio, with built in mix and filter controls.
-                                    There is also a settings menu with 7 unique color themes, a resizing tool, and a preset system with a randomizer just released in v1.2.0   
+                                    There is also a settings menu with 7 unique color themes, a resizing tool, and a preset system with a randomizer just released in v1.2.0
                                 </p>
                                 <p>Currently I am working on bundling it with an installer, cleaning up the code base, and adding hover hints to the knobs and buttons. The hover hints can be toggled in the settings menu.
                                     After that, I will be working on tuning the audio engine and knob behavior, and then completing a visual overhaul.
