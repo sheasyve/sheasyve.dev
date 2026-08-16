@@ -18,8 +18,8 @@ import { FiDownload } from "react-icons/fi";
 const DownloadButton = () => {
     return (
         <a
-            href="downloads/SimpleCrush.vst3.zip"
-            download="SimpleCrush.vst3.zip"
+            href="downloads/SimpleCrush_v1.3.0_Windows.exe"
+            download="SimpleCrush_v1.3.0_Windows.exe"
             target="_blank"
             rel="noopener noreferrer"
             style={{
@@ -32,7 +32,7 @@ const DownloadButton = () => {
             }}
         >
             <FiDownload />
-            Download SimpleCrush v1.2.0
+            Download SimpleCrush v1.3.0
         </a>
     );
 };
