@@ -17,8 +17,10 @@ import { FiDownload } from "react-icons/fi";
 
 function SimpleCrushProject() {
 
-    const techstack = [{ icon: <i className="devicon-cplusplus-plain"></i>, name: " C++" },
-    { icon: <img src="https://cdn.simpleicons.org/juce" alt="JUCE" style={{ width: '1em', height: '1em', verticalAlign: 'middle' }} />, name: " JUCE" }];
+    const techstack = [
+        { icon: <i className="devicon-cplusplus-plain"></i>, name: " C++" },
+        { icon: <img src="https://cdn.simpleicons.org/juce" alt="JUCE" style={{ width: '1em', height: '1em', verticalAlign: 'middle' }} />, name: " JUCE" }
+    ];
 
     const features = [
         "Bit Depth Reduction: Introduce quantization noise to create a characteristic lo-fi sound. Highly effective for adding texture to bass and drums.",
@@ -29,8 +31,8 @@ function SimpleCrushProject() {
         "Dedicated Settings: A centralized menu to manage theme selection, UI scale, and global plugin preferences.",
         "Preset Management: A fully featured preset system including save, delete, load, folder selection, and a randomization tool for quick inspiration.",
         "Resizable UI: A fully scalable interface ensures comfortable usability across any monitor size or resolution.",
-        "Tooltips: Hover over any control to reveal a concise description of its function, enhancing usability and learning.",
-        "Dedicated Installer: Simplifies the installation process."
+        "Interactive Tooltips: Hover over any control to reveal a concise description of its function, enhancing usability and reducing the learning curve.",
+        "Dedicated Installer: Simplifies the installation process for end-users."
     ];
 
     const experience = [
@@ -41,8 +43,8 @@ function SimpleCrushProject() {
         "Designed and implemented an intuitive, visually appealing, and fully responsive custom GUI.",
         "Refined UI/UX design skills by developing a dynamic theming system with a consistent visual language.",
         "Architected a reusable plugin development framework to streamline the creation of future VST projects.",
-        "Custom mouse control code to override default JUCE knob behavior, allowing for more precise parameter adjustments.",
-        "SVG icon generation and integration for a polished, professional interface."
+        "Custom mouse control code to override default JUCE knob behavior, allowing for highly precise parameter adjustments.",
+        "SVG icon generation and integration for a polished, resolution-independent professional interface."
     ];
 
     return (
@@ -79,7 +81,7 @@ function SimpleCrushProject() {
                         </div>
                         <div className="left-content">
                             <div className="description">
-                                <p>SimpleCrush is a VST3 bitcrusher plugin built with C++ and the JUCE framework.</p>
+                                <p>SimpleCrush is a VST3 bitcrusher plugin engineered in C++ using the JUCE framework, designed for aggressive audio destruction and unique harmonic generation.</p>
                                 <div className="button-wrapper">
                                     <a
                                         href="downloads/SimpleCrush_v1.3.0_Windows.exe"
@@ -87,7 +89,7 @@ function SimpleCrushProject() {
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
-                                        <FiDownload style={{ paddingRight: '1rem' }} /> 
+                                        <FiDownload style={{ paddingRight: '1rem' }} />
                                         Download SimpleCrush v1.3.0 Installer
                                     </a>
                                 </div>
@@ -98,15 +100,15 @@ function SimpleCrushProject() {
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
-                                        <FiDownload style={{ paddingRight: '1rem' }} /> 
+                                        <FiDownload style={{ paddingRight: '1rem' }} />
                                         Download SimpleCrush v1.3.0 zip
                                     </a>
                                 </div>
-                                <p>The plugin allows users to reduce the bit depth and sample rate of audio, with built in mix and filter controls.
-                                    There is a settings menu with 7 unique color themes, a resizing tool, and a preset system with a randomizer.
+                                <p>
+                                    The plugin provides users with direct control over digital degradation by allowing them to reduce bit depth and sample rate. To ensure these extreme effects sit perfectly in a mix, the plugin features built-in high-pass/low-pass filters and a wet/dry mix control for parallel processing.
                                 </p>
-                                <p>I have just finished releasing it with an installer, cleaning up the code base, and adding hover hints to the knobs and buttons.
-                                    The knobs have also been customized to provide a more precise and responsive user experience.
+                                <p>
+                                    The latest v1.3.0 release introduces a streamlined Windows installer, an optimized codebase, and an enhanced user experience. Interactive tooltips guide new users, while custom-engineered knobs provide highly precise and responsive parameter adjustments.
                                 </p>
                             </div>
                         </div>
@@ -130,21 +132,22 @@ function SimpleCrushProject() {
                         <img src={presetPic} alt="SimpleCrush Presets" className="preset-pic" />
                         <img src={themePic} alt="SimpleCrush Themes" className="setting-pic" />
                     </div>
-                    <p style={{ textAlign: 'center' }}>I have now finished implementing 7 unique themes that can be selected in the settings menu.</p>
+                    <p style={{ textAlign: 'center' }}>SimpleCrush features 7 unique visual themes, accessible via the central settings menu.</p>
                     <div className="theme-grid">
                         {[t1, t2, t3, t4, t5, t6, t7].map((pic, i) => (
                             <img key={i} src={pic} alt={`Theme ${i + 1}`} className="theme-pic" />
                         ))}
                     </div>
-                    <p style={{ textAlign: 'center' }}>The settings are saved in a file which is loaded on startup to be persistent across sessions.</p>
+                    <p style={{ textAlign: 'center' }}>All UI preferences, including the active theme and UI scaling, are written to a configuration file to ensure persistence across DAW sessions.</p>
                 </div>
 
                 <div className="technical-breakdown">
                     <h2>Technical Breakdown</h2>
-                    <p>The plugin was built using C++ and the JUCE framework.
-                        JUCE provides a powerful and flexible platform for audio plugin development, allowing for efficient handling of audio processing and user interface design. The plugin's core functionality is implemented in C++, leveraging JUCE's audio processing capabilities to manipulate the audio signal in real-time.
-                        <br></br><br></br>
-                        The bit depth and sample rate reduction algorithms are designed to introduce the characteristic distortion associated with bitcrushing, while the mix and filter controls allow users to remove unpleasant high and low frequencies. The development process involved iterating on the audio processing algorithms to achieve the desired sound quality and performance, as well as designing an intuitive user interface for seamless interaction with the plugin.</p>
+                    <p>
+                        SimpleCrush was built utilizing C++ and the JUCE framework. JUCE provides a robust and flexible platform for audio plugin development, allowing for low-level, efficient handling of real-time audio streams alongside complex user interface design.
+                        <br /><br />
+                        The core functionality relies on custom DSP algorithms designed to introduce the characteristic quantization noise and aliasing distortion associated with classic sampler degradation. The development process required iterative testing to balance sonic character with CPU computational efficiency. Beyond audio processing, significant engineering was dedicated to the plugin's architecture—including a bespoke preset management system, a state-saving configuration system, and customized mouse-interaction logic for refined UI control.
+                    </p>
                 </div>
 
                 <div className="project-list">
