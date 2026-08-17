@@ -311,11 +311,9 @@
 }
 
 .button-wrapper a {
-    color: var(--primary-text-color);
+    color: var(--download-link-color);
     text-decoration: none;
 }
-
-
 
 @media (min-width: 768px) {
     .desktop-split {
@@ -340,11 +338,12 @@
 
 }
 
-    .project-page ul {
-        padding-right: 1rem;
-        padding-left: 1rem;
-        font-size: 1em;
-    }
+.project-page ul {
+    padding-right: 1rem;
+    padding-left: 1rem;
+    font-size: 1em;
+}
+
 @media (min-width: 801px) {
     .settings-themes-showcase {
         flex-direction: row;
@@ -356,6 +355,7 @@
 }
 
 @media (max-width: 800px) {
+    
     .project-header h3 {
         text-align: left !important;
     }
@@ -415,6 +415,10 @@
     .experience {
         padding-left: 6vw;
         max-width: 90%;
+    }
+
+    .button-wrapper a {
+        text-decoration: underline;
     }
 
 }

@@ -49,6 +49,7 @@
     --link-gradient-end: rgba(206, 205, 205, 0.8);
     --title-gradient-start: rgb(255, 255, 255);
     --title-gradient-end: rgba(255, 255, 255, 0.8);
+    --download-link-color: rgb(7, 2, 3);
 
     /* Accessories */
     --box-shadow-color: rgba(0, 0, 0, 0.281);

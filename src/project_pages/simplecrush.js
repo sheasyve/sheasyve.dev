@@ -28,7 +28,9 @@ function SimpleCrushProject() {
         "Custom Themes: Choose from seven unique color palettes to match your DAW or personal aesthetic.",
         "Dedicated Settings: A centralized menu to manage theme selection, UI scale, and global plugin preferences.",
         "Preset Management: A fully featured preset system including save, delete, load, folder selection, and a randomization tool for quick inspiration.",
-        "Resizable UI: A fully scalable interface ensures comfortable usability across any monitor size or resolution."
+        "Resizable UI: A fully scalable interface ensures comfortable usability across any monitor size or resolution.",
+        "Tooltips: Hover over any control to reveal a concise description of its function, enhancing usability and learning.",
+        "Dedicated Installer: Simplifies the installation process."
     ];
 
     const experience = [
@@ -38,7 +40,9 @@ function SimpleCrushProject() {
         "Engineered a custom preset management system, enabling users to easily save, organize, and recall parameters.",
         "Designed and implemented an intuitive, visually appealing, and fully responsive custom GUI.",
         "Refined UI/UX design skills by developing a dynamic theming system with a consistent visual language.",
-        "Architected a reusable plugin development framework to streamline the creation of future VST projects."
+        "Architected a reusable plugin development framework to streamline the creation of future VST projects.",
+        "Custom mouse control code to override default JUCE knob behavior, allowing for more precise parameter adjustments.",
+        "SVG icon generation and integration for a polished, professional interface."
     ];
 
     return (
@@ -99,10 +103,10 @@ function SimpleCrushProject() {
                                     </a>
                                 </div>
                                 <p>The plugin allows users to reduce the bit depth and sample rate of audio, with built in mix and filter controls.
-                                    There is also a settings menu with 7 unique color themes, a resizing tool, and a preset system with a randomizer just released in v1.2.0
+                                    There is a settings menu with 7 unique color themes, a resizing tool, and a preset system with a randomizer.
                                 </p>
-                                <p>Currently I am working on bundling it with an installer, cleaning up the code base, and adding hover hints to the knobs and buttons. The hover hints can be toggled in the settings menu.
-                                    After that, I will be working on tuning the audio engine and knob behavior, and then completing a visual overhaul.
+                                <p>I have just finished releasing it with an installer, cleaning up the code base, and adding hover hints to the knobs and buttons.
+                                    The knobs have also been customized to provide a more precise and responsive user experience.
                                 </p>
                             </div>
                         </div>
