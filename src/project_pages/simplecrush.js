@@ -81,23 +81,31 @@ function SimpleCrushProject() {
                             <div className="description">
                                 <p>SimpleCrush is a VST3 bitcrusher plugin engineered in C++ using the JUCE framework, designed for aggressive audio destruction and unique harmonic generation.</p>
                                 <div className="button-wrapper">
-                                    <a href="downloads/SimpleCrush_v1.3.0_Windows.exe" download="SimpleCrush_v1.3.0.exe"
+                                    <a href="downloads/SimpleCrush_v1.3.1_Windows.exe" download="SimpleCrush_v1.3.1_Windows.exe"
                                         target="_blank" rel="noopener noreferrer">
                                         <FiDownload style={{ paddingRight: '1rem' }} />
-                                        Download SimpleCrush v1.3.0 Installer
+                                        Download SimpleCrush v1.3.1 Windows Installer
+                                    </a>
+                                </div>
+                                <div className="button-wrapper">
+                                    <a href="downloads/SimpleCrush-macOS-Unsigned.zip" download="SimpleCrush-macOS-Unsigned.zip"
+                                        target="_blank" rel="noopener noreferrer">
+                                        <FiDownload style={{ paddingRight: '1rem' }} />
+                                        Download SimpleCrush v1.3.1 macOS zip
                                     </a>
                                 </div>
                                 <div className="button-wrapper">
                                     <a href="downloads/SimpleCrush.vst3.zip"
-                                        download="SimpleCrush_v1.3.0.vst3.zip"
+                                        download="SimpleCrush_v1.3.1.zip"
                                         target="_blank" rel="noopener noreferrer">
                                         <FiDownload style={{ paddingRight: '1rem' }} />
-                                        Download SimpleCrush v1.3.0 zip
+                                        Download SimpleCrush v1.3.1 Windows zip
                                     </a>
                                 </div>
                                 <p>The plugin allows users to reduce bit depth and sample rate to control digital degradation.
                                     The plugin features built-in high-pass/low-pass filters and a wet/dry mix control for parallel processing.</p>
-                                <p>The latest v1.3.0 release introduces a streamlined Windows installer, an optimized codebase, and an enhanced user experience.
+                                <p>The latest v1.3.1 release includes a new macOS version, many bug fixes, better resizing capabilities, and the ability to add your own themes from files.</p>
+                                <p>The v1.3.0 release introduces a streamlined Windows installer, an optimized codebase, and an enhanced user experience.
                                     Interactive tooltips guide new users, while custom-engineered knobs provide highly precise and responsive parameter adjustments.</p>
                             </div>
                         </div>
