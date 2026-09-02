@@ -81,7 +81,7 @@ function SimpleCrushProject() {
                             <div className="description">
                                 <p>SimpleCrush is a VST3 bitcrusher plugin engineered in C++ using the JUCE framework, designed for aggressive audio destruction and unique harmonic generation.</p>
                                 <div className="button-wrapper">
-                                    <a href="downloads/SimpleCrush_v1.3.1_Windows.exe" download="SimpleCrush_v1.3.1_Windows.exe"
+                                    <a href="dow nloads/SimpleCrush_v1.3.1_Windows.exe" download="SimpleCrush_v1.3.1_Windows.exe"
                                         target="_blank" rel="noopener noreferrer">
                                         <FiDownload style={{ paddingRight: '1rem' }} />
                                         Download SimpleCrush v1.3.1 Windows Installer
