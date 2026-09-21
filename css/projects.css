@@ -354,6 +354,29 @@
     }
 }
 
+.mobile-only {
+    display: none;
+}
+.desktop-only {
+    display: block;
+}
+.video-title {
+    margin-bottom: 0.5rem;
+    margin-top: 0; 
+    background: none !important;
+    backdrop-filter: none !important;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .mobile-only {
+        display: block;
+    }
+    .desktop-only {
+        display: none;
+    }
+}
+
 @media (max-width: 800px) {
     
     .project-header h3 {
