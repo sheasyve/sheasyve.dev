@@ -81,7 +81,6 @@ function SimpleCrushProject() {
                         <div className="left-content">
                             <div className="description">
                                 <p>SimpleCrush is a VST3 bitcrusher plugin engineered in C++ using the JUCE framework, designed for aggressive audio destruction and unique harmonic generation.</p>
-
                                 <div className="button-wrapper">
                                     <a href="downloads/SimpleCrush_v1.3.1_Windows.exe" download="SimpleCrush_v1.3.1_Windows.exe"
                                         target="_blank" rel="noopener noreferrer">
@@ -106,8 +105,8 @@ function SimpleCrushProject() {
                                 </div>
                                 <p>The plugin allows users to reduce bit depth and sample rate to control digital degradation, featuring built-in high-pass/low-pass filters and a wet/dry mix control for parallel processing.</p>
                                 <div className="release-notes-snippet">
-                                    <p>v1.3.1 Includes official <strong>macOS support</strong>, improved resizing across knobs, presets, and settings, custom theme loading from files, refreshed color palettes, alphabetical theme sorting, an updated settings data folder button, and a cleaned-up modular codebase.
-                                    </p>
+                                    <p>v1.3.1 Includes official <strong>macOS support</strong>, improved resizing across knobs, presets, and settings, custom theme loading from files, 
+                                    refreshed color palettes, alphabetical theme sorting, an updated settings data folder button, and a cleaned-up modular codebase.</p>
                                 </div>
                             </div>
                         </div>
@@ -142,13 +141,11 @@ function SimpleCrushProject() {
 
                 <div className="technical-breakdown">
                     <h2>Technical Breakdown</h2>
-                    <p>
-                        SimpleCrush was built utilizing C++ and the JUCE framework.
+                    <p>SimpleCrush was built utilizing C++ and the JUCE framework.
                         JUCE provides a robust and flexible platform for audio plugin development, allowing for low-level, efficient handling of real-time audio streams alongside complex user interface design.
                         <br /><br />
                         The core functionality relies on custom DSP algorithms designed to introduce the characteristic quantization noise and aliasing distortion associated with classic sampler degradation.
-                        The development process required iterative testing to balance sonic character with CPU computational efficiency.
-                        Beyond audio processing, significant engineering was dedicated to the plugin's architecture—including a bespoke preset management system,
+                        Beyond audio processing, significant engineering was dedicated to the plugin's architecture. including a bespoke preset management system,
                         a state-saving configuration system, and customized mouse-interaction logic for refined UI control.
                     </p>
                 </div>
