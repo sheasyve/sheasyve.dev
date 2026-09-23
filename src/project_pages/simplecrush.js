@@ -89,7 +89,6 @@ function SimpleCrushProject() {
                     <p className="mobile-only description-intro" style={{ margin: '0', paddingTop: '1rem' }}>
                         SimpleCrush is a VST3 bitcrusher plugin engineered in C++ using the JUCE framework, designed for aggressive audio destruction and unique harmonic generation.
                     </p>
-
                     <div className="desktop-split">
                         <div className="right-content">
                             <img src={pluginPic} alt="SimpleCrush Plugin Interface" className="plugin-pic" />
@@ -99,7 +98,6 @@ function SimpleCrushProject() {
                                 <p className="desktop-only description-intro">
                                     SimpleCrush is a VST3 bitcrusher plugin engineered in C++ using the JUCE framework, designed for aggressive audio destruction and unique harmonic generation.
                                 </p>
-
                                 {downloads.map((btn, index) => (
                                     <div key={index} className="button-wrapper">
                                         <a href={btn.url} download={btn.file} target="_blank" rel="noopener noreferrer">
@@ -108,11 +106,12 @@ function SimpleCrushProject() {
                                         </a>
                                     </div>
                                 ))}
+                                <p>Control digital degradation by independently reducing bit depth and sample rate. 
+                                    Shape the resulting artifacts using built-in high-pass and low-pass filters, and blend it all with a wet/dry mix control for parallel processing.</p>
 
-                                <p>Control digital degradation by independently reducing bit depth and sample rate. Shape the resulting artifacts using built-in high-pass and low-pass filters, and blend it all with a wet/dry mix control for parallel processing.</p>
-                                
                                 <div className="release-notes-snippet">
-                                    <p><strong>v1.3.1 Update:</strong> Includes official macOS support, improved scaling across menus, custom theme file loading, refreshed color palettes, alphabetical theme sorting, and a refined, modular codebase.</p>
+                                    <p><strong>v1.3.1 Update:</strong> Includes official macOS support, improved scaling across menus, 
+                                    custom theme file loading, refreshed color palettes, alphabetical theme sorting, and a refined, modular codebase.</p>
                                 </div>
                             </div>
                         </div>
@@ -143,25 +142,30 @@ function SimpleCrushProject() {
                         <img src={presetPic} alt="Presets Menu" className="preset-pic" />
                         <img src={themePic} alt="Themes Menu" className="setting-pic" />
                     </div>
-                    
-                    <p style={{ textAlign: 'center' }}>SimpleCrush features 8 unique visual themes, accessible via the central settings menu.</p>
-                    
+
+                    <p style={{ textAlign: 'center' }}>SimpleCrush features 8 unique visual themes, 
+                        accessible via the central settings menu.</p>
+
                     <div className="theme-grid">
                         {[t1, t2, t3, t4, t5, t6, t7, t8].map((pic, i) => (
                             <img key={i} src={pic} alt={`Theme variant ${i + 1}`} className="theme-pic" loading="lazy" />
                         ))}
                     </div>
-                    
-                    <p style={{ textAlign: 'center' }}>All UI preferences, including the active theme and UI scaling, are securely written to a configuration file to ensure persistence across your DAW sessions.</p>
+
+                    <p style={{ textAlign: 'center' }}>All UI preferences, including the active theme and UI scaling, 
+                        are securely written to a configuration file to ensure persistence across your DAW sessions.</p>
                 </section>
 
                 <section className="technical-breakdown">
                     <h2>Technical Breakdown</h2>
                     <p>
-                        SimpleCrush was built utilizing C++ and the JUCE framework. JUCE provides a robust and flexible platform for audio plugin development, allowing for low-level, efficient handling of real-time audio streams alongside complex graphical user interface design.
+                        SimpleCrush was built utilizing C++ and the JUCE framework. JUCE provides a robust and flexible platform for audio plugin development, 
+                        allowing for low-level, efficient handling of real-time audio streams alongside complex graphical user interface design.
                     </p>
                     <p>
-                        The core functionality relies on custom DSP algorithms engineered to introduce the characteristic quantization noise and aliasing distortion associated with classic hardware sampler degradation. Beyond audio processing, significant engineering was dedicated to the plugin's underlying architecture, including a bespoke preset management system, a state-saving configuration system, and customized mouse-interaction logic for refined UI control.
+                        The core functionality relies on custom DSP algorithms engineered to introduce the characteristic quantization noise and aliasing distortion 
+                        associated with classic hardware sampler degradation. Beyond audio processing, significant engineering was dedicated to the plugin's underlying architecture, 
+                        including a bespoke preset management system, a state-saving configuration system, and customized mouse-interaction logic for refined UI control.
                     </p>
                 </section>
 
